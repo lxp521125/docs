@@ -16,15 +16,15 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.3.2-apache`, `8.3-apache`, `8-apache`, `apache`, `8.3.2`, `8.3`, `8`, `latest` (*8.3/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/1a7d35cc4d2d88f7658a2b6ff39af85baca463f0/8.3/apache/Dockerfile)
--	[`8.3.2-fpm`, `8.3-fpm`, `8-fpm`, `fpm` (*8.3/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/1a7d35cc4d2d88f7658a2b6ff39af85baca463f0/8.3/fpm/Dockerfile)
--	[`8.3.2-fpm-alpine`, `8.3-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine` (*8.3/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/1a7d35cc4d2d88f7658a2b6ff39af85baca463f0/8.3/fpm-alpine/Dockerfile)
--	[`8.2.8-apache`, `8.2-apache`, `8.2.8`, `8.2` (*8.2/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/e4afe0e66bb0c410d62fc9953a0a3a060fe72057/8.2/apache/Dockerfile)
--	[`8.2.8-fpm`, `8.2-fpm` (*8.2/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/e4afe0e66bb0c410d62fc9953a0a3a060fe72057/8.2/fpm/Dockerfile)
--	[`8.2.8-fpm-alpine`, `8.2-fpm-alpine` (*8.2/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/e4afe0e66bb0c410d62fc9953a0a3a060fe72057/8.2/fpm-alpine/Dockerfile)
--	[`7.54-apache`, `7-apache`, `7.54`, `7` (*7/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/e8e2309427218cb2e250a3af013e8efe54703404/7/apache/Dockerfile)
--	[`7.54-fpm`, `7-fpm` (*7/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/e8e2309427218cb2e250a3af013e8efe54703404/7/fpm/Dockerfile)
--	[`7.54-fpm-alpine`, `7-fpm-alpine` (*7/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/e8e2309427218cb2e250a3af013e8efe54703404/7/fpm-alpine/Dockerfile)
+-	[`8.4.0-alpha1-apache`, `8.4-rc-apache`, `rc-apache`, `8.4.0-alpha1`, `8.4-rc`, `rc` (*8.4-rc/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/952fad40d62705da159b713d4c8c48b1cc1080fd/8.4-rc/apache/Dockerfile)
+-	[`8.4.0-alpha1-fpm`, `8.4-rc-fpm`, `rc-fpm` (*8.4-rc/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/952fad40d62705da159b713d4c8c48b1cc1080fd/8.4-rc/fpm/Dockerfile)
+-	[`8.4.0-alpha1-fpm-alpine`, `8.4-rc-fpm-alpine`, `rc-fpm-alpine` (*8.4-rc/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/952fad40d62705da159b713d4c8c48b1cc1080fd/8.4-rc/fpm-alpine/Dockerfile)
+-	[`8.3.6-apache`, `8.3-apache`, `8-apache`, `apache`, `8.3.6`, `8.3`, `8`, `latest` (*8.3/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/9f8ce73be0a63586b26b6467310fb572be8209d2/8.3/apache/Dockerfile)
+-	[`8.3.6-fpm`, `8.3-fpm`, `8-fpm`, `fpm` (*8.3/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/9f8ce73be0a63586b26b6467310fb572be8209d2/8.3/fpm/Dockerfile)
+-	[`8.3.6-fpm-alpine`, `8.3-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine` (*8.3/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/9f8ce73be0a63586b26b6467310fb572be8209d2/8.3/fpm-alpine/Dockerfile)
+-	[`7.56-apache`, `7-apache`, `7.56`, `7` (*7/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/a8e09f524b89b61534f376e45b885d433d867c88/7/apache/Dockerfile)
+-	[`7.56-fpm`, `7-fpm` (*7/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/a8e09f524b89b61534f376e45b885d433d867c88/7/fpm/Dockerfile)
+-	[`7.56-fpm-alpine`, `7-fpm-alpine` (*7/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/a8e09f524b89b61534f376e45b885d433d867c88/7/fpm-alpine/Dockerfile)
 
 # Quick reference
 
@@ -134,9 +134,9 @@ $ docker run --name some-drupal --link some-postgres:postgres -d \
 	-v drupal-themes:/var/www/html/themes \
 ```
 
-## ... via [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
 
-Example `docker-compose.yml` for `drupal`:
+Example `stack.yml` for `drupal`:
 
 ```yaml
 # Drupal with PostgreSQL
@@ -151,7 +151,7 @@ Example `docker-compose.yml` for `drupal`:
 # Database password: example
 # ADVANCED OPTIONS; Database host: postgres
 
-version: '2'
+version: '3.1'
 
 services:
 
@@ -175,6 +175,10 @@ services:
       POSTGRES_PASSWORD: example
     restart: always
 ```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/54359bd26c41e63c6e50ccd338b5a18d8b572c60/drupal/stack.yml)
+
+Run `docker stack deploy -c stack.yml drupal` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate). When installing select `postgres` as database with the following parameters: `dbname=postgres` `user=postgres` `pass=example` `hostname=postgres`
 
 ## Adding additional libraries / extensions
 

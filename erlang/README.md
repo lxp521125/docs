@@ -16,9 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`19.3.3`, `19.3`, `19`, `latest` (*19/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/232e8eda4a1f00ffd9f417f86a4212fa4d39e441/19/Dockerfile)
--	[`19.3.3-slim`, `19.3-slim`, `19-slim`, `slim` (*19/slim/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/232e8eda4a1f00ffd9f417f86a4212fa4d39e441/19/slim/Dockerfile)
--	[`18.3.4.5`, `18.3.4`, `18.3`, `18` (*18/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/1b03fdd83ec769e7962ec0dce01e25613a46dacf/18/Dockerfile)
+-	[`20.0.2`, `20.0`, `20`, `latest` (*20/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/1a94b7d23c5e7d4b97e0c210db8ff7c26a60e0ac/20/Dockerfile)
+-	[`20.0.2-slim`, `20.0-slim`, `20-slim`, `slim` (*20/slim/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/1a94b7d23c5e7d4b97e0c210db8ff7c26a60e0ac/20/slim/Dockerfile)
+-	[`20.0.2-alpine`, `20.0-alpine`, `20-alpine`, `alpine` (*20/alpine/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/1a94b7d23c5e7d4b97e0c210db8ff7c26a60e0ac/20/alpine/Dockerfile)
+-	[`19.3.6.2`, `19.3.6`, `19.3`, `19` (*19/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/98222f1cd2c0d266f8c3a225fcb719c4e6d053c4/19/Dockerfile)
+-	[`19.3.6.2-slim`, `19.3.6-slim`, `19.3-slim`, `19-slim` (*19/slim/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/98222f1cd2c0d266f8c3a225fcb719c4e6d053c4/19/slim/Dockerfile)
+-	[`18.3.4.5`, `18.3.4`, `18.3`, `18` (*18/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/a9e5cdee4909cb1c9c2ea70595f5d32a46da885f/18/Dockerfile)
 -	[`18.3.4.5-slim`, `18.3.4-slim`, `18.3-slim`, `18-slim` (*18/slim/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/1b03fdd83ec769e7962ec0dce01e25613a46dacf/18/slim/Dockerfile)
 -	[`17.5.6.9`, `17.5.6`, `17.5`, `17` (*17/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/ea32d5f6f1735f9f55bee04b112166da96eb9c73/17/Dockerfile)
 -	[`17.5.6.9-slim`, `17.5.6-slim`, `17.5-slim`, `17-slim` (*17/slim/Dockerfile*)](https://github.com/c0b/docker-erlang-otp/blob/ea32d5f6f1735f9f55bee04b112166da96eb9c73/17/slim/Dockerfile)
@@ -62,9 +65,9 @@ Erlang is a programming language used to build massively scalable soft real-time
 
 ```console
 ➸ docker run -it --rm erlang
-Erlang/OTP 18 [erts-7.1] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V7.1  (abort with ^G)
+Eshell V9.0  (abort with ^G)
 1> uptime().
 3 seconds
 ok
@@ -81,11 +84,11 @@ User switch command
   ? | h             - this message
  --> q
 ➸ docker run -it --rm -h erlang.local erlang erl -name snode@erlang.local
-Erlang/OTP 18 [erts-7.1] [source] [64-bit] [smp:8:8] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V7.1  (abort with ^G)
+Eshell V9.0  (abort with ^G)
 (snode@erlang.local)1> erlang:system_info(otp_release).
-"18"
+"20"
 (snode@erlang.local)2>
 User switch command
 --> q
@@ -108,6 +111,14 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 ## `erlang:slim`
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `erlang`. Unless you are working in an environment where *only* the `erlang` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+
+## `erlang:alpine`
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

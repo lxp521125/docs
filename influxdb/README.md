@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.1`, `1.1.5` (*influxdb/1.1/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/ab9f2373d6ea1d5a530be529225c5bb1c18d37ee/influxdb/1.1/Dockerfile)
--	[`1.1-alpine`, `1.1.5-alpine` (*influxdb/1.1/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/ab9f2373d6ea1d5a530be529225c5bb1c18d37ee/influxdb/1.1/alpine/Dockerfile)
--	[`1.2`, `1.2.4`, `latest` (*influxdb/1.2/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/a90cd8cfb38357456914aabe63ce9cd8d216c464/influxdb/1.2/Dockerfile)
--	[`1.2-alpine`, `1.2.4-alpine`, `alpine` (*influxdb/1.2/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/a90cd8cfb38357456914aabe63ce9cd8d216c464/influxdb/1.2/alpine/Dockerfile)
+-	[`1.2`, `1.2.4` (*influxdb/1.2/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/3a8019600cefcb4ffc85c3e3a155980d2dc3f5ff/influxdb/1.2/Dockerfile)
+-	[`1.2-alpine`, `1.2.4-alpine` (*influxdb/1.2/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/3a8019600cefcb4ffc85c3e3a155980d2dc3f5ff/influxdb/1.2/alpine/Dockerfile)
+-	[`1.3`, `1.3.3`, `latest` (*influxdb/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c07b2d5c72080aadb626072098c11e75acd80e9d/influxdb/1.3/Dockerfile)
+-	[`1.3-alpine`, `1.3.3-alpine`, `alpine` (*influxdb/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c07b2d5c72080aadb626072098c11e75acd80e9d/influxdb/1.3/alpine/Dockerfile)
 
 # Quick reference
 

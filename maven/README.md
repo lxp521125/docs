@@ -16,16 +16,15 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.5.0-jdk-7`, `3.5-jdk-7`, `3-jdk-7` (*jdk-7/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-7/Dockerfile)
--	[`3.5.0-jdk-7-onbuild`, `3.5-jdk-7-onbuild`, `3-jdk-7-onbuild` (*jdk-7/onbuild/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-7/onbuild/Dockerfile)
--	[`3.5.0-jdk-7-alpine`, `3.5-jdk-7-alpine`, `3-jdk-7-alpine` (*jdk-7/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/7e98522ee97c73c22da1b62329a0f20757bad5fb/jdk-7/Dockerfile)
--	[`3.5.0-jdk-7-onbuild-alpine`, `3.5-jdk-7-onbuild-alpine`, `3-jdk-7-onbuild-alpine` (*jdk-7/onbuild/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/7e98522ee97c73c22da1b62329a0f20757bad5fb/jdk-7/onbuild/Dockerfile)
--	[`3.5.0-jdk-8`, `3.5.0`, `3.5-jdk-8`, `3.5`, `3-jdk-8`, `3`, `latest` (*jdk-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-8/Dockerfile)
--	[`3.5.0-jdk-8-onbuild`, `3.5.0-onbuild`, `3.5-jdk-8-onbuild`, `3.5-onbuild`, `3-jdk-8-onbuild`, `3-onbuild`, `onbuild` (*jdk-8/onbuild/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-8/onbuild/Dockerfile)
--	[`3.5.0-jdk-8-alpine`, `3.5.0-alpine`, `3.5-jdk-8-alpine`, `3.5-alpine`, `3-jdk-8-alpine`, `3-alpine`, `alpine` (*jdk-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/7e98522ee97c73c22da1b62329a0f20757bad5fb/jdk-8/Dockerfile)
--	[`3.5.0-jdk-8-onbuild-alpine`, `3.5.0-onbuild-alpine`, `3.5-jdk-8-onbuild-alpine`, `3.5-onbuild-alpine`, `3-jdk-8-onbuild-alpine`, `3-onbuild-alpine`, `onbuild-alpine` (*jdk-8/onbuild/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/7e98522ee97c73c22da1b62329a0f20757bad5fb/jdk-8/onbuild/Dockerfile)
--	[`3.5.0-jdk-9`, `3.5-jdk-9`, `3-jdk-9` (*jdk-9/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-9/Dockerfile)
--	[`3.5.0-jdk-9-onbuild`, `3.5-jdk-9-onbuild`, `3-jdk-9-onbuild` (*jdk-9/onbuild/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/ecf54b9839caed8aa2bcf9b8f7bb19594634ee89/jdk-9/onbuild/Dockerfile)
+-	[`3.5.0-jdk-7`, `3.5-jdk-7`, `3-jdk-7` (*jdk-7/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/4b6cf057428dec330e39af811b54a6abd000402a/jdk-7/Dockerfile)
+-	[`3.5.0-jdk-7-alpine`, `3.5-jdk-7-alpine`, `3-jdk-7-alpine` (*jdk-7/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/e8657f03def7f1d776a5348fcc71737d7cfe0f07/jdk-7/Dockerfile)
+-	[`3.5.0-jdk-8`, `3.5.0`, `3.5-jdk-8`, `3.5`, `3-jdk-8`, `3`, `latest` (*jdk-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/7fe1595b23769f777515ae3beca30003349a5ebb/jdk-8/Dockerfile)
+-	[`3.5.0-jdk-8-alpine`, `3.5.0-alpine`, `3.5-jdk-8-alpine`, `3.5-alpine`, `3-jdk-8-alpine`, `3-alpine`, `alpine` (*jdk-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/96b679900a847054148e88a0a8648cc52e3a997b/jdk-8/Dockerfile)
+-	[`3.5.0-jdk-9`, `3.5-jdk-9`, `3-jdk-9` (*jdk-9/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/4b6cf057428dec330e39af811b54a6abd000402a/jdk-9/Dockerfile)
+-	[`3.5.0-ibmjava-8`, `3.5-ibmjava-8`, `3-ibmjava-8` (*ibmjava-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/4b6cf057428dec330e39af811b54a6abd000402a/ibmjava-8/Dockerfile)
+-	[`3.5.0-ibmjava-8-alpine`, `3.5-ibmjava-8-alpine`, `3-ibmjava-8-alpine` (*ibmjava-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/a94270226e472908655fcaf0cd826d7ffb3d37ad/ibmjava-8/Dockerfile)
+-	[`3.5.0-ibmjava-9`, `3.5-ibmjava-9`, `3-ibmjava-9` (*ibmjava-9/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/4b6cf057428dec330e39af811b54a6abd000402a/ibmjava-9/Dockerfile)
+-	[`3.5.0-ibmjava-9-alpine`, `3.5-ibmjava-9-alpine`, `3-ibmjava-9-alpine` (*ibmjava-9/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/a94270226e472908655fcaf0cd826d7ffb3d37ad/ibmjava-9/Dockerfile)
 
 # Quick reference
 
@@ -93,14 +92,6 @@ The `maven` images come in many flavors, each designed for a specific use case.
 ## `maven:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `maven:onbuild`
-
-This image makes building derivative images easier. For most use cases, creating a `Dockerfile` in the base of your project directory with the line `FROM maven:onbuild` will be enough to create a stand-alone image for your project.
-
-While the `onbuild` variant is really useful for "getting off the ground running" (zero to Dockerized in a short period of time), it's not recommended for long-term usage within a project due to the lack of control over *when* the `ONBUILD` triggers fire (see also [`docker/docker#5714`](https://github.com/docker/docker/issues/5714), [`docker/docker#8240`](https://github.com/docker/docker/issues/8240), [`docker/docker#11917`](https://github.com/docker/docker/issues/11917)).
-
-Once you've got a handle on how your project functions within Docker, you'll probably want to adjust your `Dockerfile` to inherit from a non-`onbuild` variant and copy the commands from the `onbuild` variant `Dockerfile` (moving the `ONBUILD` lines to the end and removing the `ONBUILD` keywords) into your own file so that you have tighter control over them and more transparency for yourself and others looking at your `Dockerfile` as to what it does. This also makes it easier to add additional requirements as time goes on (such as installing more packages before performing the previously-`ONBUILD` steps).
 
 ## `maven:alpine`
 

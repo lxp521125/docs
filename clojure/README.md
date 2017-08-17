@@ -16,12 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`lein-2.7.1`, `lein`, `latest` (*debian/lein/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/debian/lein/Dockerfile)
--	[`lein-2.7.1-onbuild`, `lein-onbuild`, `onbuild` (*debian/lein/onbuild/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/debian/lein/onbuild/Dockerfile)
--	[`lein-2.7.1-alpine`, `lein-alpine`, `alpine` (*alpine/lein/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/alpine/lein/Dockerfile)
--	[`lein-2.7.1-alpine-onbuild`, `lein-alpine-onbuild`, `alpine-onbuild` (*alpine/lein/onbuild/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/alpine/lein/onbuild/Dockerfile)
--	[`boot-2.7.1`, `boot` (*debian/boot/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/debian/boot/Dockerfile)
--	[`boot-2.7.1-alpine`, `boot-alpine` (*alpine/boot/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f0fd68d6a197b4d1852aefab698b35ce1ea9881e/alpine/boot/Dockerfile)
+-	[`lein-2.7.1`, `lein`, `latest` (*debian/lein/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/debian/lein/Dockerfile)
+-	[`lein-2.7.1-onbuild`, `lein-onbuild`, `onbuild` (*debian/lein/onbuild/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/debian/lein/onbuild/Dockerfile)
+-	[`lein-2.7.1-alpine`, `lein-alpine`, `alpine` (*alpine/lein/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/alpine/lein/Dockerfile)
+-	[`lein-2.7.1-alpine-onbuild`, `lein-alpine-onbuild`, `alpine-onbuild` (*alpine/lein/onbuild/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/alpine/lein/onbuild/Dockerfile)
+-	[`boot-2.7.1`, `boot` (*debian/boot/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/debian/boot/Dockerfile)
+-	[`boot-2.7.1-alpine`, `boot-alpine` (*alpine/boot/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/adeda5b2e562fef82b9aca22e9770e312841dc0f/alpine/boot/Dockerfile)
 
 # Quick reference
 
@@ -113,7 +113,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `clojure:onbuild`
 
-This image makes building derivative images easier. For most use cases, creating a `Dockerfile` in the base of your project directory with the line `FROM clojure:onbuild` will be enough to create a stand-alone image for your project.
+The `ONBUILD` image variants are deprecated, and their usage is discouraged. For more details, see [docker-library/official-images#2076](https://github.com/docker-library/official-images/issues/2076).
 
 While the `onbuild` variant is really useful for "getting off the ground running" (zero to Dockerized in a short period of time), it's not recommended for long-term usage within a project due to the lack of control over *when* the `ONBUILD` triggers fire (see also [`docker/docker#5714`](https://github.com/docker/docker/issues/5714), [`docker/docker#8240`](https://github.com/docker/docker/issues/8240), [`docker/docker#11917`](https://github.com/docker/docker/issues/11917)).
 

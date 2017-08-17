@@ -16,12 +16,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.1` (*versions/library-3.1/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/3d0e79188adb609440a3b2c8516d7bd0b9db9107/versions/library-3.1/Dockerfile)
--	[`3.2` (*versions/library-3.2/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/ef2b09086c8b3f9f673c5100470462a28efe9038/versions/library-3.2/Dockerfile)
--	[`3.3` (*versions/library-3.3/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/84063540fc7568984d0c1f819107fd02081696c7/versions/library-3.3/Dockerfile)
--	[`3.4` (*versions/library-3.4/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/fb9930f2c3179e629f5cff887742f31bbb7d8d46/versions/library-3.4/Dockerfile)
--	[`3.5`, `latest` (*versions/library-3.5/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/cb5e568b84f4a48bb1245c602bae3de38a67bd55/versions/library-3.5/Dockerfile)
--	[`edge` (*versions/library-edge/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/fa6353d492aefa36c4a2e1c6130b891c85047e75/versions/library-edge/Dockerfile)
+-	[`3.1` (*versions/library-3.1/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/6b5697882749ae8fb8a1c5ad6ba87d3b59ab0a2a/versions/library-3.1/Dockerfile)
+-	[`3.2` (*versions/library-3.2/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/3fbbd4c387d2934b13ea2526ce82f80e20301278/versions/library-3.2/Dockerfile)
+-	[`3.3` (*versions/library-3.3/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/12b2d14e105813a3ff0f4bf7c6a61058c83debad/versions/library-3.3/Dockerfile)
+-	[`3.4` (*versions/library-3.4/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/7f558cc0542cf47b28686385cc0a2cc41fe10325/versions/library-3.4/Dockerfile)
+-	[`3.5` (*versions/library-3.5/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/9b354b8bb3cc7b343e72ef4ec34ef38ec525728d/versions/library-3.5/Dockerfile)
+-	[`3.6`, `latest` (*versions/library-3.6/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/c6cb2bbffbc92d4c35cdaf584dd1c43a860104ea/versions/library-3.6/Dockerfile)
+-	[`edge` (*versions/library-edge/Dockerfile*)](https://github.com/gliderlabs/docker-alpine/blob/c0f432b0e678c1096e041e7e63a089444ad544c9/versions/library-edge/Dockerfile)
 
 # Quick reference
 

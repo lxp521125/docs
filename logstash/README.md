@@ -16,18 +16,16 @@ WARNING:
 
 # **DEPRECATED**
 
-This image is officially deprecated in favor of [the `logstash` image provided by elastic.co](https://www.elastic.co/guide/en/logstash/current/docker.html) which is available to pull via `docker.elastic.co/logstash/logstash:[version]` like `5.2.1`. This image will receive no further updates after 2017-06-20 (June 20, 2017). Please adjust your usage accordingly.
+This image has been deprecated in favor of the [official `logstash` image](https://www.elastic.co/guide/en/logstash/current/docker.html) provided and maintained by [elastic.co](https://www.elastic.co/). The upstream images are available to pull via `docker.elastic.co/logstash/logstash:[version]` like `5.4.2`. The images found here will receive no further updates once the `5.6.0` release is available upstream. Please adjust your usage accordingly.
 
 Elastic provides open-source support for Logstash via the [elastic/logstash GitHub repository](https://github.com/elastic/logstash) and the Docker image via the [elastic/logstash-docker GitHub repository](https://github.com/elastic/logstash-docker), as well as community support via its [forums](https://discuss.elastic.co/c/logstash).
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.4.0`, `5.4`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/logstash/blob/17f03721f0d21cd1dae3077f3dad4b3b489a9557/5/Dockerfile)
--	[`5.4.0-alpine`, `5.4-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/17f03721f0d21cd1dae3077f3dad4b3b489a9557/5/alpine/Dockerfile)
--	[`2.4.1`, `2.4`, `2` (*2.4/Dockerfile*)](https://github.com/docker-library/logstash/blob/754eeb919e42b1f6f2708b73f6f13cbc06fd722c/2.4/Dockerfile)
--	[`2.4.1-alpine`, `2.4-alpine`, `2-alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/6e2d8dc1263d098129a264deeca065129b6c4bca/2.4/alpine/Dockerfile)
--	[`1.5.6`, `1.5`, `1` (*1.5/Dockerfile*)](https://github.com/docker-library/logstash/blob/754eeb919e42b1f6f2708b73f6f13cbc06fd722c/1.5/Dockerfile)
--	[`1.5.6-alpine`, `1.5-alpine`, `1-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/7eaa1cd9db876cd1e57371a7a515988c9768e7cc/1.5/alpine/Dockerfile)
+-	[`5.5.1`, `5.5`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/logstash/blob/479d904c1a1043e179d157259fba96a9ca2e204f/5/Dockerfile)
+-	[`5.5.1-alpine`, `5.5-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/479d904c1a1043e179d157259fba96a9ca2e204f/5/alpine/Dockerfile)
+-	[`2.4.1`, `2.4`, `2` (*2.4/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f425e9008de3d0375d1749d390029808aed8d96/2.4/Dockerfile)
+-	[`2.4.1-alpine`, `2.4-alpine`, `2-alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/19330c802e6f198f015c0c4723a6d86ed449d93f/2.4/alpine/Dockerfile)
 
 # Quick reference
 

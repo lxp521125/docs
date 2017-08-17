@@ -16,12 +16,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.1.7`, `3.1` (*3.1/Dockerfile*)](https://github.com/docker-library/redmine/blob/665a1f399082dc01543b36c9aecd0cf4c5ee214e/3.1/Dockerfile)
--	[`3.1.7-passenger`, `3.1-passenger` (*3.1/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/41c44367d9c1996a587e2bcc9462e4794f533c15/3.1/passenger/Dockerfile)
--	[`3.2.6`, `3.2` (*3.2/Dockerfile*)](https://github.com/docker-library/redmine/blob/b994741065b7a297d030b7826c478655a10f26bd/3.2/Dockerfile)
--	[`3.2.6-passenger`, `3.2-passenger` (*3.2/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/41c44367d9c1996a587e2bcc9462e4794f533c15/3.2/passenger/Dockerfile)
--	[`3.3.3`, `3.3`, `3`, `latest` (*3.3/Dockerfile*)](https://github.com/docker-library/redmine/blob/5453a92c4f8d18e59de9162c4030fb277bc72e8f/3.3/Dockerfile)
--	[`3.3.3-passenger`, `3.3-passenger`, `3-passenger`, `passenger` (*3.3/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/41c44367d9c1996a587e2bcc9462e4794f533c15/3.3/passenger/Dockerfile)
+-	[`3.4.2`, `3.4`, `3`, `latest` (*3.4/Dockerfile*)](https://github.com/docker-library/redmine/blob/bcaee7ff541b6ff01b7593e44444b3d561f67472/3.4/Dockerfile)
+-	[`3.4.2-passenger`, `3.4-passenger`, `3-passenger`, `passenger` (*3.4/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/ded105e314a3b60130573e300931b149daf8fd8c/3.4/passenger/Dockerfile)
+-	[`3.3.4`, `3.3` (*3.3/Dockerfile*)](https://github.com/docker-library/redmine/blob/bcaee7ff541b6ff01b7593e44444b3d561f67472/3.3/Dockerfile)
+-	[`3.3.4-passenger`, `3.3-passenger` (*3.3/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/ded105e314a3b60130573e300931b149daf8fd8c/3.3/passenger/Dockerfile)
+-	[`3.2.7`, `3.2` (*3.2/Dockerfile*)](https://github.com/docker-library/redmine/blob/bcaee7ff541b6ff01b7593e44444b3d561f67472/3.2/Dockerfile)
+-	[`3.2.7-passenger`, `3.2-passenger` (*3.2/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/ded105e314a3b60130573e300931b149daf8fd8c/3.2/passenger/Dockerfile)
+-	[`3.1.7`, `3.1` (*3.1/Dockerfile*)](https://github.com/docker-library/redmine/blob/bcaee7ff541b6ff01b7593e44444b3d561f67472/3.1/Dockerfile)
+-	[`3.1.7-passenger`, `3.1-passenger` (*3.1/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/ded105e314a3b60130573e300931b149daf8fd8c/3.1/passenger/Dockerfile)
 
 # Quick reference
 
@@ -92,12 +94,12 @@ Running Redmine with a database server is the recommened way.
 	$ docker run -d --name some-redmine --link some-postgres:postgres redmine
 	```
 
-## ... via [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
 
-Example `docker-compose.yml` for `redmine`:
+Example `stack.yml` for `redmine`:
 
 ```yaml
-version: '2'
+version: '3.1'
 
 services:
 
@@ -108,19 +110,17 @@ services:
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: example
-    depends_on:
-      - db
-    restart: always
 
   db:
-    image: mariadb
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: redmine
-    restart: always
 ```
 
-Run `docker-compose up`, wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/9cb58e0970fb4cad06a7787418ceb3e39ca1b853/redmine/stack.yml)
+
+Run `docker stack deploy -c stack.yml redmine` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Alternative Web Server
 

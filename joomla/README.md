@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.7.0-apache`, `3.7-apache`, `3-apache`, `apache`, `3.7.0`, `3.7`, `3`, `latest` (*apache/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/f34c936cfff081bb90c7b858a2575dc6efff48c0/apache/Dockerfile)
--	[`3.7.0-apache-php7`, `3.7-apache-php7`, `3-apache-php7`, `apache-php7` (*apache-php7/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/f34c936cfff081bb90c7b858a2575dc6efff48c0/apache-php7/Dockerfile)
--	[`3.7.0-fpm`, `3.7-fpm`, `3-fpm`, `fpm` (*fpm/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/f34c936cfff081bb90c7b858a2575dc6efff48c0/fpm/Dockerfile)
--	[`3.7.0-fpm-php7`, `3.7-fpm-php7`, `3-fpm-php7`, `fpm-php7` (*fpm-php7/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/f34c936cfff081bb90c7b858a2575dc6efff48c0/fpm-php7/Dockerfile)
+-	[`3.7.4-apache`, `3.7-apache`, `3-apache`, `apache`, `3.7.4`, `3.7`, `3`, `latest` (*apache/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/6b3b317e26a2873bd6ccaabfd96498b988d60263/apache/Dockerfile)
+-	[`3.7.4-apache-php7`, `3.7-apache-php7`, `3-apache-php7`, `apache-php7` (*apache-php7/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/6b3b317e26a2873bd6ccaabfd96498b988d60263/apache-php7/Dockerfile)
+-	[`3.7.4-fpm`, `3.7-fpm`, `3-fpm`, `fpm` (*fpm/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/6b3b317e26a2873bd6ccaabfd96498b988d60263/fpm/Dockerfile)
+-	[`3.7.4-fpm-php7`, `3.7-fpm-php7`, `3-fpm-php7`, `fpm-php7` (*fpm-php7/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/6b3b317e26a2873bd6ccaabfd96498b988d60263/fpm-php7/Dockerfile)
 
 # Quick reference
 
@@ -84,25 +84,33 @@ $ docker run --name some-joomla -e JOOMLA_DB_HOST=10.1.2.3:3306 \
     -e JOOMLA_DB_USER=... -e JOOMLA_DB_PASSWORD=... -d joomla
 ```
 
-## ... via [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
 
-Example `docker-compose.yml` for `joomla`:
+Example `stack.yml` for `joomla`:
 
 ```yaml
-joomla:
-  image: joomla
-  links:
-    - joomladb:mysql
-  ports:
-    - 8080:80
+version: '3.1'
 
-joomladb:
-  image: mysql:5.6
-  environment:
-    MYSQL_ROOT_PASSWORD: example
+services:
+    joomla:
+        image: joomla
+        links:
+            - joomladb:mysql
+        ports:
+            - 8080:80
+        environment:
+          JOOMLA_DB_HOST: joomladb
+          JOOMLA_DB_PASSWORD: example
+
+    joomladb:
+        image: mysql:5.6
+        environment:
+            MYSQL_ROOT_PASSWORD: example
 ```
 
-Run `docker-compose up`, wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/54359bd26c41e63c6e50ccd338b5a18d8b572c60/joomla/stack.yml)
+
+Run `docker stack deploy -c stack.yml joomla` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Adding additional libraries / extensions
 

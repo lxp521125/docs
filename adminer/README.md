@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.3.1-standalone`, `4.3-standalone`, `4-standalone`, `standalone`, `4.3.1`, `4.3`, `4`, `latest` (*4.3/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/e1aaa5a4a298198d739d794d239f97edcae0c1b8/4.3/Dockerfile)
--	[`4.3.1-fastcgi`, `4.3-fastcgi`, `4-fastcgi`, `fastcgi` (*4.3/fastcgi/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/e1aaa5a4a298198d739d794d239f97edcae0c1b8/4.3/fastcgi/Dockerfile)
+-	[`4.3.1-standalone`, `4.3-standalone`, `4-standalone`, `standalone`, `4.3.1`, `4.3`, `4`, `latest` (*4.3/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/73de6b9a7979ded5d2289fe015fffe81fa32e0a4/4.3/Dockerfile)
+-	[`4.3.1-fastcgi`, `4.3-fastcgi`, `4-fastcgi`, `fastcgi` (*4.3/fastcgi/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/e7677ec95176973e991b063d8782876207738ce1/4.3/fastcgi/Dockerfile)
 
 # Quick reference
 
@@ -75,6 +75,32 @@ $ docker run --link some_database:db -p 9000:9000 adminer:fastcgi
 Then point your web server to port 9000 of the container.
 
 Note: This exposes the FastCGI socket to the Internet. Make sure to add proper firewall rules or use a private Docker network instead to prevent a direct access.
+
+### ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+
+Example `stack.yml` for `adminer`:
+
+```yaml
+# Use root/example as user/password credentials
+
+version: '3.1'
+
+services:
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+
+    db:
+        image: mysql:5.6
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/96c08fac215f64844b9db61038a571b86534a12b/adminer/stack.yml)
+
+Run `docker stack deploy -c stack.yml adminer` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ### Loading plugins
 

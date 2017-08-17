@@ -16,16 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`9.6.3`, `9.6`, `9`, `latest` (*9.6/Dockerfile*)](https://github.com/docker-library/postgres/blob/e7222bf98572eec2a7b8875c13825015a163091c/9.6/Dockerfile)
--	[`9.6.3-alpine`, `9.6-alpine`, `9-alpine`, `alpine` (*9.6/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/a554d043a3b77937120d325b30fefaad2e3be12d/9.6/alpine/Dockerfile)
--	[`9.5.7`, `9.5` (*9.5/Dockerfile*)](https://github.com/docker-library/postgres/blob/f59e5f0edba2e5d4d38516e5765c1aaa8932c51e/9.5/Dockerfile)
--	[`9.5.7-alpine`, `9.5-alpine` (*9.5/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/c844ef624823fac9f0e40695d5d01a622f5fd71a/9.5/alpine/Dockerfile)
--	[`9.4.12`, `9.4` (*9.4/Dockerfile*)](https://github.com/docker-library/postgres/blob/548a270a6c16913a82d77503aba5814601ed4f58/9.4/Dockerfile)
--	[`9.4.12-alpine`, `9.4-alpine` (*9.4/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/6420763a8acd9ba12d34b2bd76e6d6927d2c36a5/9.4/alpine/Dockerfile)
--	[`9.3.17`, `9.3` (*9.3/Dockerfile*)](https://github.com/docker-library/postgres/blob/347593c5d25935dc1480adc6079400c2faf7ae5f/9.3/Dockerfile)
--	[`9.3.17-alpine`, `9.3-alpine` (*9.3/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/9ff1e6fb304f67eb3b6d946000c69838324dc693/9.3/alpine/Dockerfile)
--	[`9.2.21`, `9.2` (*9.2/Dockerfile*)](https://github.com/docker-library/postgres/blob/937cc2b25a6db9dafb60241185d492917dc842b0/9.2/Dockerfile)
--	[`9.2.21-alpine`, `9.2-alpine` (*9.2/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/87202c7e94944885c994cf1454c19a549bb7ac5b/9.2/alpine/Dockerfile)
+-	[`10-beta3`, `10` (*10/Dockerfile*)](https://github.com/docker-library/postgres/blob/a42e1249e16d8eb0c164104410f78f3dcebe6406/10/Dockerfile)
+-	[`10-beta3-alpine`, `10-alpine` (*10/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/3aeab631baeee5b6c872c750259764fd5960deca/10/alpine/Dockerfile)
+-	[`9.6.4`, `9.6`, `9`, `latest` (*9.6/Dockerfile*)](https://github.com/docker-library/postgres/blob/bef7a7e02643bb0f104ba346395d3cdb78db1480/9.6/Dockerfile)
+-	[`9.6.4-alpine`, `9.6-alpine`, `9-alpine`, `alpine` (*9.6/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/58ed93931d38f96981fb3e971217e6619d23f75a/9.6/alpine/Dockerfile)
+-	[`9.5.8`, `9.5` (*9.5/Dockerfile*)](https://github.com/docker-library/postgres/blob/8836191de6100bfae541c6d9a02cb4ec6e97471e/9.5/Dockerfile)
+-	[`9.5.8-alpine`, `9.5-alpine` (*9.5/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/a1b76e5704e4d8f40c736454eccba863a7be75e4/9.5/alpine/Dockerfile)
+-	[`9.4.13`, `9.4` (*9.4/Dockerfile*)](https://github.com/docker-library/postgres/blob/9e6a83faa9859b35fc4df18be513320c00ecd493/9.4/Dockerfile)
+-	[`9.4.13-alpine`, `9.4-alpine` (*9.4/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/9d16e9e237b271da39d05d95af24724e79181b19/9.4/alpine/Dockerfile)
+-	[`9.3.18`, `9.3` (*9.3/Dockerfile*)](https://github.com/docker-library/postgres/blob/ef1e190d84d5ef8c763cb96aeec3356916444efc/9.3/Dockerfile)
+-	[`9.3.18-alpine`, `9.3-alpine` (*9.3/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/ce13cadcb81160cf57bce87b4131cffe36359fcd/9.3/alpine/Dockerfile)
+-	[`9.2.22`, `9.2` (*9.2/Dockerfile*)](https://github.com/docker-library/postgres/blob/de4122a80157b1a0a73c14bdd4f11479011a2a51/9.2/Dockerfile)
+-	[`9.2.22-alpine`, `9.2-alpine` (*9.2/alpine/Dockerfile*)](https://github.com/docker-library/postgres/blob/49a7e2bf209f8344e8240ddbc3a1368c6b72129e/9.2/alpine/Dockerfile)
 
 # Quick reference
 
@@ -95,6 +97,31 @@ postgres=# SELECT 1;
 (1 row)
 
 ```
+
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+
+Example `stack.yml` for `postgres`:
+
+```yaml
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+    db:
+        image: postgres
+        environment:
+            POSTGRES_PASSWORD: example
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/96c08fac215f64844b9db61038a571b86534a12b/postgres/stack.yml)
+
+Run `docker stack deploy -c stack.yml postgres` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Environment Variables
 
@@ -169,7 +196,7 @@ The two easiest ways to get around this:
 
 # How to extend this image
 
-If you would like to do additional initialization in an image derived from this one, add one or more `*.sql` or `*.sh` scripts under `/docker-entrypoint-initdb.d` (creating the directory if necessary). After the entrypoint calls `initdb` to create the default `postgres` user and database, it will run any `*.sql` files and source any `*.sh` scripts found in that directory to do further initialization before starting the service.
+If you would like to do additional initialization in an image derived from this one, add one or more `*.sql`, `*.sql.gz`, or `*.sh` scripts under `/docker-entrypoint-initdb.d` (creating the directory if necessary). After the entrypoint calls `initdb` to create the default `postgres` user and database, it will run any `*.sql` files and source any `*.sh` scripts found in that directory to do further initialization before starting the service.
 
 For example, to add an additional user and database, add the following to `/docker-entrypoint-initdb.d/init-user-db.sh`:
 

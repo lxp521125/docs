@@ -16,18 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.7.4-apache`, `4.7-apache`, `4-apache`, `apache`, `4.7.4`, `4.7`, `4`, `latest`, `4.7.4-php5.6-apache`, `4.7-php5.6-apache`, `4-php5.6-apache`, `php5.6-apache`, `4.7.4-php5.6`, `4.7-php5.6`, `4-php5.6`, `php5.6` (*php5.6/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php5.6/apache/Dockerfile)
--	[`4.7.4-fpm`, `4.7-fpm`, `4-fpm`, `fpm`, `4.7.4-php5.6-fpm`, `4.7-php5.6-fpm`, `4-php5.6-fpm`, `php5.6-fpm` (*php5.6/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php5.6/fpm/Dockerfile)
--	[`4.7.4-fpm-alpine`, `4.7-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`, `4.7.4-php5.6-fpm-alpine`, `4.7-php5.6-fpm-alpine`, `4-php5.6-fpm-alpine`, `php5.6-fpm-alpine` (*php5.6/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php5.6/fpm-alpine/Dockerfile)
--	[`4.7.4-php7.0-apache`, `4.7-php7.0-apache`, `4-php7.0-apache`, `php7.0-apache`, `4.7.4-php7.0`, `4.7-php7.0`, `4-php7.0`, `php7.0` (*php7.0/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.0/apache/Dockerfile)
--	[`4.7.4-php7.0-fpm`, `4.7-php7.0-fpm`, `4-php7.0-fpm`, `php7.0-fpm` (*php7.0/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.0/fpm/Dockerfile)
--	[`4.7.4-php7.0-fpm-alpine`, `4.7-php7.0-fpm-alpine`, `4-php7.0-fpm-alpine`, `php7.0-fpm-alpine` (*php7.0/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.0/fpm-alpine/Dockerfile)
--	[`4.7.4-php7.1-apache`, `4.7-php7.1-apache`, `4-php7.1-apache`, `php7.1-apache`, `4.7.4-php7.1`, `4.7-php7.1`, `4-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.1/apache/Dockerfile)
--	[`4.7.4-php7.1-fpm`, `4.7-php7.1-fpm`, `4-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.1/fpm/Dockerfile)
--	[`4.7.4-php7.1-fpm-alpine`, `4.7-php7.1-fpm-alpine`, `4-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/716fe2fabb0be1bcd46626fad83d8c345946d343/php7.1/fpm-alpine/Dockerfile)
--	[`cli-1.1.0`, `cli-1.1`, `cli-1`, `cli`, `cli-1.1.0-php5.6`, `cli-1.1-php5.6`, `cli-1-php5.6`, `cli-php5.6` (*php5.6/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/0bd17ea187310d703d84feb5f412955d038e12fe/php5.6/cli/Dockerfile)
--	[`cli-1.1.0-php7.0`, `cli-1.1-php7.0`, `cli-1-php7.0`, `cli-php7.0` (*php7.0/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/0bd17ea187310d703d84feb5f412955d038e12fe/php7.0/cli/Dockerfile)
--	[`cli-1.1.0-php7.1`, `cli-1.1-php7.1`, `cli-1-php7.1`, `cli-php7.1` (*php7.1/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/0bd17ea187310d703d84feb5f412955d038e12fe/php7.1/cli/Dockerfile)
+-	[`4.8.1-apache`, `4.8-apache`, `4-apache`, `apache`, `4.8.1`, `4.8`, `4`, `latest`, `4.8.1-php5.6-apache`, `4.8-php5.6-apache`, `4-php5.6-apache`, `php5.6-apache`, `4.8.1-php5.6`, `4.8-php5.6`, `4-php5.6`, `php5.6` (*php5.6/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php5.6/apache/Dockerfile)
+-	[`4.8.1-fpm`, `4.8-fpm`, `4-fpm`, `fpm`, `4.8.1-php5.6-fpm`, `4.8-php5.6-fpm`, `4-php5.6-fpm`, `php5.6-fpm` (*php5.6/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php5.6/fpm/Dockerfile)
+-	[`4.8.1-fpm-alpine`, `4.8-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`, `4.8.1-php5.6-fpm-alpine`, `4.8-php5.6-fpm-alpine`, `4-php5.6-fpm-alpine`, `php5.6-fpm-alpine` (*php5.6/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php5.6/fpm-alpine/Dockerfile)
+-	[`4.8.1-php7.0-apache`, `4.8-php7.0-apache`, `4-php7.0-apache`, `php7.0-apache`, `4.8.1-php7.0`, `4.8-php7.0`, `4-php7.0`, `php7.0` (*php7.0/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.0/apache/Dockerfile)
+-	[`4.8.1-php7.0-fpm`, `4.8-php7.0-fpm`, `4-php7.0-fpm`, `php7.0-fpm` (*php7.0/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.0/fpm/Dockerfile)
+-	[`4.8.1-php7.0-fpm-alpine`, `4.8-php7.0-fpm-alpine`, `4-php7.0-fpm-alpine`, `php7.0-fpm-alpine` (*php7.0/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.0/fpm-alpine/Dockerfile)
+-	[`4.8.1-php7.1-apache`, `4.8-php7.1-apache`, `4-php7.1-apache`, `php7.1-apache`, `4.8.1-php7.1`, `4.8-php7.1`, `4-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.1/apache/Dockerfile)
+-	[`4.8.1-php7.1-fpm`, `4.8-php7.1-fpm`, `4-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.1/fpm/Dockerfile)
+-	[`4.8.1-php7.1-fpm-alpine`, `4.8-php7.1-fpm-alpine`, `4-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c3c8a37506b1bd79ae05e547faa3d31c84620051/php7.1/fpm-alpine/Dockerfile)
+-	[`cli-1.3.0`, `cli-1.3`, `cli-1`, `cli`, `cli-1.3.0-php5.6`, `cli-1.3-php5.6`, `cli-1-php5.6`, `cli-php5.6` (*php5.6/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/93bc135b2fad658fe041447209c1a379a16dd302/php5.6/cli/Dockerfile)
+-	[`cli-1.3.0-php7.0`, `cli-1.3-php7.0`, `cli-1-php7.0`, `cli-php7.0` (*php7.0/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/93bc135b2fad658fe041447209c1a379a16dd302/php7.0/cli/Dockerfile)
+-	[`cli-1.3.0-php7.1`, `cli-1.3-php7.1`, `cli-1-php7.1`, `cli-php7.1` (*php7.1/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/93bc135b2fad658fe041447209c1a379a16dd302/php7.1/cli/Dockerfile)
 
 # Quick reference
 
@@ -94,12 +94,12 @@ $ docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 \
     -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d wordpress
 ```
 
-## ... via [`docker-compose`](https://github.com/docker/compose)
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
 
-Example `docker-compose.yml` for `wordpress`:
+Example `stack.yml` for `wordpress`:
 
 ```yaml
-version: '2'
+version: '3.1'
 
 services:
 
@@ -111,12 +111,14 @@ services:
       WORDPRESS_DB_PASSWORD: example
 
   mysql:
-    image: mariadb
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: example
 ```
 
-Run `docker-compose up`, wait for it to initialize completely, and visit `http://localhost:8080` or `http://host-ip:8080`.
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/0cb43ce8ad1da073bbc30c6245cdffb433ba51ba/wordpress/stack.yml)
+
+Run `docker stack deploy -c stack.yml wordpress` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Adding additional libraries / extensions
 

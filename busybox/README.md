@@ -16,9 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.26.2-glibc`, `1.26-glibc`, `1-glibc`, `glibc` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/de3cbcb2cd371e55119e460c03bf73b8abbbd064/glibc/Dockerfile)
--	[`1.26.2-musl`, `1.26-musl`, `1-musl`, `musl` (*musl/Dockerfile*)](https://github.com/docker-library/busybox/blob/de3cbcb2cd371e55119e460c03bf73b8abbbd064/musl/Dockerfile)
--	[`1.26.2-uclibc`, `1.26-uclibc`, `1-uclibc`, `uclibc`, `1.26.2`, `1.26`, `1`, `latest` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/de3cbcb2cd371e55119e460c03bf73b8abbbd064/uclibc/Dockerfile)
+-	[`1.27.1-uclibc`, `1.27-uclibc`, `1-uclibc`, `uclibc` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/6f879028dcaa53ccebaecc1af26432c217f1d95f/uclibc/Dockerfile)
+-	[`1.27.1-glibc`, `1.27-glibc`, `1-glibc`, `glibc` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/6f879028dcaa53ccebaecc1af26432c217f1d95f/glibc/Dockerfile)
+-	[`1.27.1-musl`, `1.27-musl`, `1-musl`, `musl` (*musl/Dockerfile*)](https://github.com/docker-library/busybox/blob/6f879028dcaa53ccebaecc1af26432c217f1d95f/musl/Dockerfile)
+-	[`1.27.1`, `1.27`, `1`, `latest` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/6f879028dcaa53ccebaecc1af26432c217f1d95f/uclibc/Dockerfile)
 
 # Quick reference
 
@@ -81,6 +82,10 @@ The `busybox` images contain BusyBox built against various "libc" variants (for 
 
 For more information about the specific particulars of the build process for each variant, see `Dockerfile.builder` in the same directory as each variant's `Dockerfile` (see links above).
 
+## `busybox:uclibc`
+
+-	[uClibc](https://uclibc.org) via [Buildroot](https://buildroot.org) (statically compiled)
+
 ## `busybox:glibc`
 
 -	[glibc from Debian](https://packages.debian.org/search?searchon=names&exact=1&suite=all&section=all&keywords=libc6) (which is then included in the image)
@@ -88,10 +93,6 @@ For more information about the specific particulars of the build process for eac
 ## `busybox:musl`
 
 -	[musl from Alpine](https://pkgs.alpinelinux.org/packages?name=musl) (statically compiled)
-
-## `busybox:uclibc`
-
--	[uClibc](https://uclibc.org) via [Buildroot](https://buildroot.org) (statically compiled)
 
 # License
 

@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.4.1`, `1.4`, `1`, `latest` (*1.4/Dockerfile*)](https://github.com/composer/docker/blob/c5557dc348d9b986aec883e919d202ff76fa5d56/1.4/Dockerfile)
--	[`1.3.3`, `1.3` (*1.3/Dockerfile*)](https://github.com/composer/docker/blob/542d2ce1c1218dabec97b3dfc5815bfe87756a57/1.3/Dockerfile)
+-	[`1.5.1`, `1.5`, `1`, `latest` (*1.5/Dockerfile*)](https://github.com/composer/docker/blob/ea0ec1efa4b15f4ad7b809793eecbb76633dcbb8/1.5/Dockerfile)
+-	[`1.4.3`, `1.4` (*1.4/Dockerfile*)](https://github.com/composer/docker/blob/ea0ec1efa4b15f4ad7b809793eecbb76633dcbb8/1.4/Dockerfile)
 
 # Quick reference
 
@@ -67,7 +67,7 @@ You can mount the Composer home directory from your host inside the Container to
 ```sh
 docker run --rm --interactive --tty \
     --volume $PWD:/app \
-    --volume $COMPOSER_HOME:/composer \
+    --volume $COMPOSER_HOME:/tmp \
     composer install
 ```
 
@@ -107,7 +107,7 @@ docker run --rm --interactive --tty \
 
 ### PHP Extensions
 
-We strive to deliver an image that is as lean as possible, aimed at running Composer only.
+We aim to deliver an image that is as lean as possible, built for running Composer only.
 
 Sometimes dependencies or Composer [scripts](https://getcomposer.org/doc/articles/scripts.md) require the availability of certain PHP extensions. In this scenario, you have two options:
 

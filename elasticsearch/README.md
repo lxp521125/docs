@@ -16,18 +16,16 @@ WARNING:
 
 # **DEPRECATED**
 
-This image is officially deprecated in favor of [the `elasticsearch` image provided by elastic.co](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html) which is available to pull via `docker.elastic.co/elasticsearch/elasticsearch:[version]` like `5.2.1`. This image will receive no further updates after 2017-06-20 (June 20, 2017). Please adjust your usage accordingly.
+This image has been deprecated in favor of the [official `elasticsearch` image](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html) provided and maintained by [elastic.co](https://www.elastic.co/). The upstream images are available to pull via `docker.elastic.co/elasticsearch/elasticsearch:[version]` like `5.4.2`. The images found here will receive no further updates once the `5.6.0` release is available upstream. Please adjust your usage accordingly.
 
 Elastic provides open-source support for Elasticsearch via the [elastic/elasticsearch GitHub repository](https://github.com/elastic/elasticsearch) and the Docker image via the [elastic/elasticsearch-docker GitHub repository](https://github.com/elastic/elasticsearch-docker), as well as community support via its [forums](https://discuss.elastic.co/c/elasticsearch).
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.4.0`, `5.4`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/f9b79ebc2e8fd42372b8f302321585c4d09f9ccc/5/Dockerfile)
--	[`5.4.0-alpine`, `5.4-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/f9b79ebc2e8fd42372b8f302321585c4d09f9ccc/5/alpine/Dockerfile)
--	[`2.4.5`, `2.4`, `2` (*2.4/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/ee9ba02f90f6b34ca33c20140ecff2b6db7c0c90/2.4/Dockerfile)
--	[`2.4.5-alpine`, `2.4-alpine`, `2-alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/ee9ba02f90f6b34ca33c20140ecff2b6db7c0c90/2.4/alpine/Dockerfile)
--	[`1.7.6`, `1.7`, `1` (*1.7/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/ffd7a19f1e68329cc310f145c232e83abec09067/1.7/Dockerfile)
--	[`1.7.6-alpine`, `1.7-alpine`, `1-alpine` (*1.7/alpine/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/5727443ead111be19b55bfe5412dae5133cab8b1/1.7/alpine/Dockerfile)
+-	[`5.5.1`, `5.5`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/4369e593bab8b19ea5dc06d70cc2039c3460af46/5/Dockerfile)
+-	[`5.5.1-alpine`, `5.5-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/4369e593bab8b19ea5dc06d70cc2039c3460af46/5/alpine/Dockerfile)
+-	[`2.4.6`, `2.4`, `2` (*2.4/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/8e87587ac5d6b44a8382a229162c88e65618c30a/2.4/Dockerfile)
+-	[`2.4.6-alpine`, `2.4-alpine`, `2-alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/elasticsearch/blob/8e87587ac5d6b44a8382a229162c88e65618c30a/2.4/alpine/Dockerfile)
 
 # Quick reference
 
@@ -116,6 +114,28 @@ $ docker run -d -v "$PWD/esdata":/usr/share/elasticsearch/data elasticsearch
 ```
 
 This image includes `EXPOSE 9200 9300` ([default `http.port`](http://www.elastic.co/guide/en/elasticsearch/reference/1.5/modules-http.html)), so standard container linking will make it automatically available to the linked containers.
+
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+
+Example `stack.yml` for `elasticsearch`:
+
+```yaml
+version: '3.1'
+
+services:
+
+    elasticsearch:
+        image: elasticsearch
+
+    kibana:
+        image: kibana
+        ports:
+            - 5601:5601
+```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/96c08fac215f64844b9db61038a571b86534a12b/elasticsearch/stack.yml)
+
+Run `docker stack deploy -c stack.yml elasticsearch` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:5601`, `http://localhost:5601`, or `http://host-ip:5601` (as appropriate).
 
 # Image Variants
 

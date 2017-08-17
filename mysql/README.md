@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.0.1`, `8.0`, `8` (*8.0/Dockerfile*)](https://github.com/docker-library/mysql/blob/dc60c4b80f3eb5b7ef8b9ae09f16f6fab7a2fbf5/8.0/Dockerfile)
--	[`5.7.18`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/mysql/blob/6b1dc54320b03b83a89068f49cc796fea0ff6bb4/5.7/Dockerfile)
--	[`5.6.36`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/mysql/blob/2bbab7b691b582e2df99dbd16525608adbff016e/5.6/Dockerfile)
--	[`5.5.56`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/mysql/blob/e8a0ed55678d27039905c50f8327f3a367e92498/5.5/Dockerfile)
+-	[`8.0.2`, `8.0`, `8` (*8.0/Dockerfile*)](https://github.com/docker-library/mysql/blob/e207dbbdfd5c95e4b51bdc2dae62c5f72a1dd908/8.0/Dockerfile)
+-	[`5.7.19`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/mysql/blob/0590e4efd2b31ec794383f084d419dea9bc752c4/5.7/Dockerfile)
+-	[`5.6.37`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/mysql/blob/7ee927986b8c0cbfa6cdbb073a0e662bdb62c18a/5.6/Dockerfile)
+-	[`5.5.57`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/mysql/blob/08b08d88066bc27f82212631e1d3415b61097afe/5.5/Dockerfile)
 
 # Quick reference
 
@@ -91,6 +91,31 @@ $ docker run -it --rm mysql mysql -hsome.mysql.host -usome-mysql-user -p
 ```
 
 More information about the MySQL command line client can be found in the [MySQL documentation](http://dev.mysql.com/doc/en/mysql.html)
+
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+
+Example `stack.yml` for `mysql`:
+
+```yaml
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+    db:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
+```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/96c08fac215f64844b9db61038a571b86534a12b/mysql/stack.yml)
+
+Run `docker stack deploy -c stack.yml mysql` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Container shell access and viewing MySQL logs
 

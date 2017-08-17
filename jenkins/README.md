@@ -14,10 +14,14 @@ WARNING:
 
 -->
 
+# **DEPRECATED**
+
+This image has been deprecated in favor of the [`jenkins/jenkins:lts`](https://hub.docker.com/r/jenkins/jenkins) image provided and maintained by [Jenkins Community](https://jenkins.io/) as part of project's release process. The images found here will receive no further updates after LTS 2.60.x. Please adjust your usage accordingly.
+
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `2.46.2` (*Dockerfile*)](https://github.com/jenkinsci/jenkins-ci.org-docker/blob/06306a35681df39e0dda7d464682ea08d3baf2ea/Dockerfile)
--	[`alpine`, `2.46.2-alpine` (*Dockerfile*)](https://github.com/jenkinsci/jenkins-ci.org-docker/blob/2bbb3bfcabf7f67746c429dee2dc9f139dda3c2a/Dockerfile)
+-	[`latest`, `2.60.2` (*Dockerfile*)](https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile)
+-	[`alpine`, `2.60.2-alpine` (*Dockerfile*)](https://github.com/jenkinsci/docker/blob/c24687d11870e6a408678a394c1298008773bf03/Dockerfile)
 
 # Quick reference
 

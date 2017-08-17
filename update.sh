@@ -25,8 +25,15 @@ for image in "${images[@]}"; do
 	namespace="${image%$repo}"
 	namespace="${namespace%/}"
 
+	# this is used by subscripts to determine whether we're pushing /_/xxx or /r/ARCH/xxx
+	# (especialy for "supported tags")
+	export ARCH_SPECIFIC_DOCS=
+	if [ -n "$namespace" ] && [ -n "${BASHBREW_ARCH:-}" ]; then
+		export ARCH_SPECIFIC_DOCS=1
+	fi
+
 	if [ -x "$repo/update.sh" ]; then
-		( set -x; "$repo/update.sh" )
+		( set -x; "$repo/update.sh" "$image" )
 	fi
 
 	if [ -e "$repo/content.md" ]; then
@@ -53,10 +60,21 @@ for image in "${images[@]}"; do
 			logoCommit="$(git log -1 --format='format:%H' -- "$logoFile" 2>/dev/null || true)"
 			[ "$logoCommit" ] || logoCommit='master'
 			if [ "${logoFile##*.}" = 'svg' ]; then
-				logo="![logo](https://rawgit.com/docker-library/docs/$logoCommit/$logoFile)"
+				logo="![logo](https://cdn.rawgit.com/docker-library/docs/$logoCommit/$logoFile)"
 			else
 				logo="![logo](https://raw.githubusercontent.com/docker-library/docs/$logoCommit/$logoFile)"
 			fi
+		fi
+
+		stack=
+		stackYml=
+		stackUrl=
+		if [ -f "$repo/stack.yml" ]; then
+			stack="$(cat "$repo/stack.md" 2>/dev/null || cat "$helperDir/stack.md")"
+			stackYml=$'```yaml\n'"$(cat "$repo/stack.yml")"$'\n```'
+			stackCommit="$(git log -1 --format='format:%H' -- "$repo/stack.yml" 2>/dev/null || true)"
+			[ "$stackCommit" ] || stackCommit='master'
+			stackUrl="https://raw.githubusercontent.com/docker-library/docs/$stackCommit/$repo/stack.yml"
 		fi
 
 		compose=
@@ -97,9 +115,15 @@ for image in "${images[@]}"; do
 		echo "  LOGO => $logo"
 		replace_field "$targetFile" 'LOGO' "$logo" '\s*'
 
+		echo '  STACK => '"$repo"'/stack.md'
+		replace_field "$targetFile" 'STACK' "$stack"
+		echo '  STACK-YML => '"$repo"'/docker-stack.yml'
+		replace_field "$targetFile" 'STACK-YML' "$stackYml"
+		echo '  STACK-URL => '"$repo"'/docker-stack.yml'
+		replace_field "$targetFile" 'STACK-URL' "$stackUrl"
+
 		echo '  COMPOSE => '"$repo"'/compose.md'
 		replace_field "$targetFile" 'COMPOSE' "$compose"
-
 		echo '  COMPOSE-YML => '"$repo"'/docker-compose.yml'
 		replace_field "$targetFile" 'COMPOSE-YML' "$composeYml"
 

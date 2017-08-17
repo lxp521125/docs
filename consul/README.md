@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `0.8.3` (*0.X/Dockerfile*)](https://github.com/hashicorp/docker-consul/blob/b018ca790f1fabf4175cdde857e33803153a5b02/0.X/Dockerfile)
+-	[`latest`, `0.9.2` (*0.X/Dockerfile*)](https://github.com/hashicorp/docker-consul/blob/b323ad31103564a502ed4c5d2ba0017c953e6239/0.X/Dockerfile)
 
 # Quick reference
 
@@ -50,7 +50,7 @@ Consul is a distributed, highly-available, and multi-datacenter aware tool for s
 -	[Consul documentation](https://www.consul.io/)
 -	[Consul on GitHub](https://github.com/hashicorp/consul)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/27b03f6f9076e05839961530006185998660f321/consul/logo.png)
+![logo](https://cdn.rawgit.com/docker-library/docs/8adb88e1e328c244711742f65319ed4064cff9a2/consul/logo.svg)
 
 # Consul and Docker
 

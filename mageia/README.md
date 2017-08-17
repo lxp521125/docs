@@ -16,7 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5`, `5.1`, `latest` (*5/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/c01771b53f87dd8d130879122d13025a9d957000/5/Dockerfile)
+-	[`6`, `latest` (*6/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/d94167fc4cf0dcca9dfed717de5a38a505349f08/6/Dockerfile)
+-	[`5`, `5.1` (*5/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/d94167fc4cf0dcca9dfed717de5a38a505349f08/5/Dockerfile)
 
 # Quick reference
 
@@ -64,16 +65,17 @@ To date, Mageia:
 ## Create a Dockerfile for your container
 
 ```dockerfile
-FROM mageia:5
+FROM mageia:6
 MAINTAINER  "Foo Bar" <foo@bar.com>
 CMD [ "bash" ]
 ```
 
 ## Installed packages
 
-All images install the following packages:
+The images include the following packages:
 
 -	basesystem-minimal
--	urpmi
+-	dnf (Mageia 6+)
 -	locales
 -	locales-en
+-	urpmi

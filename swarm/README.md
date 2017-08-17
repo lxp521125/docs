@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.2.6`, `latest` (*Dockerfile*)](https://github.com/docker/swarm-library-image/blob/3725bf97c64a9425fc609d32df907170657a6b84/Dockerfile)
+-	[`1.2.8`, `latest` (*Dockerfile*)](https://github.com/docker/swarm-library-image/blob/741c78fb0287dc0850f5f131e099610a7acc2bf9/Dockerfile)
 
 # Quick reference
 
