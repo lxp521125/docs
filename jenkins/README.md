@@ -14,14 +14,14 @@ WARNING:
 
 -->
 
-# **DEPRECATED**
+# **DEPRECATION NOTICE**
 
 This image has been deprecated in favor of the [`jenkins/jenkins:lts`](https://hub.docker.com/r/jenkins/jenkins) image provided and maintained by [Jenkins Community](https://jenkins.io/) as part of project's release process. The images found here will receive no further updates after LTS 2.60.x. Please adjust your usage accordingly.
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `2.60.2` (*Dockerfile*)](https://github.com/jenkinsci/docker/blob/15dc59d7dbd47da5259a50a9ebfa8895d594444f/Dockerfile)
--	[`alpine`, `2.60.2-alpine` (*Dockerfile*)](https://github.com/jenkinsci/docker/blob/c24687d11870e6a408678a394c1298008773bf03/Dockerfile)
+-	[`latest`, `2.60.3` (*Dockerfile*)](https://github.com/jenkinsci/jenkins-ci.org-docker/blob/587b2856cd225bb152c4abeeaaa24934c75aa460/Dockerfile)
+-	[`alpine`, `2.60.3-alpine` (*Dockerfile*)](https://github.com/jenkinsci/jenkins-ci.org-docker/blob/c2d6f2122fa03c437e139a317b7fe5b9547fe49e/Dockerfile)
 
 # Quick reference
 
@@ -33,6 +33,9 @@ This image has been deprecated in favor of the [`jenkins/jenkins:lts`](https://h
 
 -	**Maintained by**:  
 	[the Jenkins Project](https://github.com/cloudbees/jenkins-ci.org-docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/jenkins/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/jenkins/` directory](https://github.com/docker-library/repo-info/blob/master/repos/jenkins) ([history](https://github.com/docker-library/repo-info/commits/master/repos/jenkins))  
@@ -46,7 +49,7 @@ This image has been deprecated in favor of the [`jenkins/jenkins:lts`](https://h
 	[docs repo's `jenkins/` directory](https://github.com/docker-library/docs/tree/master/jenkins) ([history](https://github.com/docker-library/docs/commits/master/jenkins))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Jenkins
 
@@ -229,3 +232,13 @@ This image is based on the popular [Alpine Linux project](http://alpinelinux.org
 This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+
+# License
+
+View [license information](https://jenkins.io/license/) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `jenkins/` directory](https://github.com/docker-library/repo-info/tree/master/repos/jenkins).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

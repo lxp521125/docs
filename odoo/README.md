@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.0`, `8` (*8.0/Dockerfile*)](https://github.com/odoo/docker/blob/f432264ad15ce8e3326f281394e1900eb9d1c903/8.0/Dockerfile)
--	[`9.0`, `9` (*9.0/Dockerfile*)](https://github.com/odoo/docker/blob/f432264ad15ce8e3326f281394e1900eb9d1c903/9.0/Dockerfile)
--	[`10.0`, `10`, `latest` (*10.0/Dockerfile*)](https://github.com/odoo/docker/blob/f432264ad15ce8e3326f281394e1900eb9d1c903/10.0/Dockerfile)
+-	[`9.0`, `9` (*9.0/Dockerfile*)](https://github.com/odoo/docker/blob/b3d6d018f740ad2a816b5209300b875e2760085e/9.0/Dockerfile)
+-	[`10.0`, `10` (*10.0/Dockerfile*)](https://github.com/odoo/docker/blob/b3d6d018f740ad2a816b5209300b875e2760085e/10.0/Dockerfile)
+-	[`11.0`, `11`, `latest` (*11.0/Dockerfile*)](https://github.com/odoo/docker/blob/b3d6d018f740ad2a816b5209300b875e2760085e/11.0/Dockerfile)
 
 # Quick reference
 
@@ -30,6 +30,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[Odoo](https://github.com/odoo/docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/odoo/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/odoo/` directory](https://github.com/docker-library/repo-info/blob/master/repos/odoo) ([history](https://github.com/docker-library/repo-info/commits/master/repos/odoo))  
@@ -43,7 +46,7 @@ WARNING:
 	[docs repo's `odoo/` directory](https://github.com/docker-library/docs/tree/master/odoo) ([history](https://github.com/docker-library/docs/commits/master/odoo))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Odoo?
 
@@ -219,3 +222,9 @@ You can also simply prevent Odoo from using the filestore by setting the system 
 # License
 
 View [license information](https://raw.githubusercontent.com/odoo/odoo/8.0/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `odoo/` directory](https://github.com/docker-library/repo-info/tree/master/repos/odoo).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

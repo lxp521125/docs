@@ -16,11 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6.0`, `6`, `LTS-2014` (*6.0/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/4da3ff891d3d6911304cbbe0895333ae4c84ffa7/6.0/Dockerfile)
 -	[`7.10`, `7`, `LTS-2015` (*7.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/4da3ff891d3d6911304cbbe0895333ae4c84ffa7/7.10/Dockerfile)
--	[`8.10`, `8`, `LTS-2016`, `LTS` (*8.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/20df98ce84f12cd3cfdcfd08ab8c9e029f7f01ab/8.10/Dockerfile)
--	[`9.1` (*9.1/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/20df98ce84f12cd3cfdcfd08ab8c9e029f7f01ab/9.1/Dockerfile)
--	[`9.2`, `9`, `FT`, `latest` (*9.2/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/cd9f63db5f75de35873531d02c3cbc680407d5c8/9.2/Dockerfile)
+-	[`8.10`, `8`, `LTS-2016` (*8.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/20df98ce84f12cd3cfdcfd08ab8c9e029f7f01ab/8.10/Dockerfile)
+-	[`9.3`, `FT` (*9.3/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/261cb4cb5bee049a8c756366b5257b4bc48e811d/9.3/Dockerfile)
+-	[`9.10`, `9`, `LTS-2017`, `LTS`, `latest` (*9.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/261cb4cb5bee049a8c756366b5257b4bc48e811d/9.10/Dockerfile)
 
 # Quick reference
 
@@ -32,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[Nuxeo](https://github.com/nuxeo/docker-nuxeo)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/nuxeo/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nuxeo/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nuxeo) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nuxeo))  
@@ -45,13 +47,13 @@ WARNING:
 	[docs repo's `nuxeo/` directory](https://github.com/docker-library/docs/tree/master/nuxeo) ([history](https://github.com/docker-library/docs/commits/master/nuxeo))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Nuxeo ?
 
 The Nuxeo Platform is a highly customizable and extensible content management platform for building business applications.
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/78776b9252a6639e40a3ed15cb5ff5e88a1f6dbf/nuxeo/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/6538ea62bab8b051d0556c689c113202d48089ed/nuxeo/logo.png)
 
 # How to use this image
 
@@ -174,11 +176,11 @@ Allows to add custom parameters to `nuxeo.conf`. Multiple parameters can be spli
 
 ## Adding additional configuration
 
-If you would like to do additional setup in an image derived from this one, you can add a `/nuxeo.conf` file that will be appended to the end of the regular `nuxeo.conf` file.
+If you would like to do additional setup in an image derived from this one, you can add a `/docker-entrypoint-initnuxeo.d/nuxeo.conf` file that will be appended to the end of the regular `nuxeo.conf` file.
 
 ```dockerfile
 FROM nuxeo:7.10
-ADD nuxeo.conf /nuxeo.conf
+ADD nuxeo.conf /docker-entrypoint-initnuxeo.d/nuxeo.conf
 ```
 
 If you need a root account to run some installation steps in your `Dockerfile`, then you need to put those steps between two `USER` command as the image is run with the user `1000` (nuxeo). For instance:
@@ -244,3 +246,9 @@ This image is big because it contains a lot of features. The nuxeo distribution 
 # License
 
 View [license information](http://doc.nuxeo.com/x/gIK7) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `nuxeo/` directory](https://github.com/docker-library/repo-info/tree/master/repos/nuxeo).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -32,25 +32,44 @@ tags=( $(bashbrew cat -f '
 unset IFS
 
 text=
+declare -A includedFiles=()
 for tag in "${tags[@]}"; do
-	for f in "$repoDir/variant-$tag.md" "$dir/variant-$tag.md"; do
+	for f in \
+		"$repoDir/variant-$tag.md" "$repoDir/variant-${tag##*-}.md" \
+		"$dir/variant-$tag.md" "$dir/variant-${tag##*-}.md" \
+	; do
+		if [ -n "${includedFiles[$f]}" ]; then
+			# make sure we don't duplicate variant sections
+			break
+		fi
 		if [ -f "$f" ]; then
-			text+=$'\n' # give a little space
-			text+="$(< "$f")"
-			text+=$'\n' # parameter expansion eats the trailing newline
+			includedFiles[$f]=1
+			if [ -s "$f" ]; then
+				# an empty file can be used to disable a specific "variant" section for an image
+				text+=$'\n' # give a little space
+				text+="$(< "$f")"
+				text+=$'\n' # parameter expansion eats the trailing newline
+			fi
 			break
 		fi
 	done
 done
 
 if [ "$text" ]; then
-	baseImage="$(bashbrew cat -f '{{ .DockerFrom .TagEntry }}' "$repo":latest)"
-	baseImage="${baseImage%:*}"
+	buildpacks=
+	potentialTags="$(bashbrew list --uniq "$repo" | cut -d: -f2)"
+	for tag in $potentialTags; do
+		baseImage="$(bashbrew cat -f '{{ .ArchDockerFrom (.TagEntry.Architectures | first) .TagEntry }}' "$repo:$tag")"
+		case "$baseImage" in
+			buildpack-deps:*-*) ;; # "scm", "curl" -- not large images
+			buildpack-deps:*) buildpacks=1; break ;;
+		esac
+	done
 
 	echo
 	echo
 
-	if [ "$baseImage" = 'buildpack-deps' ]; then
+	if [ -n "$buildpacks" ]; then
 		f='variant-buildpacks.md'
 	else
 		f='variant.md'

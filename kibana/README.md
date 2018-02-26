@@ -14,16 +14,16 @@ WARNING:
 
 -->
 
-# **DEPRECATED**
+# **DEPRECATION NOTICE**
 
-This image has been deprecated in favor of the [official `kibana` image](https://www.elastic.co/guide/en/kibana/current/_pulling_the_image.html) provided and maintained by [elastic.co](https://www.elastic.co/). The upstream images are available to pull via `docker.elastic.co/kibana/kibana:[version]` like `5.4.2`. The images found here will receive no further updates once the `5.6.0` release is available upstream. Please adjust your usage accordingly.
+This image has been deprecated in favor of the [official `kibana` image](https://www.elastic.co/guide/en/kibana/current/_pulling_the_image.html) provided and maintained by [elastic.co](https://www.elastic.co/). The list of images available from Elastic can be found at [www.docker.elastic.co](https://www.docker.elastic.co/). The images found here will receive no further updates once the `6.0.0` release is available upstream. Please adjust your usage accordingly.
 
 Elastic provides open-source support for Kibana via the [elastic/kibana GitHub repository](https://github.com/elastic/kibana) and the Docker image via the [elastic/kibana-docker GitHub repository](https://github.com/elastic/kibana-docker), as well as community support via its [forums](https://discuss.elastic.co/c/kibana).
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.1`, `5.5`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/kibana/blob/912e443dcc59e658c4c1eff0976e6054087f87fb/5/Dockerfile)
--	[`4.6.5`, `4.6`, `4` (*4.6/Dockerfile*)](https://github.com/docker-library/kibana/blob/493a24c88deff8080aa781f0596deab8b33e5992/4.6/Dockerfile)
+-	[`5.6.8`, `5.6`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/kibana/blob/353e125bf1d11c16f31966fc7fef8355e7d272b3/5/Dockerfile)
+-	[`4.6.6`, `4.6`, `4` (*4.6/Dockerfile*)](https://github.com/docker-library/kibana/blob/febc4b766dabfc5a30f04373337cd0a0ec997bb2/4.6/Dockerfile)
 
 # Quick reference
 
@@ -35,6 +35,9 @@ Elastic provides open-source support for Kibana via the [elastic/kibana GitHub r
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/kibana)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/kibana/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/kibana/` directory](https://github.com/docker-library/repo-info/blob/master/repos/kibana) ([history](https://github.com/docker-library/repo-info/commits/master/repos/kibana))  
@@ -48,7 +51,7 @@ Elastic provides open-source support for Kibana via the [elastic/kibana GitHub r
 	[docs repo's `kibana/` directory](https://github.com/docker-library/docs/tree/master/kibana) ([history](https://github.com/docker-library/docs/commits/master/kibana))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Kibana?
 
@@ -58,7 +61,7 @@ Kibana is a registered trademark of Elasticsearch BV.
 
 > [wikipedia.org/wiki/Kibana](https://en.wikipedia.org/wiki/Kibana)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/8965672c23522a2196bba6a431a8746c10116304/kibana/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/8bb704930619acddf6f5705e7d1cf54defdd3388/kibana/logo.png)
 
 # How to use this image
 
@@ -97,19 +100,25 @@ version: '3.1'
 
 services:
 
-    kibana:
-        image: kibana
-        ports:
-            - 5601:5601
+  kibana:
+    image: kibana
+    ports:
+      - 5601:5601
 
-    elasticsearch:
-        image: elasticsearch
+  elasticsearch:
+    image: elasticsearch
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/96c08fac215f64844b9db61038a571b86534a12b/kibana/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/9efeec18b6b2ed232cf0fbd3914b6211e16e242c/kibana/stack.yml)
 
 Run `docker stack deploy -c stack.yml kibana` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:5601`, `http://localhost:5601`, or `http://host-ip:5601` (as appropriate).
 
 # License
 
 View [license information](https://github.com/elastic/kibana/blob/4557a6fc0ba08c5e7ac813a180179e5e2631c90a/LICENSE.md) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `kibana/` directory](https://github.com/docker-library/repo-info/tree/master/repos/kibana).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

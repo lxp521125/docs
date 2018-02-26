@@ -16,14 +16,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.13.3`, `mainline`, `1`, `1.13`, `latest` (*mainline/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14aa3b1b80341099afbf90eb0a9b9061b7145f18/mainline/stretch/Dockerfile)
--	[`1.13.3-perl`, `mainline-perl`, `1-perl`, `1.13-perl`, `perl` (*mainline/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14aa3b1b80341099afbf90eb0a9b9061b7145f18/mainline/stretch-perl/Dockerfile)
--	[`1.13.3-alpine`, `mainline-alpine`, `1-alpine`, `1.13-alpine`, `alpine` (*mainline/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14aa3b1b80341099afbf90eb0a9b9061b7145f18/mainline/alpine/Dockerfile)
--	[`1.13.3-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.13-alpine-perl`, `alpine-perl` (*mainline/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/14aa3b1b80341099afbf90eb0a9b9061b7145f18/mainline/alpine-perl/Dockerfile)
--	[`1.12.1`, `stable`, `1.12` (*stable/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/7e278fff2f12f852ef1be2aed17e9a2f822365ac/stable/stretch/Dockerfile)
--	[`1.12.1-perl`, `stable-perl`, `1.12-perl` (*stable/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/7e278fff2f12f852ef1be2aed17e9a2f822365ac/stable/stretch-perl/Dockerfile)
--	[`1.12.1-alpine`, `stable-alpine`, `1.12-alpine` (*stable/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/7e278fff2f12f852ef1be2aed17e9a2f822365ac/stable/alpine/Dockerfile)
--	[`1.12.1-alpine-perl`, `stable-alpine-perl`, `1.12-alpine-perl` (*stable/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/7e278fff2f12f852ef1be2aed17e9a2f822365ac/stable/alpine-perl/Dockerfile)
+-	[`1.13.9`, `mainline`, `1`, `1.13`, `latest` (*mainline/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/dbd053d52727bc8db0fec704caa22b8e0d5f6c84/mainline/stretch/Dockerfile)
+-	[`1.13.9-perl`, `mainline-perl`, `1-perl`, `1.13-perl`, `perl` (*mainline/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/dbd053d52727bc8db0fec704caa22b8e0d5f6c84/mainline/stretch-perl/Dockerfile)
+-	[`1.13.9-alpine`, `mainline-alpine`, `1-alpine`, `1.13-alpine`, `alpine` (*mainline/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/dbd053d52727bc8db0fec704caa22b8e0d5f6c84/mainline/alpine/Dockerfile)
+-	[`1.13.9-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.13-alpine-perl`, `alpine-perl` (*mainline/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/dbd053d52727bc8db0fec704caa22b8e0d5f6c84/mainline/alpine-perl/Dockerfile)
+-	[`1.12.2`, `stable`, `1.12` (*stable/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/72ac2226580ee73c170163dbe6e4436373b6ece9/stable/stretch/Dockerfile)
+-	[`1.12.2-perl`, `stable-perl`, `1.12-perl` (*stable/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/72ac2226580ee73c170163dbe6e4436373b6ece9/stable/stretch-perl/Dockerfile)
+-	[`1.12.2-alpine`, `stable-alpine`, `1.12-alpine` (*stable/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/72ac2226580ee73c170163dbe6e4436373b6ece9/stable/alpine/Dockerfile)
+-	[`1.12.2-alpine-perl`, `stable-alpine-perl`, `1.12-alpine-perl` (*stable/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/72ac2226580ee73c170163dbe6e4436373b6ece9/stable/alpine-perl/Dockerfile)
 
 # Quick reference
 
@@ -35,6 +35,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the NGINX Docker Maintainers](https://github.com/nginxinc/docker-nginx)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/nginx/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nginx/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nginx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nginx/), [`i386`](https://hub.docker.com/r/i386/nginx/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nginx/), [`s390x`](https://hub.docker.com/r/s390x/nginx/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nginx/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nginx) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nginx))  
@@ -48,7 +51,7 @@ WARNING:
 	[docs repo's `nginx/` directory](https://github.com/docker-library/docs/tree/master/nginx) ([history](https://github.com/docker-library/docs/commits/master/nginx))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is nginx?
 
@@ -185,3 +188,13 @@ This image is based on the popular [Alpine Linux project](http://alpinelinux.org
 This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
+
+# License
+
+View [license information](http://nginx.org/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `nginx/` directory](https://github.com/docker-library/repo-info/tree/master/repos/nginx).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

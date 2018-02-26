@@ -30,6 +30,9 @@ WARNING:
 -	**Maintained by**:  
 	[Mageia Developers](https://github.com/juanluisbaptiste/docker-brew-mageia)
 
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/mageia/)
+
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/mageia/` directory](https://github.com/docker-library/repo-info/blob/master/repos/mageia) ([history](https://github.com/docker-library/repo-info/commits/master/repos/mageia))  
 	(image metadata, transfer size, etc)
@@ -42,7 +45,7 @@ WARNING:
 	[docs repo's `mageia/` directory](https://github.com/docker-library/docs/tree/master/mageia) ([history](https://github.com/docker-library/docs/commits/master/mageia))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Mageia?
 
@@ -79,3 +82,13 @@ The images include the following packages:
 -	locales
 -	locales-en
 -	urpmi
+
+# License
+
+View [license information](https://www.mageia.org/en/about/license/) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `mageia/` directory](https://github.com/docker-library/repo-info/tree/master/repos/mageia).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

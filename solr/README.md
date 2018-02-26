@@ -16,16 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.4`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/600fd5c682b63cca400ef87fe7738d752f6ca0ed/5.5/Dockerfile)
--	[`5.5.4-alpine`, `5.5-alpine`, `5-alpine` (*5.5/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/f02cef1654e7c5cdd46411b6dbe351e7fcb6422c/5.5/alpine/Dockerfile)
--	[`6.3.0`, `6.3` (*6.3/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/600fd5c682b63cca400ef87fe7738d752f6ca0ed/6.3/Dockerfile)
--	[`6.3.0-alpine`, `6.3-alpine` (*6.3/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/f02cef1654e7c5cdd46411b6dbe351e7fcb6422c/6.3/alpine/Dockerfile)
--	[`6.4.2`, `6.4` (*6.4/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/600fd5c682b63cca400ef87fe7738d752f6ca0ed/6.4/Dockerfile)
--	[`6.4.2-alpine`, `6.4-alpine` (*6.4/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/f02cef1654e7c5cdd46411b6dbe351e7fcb6422c/6.4/alpine/Dockerfile)
--	[`6.5.1`, `6.5` (*6.5/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/600fd5c682b63cca400ef87fe7738d752f6ca0ed/6.5/Dockerfile)
--	[`6.5.1-alpine`, `6.5-alpine` (*6.5/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/f02cef1654e7c5cdd46411b6dbe351e7fcb6422c/6.5/alpine/Dockerfile)
--	[`6.6.0`, `6.6`, `6`, `latest` (*6.6/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/600fd5c682b63cca400ef87fe7738d752f6ca0ed/6.6/Dockerfile)
--	[`6.6.0-alpine`, `6.6-alpine`, `6-alpine`, `alpine` (*6.6/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/c61a0c9b012c7313c2b5d0d97ddc06693270b734/6.6/alpine/Dockerfile)
+-	[`7.2.1`, `7.2`, `7`, `latest` (*7.2/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.2/Dockerfile)
+-	[`7.2.1-alpine`, `7.2-alpine`, `7-alpine`, `alpine` (*7.2/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.2/alpine/Dockerfile)
+-	[`7.2.1-slim`, `7.2-slim`, `7-slim`, `slim` (*7.2/slim/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.2/slim/Dockerfile)
+-	[`7.1.0`, `7.1` (*7.1/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.1/Dockerfile)
+-	[`7.1.0-alpine`, `7.1-alpine` (*7.1/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.1/alpine/Dockerfile)
+-	[`7.1.0-slim`, `7.1-slim` (*7.1/slim/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/7.1/slim/Dockerfile)
+-	[`6.6.2`, `6.6`, `6` (*6.6/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/6.6/Dockerfile)
+-	[`6.6.2-alpine`, `6.6-alpine`, `6-alpine` (*6.6/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/6.6/alpine/Dockerfile)
+-	[`6.6.2-slim`, `6.6-slim`, `6-slim` (*6.6/slim/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/6.6/slim/Dockerfile)
+-	[`5.5.5`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/5.5/Dockerfile)
+-	[`5.5.5-alpine`, `5.5-alpine`, `5-alpine` (*5.5/alpine/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/5.5/alpine/Dockerfile)
+-	[`5.5.5-slim`, `5.5-slim`, `5-slim` (*5.5/slim/Dockerfile*)](https://github.com/docker-solr/docker-solr/blob/afe43e97be7aa764656f3e0aa068bed90f6bdd27/5.5/slim/Dockerfile)
 
 # Quick reference
 
@@ -37,6 +39,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Solr Community](https://github.com/docker-solr/docker-solr)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/solr/), [`arm32v5`](https://hub.docker.com/r/arm32v5/solr/), [`arm32v6`](https://hub.docker.com/r/arm32v6/solr/), [`arm32v7`](https://hub.docker.com/r/arm32v7/solr/), [`arm64v8`](https://hub.docker.com/r/arm64v8/solr/), [`i386`](https://hub.docker.com/r/i386/solr/), [`ppc64le`](https://hub.docker.com/r/ppc64le/solr/), [`s390x`](https://hub.docker.com/r/s390x/solr/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/solr/` directory](https://github.com/docker-library/repo-info/blob/master/repos/solr) ([history](https://github.com/docker-library/repo-info/commits/master/repos/solr))  
@@ -50,7 +55,7 @@ WARNING:
 	[docs repo's `solr/` directory](https://github.com/docker-library/docs/tree/master/solr) ([history](https://github.com/docker-library/docs/commits/master/solr))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Solr?
 
@@ -246,6 +251,10 @@ This variant is highly recommended when final image size being as small as possi
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
+## `solr:slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `solr`. Unless you are working in an environment where *only* the `solr` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+
 # License
 
 Solr is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
@@ -259,3 +268,9 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 	      http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `solr/` directory](https://github.com/docker-library/repo-info/tree/master/repos/solr).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

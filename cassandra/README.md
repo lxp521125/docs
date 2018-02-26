@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.1.18`, `2.1` (*2.1/Dockerfile*)](https://github.com/docker-library/cassandra/blob/a78f0c2c40507f31a6b5048d029e77f5e3e5054b/2.1/Dockerfile)
--	[`2.2.10`, `2.2`, `2` (*2.2/Dockerfile*)](https://github.com/docker-library/cassandra/blob/92e76b1607393679735adf04a7c6bf08d66278b2/2.2/Dockerfile)
--	[`3.0.14`, `3.0` (*3.0/Dockerfile*)](https://github.com/docker-library/cassandra/blob/aebf66bbd63d5b860410837810ae738d76a03932/3.0/Dockerfile)
--	[`3.11.0`, `3.11`, `3`, `latest` (*3.11/Dockerfile*)](https://github.com/docker-library/cassandra/blob/f6f09faf3e50e648ec11a9676a29dd1130604c2d/3.11/Dockerfile)
+-	[`2.1.20`, `2.1` (*2.1/Dockerfile*)](https://github.com/docker-library/cassandra/blob/f2662126a725065bc524c907a7dcfdbb6e38b31d/2.1/Dockerfile)
+-	[`2.2.12`, `2.2`, `2` (*2.2/Dockerfile*)](https://github.com/docker-library/cassandra/blob/0a8b0c981c2db51bcf15bda01de805f636744073/2.2/Dockerfile)
+-	[`3.0.16`, `3.0` (*3.0/Dockerfile*)](https://github.com/docker-library/cassandra/blob/202f69bdc8514e1f1eec4c0de31a964f79af3cff/3.0/Dockerfile)
+-	[`3.11.2`, `3.11`, `3`, `latest` (*3.11/Dockerfile*)](https://github.com/docker-library/cassandra/blob/88f7b82386e788634f4a0f31711c92c268640df9/3.11/Dockerfile)
 
 # Quick reference
 
@@ -31,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/cassandra)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/cassandra/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cassandra/), [`i386`](https://hub.docker.com/r/i386/cassandra/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cassandra/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/cassandra/` directory](https://github.com/docker-library/repo-info/blob/master/repos/cassandra) ([history](https://github.com/docker-library/repo-info/commits/master/repos/cassandra))  
@@ -44,7 +47,7 @@ WARNING:
 	[docs repo's `cassandra/` directory](https://github.com/docker-library/docs/tree/master/cassandra) ([history](https://github.com/docker-library/docs/commits/master/cassandra))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Cassandra?
 
@@ -170,11 +173,11 @@ This variable sets number of tokens for this node. It will set the [`num_tokens`
 
 ### `CASSANDRA_DC`
 
-This variable sets the datacenter name of this node. It will set the [`dc`](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) option of `cassandra-rackdc.properties`.
+This variable sets the datacenter name of this node. It will set the [`dc`](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) option of `cassandra-rackdc.properties`. You must set `CASSANDRA_ENDPOINT_SNITCH` to use the ["GossipingPropertyFileSnitch"](https://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) in order for Cassandra to apply `cassandra-rackdc.properties`, otherwise this variable will have no effect.
 
 ### `CASSANDRA_RACK`
 
-This variable sets the rack name of this node. It will set the [`rack`](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) option of `cassandra-rackdc.properties`.
+This variable sets the rack name of this node. It will set the [`rack`](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) option of `cassandra-rackdc.properties`. You must set `CASSANDRA_ENDPOINT_SNITCH` to use the ["GossipingPropertyFileSnitch"](https://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html) in order for Cassandra to apply `cassandra-rackdc.properties`, otherwise this variable will have no effect.
 
 ### `CASSANDRA_ENDPOINT_SNITCH`
 
@@ -209,3 +212,13 @@ $ chcon -Rt svirt_sandbox_file_t /my/own/datadir
 ## No connections until Cassandra init completes
 
 If there is no database initialized when the container starts, then a default database will be created. While this is the expected behavior, this means that it will not accept incoming connections until such initialization completes. This may cause issues when using automation tools, such as `docker-compose`, which start several containers simultaneously.
+
+# License
+
+View [license information](https://git-wip-us.apache.org/repos/asf?p=cassandra.git;a=blob;f=LICENSE.txt;hb=cassandra-3.11.1) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `cassandra/` directory](https://github.com/docker-library/repo-info/tree/master/repos/cassandra).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

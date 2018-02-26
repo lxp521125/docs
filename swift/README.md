@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.1.0`, `3.1`, `3`, `latest` (*Dockerfile*)](https://github.com/swiftdocker/docker-swift/blob/ef9aa534705fc8ab4258c539f6304072ebae9613/Dockerfile)
--	[`3.0.2`, `3.0` (*Dockerfile*)](https://github.com/swiftdocker/docker-swift/blob/94a43272fe6411c12045414cfc797d3c0bcf2823/Dockerfile)
+-	[`4.0.3`, `4.0`, `4`, `latest` (*4.0/Dockerfile*)](https://github.com/swiftdocker/docker-swift/blob/bc8cb3032ffd6a05d3eddf9cf885139277c11642/4.0/Dockerfile)
+-	[`3.1.1`, `3.1`, `3` (*3.1/Dockerfile*)](https://github.com/swiftdocker/docker-swift/blob/bc8cb3032ffd6a05d3eddf9cf885139277c11642/3.1/Dockerfile)
 
 # Quick reference
 
@@ -29,6 +29,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[Haris and Thomas (of the Docker Community)](https://github.com/swiftdocker/docker-swift), [with the approval of the Swift Project](https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20160118/000908.html)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/swift/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/swift/` directory](https://github.com/docker-library/repo-info/blob/master/repos/swift) ([history](https://github.com/docker-library/repo-info/commits/master/repos/swift))  
@@ -42,7 +45,7 @@ WARNING:
 	[docs repo's `swift/` directory](https://github.com/docker-library/docs/tree/master/swift) ([history](https://github.com/docker-library/docs/commits/master/swift))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Swift?
 
@@ -81,7 +84,7 @@ docker pull swift
 ##### Create a Container from the Image and Attach It:
 
 ```bash
-docker run  -it --name swiftfun swift:latest /bin/bash
+docker run  -it --name swiftfun swift /bin/bash
 ```
 
 ##### To Start and Attach Your Image Later:
@@ -101,3 +104,9 @@ docker attach swiftfun
 # License
 
 View [license information](https://swift.org/LICENSE.txt) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `swift/` directory](https://github.com/docker-library/repo-info/tree/master/repos/swift).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -14,16 +14,16 @@ WARNING:
 
 -->
 
-# **DEPRECATED**
+# **DEPRECATION NOTICE**
 
-This image has been deprecated in favor of the [official `logstash` image](https://www.elastic.co/guide/en/logstash/current/docker.html) provided and maintained by [elastic.co](https://www.elastic.co/). The upstream images are available to pull via `docker.elastic.co/logstash/logstash:[version]` like `5.4.2`. The images found here will receive no further updates once the `5.6.0` release is available upstream. Please adjust your usage accordingly.
+This image has been deprecated in favor of the [official `logstash` image](https://www.elastic.co/guide/en/logstash/current/docker.html) provided and maintained by [elastic.co](https://www.elastic.co/). The list of images available from Elastic can be found at [www.docker.elastic.co](https://www.docker.elastic.co/). The images found here will receive no further updates once the `6.0.0` release is available upstream. Please adjust your usage accordingly.
 
 Elastic provides open-source support for Logstash via the [elastic/logstash GitHub repository](https://github.com/elastic/logstash) and the Docker image via the [elastic/logstash-docker GitHub repository](https://github.com/elastic/logstash-docker), as well as community support via its [forums](https://discuss.elastic.co/c/logstash).
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.1`, `5.5`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/logstash/blob/479d904c1a1043e179d157259fba96a9ca2e204f/5/Dockerfile)
--	[`5.5.1-alpine`, `5.5-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/479d904c1a1043e179d157259fba96a9ca2e204f/5/alpine/Dockerfile)
+-	[`5.6.8`, `5.6`, `5`, `latest` (*5/Dockerfile*)](https://github.com/docker-library/logstash/blob/26506a8c65e1b1cb5584481b3b3f039b45f5c218/5/Dockerfile)
+-	[`5.6.8-alpine`, `5.6-alpine`, `5-alpine`, `alpine` (*5/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/26506a8c65e1b1cb5584481b3b3f039b45f5c218/5/alpine/Dockerfile)
 -	[`2.4.1`, `2.4`, `2` (*2.4/Dockerfile*)](https://github.com/docker-library/logstash/blob/4f425e9008de3d0375d1749d390029808aed8d96/2.4/Dockerfile)
 -	[`2.4.1-alpine`, `2.4-alpine`, `2-alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/logstash/blob/19330c802e6f198f015c0c4723a6d86ed449d93f/2.4/alpine/Dockerfile)
 
@@ -38,6 +38,9 @@ Elastic provides open-source support for Logstash via the [elastic/logstash GitH
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/logstash)
 
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/logstash/)
+
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/logstash/` directory](https://github.com/docker-library/repo-info/blob/master/repos/logstash) ([history](https://github.com/docker-library/repo-info/commits/master/repos/logstash))  
 	(image metadata, transfer size, etc)
@@ -50,7 +53,7 @@ Elastic provides open-source support for Logstash via the [elastic/logstash GitH
 	[docs repo's `logstash/` directory](https://github.com/docker-library/docs/tree/master/logstash) ([history](https://github.com/docker-library/docs/commits/master/logstash))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Logstash?
 
@@ -58,7 +61,7 @@ Logstash is a tool that can be used to collect, process and forward events and l
 
 > [wikitech.wikimedia.org/wiki/Logstash](https://wikitech.wikimedia.org/wiki/Logstash)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/3a5ee2af49550e2c692a15c339725b4967720db1/logstash/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/8bb704930619acddf6f5705e7d1cf54defdd3388/logstash/logo.png)
 
 # How to use this image
 
@@ -135,3 +138,9 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 # License
 
 View [license information](https://github.com/elastic/logstash/blob/master/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `logstash/` directory](https://github.com/docker-library/repo-info/tree/master/repos/logstash).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

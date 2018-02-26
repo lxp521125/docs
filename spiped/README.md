@@ -17,7 +17,7 @@ WARNING:
 # Supported tags and respective `Dockerfile` links
 
 -	[`1.6.0`, `1.6`, `1`, `latest` (*1.6/Dockerfile*)](https://github.com/TimWolla/docker-spiped/blob/4d45a684a91cd50c98a79fbcabc479efe0b49dde/1.6/Dockerfile)
--	[`1.6.0-alpine`, `1.6-alpine`, `1-alpine`, `alpine` (*1.6/alpine/Dockerfile*)](https://github.com/TimWolla/docker-spiped/blob/c9dfc2d06685a700788f85d833875de31e0f2538/1.6/alpine/Dockerfile)
+-	[`1.6.0-alpine`, `1.6-alpine`, `1-alpine`, `alpine` (*1.6/alpine/Dockerfile*)](https://github.com/TimWolla/docker-spiped/blob/d9eed48a399aa481269e23f0ad734e756567f954/1.6/alpine/Dockerfile)
 
 # Quick reference
 
@@ -29,6 +29,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-spiped), [with Colin's support (from spiped upstream)](https://github.com/docker-library/official-images/pull/1714#issuecomment-219556607)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/spiped/), [`arm32v5`](https://hub.docker.com/r/arm32v5/spiped/), [`arm32v6`](https://hub.docker.com/r/arm32v6/spiped/), [`arm32v7`](https://hub.docker.com/r/arm32v7/spiped/), [`arm64v8`](https://hub.docker.com/r/arm64v8/spiped/), [`i386`](https://hub.docker.com/r/i386/spiped/), [`ppc64le`](https://hub.docker.com/r/ppc64le/spiped/), [`s390x`](https://hub.docker.com/r/s390x/spiped/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/spiped/` directory](https://github.com/docker-library/repo-info/blob/master/repos/spiped) ([history](https://github.com/docker-library/repo-info/commits/master/repos/spiped))  
@@ -42,7 +45,7 @@ WARNING:
 	[docs repo's `spiped/` directory](https://github.com/docker-library/docs/tree/master/spiped) ([history](https://github.com/docker-library/docs/commits/master/spiped))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # spiped
 
@@ -110,3 +113,9 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 # License
 
 View [license information](https://github.com/Tarsnap/spiped/blob/master/COPYRIGHT) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `spiped/` directory](https://github.com/docker-library/repo-info/tree/master/repos/spiped).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

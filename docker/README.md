@@ -16,15 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`17.07.0-ce-rc2`, `17.07.0-ce`, `17.07.0`, `17.07-rc`, `rc`, `test` (*17.07-rc/Dockerfile*)](https://github.com/docker-library/docker/blob/38f9cbf2cbfaecf291141665234425d8affbbede/17.07-rc/Dockerfile)
--	[`17.07.0-ce-rc2-dind`, `17.07.0-ce-dind`, `17.07.0-dind`, `17.07-rc-dind`, `rc-dind`, `test-dind` (*17.07-rc/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/c49283cd0ab1dff78a4cb1b5c62618b8b1744595/17.07-rc/dind/Dockerfile)
--	[`17.07.0-ce-rc2-git`, `17.07.0-ce-git`, `17.07.0-git`, `17.07-rc-git`, `rc-git`, `test-git` (*17.07-rc/git/Dockerfile*)](https://github.com/docker-library/docker/blob/c49283cd0ab1dff78a4cb1b5c62618b8b1744595/17.07-rc/git/Dockerfile)
--	[`17.06.1-ce-rc4`, `17.06.1-ce`, `17.06.1`, `17.06-rc` (*17.06-rc/Dockerfile*)](https://github.com/docker-library/docker/blob/85ba25f3cc07e170c983f4c13947a2786d6bd33d/17.06-rc/Dockerfile)
--	[`17.06.1-ce-rc4-dind`, `17.06.1-ce-dind`, `17.06.1-dind`, `17.06-rc-dind` (*17.06-rc/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/f60aacc67bcba2d5b45c28665742a60b99d24466/17.06-rc/dind/Dockerfile)
--	[`17.06.1-ce-rc4-git`, `17.06.1-ce-git`, `17.06.1-git`, `17.06-rc-git` (*17.06-rc/git/Dockerfile*)](https://github.com/docker-library/docker/blob/f60aacc67bcba2d5b45c28665742a60b99d24466/17.06-rc/git/Dockerfile)
--	[`17.06.0-ce`, `17.06.0`, `17.06`, `17`, `edge`, `stable`, `latest` (*17.06/Dockerfile*)](https://github.com/docker-library/docker/blob/e68e4e6ec06c055a95d441144b0e34d0872f2665/17.06/Dockerfile)
--	[`17.06.0-ce-dind`, `17.06.0-dind`, `17.06-dind`, `17-dind`, `edge-dind`, `stable-dind`, `dind` (*17.06/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/e68e4e6ec06c055a95d441144b0e34d0872f2665/17.06/dind/Dockerfile)
--	[`17.06.0-ce-git`, `17.06.0-git`, `17.06-git`, `17-git`, `edge-git`, `stable-git`, `git` (*17.06/git/Dockerfile*)](https://github.com/docker-library/docker/blob/e68e4e6ec06c055a95d441144b0e34d0872f2665/17.06/git/Dockerfile)
+-	[`18.03.0-ce-rc1`, `18.03-rc`, `rc`, `test` (*18.03-rc/Dockerfile*)](https://github.com/docker-library/docker/blob/5d58870994d0ba33a5228af06876fe2026752924/18.03-rc/Dockerfile)
+-	[`18.03.0-ce-rc1-dind`, `18.03-rc-dind`, `rc-dind`, `test-dind` (*18.03-rc/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/5d58870994d0ba33a5228af06876fe2026752924/18.03-rc/dind/Dockerfile)
+-	[`18.03.0-ce-rc1-git`, `18.03-rc-git`, `rc-git`, `test-git` (*18.03-rc/git/Dockerfile*)](https://github.com/docker-library/docker/blob/5d58870994d0ba33a5228af06876fe2026752924/18.03-rc/git/Dockerfile)
+-	[`18.02.0-ce`, `18.02.0`, `18.02`, `18`, `edge`, `latest` (*18.02/Dockerfile*)](https://github.com/docker-library/docker/blob/157869f94ea90e2acb4d0f77045d99079ead821c/18.02/Dockerfile)
+-	[`18.02.0-ce-dind`, `18.02.0-dind`, `18.02-dind`, `18-dind`, `edge-dind`, `dind` (*18.02/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/157869f94ea90e2acb4d0f77045d99079ead821c/18.02/dind/Dockerfile)
+-	[`18.02.0-ce-git`, `18.02.0-git`, `18.02-git`, `18-git`, `edge-git`, `git` (*18.02/git/Dockerfile*)](https://github.com/docker-library/docker/blob/157869f94ea90e2acb4d0f77045d99079ead821c/18.02/git/Dockerfile)
+-	[`17.12.1-ce-rc2`, `17.12-rc` (*17.12-rc/Dockerfile*)](https://github.com/docker-library/docker/blob/9a1feddfc856278e289035da7a29fd218bc12d78/17.12-rc/Dockerfile)
+-	[`17.12.1-ce-rc2-dind`, `17.12-rc-dind` (*17.12-rc/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/56ff41e041f3bffbabaa9237421baa5ebe86ec74/17.12-rc/dind/Dockerfile)
+-	[`17.12.1-ce-rc2-git`, `17.12-rc-git` (*17.12-rc/git/Dockerfile*)](https://github.com/docker-library/docker/blob/56ff41e041f3bffbabaa9237421baa5ebe86ec74/17.12-rc/git/Dockerfile)
+-	[`17.12.0-ce`, `17.12.0`, `17.12`, `17`, `stable` (*17.12/Dockerfile*)](https://github.com/docker-library/docker/blob/b9fd686dac473fb71ffb426a9ef8e0467208dd2f/17.12/Dockerfile)
+-	[`17.12.0-ce-dind`, `17.12.0-dind`, `17.12-dind`, `17-dind`, `stable-dind` (*17.12/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/de9fda490429cf83734ef78b58f0ae9cfed1b087/17.12/dind/Dockerfile)
+-	[`17.12.0-ce-git`, `17.12.0-git`, `17.12-git`, `17-git`, `stable-git` (*17.12/git/Dockerfile*)](https://github.com/docker-library/docker/blob/de9fda490429cf83734ef78b58f0ae9cfed1b087/17.12/git/Dockerfile)
 
 # Quick reference
 
@@ -36,6 +39,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[Tianon (of the Docker Project)](https://github.com/docker-library/docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/docker/), [`arm32v6`](https://hub.docker.com/r/arm32v6/docker/), [`arm64v8`](https://hub.docker.com/r/arm64v8/docker/), [`ppc64le`](https://hub.docker.com/r/ppc64le/docker/), [`s390x`](https://hub.docker.com/r/s390x/docker/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/docker/` directory](https://github.com/docker-library/repo-info/blob/master/repos/docker) ([history](https://github.com/docker-library/repo-info/commits/master/repos/docker))  
@@ -49,7 +55,7 @@ WARNING:
 	[docs repo's `docker/` directory](https://github.com/docker-library/docs/tree/master/docker) ([history](https://github.com/docker-library/docs/commits/master/docker))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Docker in Docker?
 
@@ -215,3 +221,9 @@ The `-v /my/own/var-lib-docker:/var/lib/docker` part of the command mounts the `
 # License
 
 View [license information](https://github.com/docker/docker/blob/eb7b2ed6bbe3fbef588116d362ce595d6e35fc43/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `docker/` directory](https://github.com/docker-library/repo-info/tree/master/repos/docker).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

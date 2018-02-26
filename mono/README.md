@@ -16,10 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.12.1`, `3.12.0`, `3.12`, `3` (*3.12.1/Dockerfile*)](https://github.com/mono/docker/blob/0d987d93235630e05a14983c7f87500ab33c90da/3.12.1/Dockerfile)
+-	[`5.8.0.108`, `latest`, `5.8.0`, `5.8`, `5` (*5.8.0.108/Dockerfile*)](https://github.com/mono/docker/blob/a1fdfa9177869de5e0a0cfbdf10ebb4281200b02/5.8.0.108/Dockerfile)
+-	[`5.8.0.108-slim`, `slim`, `5.8.0-slim`, `5.8-slim`, `5-slim` (*5.8.0.108/slim/Dockerfile*)](https://github.com/mono/docker/blob/a1fdfa9177869de5e0a0cfbdf10ebb4281200b02/5.8.0.108/slim/Dockerfile)
+-	[`5.4.1.6`, `5.4.1`, `5.4` (*5.4.1.6/Dockerfile*)](https://github.com/mono/docker/blob/c05f965729b45093c1e9534d3e6532984f8091db/5.4.1.6/Dockerfile)
+-	[`5.4.1.6-slim`, `5.4.1-slim`, `5.4-slim` (*5.4.1.6/slim/Dockerfile*)](https://github.com/mono/docker/blob/c05f965729b45093c1e9534d3e6532984f8091db/5.4.1.6/slim/Dockerfile)
 -	[`4.8.0.524`, `4.8.0`, `4.8`, `4` (*4.8.0.524/Dockerfile*)](https://github.com/mono/docker/blob/0d987d93235630e05a14983c7f87500ab33c90da/4.8.0.524/Dockerfile)
--	[`5.0.0.100`, `5.0.0` (*5.0.0.100/Dockerfile*)](https://github.com/mono/docker/blob/d7a8871afc770695b81977272792d8966340939e/5.0.0.100/Dockerfile)
--	[`5.0.1.1`, `5.0.1`, `5.0`, `5`, `latest` (*5.0.1.1/Dockerfile*)](https://github.com/mono/docker/blob/39b989ea0ef3e787fb75410521217cb7cb7df05e/5.0.1.1/Dockerfile)
 
 # Quick reference
 
@@ -31,6 +32,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Mono Project](https://github.com/mono/docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/mono/), [`arm32v7`](https://hub.docker.com/r/arm32v7/mono/), [`arm64v8`](https://hub.docker.com/r/arm64v8/mono/), [`i386`](https://hub.docker.com/r/i386/mono/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/mono/` directory](https://github.com/docker-library/repo-info/blob/master/repos/mono) ([history](https://github.com/docker-library/repo-info/commits/master/repos/mono))  
@@ -44,7 +48,7 @@ WARNING:
 	[docs repo's `mono/` directory](https://github.com/docker-library/docs/tree/master/mono) ([history](https://github.com/docker-library/docs/commits/master/mono))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Mono
 
@@ -87,6 +91,24 @@ This Docker image is provided by Xamarin, for users of the Mono Project.
 
 Thanks to [Michael Friis](http://friism.com/) for his preliminary work.
 
+# Image Variants
+
+The `mono` images come in many flavors, each designed for a specific use case.
+
+## `mono:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+## `mono:slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `mono`. Unless you are working in an environment where *only* the `mono` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+
 # License
 
 This Docker Image is licensed with the Expat License. See the [Mono Project licensing FAQ](http://www.mono-project.com/docs/faq/licensing/) for details on how Mono and associated libraries are licensed.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `mono/` directory](https://github.com/docker-library/repo-info/tree/master/repos/mono).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

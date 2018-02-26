@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.7.18`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/percona/blob/48c7ca0ae7473f3127650f45f21e8ea85d7bb4d2/5.7/Dockerfile)
--	[`5.6.36`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/bfff0f74903bf6db64b5d1ca85968e3546f039a5/5.6/Dockerfile)
--	[`5.5.55`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/48c7ca0ae7473f3127650f45f21e8ea85d7bb4d2/5.5/Dockerfile)
+-	[`5.7.21`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/percona/blob/34106a8d1325f2692826b98502b1c4760a716e9a/5.7/Dockerfile)
+-	[`5.6.39`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/a3ba3b6a69a6c7a21e9ea2d4a5b746b9829039eb/5.6/Dockerfile)
+-	[`5.5.59`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/6b511c1afee7545d8e3ebe307d3186cf7c92bb2d/5.5/Dockerfile)
 
 # Quick reference
 
@@ -30,6 +30,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/percona)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/percona/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/percona/` directory](https://github.com/docker-library/repo-info/blob/master/repos/percona) ([history](https://github.com/docker-library/repo-info/commits/master/repos/percona))  
@@ -43,7 +46,7 @@ WARNING:
 	[docs repo's `percona/` directory](https://github.com/docker-library/docs/tree/master/percona) ([history](https://github.com/docker-library/docs/commits/master/percona))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Percona Server
 
@@ -69,7 +72,9 @@ $ docker run --name some-percona -e MYSQL_ROOT_PASSWORD=my-secret-pw -d percona:
 
 ## Connect to MySQL from an application in another Docker container
 
-Since Percona is intended as a drop-in replacement for MySQL, it can be used with many applications. This image exposes the standard MySQL port (3306), so container linking makes the MySQL instance available to other application containers. Start your application container like this in order to link it to the MySQL container:
+Since Percona is intended as a drop-in replacement for MySQL, it can be used with many applications.
+
+This image exposes the standard MySQL port (3306), so container linking makes the MySQL instance available to other application containers. Start your application container like this in order to link it to the MySQL container:
 
 ```console
 $ docker run --name some-app --link some-percona:mysql -d application-that-uses-mysql
@@ -77,13 +82,13 @@ $ docker run --name some-app --link some-percona:mysql -d application-that-uses-
 
 ## Connect to Percona from the MySQL command line client
 
-The following command starts another percona container instance and runs the `mysql` command line client against your original percona container, allowing you to execute SQL statements against your database instance:
+The following command starts another `percona` container instance and runs the `mysql` command line client against your original `percona` container, allowing you to execute SQL statements against your database instance:
 
 ```console
 $ docker run -it --link some-percona:mysql --rm percona sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
 ```
 
-... where `some-percona` is the name of your original percona container.
+... where `some-percona` is the name of your original `percona` container.
 
 This image can also be used as a client for non-Docker or remote Percona instances:
 
@@ -92,6 +97,33 @@ $ docker run -it --rm percona mysql -hsome.mysql.host -usome-mysql-user -p
 ```
 
 More information about the MySQL command line client can be found in the [MySQL documentation](http://dev.mysql.com/doc/en/mysql.html)
+
+## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
+
+Example `stack.yml` for `percona`:
+
+```yaml
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: percona
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+```
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/9efeec18b6b2ed232cf0fbd3914b6211e16e242c/percona/stack.yml)
+
+Run `docker stack deploy -c stack.yml percona` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 
 ## Container shell access and viewing MySQL logs
 
@@ -169,9 +201,19 @@ This is an optional variable. Set to `yes` to generate a random initial password
 
 Sets root (*not* the user specified in `MYSQL_USER`!) user as expired once init is complete, forcing a password change on first login. *NOTE*: This feature is supported on MySQL 5.6+ only. Using this option on MySQL 5.5 will throw an appropriate error during initialization.
 
+## Docker Secrets
+
+As an alternative to passing sensitive information via environment variables, `_FILE` may be appended to the previously listed environment variables, causing the initialization script to load the values for those variables from files present in the container. In particular, this can be used to load passwords from Docker secrets stored in `/run/secrets/<secret_name>` files. For example:
+
+```console
+$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-root -d percona:tag
+```
+
+Currently, this is only supported for `MYSQL_ROOT_PASSWORD`, `MYSQL_ROOT_HOST`, `MYSQL_DATABASE`, `MYSQL_USER`, and `MYSQL_PASSWORD`.
+
 # Initializing a fresh instance
 
-When a container is started for the first time, a new database with the specified name will be created and initialized with the provided configuration variables. Furthermore, it will execute files with extensions `.sh`, `.sql` and `.sql.gz` that are found in `/docker-entrypoint-initdb.d`. Files will be executed in alphabetical order. You can easily populate your percona services by [mounting a SQL dump into that directory](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-file-as-a-data-volume) and provide [custom images](https://docs.docker.com/reference/builder/) with contributed data. SQL files will be imported by default to the database specified by the `MYSQL_DATABASE` variable.
+When a container is started for the first time, a new database with the specified name will be created and initialized with the provided configuration variables. Furthermore, it will execute files with extensions `.sh`, `.sql` and `.sql.gz` that are found in `/docker-entrypoint-initdb.d`. Files will be executed in alphabetical order. You can easily populate your `percona` services by [mounting a SQL dump into that directory](https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-file-as-a-data-volume) and provide [custom images](https://docs.docker.com/reference/builder/) with contributed data. SQL files will be imported by default to the database specified by the `MYSQL_DATABASE` variable.
 
 # Caveats
 
@@ -214,3 +256,13 @@ Most of the normal tools will work, although their usage might be a little convo
 ```console
 $ docker exec some-percona sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
 ```
+
+# License
+
+View [license information](https://www.percona.com/doc/percona-server/LATEST/copyright.html) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `percona/` directory](https://github.com/docker-library/repo-info/tree/master/repos/percona).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

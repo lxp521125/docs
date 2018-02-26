@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.6.0`, `0.6`, `0`, `latest` (*Dockerfile*)](https://github.com/docker-library/julia/blob/ef0fdf96ba90c0020776bca367cb838910aca339/Dockerfile)
+-	[`0.6.2`, `0.6`, `0`, `latest` (*Dockerfile*)](https://github.com/docker-library/julia/blob/7dc8567964481b8ff4370671ca57b79f1bab7bb4/Dockerfile)
 
 # Quick reference
 
@@ -28,6 +28,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/julia)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/julia/), [`arm32v7`](https://hub.docker.com/r/arm32v7/julia/), [`arm64v8`](https://hub.docker.com/r/arm64v8/julia/), [`i386`](https://hub.docker.com/r/i386/julia/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/julia/` directory](https://github.com/docker-library/repo-info/blob/master/repos/julia) ([history](https://github.com/docker-library/repo-info/commits/master/repos/julia))  
@@ -41,7 +44,7 @@ WARNING:
 	[docs repo's `julia/` directory](https://github.com/docker-library/docs/tree/master/julia) ([history](https://github.com/docker-library/docs/commits/master/julia))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Julia?
 
@@ -70,3 +73,9 @@ $ docker run -it --rm -v "$PWD":/usr/myapp -w /usr/myapp julia julia script.jl a
 # License
 
 View [license information](http://julialang.org/) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `julia/` directory](https://github.com/docker-library/repo-info/tree/master/repos/julia).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `6.5` (*6.5/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/c6aa0bbe967999f37cfa64522b3ae6ff0fda04de/6.5/Dockerfile)
--	[`lts`, `5.6.6` (*5.6.6/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/c6aa0bbe967999f37cfa64522b3ae6ff0fda04de/5.6.6/Dockerfile)
--	[`alpine`, `6.5-alpine` (*6.5-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/c6aa0bbe967999f37cfa64522b3ae6ff0fda04de/6.5-alpine/Dockerfile)
--	[`lts-alpine`, `5.6.6-alpine` (*5.6.6-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/c6aa0bbe967999f37cfa64522b3ae6ff0fda04de/5.6.6-alpine/Dockerfile)
+-	[`6.7.1`, `lts` (*6.7.1/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/6.7.1/Dockerfile)
+-	[`6.7.1-alpine`, `lts-alpine` (*6.7.1-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/6.7.1-alpine/Dockerfile)
+-	[`7.0`, `latest` (*7.0/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/7.0/Dockerfile)
+-	[`7.0-alpine`, `alpine` (*7.0-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/7.0-alpine/Dockerfile)
 
 # Quick reference
 
@@ -31,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[SonarSource](https://github.com/SonarSource/docker-sonarqube)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/sonarqube/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/sonarqube/` directory](https://github.com/docker-library/repo-info/blob/master/repos/sonarqube) ([history](https://github.com/docker-library/repo-info/commits/master/repos/sonarqube))  
@@ -44,7 +47,7 @@ WARNING:
 	[docs repo's `sonarqube/` directory](https://github.com/docker-library/docs/tree/master/sonarqube) ([history](https://github.com/docker-library/docs/commits/master/sonarqube))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is SonarQube?
 
@@ -63,6 +66,8 @@ The server is started this way:
 ```console
 $ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 ```
+
+By default you can login as `admin` with password `admin`, see [authentication](https://docs.sonarqube.org/display/SONAR/Authentication).
 
 To analyse a project:
 
@@ -114,3 +119,9 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 # License
 
 View [license information](http://www.gnu.org/licenses/lgpl.txt) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `sonarqube/` directory](https://github.com/docker-library/repo-info/tree/master/repos/sonarqube).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

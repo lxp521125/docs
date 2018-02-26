@@ -16,12 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2-5.8.0`, `2-5.8`, `2-5`, `2` (*2/Dockerfile*)](https://github.com/docker-library/pypy/blob/bff939590214797aeb1f5d1c30166edceef2eb6d/2/Dockerfile)
--	[`2-5.8.0-slim`, `2-5.8-slim`, `2-5-slim`, `2-slim` (*2/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/bff939590214797aeb1f5d1c30166edceef2eb6d/2/slim/Dockerfile)
--	[`2-5.8.0-onbuild`, `2-5.8-onbuild`, `2-5-onbuild`, `2-onbuild` (*2/onbuild/Dockerfile*)](https://github.com/docker-library/pypy/blob/b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48/2/onbuild/Dockerfile)
--	[`3-5.8.0`, `3-5.8`, `3-5`, `3`, `latest` (*3/Dockerfile*)](https://github.com/docker-library/pypy/blob/bff939590214797aeb1f5d1c30166edceef2eb6d/3/Dockerfile)
--	[`3-5.8.0-slim`, `3-5.8-slim`, `3-5-slim`, `3-slim`, `slim` (*3/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/bff939590214797aeb1f5d1c30166edceef2eb6d/3/slim/Dockerfile)
--	[`3-5.8.0-onbuild`, `3-5.8-onbuild`, `3-5-onbuild`, `3-onbuild`, `onbuild` (*3/onbuild/Dockerfile*)](https://github.com/docker-library/pypy/blob/b48e8489ab794a2bacfd396c2f8e1a5b06d6ae48/3/onbuild/Dockerfile)
+-	[`2-5.10.0`, `2-5.10`, `2-5`, `2` (*2/Dockerfile*)](https://github.com/docker-library/pypy/blob/2b2b28c8d47683df043de22ddd11cb1bc6c5d151/2/Dockerfile)
+-	[`2-5.10.0-slim`, `2-5.10-slim`, `2-5-slim`, `2-slim` (*2/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/2b2b28c8d47683df043de22ddd11cb1bc6c5d151/2/slim/Dockerfile)
+-	[`3-5.10.1`, `3-5.10`, `3-5`, `3`, `latest` (*3/Dockerfile*)](https://github.com/docker-library/pypy/blob/90d6f08b46c99c7cccae534f4ba003c132cc1afe/3/Dockerfile)
+-	[`3-5.10.1-slim`, `3-5.10-slim`, `3-5-slim`, `3-slim`, `slim` (*3/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/90d6f08b46c99c7cccae534f4ba003c132cc1afe/3/slim/Dockerfile)
 
 # Quick reference
 
@@ -33,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/pypy)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/pypy/), [`arm32v5`](https://hub.docker.com/r/arm32v5/pypy/), [`i386`](https://hub.docker.com/r/i386/pypy/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/pypy/` directory](https://github.com/docker-library/repo-info/blob/master/repos/pypy) ([history](https://github.com/docker-library/repo-info/commits/master/repos/pypy))  
@@ -46,7 +47,7 @@ WARNING:
 	[docs repo's `pypy/` directory](https://github.com/docker-library/docs/tree/master/pypy) ([history](https://github.com/docker-library/docs/commits/master/pypy))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is PyPy?
 
@@ -109,14 +110,12 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `pypy`. Unless you are working in an environment where *only* the `pypy` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `pypy:onbuild`
-
-The `ONBUILD` image variants are deprecated, and their usage is discouraged. For more details, see [docker-library/official-images#2076](https://github.com/docker-library/official-images/issues/2076).
-
-While the `onbuild` variant is really useful for "getting off the ground running" (zero to Dockerized in a short period of time), it's not recommended for long-term usage within a project due to the lack of control over *when* the `ONBUILD` triggers fire (see also [`docker/docker#5714`](https://github.com/docker/docker/issues/5714), [`docker/docker#8240`](https://github.com/docker/docker/issues/8240), [`docker/docker#11917`](https://github.com/docker/docker/issues/11917)).
-
-Once you've got a handle on how your project functions within Docker, you'll probably want to adjust your `Dockerfile` to inherit from a non-`onbuild` variant and copy the commands from the `onbuild` variant `Dockerfile` (moving the `ONBUILD` lines to the end and removing the `ONBUILD` keywords) into your own file so that you have tighter control over them and more transparency for yourself and others looking at your `Dockerfile` as to what it does. This also makes it easier to add additional requirements as time goes on (such as installing more packages before performing the previously-`ONBUILD` steps).
-
 # License
 
 View [license information](https://bitbucket.org/pypy/pypy/src/c3ff0dd6252b6ba0d230f3624dbb4aab8973a1d0/LICENSE?at=default) for software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `pypy/` directory](https://github.com/docker-library/repo-info/tree/master/repos/pypy).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

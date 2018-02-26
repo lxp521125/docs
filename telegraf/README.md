@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.2`, `1.2.1` (*telegraf/1.2/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/9c2c0d225ca0f2cb5d28749ed2bbd25122b46c9f/telegraf/1.2/Dockerfile)
--	[`1.2-alpine`, `1.2.1-alpine` (*telegraf/1.2/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/9c2c0d225ca0f2cb5d28749ed2bbd25122b46c9f/telegraf/1.2/alpine/Dockerfile)
--	[`1.3`, `1.3.5`, `latest` (*telegraf/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/acd3023f04fc25ef8b4ebe2535b093bdc976ae57/telegraf/1.3/Dockerfile)
--	[`1.3-alpine`, `1.3.5-alpine`, `alpine` (*telegraf/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/acd3023f04fc25ef8b4ebe2535b093bdc976ae57/telegraf/1.3/alpine/Dockerfile)
+-	[`1.4`, `1.4.5` (*telegraf/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.4/Dockerfile)
+-	[`1.4-alpine`, `1.4.5-alpine` (*telegraf/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.4/alpine/Dockerfile)
+-	[`1.5`, `1.5.2`, `latest` (*telegraf/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.5/Dockerfile)
+-	[`1.5-alpine`, `1.5.2-alpine`, `alpine` (*telegraf/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.5/alpine/Dockerfile)
 
 # Quick reference
 
@@ -31,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[InfluxData](https://github.com/influxdata/influxdata-docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/telegraf/), [`arm32v7`](https://hub.docker.com/r/arm32v7/telegraf/), [`arm64v8`](https://hub.docker.com/r/arm64v8/telegraf/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/telegraf/` directory](https://github.com/docker-library/repo-info/blob/master/repos/telegraf) ([history](https://github.com/docker-library/repo-info/commits/master/repos/telegraf))  
@@ -44,13 +47,13 @@ WARNING:
 	[docs repo's `telegraf/` directory](https://github.com/docker-library/docs/tree/master/telegraf) ([history](https://github.com/docker-library/docs/commits/master/telegraf))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Telegraf
 
 Telegraf is an open source agent written in Go for collecting metrics and data on the system it's running on or from other services. Telegraf writes data it collects to InfluxDB in the correct format.
 
-[Telegraf Official Docs](https://docs.influxdata.com/telegraf/latest/introduction/getting-started-telegraf/)
+[Telegraf Official Docs](https://docs.influxdata.com/telegraf/latest/introduction/getting_started/)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/43d87118415bb75d7bb107683e79cd6d69186f67/telegraf/logo.png)
 
@@ -83,7 +86,7 @@ $ docker run --net=container:influxdb telegraf
 First, generate a sample configuration and save it as `telegraf.conf` on the host:
 
 ```console
-$ docker run --rm telegraf -sample-config > telegraf.conf
+$ docker run --rm telegraf telegraf config > telegraf.conf
 ```
 
 Once you've customized `telegraf.conf`, you can run the Telegraf container with it mounted in the expected location:
@@ -94,7 +97,7 @@ $ docker run -v $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf
 
 Modify `$PWD` to the directory where you want to store the configuration file.
 
-Read more about the Telegraf configuration [here](https://docs.influxdata.com/telegraf/latest/introduction/configuration/).
+Read more about the Telegraf configuration [here](https://docs.influxdata.com/telegraf/latest/administration/configuration/).
 
 ### Using the container with input plugins
 
@@ -216,9 +219,9 @@ Check that the measurement `foo` is added in the DB.
 
 ### Supported Plugins Reference
 
--	[Input Plugins](https://docs.influxdata.com/telegraf/latest/inputs/)
+-	[Input Plugins](https://docs.influxdata.com/telegraf/latest/plugins/inputs/)
 
--	[Output Plugins](https://docs.influxdata.com/telegraf/latest/outputs/)
+-	[Output Plugins](https://docs.influxdata.com/telegraf/latest/plugins/outputs/)
 
 # Image Variants
 
@@ -226,7 +229,7 @@ The `telegraf` images come in many flavors, each designed for a specific use cas
 
 ## `telegraf:<version>`
 
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
 ## `telegraf:alpine`
 
@@ -239,3 +242,9 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 # License
 
 View [license information](https://github.com/influxdata/telegraf/blob/master/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `telegraf/` directory](https://github.com/docker-library/repo-info/tree/master/repos/telegraf).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

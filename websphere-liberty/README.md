@@ -16,12 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`kernel` (*ga/developer/kernel/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/8008b344085e4e49d7d702fdb0db1fa5363c0899/ga/developer/kernel/Dockerfile)
--	[`microProfile` (*ga/developer/microProfile/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/8008b344085e4e49d7d702fdb0db1fa5363c0899/ga/developer/microProfile/Dockerfile)
--	[`webProfile6` (*ga/developer/webProfile6/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/8008b344085e4e49d7d702fdb0db1fa5363c0899/ga/developer/webProfile6/Dockerfile)
--	[`webProfile7` (*ga/developer/webProfile7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/8008b344085e4e49d7d702fdb0db1fa5363c0899/ga/developer/webProfile7/Dockerfile)
--	[`javaee7`, `latest` (*ga/developer/javaee7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/8008b344085e4e49d7d702fdb0db1fa5363c0899/ga/developer/javaee7/Dockerfile)
--	[`beta` (*beta/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/164a9dfac2368e328ec8ac033277c61ebc467d2b/beta/Dockerfile)
+-	[`kernel` (*ga/developer/kernel/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/ga/developer/kernel/Dockerfile)
+-	[`microProfile` (*ga/developer/microProfile/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/ga/developer/microProfile/Dockerfile)
+-	[`webProfile6` (*ga/developer/webProfile6/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/ga/developer/webProfile6/Dockerfile)
+-	[`webProfile7` (*ga/developer/webProfile7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/ga/developer/webProfile7/Dockerfile)
+-	[`javaee7`, `latest` (*ga/developer/javaee7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/ga/developer/javaee7/Dockerfile)
+-	[`beta` (*beta/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/c77e57d49667e9d1fa0b330d87ee63b1305e7c33/beta/Dockerfile)
 
 # Quick reference
 
@@ -33,6 +33,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the IBM WASdev Community](https://github.com/WASdev/ci.docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/websphere-liberty/), [`i386`](https://hub.docker.com/r/i386/websphere-liberty/), [`ppc64le`](https://hub.docker.com/r/ppc64le/websphere-liberty/), [`s390x`](https://hub.docker.com/r/s390x/websphere-liberty/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/websphere-liberty/` directory](https://github.com/docker-library/repo-info/blob/master/repos/websphere-liberty) ([history](https://github.com/docker-library/repo-info/commits/master/repos/websphere-liberty))  
@@ -46,7 +49,7 @@ WARNING:
 	[docs repo's `websphere-liberty/` directory](https://github.com/docker-library/docs/tree/master/websphere-liberty) ([history](https://github.com/docker-library/docs/commits/master/websphere-liberty))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Overview
 
@@ -134,6 +137,10 @@ The images are designed to support a number of different usage patterns. The fol
 	  --volumes-from app websphere-liberty:webProfile7
 	```
 
+# Providing your own keystore/truststore
+
+By default, when a `websphere-liberty` image starts, a Liberty server XML snippet is generated in `/config/configDropins/defaults/keystore.xml` that specifies a `keyStore` stanza with a generated password. This causes Liberty to generate a default keystore and truststore with a self-signed certificate when it starts (see the [Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_liberty_ssl_defaults.html) for more information). When providing your own keystore/truststore, this default behavior can be disabled by ensuring that a file already exists at `/config/configDropins/defaults/keystore.xml` (for example, added as part of your Docker build). This file can contain your keystore configuration or could just contain an empty `<server></server>` stanza.
+
 # Using IBM JRE Class data sharing
 
 The IBM JRE provides a feature [Class data sharing](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/understanding/shared_classes.html) which offers transparent and dynamic sharing of data between multiple Java Virtual Machines running on the same host by using shared memory backed by a file. When running the Liberty Docker image, it looks for the file at `/opt/ibm/wlp/output/.classCache`. To benefit from Class data sharing, this location needs to be shared between containers either through the host or a data volume container.
@@ -191,3 +198,9 @@ Licenses for the products installed within the images are as follows:
 -	[IBM WebSphere Application Server Liberty Beta](https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html) in the `beta` image (International License Agreement for Early Release of Programs)
 
 Note: These licenses do not permit further distribution and that the terms for WebSphere Application Server in the non-beta images restrict usage to a developer machine or build server only, or subject to a maximum 2 gigabyte heap usage across all instances. Instructions are available to enable entitled customers to [upgrade](https://github.com/WASdev/ci.docker/tree/master/ga/production-upgrade) the Docker Hub image for production use or [build](https://github.com/WASdev/ci.docker/tree/master/ga/production-install) their own production licensed image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `websphere-liberty/` directory](https://github.com/docker-library/repo-info/tree/master/repos/websphere-liberty).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

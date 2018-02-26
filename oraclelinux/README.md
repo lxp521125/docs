@@ -16,17 +16,17 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7-slim` (*7-slim/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7-slim/Dockerfile)
--	[`latest`, `7`, `7.4` (*7.4/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7.4/Dockerfile)
--	[`7.3` (*7.3/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7.3/Dockerfile)
--	[`7.2` (*7.2/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7.2/Dockerfile)
--	[`7.1` (*7.1/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7.1/Dockerfile)
--	[`7.0` (*7.0/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/7.0/Dockerfile)
--	[`6-slim` (*6-slim/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/6-slim/Dockerfile)
--	[`6`, `6.9` (*6.9/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/6.9/Dockerfile)
--	[`6.8` (*6.8/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/6.8/Dockerfile)
--	[`6.7` (*6.7/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/6.7/Dockerfile)
--	[`6.6` (*6.6/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/da78602b8541faa928cbdda02463db1280523712/6.6/Dockerfile)
+-	[`7-slim` (*7-slim/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7-slim/Dockerfile)
+-	[`latest`, `7`, `7.4` (*7.4/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7.4/Dockerfile)
+-	[`7.3` (*7.3/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7.3/Dockerfile)
+-	[`7.2` (*7.2/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7.2/Dockerfile)
+-	[`7.1` (*7.1/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7.1/Dockerfile)
+-	[`7.0` (*7.0/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/7.0/Dockerfile)
+-	[`6-slim` (*6-slim/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/6-slim/Dockerfile)
+-	[`6`, `6.9` (*6.9/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/6.9/Dockerfile)
+-	[`6.8` (*6.8/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/6.8/Dockerfile)
+-	[`6.7` (*6.7/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/6.7/Dockerfile)
+-	[`6.6` (*6.6/Dockerfile*)](https://github.com/oracle/ol-container-images/blob/74409877de8c1ca942904ff77dd5d002a3dac360/6.6/Dockerfile)
 
 # Quick reference
 
@@ -38,6 +38,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Oracle Linux Product Team](https://github.com/oracle/docker-images)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/oraclelinux/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/oraclelinux/` directory](https://github.com/docker-library/repo-info/blob/master/repos/oraclelinux) ([history](https://github.com/docker-library/repo-info/commits/master/repos/oraclelinux))  
@@ -51,7 +54,7 @@ WARNING:
 	[docs repo's `oraclelinux/` directory](https://github.com/docker-library/docs/tree/master/oraclelinux) ([history](https://github.com/docker-library/docs/commits/master/oraclelinux))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Oracle Linux
 
@@ -106,3 +109,9 @@ For Oracle Linux users without a paid support subscription, the following resour
 # License
 
 View the [Oracle Linux End-User License Agreement](https://oss.oracle.com/ol6/EULA) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `oraclelinux/` directory](https://github.com/docker-library/repo-info/tree/master/repos/oraclelinux).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

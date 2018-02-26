@@ -14,7 +14,7 @@ WARNING:
 
 -->
 
-# **DEPRECATED**
+# **DEPRECATION NOTICE**
 
 This image is deprecated due to maintainer inactivity (last updated Aug 2015; [docker-library/official-images#1012](https://github.com/docker-library/official-images/pull/1012)).
 
@@ -35,6 +35,9 @@ If a representative of the CRUX community would like to step up and continue mai
 -	**Maintained by**:  
 	currently unmainainted (see deprecation notice)
 
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/crux/)
+
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/crux/` directory](https://github.com/docker-library/repo-info/blob/master/repos/crux) ([history](https://github.com/docker-library/repo-info/commits/master/repos/crux))  
 	(image metadata, transfer size, etc)
@@ -47,7 +50,7 @@ If a representative of the CRUX community would like to step up and continue mai
 	[docs repo's `crux/` directory](https://github.com/docker-library/docs/tree/master/crux) ([history](https://github.com/docker-library/docs/commits/master/crux))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is CRUX?
 
@@ -64,3 +67,13 @@ Finally, it strives to use new features as they become available, as long as the
 -	A somewhat experienced Linux user who wants a clean and solid Linux distribution as the foundation of your installation.
 -	A person who prefers editing configuration files with an editor to using a GUI.
 -	Someone who does not hesitate to download and compile programs from the source.
+
+# License
+
+View [license information](https://crux.nu/Main/Handbook3-3-Intro) for the software contained in this image (scroll to the "License" section at the end of the linked document).
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `crux/` directory](https://github.com/docker-library/repo-info/tree/master/repos/crux).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.19.0-stretch`, `1-stretch`, `1.19-stretch`, `stretch`, `1.19.0`, `1`, `1.19`, `latest` (*1.19.0/stretch/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/106c4be7e3d29a38c6953c30fccd54c6ce366157/1.19.0/stretch/Dockerfile)
--	[`1.19.0-jessie`, `1-jessie`, `1.19-jessie`, `jessie` (*1.19.0/jessie/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/106c4be7e3d29a38c6953c30fccd54c6ce366157/1.19.0/jessie/Dockerfile)
+-	[`1.24.0-stretch`, `1-stretch`, `1.24-stretch`, `stretch`, `1.24.0`, `1`, `1.24`, `latest` (*1.24.0/stretch/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/c481589e552336cffcbe97b6e42a7d1d3e1e9a49/1.24.0/stretch/Dockerfile)
+-	[`1.24.0-jessie`, `1-jessie`, `1.24-jessie`, `jessie` (*1.24.0/jessie/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/c481589e552336cffcbe97b6e42a7d1d3e1e9a49/1.24.0/jessie/Dockerfile)
 
 # Quick reference
 
@@ -29,6 +29,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Rust Project developers](https://github.com/rust-lang-nursery/docker-rust)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/rust/), [`arm32v7`](https://hub.docker.com/r/arm32v7/rust/), [`arm64v8`](https://hub.docker.com/r/arm64v8/rust/), [`i386`](https://hub.docker.com/r/i386/rust/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/rust/` directory](https://github.com/docker-library/repo-info/blob/master/repos/rust) ([history](https://github.com/docker-library/repo-info/commits/master/repos/rust))  
@@ -42,7 +45,7 @@ WARNING:
 	[docs repo's `rust/` directory](https://github.com/docker-library/docs/tree/master/rust) ([history](https://github.com/docker-library/docs/commits/master/rust))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Rust?
 
@@ -59,7 +62,7 @@ Rust is a systems programming language sponsored by Mozilla Research. It is desi
 The most straightforward way to use this image is to use a Rust container as both the build and runtime environment. In your `Dockerfile`, writing something along the lines of the following will compile and run your project:
 
 ```dockerfile
-FROM rust:1.19.0
+FROM rust:1.23.0
 
 WORKDIR /usr/src/myapp
 COPY . .
@@ -78,10 +81,10 @@ $ docker run -it --rm --name my-running-app my-rust-app
 
 ## Compile your app inside the Docker container
 
-There may be occasions where it is not appropriate to run your app inside a container. To compiler, but not run your app inside the Docker instance, you can write something like:
+There may be occasions where it is not appropriate to run your app inside a container. To compile, but not run your app inside the Docker instance, you can write something like:
 
 ```console
-$ docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/myapp -w /usr/src/myapp rust:1.19.0 cargo build --release
+$ docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/myapp -w /usr/src/myapp rust:1.23.0 cargo build --release
 ```
 
 This will add your current directory, as a volume, to the container, set the working directory to the volume, and run the command `cargo build --release`. This tells Cargo, Rust's build system, to compile the crate in `myapp` and output the executable to `target/release/myapp`.
@@ -89,3 +92,9 @@ This will add your current directory, as a volume, to the container, set the wor
 # License
 
 View [license information](https://www.rust-lang.org/en-US/legal.html) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `rust/` directory](https://github.com/docker-library/repo-info/tree/master/repos/rust).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -30,6 +30,9 @@ WARNING:
 -	**Maintained by**:  
 	[the Plone Foundation](https://github.com/plone/plone.docker)
 
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/plone/)
+
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/plone/` directory](https://github.com/docker-library/repo-info/blob/master/repos/plone) ([history](https://github.com/docker-library/repo-info/commits/master/repos/plone))  
 	(image metadata, transfer size, etc)
@@ -42,13 +45,13 @@ WARNING:
 	[docs repo's `plone/` directory](https://github.com/docker-library/docs/tree/master/plone) ([history](https://github.com/docker-library/docs/commits/master/plone))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Plone?
 
 [Plone](https://plone.org) is a free and open source content management system built on top of the Zope application server.
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/9902f062d48cc58d9d5036b5f2e9641d610bbb7c/plone/logo.png)
+![logo](https://cdn.rawgit.com/docker-library/docs/888adfc80adb42b47fa6d446d472ec3f44274be8/plone/logo.svg)
 
 ## Features
 
@@ -130,3 +133,9 @@ Thanks to [Antonio De Marinis](https://github.com/demarant), [Sven Strack](https
 # License
 
 View [license information](https://plone.org/foundation/copyrights/license-faq) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `plone/` directory](https://github.com/docker-library/repo-info/tree/master/repos/plone).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -18,11 +18,10 @@ WARNING:
 
 -	[`2.0.18` (*2.0/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/8a9633c19fa9c53a5446b9b62997ff389813e785/2.0/Dockerfile)
 -	[`2.1.25` (*2.1/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/8a9633c19fa9c53a5446b9b62997ff389813e785/2.1/Dockerfile)
--	[`2.2.25` (*2.2/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/f983933450a3e8457937484d0ec26dc1f742fe39/2.2/x86_64/alpine/Dockerfile)
--	[`2.2.25-spatial` (*2.2-spatial/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/f983933450a3e8457937484d0ec26dc1f742fe39/2.2-spatial/x86_64/alpine/Dockerfile)
--	[`3.0.0m2` (*3.0/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/222b64299884eeb4b324e2822873f69e8a7c006e/3.0/x86_64/alpine/Dockerfile)
--	[`3.0.0m2-spatial` (*3.0-spatial/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/63df9efb84b44535fd99145b00fb5e2dda6beaa3/3.0-spatial/x86_64/alpine/Dockerfile)
--	[`latest` (*2.2/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/366763f1b6552854cbd840511f2fa9bd5ebd07f3/2.2/x86_64/alpine/Dockerfile)
+-	[`2.2.32`, `latest` (*2.2/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/b364415996e2211f2704b8a1d1d3c7295585fc0e/2.2/x86_64/alpine/Dockerfile)
+-	[`2.2.32-spatial` (*2.2-spatial/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/b364415996e2211f2704b8a1d1d3c7295585fc0e/2.2-spatial/x86_64/alpine/Dockerfile)
+-	[`3.0.0RC1` (*3.0/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/e6855db21e0c4eb47db36f60a7b8a4d05ef5ffb4/3.0/x86_64/alpine/Dockerfile)
+-	[`3.0.0RC1-spatial` (*3.0-spatial/x86_64/alpine/Dockerfile*)](https://github.com/orientechnologies/orientdb-docker/blob/e6855db21e0c4eb47db36f60a7b8a4d05ef5ffb4/3.0-spatial/x86_64/alpine/Dockerfile)
 
 # Quick reference
 
@@ -34,6 +33,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[OrientDB](https://github.com/orientechnologies/orientdb-docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/orientdb/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/orientdb/` directory](https://github.com/docker-library/repo-info/blob/master/repos/orientdb) ([history](https://github.com/docker-library/repo-info/commits/master/repos/orientdb))  
@@ -47,7 +49,7 @@ WARNING:
 	[docs repo's `orientdb/` directory](https://github.com/docker-library/docs/tree/master/orientdb) ([history](https://github.com/docker-library/docs/commits/master/orientdb))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is OrientDB?
 
@@ -121,3 +123,13 @@ $ docker run -d --name orientdb -p 2424:2424 -p 2480:2480 \
     -e ORIENTDB_ROOT_PASSWORD=rootpwd \
     orientdb /orientdb/bin/server.sh -Xmx8g
 ```
+
+# License
+
+View [license information](https://github.com/orientechnologies/orientdb/blob/master/license.txt) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `orientdb/` directory](https://github.com/docker-library/repo-info/tree/master/repos/orientdb).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

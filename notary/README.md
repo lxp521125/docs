@@ -36,6 +36,9 @@ WARNING:
 -	**Maintained by**:  
 	[Docker, Inc.](https://github.com/docker/notary-official-images)
 
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/notary/)
+
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/notary/` directory](https://github.com/docker-library/repo-info/blob/master/repos/notary) ([history](https://github.com/docker-library/repo-info/commits/master/repos/notary))  
 	(image metadata, transfer size, etc)
@@ -48,7 +51,7 @@ WARNING:
 	[docs repo's `notary/` directory](https://github.com/docker-library/docs/tree/master/notary) ([history](https://github.com/docker-library/docs/commits/master/notary))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # How to use this repository
 
@@ -92,7 +95,7 @@ The components you *must* provide are the certificates and keys, and the links f
 
 If you require a different configuration, you should wrap this image with your own Dockerfile.
 
-For more details on how to configure your Notary server, please read the [docs](https://github.com/docker/notary/blob/master/docs/reference/server-config.md).
+For more details on how to configure your Notary server, please read the [docs](https://github.com/theupdateframework/notary/blob/master/docs/reference/server-config.md).
 
 # Notary Signer
 
@@ -123,14 +126,20 @@ The components you *must* provide are the certificates and keys, and the link fo
 
 If you require a different configuration, you should wrap this image with your own Dockerfile.
 
-For more details on how to configure your Notary signer, please read the [docs](https://github.com/docker/notary/blob/master/docs/reference/signer-config.md).
+For more details on how to configure your Notary signer, please read the [docs](https://github.com/theupdateframework/notary/blob/master/docs/reference/signer-config.md).
 
 ## Database Migrations
 
-Notary server and signer both use the [migrate tool](https://github.com/mattes/migrate) to manage database updates. The migration files can be found [here](https://github.com/docker/notary/tree/master/migrations/) and are an ordered list of plain SQL files. The migrate tool manages schema versions to ensure that migrations start and end at the correct point.
+Notary server and signer both use the [migrate tool](https://github.com/mattes/migrate) to manage database updates. The migration files can be found [here](https://github.com/theupdateframework/notary/tree/master/migrations/) and are an ordered list of plain SQL files. The migrate tool manages schema versions to ensure that migrations start and end at the correct point.
 
 We strongly recommend you create separate databases and users with restricted permissions such that the server cannot access the signer's database and vice versa.
 
 # License
 
-View [license information](https://github.com/docker/notary/blob/master/LICENSE) for the software contained in this image.
+View [license information](https://github.com/theupdateframework/notary/blob/master/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `notary/` directory](https://github.com/docker-library/repo-info/tree/master/repos/notary).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

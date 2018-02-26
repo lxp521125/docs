@@ -16,11 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`42.3`, `leap`, `latest` (*docker/Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/ee4fecdbaf779964d031bd01d39e11fc02dbc502/docker/Dockerfile)
--	[`42.2` (*docker/Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/85eed4628bd0fd63ba44daade22f59bcc6a4f20f/docker/Dockerfile)
--	[`42.1` (*docker/Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/28ae2ecb12d4ec628bd0ca561ae5ed6b64c1eecd/docker/Dockerfile)
--	[`13.2`, `harlequin` (*docker/Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/9f10701463d217a0d9d8053a6bfe8be545449ea3/docker/Dockerfile)
--	[`tumbleweed` (*docker/Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/7b600c66152013a0cd3591173dc5cc5a287da880/docker/Dockerfile)
+-	[`42.2` (*x86_64//Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/fd39ce9631c3b6a110b6c1e8e5756a20d0863a77/x86_64//Dockerfile)
+-	[`42.3`, `latest`, `leap` (*x86_64//Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/6252e7bc2a411b3c5cfd5ed3b74e5839f7f7615b/x86_64//Dockerfile)
+-	[`tumbleweed` (*x86_64//Dockerfile*)](https://github.com/openSUSE/docker-containers-build/blob/63f8c38ea523302fa8918fa0265f949075516a03/x86_64//Dockerfile)
 
 # Quick reference
 
@@ -32,6 +30,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the SUSE containers team](https://github.com/openSUSE/docker-containers-build)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/opensuse/), [`arm64v8`](https://hub.docker.com/r/arm64v8/opensuse/), [`ppc64le`](https://hub.docker.com/r/ppc64le/opensuse/), [`s390x`](https://hub.docker.com/r/s390x/opensuse/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/opensuse/` directory](https://github.com/docker-library/repo-info/blob/master/repos/opensuse) ([history](https://github.com/docker-library/repo-info/commits/master/repos/opensuse))  
@@ -45,7 +46,7 @@ WARNING:
 	[docs repo's `opensuse/` directory](https://github.com/docker-library/docs/tree/master/opensuse) ([history](https://github.com/docker-library/docs/commits/master/opensuse))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # openSUSE
 
@@ -69,3 +70,13 @@ However the following repositories are already part of the image:
 -	OSS Updates
 -	Non-OSS
 -	Non-OSS Updates
+
+# License
+
+View the [license information](https://en.opensuse.org/openSUSE:License) for the software contained in this image. Please note that individual packages installed may have their own licenses, which you also must follow. License information is available through the built-in package manager.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `opensuse/` directory](https://github.com/docker-library/repo-info/tree/master/repos/opensuse).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

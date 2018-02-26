@@ -16,10 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.9.4`, `4.9`, `4` (*4.9/Dockerfile*)](https://github.com/docker-library/gcc/blob/3b33871fe9558262cb5ed6253d358f76710e9ccb/4.9/Dockerfile)
--	[`5.4.0`, `5.4`, `5` (*5/Dockerfile*)](https://github.com/docker-library/gcc/blob/3b33871fe9558262cb5ed6253d358f76710e9ccb/5/Dockerfile)
--	[`6.4.0`, `6.4`, `6` (*6/Dockerfile*)](https://github.com/docker-library/gcc/blob/c1fe37de30fbe69e83f042b4a9426b11cb624bca/6/Dockerfile)
--	[`7.1.0`, `7.1`, `7`, `latest` (*7/Dockerfile*)](https://github.com/docker-library/gcc/blob/3b33871fe9558262cb5ed6253d358f76710e9ccb/7/Dockerfile)
+-	[`5.5.0`, `5.5`, `5` (*5/Dockerfile*)](https://github.com/docker-library/gcc/blob/0423cc3f79023c2ab821d2377f73105217c46892/5/Dockerfile)
+-	[`6.4.0`, `6.4`, `6` (*6/Dockerfile*)](https://github.com/docker-library/gcc/blob/0423cc3f79023c2ab821d2377f73105217c46892/6/Dockerfile)
+-	[`7.3.0`, `7.3`, `7`, `latest` (*7/Dockerfile*)](https://github.com/docker-library/gcc/blob/0f2605b8a300a1cbd70d244330400e8baf1dde33/7/Dockerfile)
 
 # Quick reference
 
@@ -31,6 +30,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/gcc)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/gcc/), [`arm32v5`](https://hub.docker.com/r/arm32v5/gcc/), [`arm32v7`](https://hub.docker.com/r/arm32v7/gcc/), [`arm64v8`](https://hub.docker.com/r/arm64v8/gcc/), [`ppc64le`](https://hub.docker.com/r/ppc64le/gcc/), [`s390x`](https://hub.docker.com/r/s390x/gcc/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/gcc/` directory](https://github.com/docker-library/repo-info/blob/master/repos/gcc) ([history](https://github.com/docker-library/repo-info/commits/master/repos/gcc))  
@@ -44,7 +46,7 @@ WARNING:
 	[docs repo's `gcc/` directory](https://github.com/docker-library/docs/tree/master/gcc) ([history](https://github.com/docker-library/docs/commits/master/gcc))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is GCC?
 
@@ -92,3 +94,9 @@ $ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:4.9 make
 # License
 
 View [license information](https://gcc.gnu.org/viewcvs/gcc/trunk/gcc/COPYING3?view=markup) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `gcc/` directory](https://github.com/docker-library/repo-info/tree/master/repos/gcc).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

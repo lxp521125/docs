@@ -16,8 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.3`, `1.3.6`, `1.3.6.1`, `latest` (*chronograf/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8116068f4dfd1375b4287896807a60783bd0dd11/chronograf/1.3/Dockerfile)
--	[`1.3-alpine`, `1.3.6-alpine`, `1.3.6.1-alpine`, `alpine` (*chronograf/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8116068f4dfd1375b4287896807a60783bd0dd11/chronograf/1.3/alpine/Dockerfile)
+-	[`1.3`, `1.3.10`, `1.3.10.0` (*chronograf/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.3/Dockerfile)
+-	[`1.3-alpine`, `1.3.10-alpine`, `1.3.10.0-alpine` (*chronograf/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.3/alpine/Dockerfile)
+-	[`1.4`, `1.4.1`, `1.4.1.2`, `latest` (*chronograf/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.4/Dockerfile)
+-	[`1.4-alpine`, `1.4.1-alpine`, `1.4.1.2-alpine`, `alpine` (*chronograf/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.4/alpine/Dockerfile)
 
 # Quick reference
 
@@ -29,6 +31,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[InfluxData](https://github.com/influxdata/influxdata-docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/chronograf/), [`arm32v7`](https://hub.docker.com/r/arm32v7/chronograf/), [`arm64v8`](https://hub.docker.com/r/arm64v8/chronograf/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/chronograf/` directory](https://github.com/docker-library/repo-info/blob/master/repos/chronograf) ([history](https://github.com/docker-library/repo-info/commits/master/repos/chronograf))  
@@ -42,7 +47,7 @@ WARNING:
 	[docs repo's `chronograf/` directory](https://github.com/docker-library/docs/tree/master/chronograf) ([history](https://github.com/docker-library/docs/commits/master/chronograf))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Chronograf
 
@@ -129,3 +134,9 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 # License
 
 View [license information](https://github.com/influxdata/chronograf/blob/master/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `chronograf/` directory](https://github.com/docker-library/repo-info/tree/master/repos/chronograf).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

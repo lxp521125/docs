@@ -16,9 +16,17 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.0.2`, `latest` (*Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4a2e6f17092b5b8481637c1881f781ae25374309/Dockerfile)
--	[`1.0.2-nanoserver`, `nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4a2e6f17092b5b8481637c1881f781ae25374309/windows/nanoserver/Dockerfile)
--	[`1.0.2-windowsservercore`, `windowsservercore` (*windows/windowsservercore/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4a2e6f17092b5b8481637c1881f781ae25374309/windows/windowsservercore/Dockerfile)
+## Simple Tags
+
+-	[`1.0.4-linux`, `linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/amd64/Dockerfile)
+-	[`1.0.4-nanoserver`, `nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/nanoserver/Dockerfile)
+-	[`1.0.4-windowsservercore`, `windowsservercore` (*windows/windowsservercore/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/windowsservercore/Dockerfile)
+
+## Shared Tags
+
+-	`1.0.4`, `latest`:
+	-	[`1.0.4-linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/amd64/Dockerfile)
+	-	[`1.0.4-nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/nanoserver/Dockerfile)
 
 # Quick reference
 
@@ -30,6 +38,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the NATS Project](https://github.com/nats-io/nats-docker)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/nats/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nats/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nats/), [`windows-amd64`](https://hub.docker.com/r/winamd64/nats/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nats/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nats) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nats))  
@@ -43,7 +54,7 @@ WARNING:
 	[docs repo's `nats/` directory](https://github.com/docker-library/docs/tree/master/nats) ([history](https://github.com/docker-library/docs/commits/master/nats))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # [NATS](https://nats.io): A high-performance cloud native messaging system.
 
@@ -62,7 +73,7 @@ WARNING:
 # use -p or -P as needed.
 
 $ docker run -d --name nats-main nats
-[INF] Starting nats-server version 1.0.2
+[INF] Starting nats-server version 1.0.4
 [INF] Starting http monitor on 0.0.0.0:8222
 [INF] Listening for client connections on 0.0.0.0:4222
 [INF] Server is ready
@@ -78,8 +89,8 @@ $ docker run -d --name=nats-2 --link nats-main nats -c gnatsd.conf --routes=nats
 
 # If you want to verify the routes are connected, try this instead:
 $ docker run -d --name=nats-2 --link nats-main nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222 -DV
-[INF] Starting nats-server version 1.0.2
-[DBG] Go build version go1.7.6
+[INF] Starting nats-server version 1.0.4
+[DBG] Go build version go1.8.3
 [INF] Starting http monitor on 0.0.0.0:8222
 [INF] Listening for client connections on 0.0.0.0:4222
 [DBG] Server id is BEfslG6VOmnIbMQcXTVaVJ
@@ -190,3 +201,9 @@ For information about how to get Docker running on Windows, please see the relev
 # License
 
 View [license information](https://github.com/nats-io/gnatsd/blob/master/LICENSE) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `nats/` directory](https://github.com/docker-library/repo-info/tree/master/repos/nats).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.3.5`, `1.3.5`, `v1.3`, `1.3`, `raclette`, `latest` (*Dockerfile*)](https://github.com/containous/traefik-library-image/blob/03da849385c1b10d2f9d8ca6b0de36626212f01d/Dockerfile)
--	[`v1.3.5-alpine`, `1.3.5-alpine`, `v1.3-alpine`, `1.3-alpine`, `raclette-alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/03da849385c1b10d2f9d8ca6b0de36626212f01d/alpine/Dockerfile)
+-	[`v1.5.2`, `1.5.2`, `v1.5`, `1.5`, `cancoillotte`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/2629a1f4a45b2ce0eb2280cd2640a5a02c24b3c2/scratch/amd64/Dockerfile)
+-	[`v1.5.2-alpine`, `1.5.2-alpine`, `v1.5-alpine`, `1.5-alpine`, `cancoillotte-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/2629a1f4a45b2ce0eb2280cd2640a5a02c24b3c2/alpine/Dockerfile)
 
 # Quick reference
 
@@ -29,6 +29,9 @@ WARNING:
 
 -	**Maintained by**:  
 	[the Træfik Project](https://github.com/containous/traefik-library-image)
+
+-	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
+	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/traefik/` directory](https://github.com/docker-library/repo-info/blob/master/repos/traefik) ([history](https://github.com/docker-library/repo-info/commits/master/repos/traefik))  
@@ -42,7 +45,7 @@ WARNING:
 	[docs repo's `traefik/` directory](https://github.com/docker-library/docs/tree/master/traefik) ([history](https://github.com/docker-library/docs/commits/master/traefik))
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker/releases/latest) (down to 1.6 on a best-effort basis)
+	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/a6cc2c5f4bc6658168f2a0abbb0307acaefff80e/traefik/logo.png)
 
@@ -113,3 +116,9 @@ You can find the complete documentation [here](https://docs.traefik.io).
 # License
 
 View [license information](https://github.com/containous/traefik/blob/master/LICENSE.md) for the software contained in this image.
+
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+
+Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `traefik/` directory](https://github.com/docker-library/repo-info/tree/master/repos/traefik).
+
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
