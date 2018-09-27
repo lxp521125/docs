@@ -16,12 +16,15 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.2.11`, `3.2`, `3` (*3.2/Dockerfile*)](https://github.com/docker-library/redis/blob/99a06c057297421f9ea46934c342a2fc00644c4f/3.2/Dockerfile)
--	[`3.2.11-32bit`, `3.2-32bit`, `3-32bit` (*3.2/32bit/Dockerfile*)](https://github.com/docker-library/redis/blob/99a06c057297421f9ea46934c342a2fc00644c4f/3.2/32bit/Dockerfile)
--	[`3.2.11-alpine`, `3.2-alpine`, `3-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/docker-library/redis/blob/14e48621e40c6b6c84e474e28b06430a3261916a/3.2/alpine/Dockerfile)
--	[`4.0.8`, `4.0`, `4`, `latest` (*4.0/Dockerfile*)](https://github.com/docker-library/redis/blob/d53b982b387634092c6f11069401679034054ecb/4.0/Dockerfile)
--	[`4.0.8-32bit`, `4.0-32bit`, `4-32bit`, `32bit` (*4.0/32bit/Dockerfile*)](https://github.com/docker-library/redis/blob/d53b982b387634092c6f11069401679034054ecb/4.0/32bit/Dockerfile)
--	[`4.0.8-alpine`, `4.0-alpine`, `4-alpine`, `alpine` (*4.0/alpine/Dockerfile*)](https://github.com/docker-library/redis/blob/d53b982b387634092c6f11069401679034054ecb/4.0/alpine/Dockerfile)
+-	[`5.0-rc5`, `5.0-rc`, `5.0-rc5-stretch`, `5.0-rc-stretch` (*5.0-rc/Dockerfile*)](https://github.com/docker-library/redis/blob/10a0d470b8debe15540437e2395ad7c0525886f0/5.0-rc/Dockerfile)
+-	[`5.0-rc5-32bit`, `5.0-rc-32bit`, `5.0-rc5-32bit-stretch`, `5.0-rc-32bit-stretch` (*5.0-rc/32bit/Dockerfile*)](https://github.com/docker-library/redis/blob/10a0d470b8debe15540437e2395ad7c0525886f0/5.0-rc/32bit/Dockerfile)
+-	[`5.0-rc5-alpine`, `5.0-rc-alpine`, `5.0-rc5-alpine3.8`, `5.0-rc-alpine3.8` (*5.0-rc/alpine/Dockerfile*)](https://github.com/docker-library/redis/blob/10a0d470b8debe15540437e2395ad7c0525886f0/5.0-rc/alpine/Dockerfile)
+-	[`4.0.11`, `4.0`, `4`, `latest`, `4.0.11-stretch`, `4.0-stretch`, `4-stretch`, `stretch` (*4.0/Dockerfile*)](https://github.com/docker-library/redis/blob/7900c5d31e0b3a4c463c57a8d69cc497d58fbe70/4.0/Dockerfile)
+-	[`4.0.11-32bit`, `4.0-32bit`, `4-32bit`, `32bit`, `4.0.11-32bit-stretch`, `4.0-32bit-stretch`, `4-32bit-stretch`, `32bit-stretch` (*4.0/32bit/Dockerfile*)](https://github.com/docker-library/redis/blob/7900c5d31e0b3a4c463c57a8d69cc497d58fbe70/4.0/32bit/Dockerfile)
+-	[`4.0.11-alpine`, `4.0-alpine`, `4-alpine`, `alpine`, `4.0.11-alpine3.8`, `4.0-alpine3.8`, `4-alpine3.8`, `alpine3.8` (*4.0/alpine/Dockerfile*)](https://github.com/docker-library/redis/blob/f71b77c76b524260b9edd2397cacec51e87c4d33/4.0/alpine/Dockerfile)
+-	[`3.2.12`, `3.2`, `3`, `3.2.12-stretch`, `3.2-stretch`, `3-stretch` (*3.2/Dockerfile*)](https://github.com/docker-library/redis/blob/53f86805506b103b503fd392e029929290fe5346/3.2/Dockerfile)
+-	[`3.2.12-32bit`, `3.2-32bit`, `3-32bit`, `3.2.12-32bit-stretch`, `3.2-32bit-stretch`, `3-32bit-stretch` (*3.2/32bit/Dockerfile*)](https://github.com/docker-library/redis/blob/53f86805506b103b503fd392e029929290fe5346/3.2/32bit/Dockerfile)
+-	[`3.2.12-alpine`, `3.2-alpine`, `3-alpine`, `3.2.12-alpine3.8`, `3.2-alpine3.8`, `3-alpine3.8` (*3.2/alpine/Dockerfile*)](https://github.com/docker-library/redis/blob/f71b77c76b524260b9edd2397cacec51e87c4d33/3.2/alpine/Dockerfile)
 
 # Quick reference
 
@@ -129,7 +132,7 @@ The `redis` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `redis:alpine`
+## `redis:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

@@ -16,28 +16,28 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.0.85-jre7`, `7.0-jre7`, `7-jre7`, `7.0.85`, `7.0`, `7` (*7/jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/27c69186d320837884e9ed56db504b92e454f6d5/7/jre7/Dockerfile)
--	[`7.0.85-jre7-slim`, `7.0-jre7-slim`, `7-jre7-slim`, `7.0.85-slim`, `7.0-slim`, `7-slim` (*7/jre7-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/27c69186d320837884e9ed56db504b92e454f6d5/7/jre7-slim/Dockerfile)
--	[`7.0.85-jre7-alpine`, `7.0-jre7-alpine`, `7-jre7-alpine`, `7.0.85-alpine`, `7.0-alpine`, `7-alpine` (*7/jre7-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/85486f9d3edfa08a827037e556924b1aeb7069d9/7/jre7-alpine/Dockerfile)
--	[`7.0.85-jre8`, `7.0-jre8`, `7-jre8` (*7/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/27c69186d320837884e9ed56db504b92e454f6d5/7/jre8/Dockerfile)
--	[`7.0.85-jre8-slim`, `7.0-jre8-slim`, `7-jre8-slim` (*7/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/27c69186d320837884e9ed56db504b92e454f6d5/7/jre8-slim/Dockerfile)
--	[`7.0.85-jre8-alpine`, `7.0-jre8-alpine`, `7-jre8-alpine` (*7/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/85486f9d3edfa08a827037e556924b1aeb7069d9/7/jre8-alpine/Dockerfile)
--	[`8.0.50-jre7`, `8.0-jre7`, `8.0.50`, `8.0` (*8.0/jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/af4b04d13a880a81a73dc2936afdf44147144418/8.0/jre7/Dockerfile)
--	[`8.0.50-jre7-slim`, `8.0-jre7-slim`, `8.0.50-slim`, `8.0-slim` (*8.0/jre7-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/af4b04d13a880a81a73dc2936afdf44147144418/8.0/jre7-slim/Dockerfile)
--	[`8.0.50-jre7-alpine`, `8.0-jre7-alpine`, `8.0.50-alpine`, `8.0-alpine` (*8.0/jre7-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/99e449dbecd64705dd81c07b8767ec67e706be41/8.0/jre7-alpine/Dockerfile)
--	[`8.0.50-jre8`, `8.0-jre8` (*8.0/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/af4b04d13a880a81a73dc2936afdf44147144418/8.0/jre8/Dockerfile)
--	[`8.0.50-jre8-slim`, `8.0-jre8-slim` (*8.0/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/af4b04d13a880a81a73dc2936afdf44147144418/8.0/jre8-slim/Dockerfile)
--	[`8.0.50-jre8-alpine`, `8.0-jre8-alpine` (*8.0/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/99e449dbecd64705dd81c07b8767ec67e706be41/8.0/jre8-alpine/Dockerfile)
--	[`8.5.28-jre8`, `8.5-jre8`, `8-jre8`, `jre8`, `8.5.28`, `8.5`, `8`, `latest` (*8.5/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/da8aa30aaa6593e61ab7152bcdfb25a177116ffa/8.5/jre8/Dockerfile)
--	[`8.5.28-jre8-slim`, `8.5-jre8-slim`, `8-jre8-slim`, `jre8-slim`, `8.5.28-slim`, `8.5-slim`, `8-slim`, `slim` (*8.5/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/da8aa30aaa6593e61ab7152bcdfb25a177116ffa/8.5/jre8-slim/Dockerfile)
--	[`8.5.28-jre8-alpine`, `8.5-jre8-alpine`, `8-jre8-alpine`, `jre8-alpine`, `8.5.28-alpine`, `8.5-alpine`, `8-alpine`, `alpine` (*8.5/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/5985bc3fcd2479df62bdada2570651291c2e96b2/8.5/jre8-alpine/Dockerfile)
--	[`8.5.28-jre9`, `8.5-jre9`, `8-jre9`, `jre9` (*8.5/jre9/Dockerfile*)](https://github.com/docker-library/tomcat/blob/da8aa30aaa6593e61ab7152bcdfb25a177116ffa/8.5/jre9/Dockerfile)
--	[`8.5.28-jre9-slim`, `8.5-jre9-slim`, `8-jre9-slim`, `jre9-slim` (*8.5/jre9-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/da8aa30aaa6593e61ab7152bcdfb25a177116ffa/8.5/jre9-slim/Dockerfile)
--	[`9.0.5-jre8`, `9.0-jre8`, `9-jre8` (*9.0/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/1d917f75107e599b43fd5bb56d9d73c6c8f4c036/9.0/jre8/Dockerfile)
--	[`9.0.5-jre8-slim`, `9.0-jre8-slim`, `9-jre8-slim` (*9.0/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/1d917f75107e599b43fd5bb56d9d73c6c8f4c036/9.0/jre8-slim/Dockerfile)
--	[`9.0.5-jre8-alpine`, `9.0-jre8-alpine`, `9-jre8-alpine` (*9.0/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/55a3f09bc475c11c23f6a972b17766b2f68c29a0/9.0/jre8-alpine/Dockerfile)
--	[`9.0.5-jre9`, `9.0-jre9`, `9-jre9`, `9.0.5`, `9.0`, `9` (*9.0/jre9/Dockerfile*)](https://github.com/docker-library/tomcat/blob/1d917f75107e599b43fd5bb56d9d73c6c8f4c036/9.0/jre9/Dockerfile)
--	[`9.0.5-jre9-slim`, `9.0-jre9-slim`, `9-jre9-slim`, `9.0.5-slim`, `9.0-slim`, `9-slim` (*9.0/jre9-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/1d917f75107e599b43fd5bb56d9d73c6c8f4c036/9.0/jre9-slim/Dockerfile)
+-	[`7.0.91-jre7`, `7.0-jre7`, `7-jre7`, `7.0.91`, `7.0`, `7` (*7/jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/92855dba2d4edffc55bc04f9b779a0826747ff4c/7/jre7/Dockerfile)
+-	[`7.0.91-jre7-slim`, `7.0-jre7-slim`, `7-jre7-slim`, `7.0.91-slim`, `7.0-slim`, `7-slim` (*7/jre7-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/92855dba2d4edffc55bc04f9b779a0826747ff4c/7/jre7-slim/Dockerfile)
+-	[`7.0.91-jre7-alpine`, `7.0-jre7-alpine`, `7-jre7-alpine`, `7.0.91-alpine`, `7.0-alpine`, `7-alpine` (*7/jre7-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/e0cfc71038fca93f3e1b54ef4a4db58fb506d5be/7/jre7-alpine/Dockerfile)
+-	[`7.0.91-jre8`, `7.0-jre8`, `7-jre8` (*7/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/92855dba2d4edffc55bc04f9b779a0826747ff4c/7/jre8/Dockerfile)
+-	[`7.0.91-jre8-slim`, `7.0-jre8-slim`, `7-jre8-slim` (*7/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/92855dba2d4edffc55bc04f9b779a0826747ff4c/7/jre8-slim/Dockerfile)
+-	[`7.0.91-jre8-alpine`, `7.0-jre8-alpine`, `7-jre8-alpine` (*7/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/e0cfc71038fca93f3e1b54ef4a4db58fb506d5be/7/jre8-alpine/Dockerfile)
+-	[`8.0.53-jre7`, `8.0-jre7`, `8.0.53`, `8.0` (*8.0/jre7/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre7/Dockerfile)
+-	[`8.0.53-jre7-slim`, `8.0-jre7-slim`, `8.0.53-slim`, `8.0-slim` (*8.0/jre7-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre7-slim/Dockerfile)
+-	[`8.0.53-jre7-alpine`, `8.0-jre7-alpine`, `8.0.53-alpine`, `8.0-alpine` (*8.0/jre7-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre7-alpine/Dockerfile)
+-	[`8.0.53-jre8`, `8.0-jre8` (*8.0/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre8/Dockerfile)
+-	[`8.0.53-jre8-slim`, `8.0-jre8-slim` (*8.0/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre8-slim/Dockerfile)
+-	[`8.0.53-jre8-alpine`, `8.0-jre8-alpine` (*8.0/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/ccf0fa74f05274f8e00e2a27ca0cc8e04d28f0ec/8.0/jre8-alpine/Dockerfile)
+-	[`8.5.34-jre8`, `8.5-jre8`, `8-jre8`, `jre8`, `8.5.34`, `8.5`, `8`, `latest` (*8.5/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd/8.5/jre8/Dockerfile)
+-	[`8.5.34-jre8-slim`, `8.5-jre8-slim`, `8-jre8-slim`, `jre8-slim`, `8.5.34-slim`, `8.5-slim`, `8-slim`, `slim` (*8.5/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd/8.5/jre8-slim/Dockerfile)
+-	[`8.5.34-jre8-alpine`, `8.5-jre8-alpine`, `8-jre8-alpine`, `jre8-alpine`, `8.5.34-alpine`, `8.5-alpine`, `8-alpine`, `alpine` (*8.5/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/af1646c18d6398e6cf27a29d32ff58b994d2566e/8.5/jre8-alpine/Dockerfile)
+-	[`8.5.34-jre10`, `8.5-jre10`, `8-jre10`, `jre10` (*8.5/jre10/Dockerfile*)](https://github.com/docker-library/tomcat/blob/dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd/8.5/jre10/Dockerfile)
+-	[`8.5.34-jre10-slim`, `8.5-jre10-slim`, `8-jre10-slim`, `jre10-slim` (*8.5/jre10-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/dec5126a93c8b4bdbb7480e3bccdc4ca13c024fd/8.5/jre10-slim/Dockerfile)
+-	[`9.0.12-jre8`, `9.0-jre8`, `9-jre8` (*9.0/jre8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/56e65662f0e151aed90bd255aa97a10de17b8316/9.0/jre8/Dockerfile)
+-	[`9.0.12-jre8-slim`, `9.0-jre8-slim`, `9-jre8-slim` (*9.0/jre8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/56e65662f0e151aed90bd255aa97a10de17b8316/9.0/jre8-slim/Dockerfile)
+-	[`9.0.12-jre8-alpine`, `9.0-jre8-alpine`, `9-jre8-alpine` (*9.0/jre8-alpine/Dockerfile*)](https://github.com/docker-library/tomcat/blob/56e65662f0e151aed90bd255aa97a10de17b8316/9.0/jre8-alpine/Dockerfile)
+-	[`9.0.12-jre10`, `9.0-jre10`, `9-jre10`, `9.0.12`, `9.0`, `9` (*9.0/jre10/Dockerfile*)](https://github.com/docker-library/tomcat/blob/56e65662f0e151aed90bd255aa97a10de17b8316/9.0/jre10/Dockerfile)
+-	[`9.0.12-jre10-slim`, `9.0-jre10-slim`, `9-jre10-slim`, `9.0.12-slim`, `9.0-slim`, `9-slim` (*9.0/jre10-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/56e65662f0e151aed90bd255aa97a10de17b8316/9.0/jre10-slim/Dockerfile)
 
 # Quick reference
 
@@ -117,11 +117,11 @@ The `tomcat` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `tomcat:slim`
+## `tomcat:<version>-slim`
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `tomcat`. Unless you are working in an environment where *only* the `tomcat` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `tomcat:alpine`
+## `tomcat:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

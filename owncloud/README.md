@@ -14,12 +14,16 @@ WARNING:
 
 -->
 
+# **DEPRECATION NOTICE**
+
+This image has been deprecated in favor of the [official `owncloud/server` image](https://hub.docker.com/r/owncloud/server/) provided, maintained, and supported by [ownCloud upstream](https://owncloud.org/download/#owncloud-server-docker). The images found here will receive no further updates after 2018-12-31 (Dec 31, 2018). Please adjust your usage accordingly.
+
 # Supported tags and respective `Dockerfile` links
 
--	[`10.0.7-apache`, `10.0-apache`, `10-apache`, `apache`, `10.0.7`, `10.0`, `10`, `latest` (*10.0/apache/Dockerfile*)](https://github.com/docker-library/owncloud/blob/f35a832b5d8b569adb9be8b3a76108cd12ae27ba/10.0/apache/Dockerfile)
--	[`10.0.7-fpm`, `10.0-fpm`, `10-fpm`, `fpm` (*10.0/fpm/Dockerfile*)](https://github.com/docker-library/owncloud/blob/f35a832b5d8b569adb9be8b3a76108cd12ae27ba/10.0/fpm/Dockerfile)
--	[`9.1.7-apache`, `9.1-apache`, `9-apache`, `9.1.7`, `9.1`, `9` (*9.1/apache/Dockerfile*)](https://github.com/docker-library/owncloud/blob/158a440fa5fc7f6d0fc16c94cabdbe70ed700415/9.1/apache/Dockerfile)
--	[`9.1.7-fpm`, `9.1-fpm`, `9-fpm` (*9.1/fpm/Dockerfile*)](https://github.com/docker-library/owncloud/blob/158a440fa5fc7f6d0fc16c94cabdbe70ed700415/9.1/fpm/Dockerfile)
+-	[`10.0.10-apache`, `10.0-apache`, `10-apache`, `apache`, `10.0.10`, `10.0`, `10`, `latest` (*10.0/apache/Dockerfile*)](https://github.com/docker-library/owncloud/blob/b70c794c5b9f437c14331772873cf49e668c7042/10.0/apache/Dockerfile)
+-	[`10.0.10-fpm`, `10.0-fpm`, `10-fpm`, `fpm` (*10.0/fpm/Dockerfile*)](https://github.com/docker-library/owncloud/blob/b70c794c5b9f437c14331772873cf49e668c7042/10.0/fpm/Dockerfile)
+-	[`9.1.8-apache`, `9.1-apache`, `9-apache`, `9.1.8`, `9.1`, `9` (*9.1/apache/Dockerfile*)](https://github.com/docker-library/owncloud/blob/97f7e38b9b8cc2cc22ddaec513f8a9b08f8e4578/9.1/apache/Dockerfile)
+-	[`9.1.8-fpm`, `9.1-fpm`, `9-fpm` (*9.1/fpm/Dockerfile*)](https://github.com/docker-library/owncloud/blob/97f7e38b9b8cc2cc22ddaec513f8a9b08f8e4578/9.1/fpm/Dockerfile)
 
 # Quick reference
 
@@ -130,6 +134,10 @@ services:
 [![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/e24f39cddf21560cf0a24f149059ff23640b0f16/owncloud/stack.yml)
 
 Run `docker stack deploy -c stack.yml owncloud` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080/`, `http://localhost:8080/`, or `http://host-ip:8080` (as appropriate).
+
+## Running as an arbitrary user
+
+See [the "Running as an arbitrary user" section of the `php` image documentation](https://hub.docker.com/_/php/).
 
 # License
 

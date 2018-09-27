@@ -16,8 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `4`, `4.1`, `4.1.34` (*4.1.34/mono/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f1c1a562118cee0f0f9b31890b5f099b37e72284/4.1.34/mono/Dockerfile)
--	[`4.0`, `4.0.1`, `4.0.1.1` (*4.0.1.1/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f1c1a562118cee0f0f9b31890b5f099b37e72284/4.0.1.1/Dockerfile)
+-	[`latest`, `10`, `10.2`, `10.2.1` (*10.2.1/mono/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f495db3a791138b7d2b196753874aa1e4312ba8e/10.2.1/mono/Dockerfile)
+-	[`4`, `4.1`, `4.1.34` (*4.1.34/mono/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f495db3a791138b7d2b196753874aa1e4312ba8e/4.1.34/mono/Dockerfile)
+-	[`4.0`, `4.0.1`, `4.0.1.1` (*4.0.1.1/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f495db3a791138b7d2b196753874aa1e4312ba8e/4.0.1.1/Dockerfile)
+-	[`netcore`, `10-netcore`, `10.2-netcore`, `10.2.1-netcore` (*10.2.1/netcore/Dockerfile*)](https://github.com/fsprojects/docker-fsharp/blob/f495db3a791138b7d2b196753874aa1e4312ba8e/10.2.1/netcore/Dockerfile)
 
 # Quick reference
 
@@ -31,7 +33,7 @@ WARNING:
 	[the F# Community](https://github.com/fsprojects/docker-fsharp)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/fsharp/)
+	[`amd64`](https://hub.docker.com/r/amd64/fsharp/), [`arm64v8`](https://hub.docker.com/r/arm64v8/fsharp/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/fsharp/` directory](https://github.com/docker-library/repo-info/blob/master/repos/fsharp) ([history](https://github.com/docker-library/repo-info/commits/master/repos/fsharp))  

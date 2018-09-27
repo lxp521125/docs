@@ -16,22 +16,22 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.9.4-php5.6-apache`, `4.9-php5.6-apache`, `4-php5.6-apache`, `php5.6-apache`, `4.9.4-php5.6`, `4.9-php5.6`, `4-php5.6`, `php5.6` (*php5.6/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php5.6/apache/Dockerfile)
--	[`4.9.4-php5.6-fpm`, `4.9-php5.6-fpm`, `4-php5.6-fpm`, `php5.6-fpm` (*php5.6/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php5.6/fpm/Dockerfile)
--	[`4.9.4-php5.6-fpm-alpine`, `4.9-php5.6-fpm-alpine`, `4-php5.6-fpm-alpine`, `php5.6-fpm-alpine` (*php5.6/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php5.6/fpm-alpine/Dockerfile)
--	[`4.9.4-php7.0-apache`, `4.9-php7.0-apache`, `4-php7.0-apache`, `php7.0-apache`, `4.9.4-php7.0`, `4.9-php7.0`, `4-php7.0`, `php7.0` (*php7.0/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.0/apache/Dockerfile)
--	[`4.9.4-php7.0-fpm`, `4.9-php7.0-fpm`, `4-php7.0-fpm`, `php7.0-fpm` (*php7.0/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.0/fpm/Dockerfile)
--	[`4.9.4-php7.0-fpm-alpine`, `4.9-php7.0-fpm-alpine`, `4-php7.0-fpm-alpine`, `php7.0-fpm-alpine` (*php7.0/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.0/fpm-alpine/Dockerfile)
--	[`4.9.4-php7.1-apache`, `4.9-php7.1-apache`, `4-php7.1-apache`, `php7.1-apache`, `4.9.4-php7.1`, `4.9-php7.1`, `4-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.1/apache/Dockerfile)
--	[`4.9.4-php7.1-fpm`, `4.9-php7.1-fpm`, `4-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.1/fpm/Dockerfile)
--	[`4.9.4-php7.1-fpm-alpine`, `4.9-php7.1-fpm-alpine`, `4-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.1/fpm-alpine/Dockerfile)
--	[`4.9.4-apache`, `4.9-apache`, `4-apache`, `apache`, `4.9.4`, `4.9`, `4`, `latest`, `4.9.4-php7.2-apache`, `4.9-php7.2-apache`, `4-php7.2-apache`, `php7.2-apache`, `4.9.4-php7.2`, `4.9-php7.2`, `4-php7.2`, `php7.2` (*php7.2/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.2/apache/Dockerfile)
--	[`4.9.4-fpm`, `4.9-fpm`, `4-fpm`, `fpm`, `4.9.4-php7.2-fpm`, `4.9-php7.2-fpm`, `4-php7.2-fpm`, `php7.2-fpm` (*php7.2/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.2/fpm/Dockerfile)
--	[`4.9.4-fpm-alpine`, `4.9-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`, `4.9.4-php7.2-fpm-alpine`, `4.9-php7.2-fpm-alpine`, `4-php7.2-fpm-alpine`, `php7.2-fpm-alpine` (*php7.2/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/59f3b513af128d12da1403721e4f9be8d882ec54/php7.2/fpm-alpine/Dockerfile)
--	[`cli-1.5.0-php5.6`, `cli-1.5-php5.6`, `cli-1-php5.6`, `cli-php5.6` (*php5.6/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/6fb1a99b550441edb5d1e554703f9f26afa73305/php5.6/cli/Dockerfile)
--	[`cli-1.5.0-php7.0`, `cli-1.5-php7.0`, `cli-1-php7.0`, `cli-php7.0` (*php7.0/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/6fb1a99b550441edb5d1e554703f9f26afa73305/php7.0/cli/Dockerfile)
--	[`cli-1.5.0-php7.1`, `cli-1.5-php7.1`, `cli-1-php7.1`, `cli-php7.1` (*php7.1/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/6fb1a99b550441edb5d1e554703f9f26afa73305/php7.1/cli/Dockerfile)
--	[`cli-1.5.0`, `cli-1.5`, `cli-1`, `cli`, `cli-1.5.0-php7.2`, `cli-1.5-php7.2`, `cli-1-php7.2`, `cli-php7.2` (*php7.2/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/6fb1a99b550441edb5d1e554703f9f26afa73305/php7.2/cli/Dockerfile)
+-	[`4.9.8-php5.6-apache`, `4.9-php5.6-apache`, `4-php5.6-apache`, `php5.6-apache`, `4.9.8-php5.6`, `4.9-php5.6`, `4-php5.6`, `php5.6` (*php5.6/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/57572ac281f3f77846aef85641ca36a02e71458f/php5.6/apache/Dockerfile)
+-	[`4.9.8-php5.6-fpm`, `4.9-php5.6-fpm`, `4-php5.6-fpm`, `php5.6-fpm` (*php5.6/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php5.6/fpm/Dockerfile)
+-	[`4.9.8-php5.6-fpm-alpine`, `4.9-php5.6-fpm-alpine`, `4-php5.6-fpm-alpine`, `php5.6-fpm-alpine` (*php5.6/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php5.6/fpm-alpine/Dockerfile)
+-	[`4.9.8-php7.0-apache`, `4.9-php7.0-apache`, `4-php7.0-apache`, `php7.0-apache`, `4.9.8-php7.0`, `4.9-php7.0`, `4-php7.0`, `php7.0` (*php7.0/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.0/apache/Dockerfile)
+-	[`4.9.8-php7.0-fpm`, `4.9-php7.0-fpm`, `4-php7.0-fpm`, `php7.0-fpm` (*php7.0/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.0/fpm/Dockerfile)
+-	[`4.9.8-php7.0-fpm-alpine`, `4.9-php7.0-fpm-alpine`, `4-php7.0-fpm-alpine`, `php7.0-fpm-alpine` (*php7.0/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.0/fpm-alpine/Dockerfile)
+-	[`4.9.8-php7.1-apache`, `4.9-php7.1-apache`, `4-php7.1-apache`, `php7.1-apache`, `4.9.8-php7.1`, `4.9-php7.1`, `4-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.1/apache/Dockerfile)
+-	[`4.9.8-php7.1-fpm`, `4.9-php7.1-fpm`, `4-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.1/fpm/Dockerfile)
+-	[`4.9.8-php7.1-fpm-alpine`, `4.9-php7.1-fpm-alpine`, `4-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.1/fpm-alpine/Dockerfile)
+-	[`4.9.8-apache`, `4.9-apache`, `4-apache`, `apache`, `4.9.8`, `4.9`, `4`, `latest`, `4.9.8-php7.2-apache`, `4.9-php7.2-apache`, `4-php7.2-apache`, `php7.2-apache`, `4.9.8-php7.2`, `4.9-php7.2`, `4-php7.2`, `php7.2` (*php7.2/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.2/apache/Dockerfile)
+-	[`4.9.8-fpm`, `4.9-fpm`, `4-fpm`, `fpm`, `4.9.8-php7.2-fpm`, `4.9-php7.2-fpm`, `4-php7.2-fpm`, `php7.2-fpm` (*php7.2/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.2/fpm/Dockerfile)
+-	[`4.9.8-fpm-alpine`, `4.9-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`, `4.9.8-php7.2-fpm-alpine`, `4.9-php7.2-fpm-alpine`, `4-php7.2-fpm-alpine`, `php7.2-fpm-alpine` (*php7.2/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/cb50cbaabba8eea67ea6a1f7702a7a1e238f10b9/php7.2/fpm-alpine/Dockerfile)
+-	[`cli-2.0.1-php5.6`, `cli-2.0-php5.6`, `cli-2-php5.6`, `cli-php5.6` (*php5.6/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4/php5.6/cli/Dockerfile)
+-	[`cli-2.0.1-php7.0`, `cli-2.0-php7.0`, `cli-2-php7.0`, `cli-php7.0` (*php7.0/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4/php7.0/cli/Dockerfile)
+-	[`cli-2.0.1-php7.1`, `cli-2.0-php7.1`, `cli-2-php7.1`, `cli-php7.1` (*php7.1/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4/php7.1/cli/Dockerfile)
+-	[`cli-2.0.1`, `cli-2.0`, `cli-2`, `cli`, `cli-2.0.1-php7.2`, `cli-2.0-php7.2`, `cli-2-php7.2`, `cli-php7.2` (*php7.2/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/c5dcf1a2d8d894a5b1ed1c7218e444dc342bd7b4/php7.2/cli/Dockerfile)
 
 # Quick reference
 
@@ -83,6 +83,8 @@ The following environment variables are also honored for configuring your WordPr
 -	`-e WORDPRESS_DB_NAME=...` (defaults to "wordpress")
 -	`-e WORDPRESS_TABLE_PREFIX=...` (defaults to "", only set this when you need to override the default table prefix in wp-config.php)
 -	`-e WORDPRESS_AUTH_KEY=...`, `-e WORDPRESS_SECURE_AUTH_KEY=...`, `-e WORDPRESS_LOGGED_IN_KEY=...`, `-e WORDPRESS_NONCE_KEY=...`, `-e WORDPRESS_AUTH_SALT=...`, `-e WORDPRESS_SECURE_AUTH_SALT=...`, `-e WORDPRESS_LOGGED_IN_SALT=...`, `-e WORDPRESS_NONCE_SALT=...` (default to unique random SHA1s)
+-	`-e WORDPRESS_DEBUG=1` (defaults to disabled, non-empty value will enable `WP_DEBUG` in `wp-config.php`)
+-	`-e WORDPRESS_CONFIG_EXTRA=...` (defaults to nothing, non-empty value will be embedded verbatim inside `wp-config.php` -- especially useful for applying extra configuration values this image does not provide by default such as `WP_ALLOW_MULTISITE`; see [docker-library/wordpress#142](https://github.com/docker-library/wordpress/pull/142) for more details)
 
 If the `WORDPRESS_DB_NAME` specified does not already exist on the given MySQL server, it will be created automatically upon startup of the `wordpress` container, provided that the `WORDPRESS_DB_USER` specified has the necessary permissions to create it.
 
@@ -100,6 +102,10 @@ If you'd like to use an external database instead of a linked `mysql` container,
 $ docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 \
     -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d wordpress
 ```
+
+When running WordPress with TLS behind a reverse proxy such as NGINX which is responsible for doing TLS termination, be sure to set `X-Forwarded-Proto` appropriately (see ["Using a Reverse Proxy" in "Administration Over SSL" in upstream's documentation](https://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy)). No additional environment variables or configuration should be necessary (this image automatically adds the noted `HTTP_X_FORWARDED_PROTO` code to `wp-config.php` if *any* of the above-noted environment variables are specified).
+
+If your database requires SSL, [WordPress ticket #28625](https://core.trac.wordpress.org/ticket/28625) has the relevant details regarding support for that with WordPress upstream. As a workaround, [the "Secure DB Connection" plugin](https://wordpress.org/plugins/secure-db-connection/) can be extracted into the WordPress directory and the appropriate values described in the configuration of that plugin added in `wp-config.php`.
 
 ## Docker Secrets
 
@@ -150,6 +156,12 @@ The following Docker Hub features can help with the task of keeping your depende
 -	[Automated Builds](https://docs.docker.com/docker-hub/builds/) let Docker Hub automatically build your Dockerfile each time you push changes to it.
 -	[Repository Links](https://docs.docker.com/docker-hub/builds/#repository-links) can ensure that your image is also rebuilt any time `wordpress` is updated.
 
+## Running as an arbitrary user
+
+See [the "Running as an arbitrary user" section of the `php` image documentation](https://hub.docker.com/_/php/).
+
+When running WP-CLI via the `cli` variants of this image, it is important to note that they're based on Alpine, and have a default `USER` of Alpine's `www-data`, whose UID is `82` (compared to the Debian-based WordPress variants whose default effective UID is `33`), so when running `wordpress:cli` against an existing Debian-based WordPress install, something like `--user 33:33` is likely going to be necessary. See [docker-library/wordpress#256](https://github.com/docker-library/wordpress/issues/256) for more discussion around this.
+
 # Image Variants
 
 The `wordpress` images come in many flavors, each designed for a specific use case.
@@ -158,7 +170,7 @@ The `wordpress` images come in many flavors, each designed for a specific use ca
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `wordpress:alpine`
+## `wordpress:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

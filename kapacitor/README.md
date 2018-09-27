@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.3`, `1.3.3` (*kapacitor/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/kapacitor/1.3/Dockerfile)
--	[`1.3-alpine`, `1.3.3-alpine` (*kapacitor/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/kapacitor/1.3/alpine/Dockerfile)
--	[`1.4`, `1.4.0`, `latest` (*kapacitor/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/kapacitor/1.4/Dockerfile)
--	[`1.4-alpine`, `1.4.0-alpine`, `alpine` (*kapacitor/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/kapacitor/1.4/alpine/Dockerfile)
+-	[`1.4`, `1.4.1` (*kapacitor/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/768b6219c964a2bbab299fa45879acc40f11ad4b/kapacitor/1.4/Dockerfile)
+-	[`1.4-alpine`, `1.4.1-alpine` (*kapacitor/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/768b6219c964a2bbab299fa45879acc40f11ad4b/kapacitor/1.4/alpine/Dockerfile)
+-	[`1.5`, `1.5.1`, `latest` (*kapacitor/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/768b6219c964a2bbab299fa45879acc40f11ad4b/kapacitor/1.5/Dockerfile)
+-	[`1.5-alpine`, `1.5.1-alpine`, `alpine` (*kapacitor/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/768b6219c964a2bbab299fa45879acc40f11ad4b/kapacitor/1.5/alpine/Dockerfile)
 
 # Quick reference
 
@@ -190,7 +190,7 @@ The `kapacitor` images come in many flavors, each designed for a specific use ca
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `kapacitor:alpine`
+## `kapacitor:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

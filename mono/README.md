@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.8.0.108`, `latest`, `5.8.0`, `5.8`, `5` (*5.8.0.108/Dockerfile*)](https://github.com/mono/docker/blob/a1fdfa9177869de5e0a0cfbdf10ebb4281200b02/5.8.0.108/Dockerfile)
--	[`5.8.0.108-slim`, `slim`, `5.8.0-slim`, `5.8-slim`, `5-slim` (*5.8.0.108/slim/Dockerfile*)](https://github.com/mono/docker/blob/a1fdfa9177869de5e0a0cfbdf10ebb4281200b02/5.8.0.108/slim/Dockerfile)
--	[`5.4.1.6`, `5.4.1`, `5.4` (*5.4.1.6/Dockerfile*)](https://github.com/mono/docker/blob/c05f965729b45093c1e9534d3e6532984f8091db/5.4.1.6/Dockerfile)
--	[`5.4.1.6-slim`, `5.4.1-slim`, `5.4-slim` (*5.4.1.6/slim/Dockerfile*)](https://github.com/mono/docker/blob/c05f965729b45093c1e9534d3e6532984f8091db/5.4.1.6/slim/Dockerfile)
+-	[`5.14.0.177`, `latest`, `5.14.0`, `5.14`, `5` (*5.14.0.177/Dockerfile*)](https://github.com/mono/docker/blob/6d9b65ee9c9fe73b5fed6674e8ebe8e0d6f5abaf/5.14.0.177/Dockerfile)
+-	[`5.14.0.177-slim`, `slim`, `5.14.0-slim`, `5.14-slim`, `5-slim` (*5.14.0.177/slim/Dockerfile*)](https://github.com/mono/docker/blob/6d9b65ee9c9fe73b5fed6674e8ebe8e0d6f5abaf/5.14.0.177/slim/Dockerfile)
+-	[`5.12.0.226`, `5.12.0`, `5.12` (*5.12.0.226/Dockerfile*)](https://github.com/mono/docker/blob/f78944a3b27b9f155bd38210571eb05d348f2973/5.12.0.226/Dockerfile)
+-	[`5.12.0.226-slim`, `5.12.0-slim`, `5.12-slim` (*5.12.0.226/slim/Dockerfile*)](https://github.com/mono/docker/blob/f78944a3b27b9f155bd38210571eb05d348f2973/5.12.0.226/slim/Dockerfile)
 -	[`4.8.0.524`, `4.8.0`, `4.8`, `4` (*4.8.0.524/Dockerfile*)](https://github.com/mono/docker/blob/0d987d93235630e05a14983c7f87500ab33c90da/4.8.0.524/Dockerfile)
 
 # Quick reference
@@ -99,7 +99,7 @@ The `mono` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `mono:slim`
+## `mono:<version>-slim`
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `mono`. Unless you are working in an environment where *only* the `mono` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 

@@ -16,12 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`11.0.7-apache`, `11.0-apache`, `11-apache`, `11.0.7`, `11.0`, `11` (*11.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/11.0/apache/Dockerfile)
--	[`11.0.7-fpm`, `11.0-fpm`, `11-fpm` (*11.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/11.0/fpm/Dockerfile)
--	[`12.0.5-apache`, `12.0-apache`, `12-apache`, `12.0.5`, `12.0`, `12` (*12.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/12.0/apache/Dockerfile)
--	[`12.0.5-fpm`, `12.0-fpm`, `12-fpm` (*12.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/12.0/fpm/Dockerfile)
--	[`13.0.0-apache`, `13.0-apache`, `13-apache`, `apache`, `13.0.0`, `13.0`, `13`, `latest` (*13.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/13.0/apache/Dockerfile)
--	[`13.0.0-fpm`, `13.0-fpm`, `13-fpm`, `fpm` (*13.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/013a71ac9b5b6153e52f8572f607bc7d2ad953bd/13.0/fpm/Dockerfile)
+-	[`12.0.11-apache`, `12.0-apache`, `12-apache`, `12.0.11`, `12.0`, `12` (*12.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/apache/Dockerfile)
+-	[`12.0.11-fpm-alpine`, `12.0-fpm-alpine`, `12-fpm-alpine` (*12.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/fpm-alpine/Dockerfile)
+-	[`12.0.11-fpm`, `12.0-fpm`, `12-fpm` (*12.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/fpm/Dockerfile)
+-	[`13.0.6-apache`, `13.0-apache`, `13-apache`, `stable-apache`, `production-apache`, `13.0.6`, `13.0`, `13`, `stable`, `production` (*13.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/apache/Dockerfile)
+-	[`13.0.6-fpm-alpine`, `13.0-fpm-alpine`, `13-fpm-alpine`, `stable-fpm-alpine`, `production-fpm-alpine` (*13.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/fpm-alpine/Dockerfile)
+-	[`13.0.6-fpm`, `13.0-fpm`, `13-fpm`, `stable-fpm`, `production-fpm` (*13.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/fpm/Dockerfile)
+-	[`14.0.1RC1-apache`, `14.0.1-rc-apache`, `14.0-rc-apache`, `14-rc-apache`, `rc-apache`, `14.0.1RC1`, `14.0.1-rc`, `14.0-rc`, `14-rc`, `rc` (*14.0-rc/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/apache/Dockerfile)
+-	[`14.0.1RC1-fpm-alpine`, `14.0.1-rc-fpm-alpine`, `14.0-rc-fpm-alpine`, `14-rc-fpm-alpine`, `rc-fpm-alpine` (*14.0-rc/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/fpm-alpine/Dockerfile)
+-	[`14.0.1RC1-fpm`, `14.0.1-rc-fpm`, `14.0-rc-fpm`, `14-rc-fpm`, `rc-fpm` (*14.0-rc/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/fpm/Dockerfile)
+-	[`14.0.0-apache`, `14.0-apache`, `14-apache`, `apache`, `14.0.0`, `14.0`, `14`, `latest` (*14.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/apache/Dockerfile)
+-	[`14.0.0-fpm-alpine`, `14.0-fpm-alpine`, `14-fpm-alpine`, `fpm-alpine` (*14.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/fpm-alpine/Dockerfile)
+-	[`14.0.0-fpm`, `14.0-fpm`, `14-fpm`, `fpm` (*14.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/fpm/Dockerfile)
 
 # Quick reference
 
@@ -35,7 +41,7 @@ WARNING:
 	[Nextcloud](https://github.com/nextcloud/docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nextcloud/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nextcloud/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nextcloud/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nextcloud/), [`i386`](https://hub.docker.com/r/i386/nextcloud/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nextcloud/), [`s390x`](https://hub.docker.com/r/s390x/nextcloud/)
+	[`amd64`](https://hub.docker.com/r/amd64/nextcloud/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nextcloud/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nextcloud/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nextcloud/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nextcloud/), [`i386`](https://hub.docker.com/r/i386/nextcloud/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nextcloud/), [`s390x`](https://hub.docker.com/r/s390x/nextcloud/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nextcloud/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nextcloud) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nextcloud))  
@@ -57,7 +63,7 @@ A safe home for all your data. Access & share your files, calendars, contacts, m
 
 > [Nextcloud.com](https://nextcloud.com/)
 
-![logo](https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg)
+![logo](https://cdn.rawgit.com/docker-library/docs/e563b6cd3d797e2b3695576d20041227d1fb7536/nextcloud/logo.svg)
 
 # How to use this image
 
@@ -419,6 +425,22 @@ You're already using Nextcloud and want to switch to docker? Great! Here are som
 # Questions / Issues
 
 If you got any questions or problems using the image, please visit our [Github Repository](https://github.com/nextcloud/docker) and write an issue.
+
+# Image Variants
+
+The `nextcloud` images come in many flavors, each designed for a specific use case.
+
+## `nextcloud:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+## `nextcloud:<version>-alpine`
+
+This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+
+To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

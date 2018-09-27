@@ -16,14 +16,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.5.19`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/7c772b810df3afe6884d0fb8b83720f992c3951b/1.5/Dockerfile)
--	[`1.5.19-alpine`, `1.5-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/7c772b810df3afe6884d0fb8b83720f992c3951b/1.5/alpine/Dockerfile)
--	[`1.6.14`, `1.6` (*1.6/Dockerfile*)](https://github.com/docker-library/haproxy/blob/7c772b810df3afe6884d0fb8b83720f992c3951b/1.6/Dockerfile)
--	[`1.6.14-alpine`, `1.6-alpine` (*1.6/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/fbf8924b471f678bbc7a4866a2beb0db37d7e9d0/1.6/alpine/Dockerfile)
--	[`1.7.10`, `1.7` (*1.7/Dockerfile*)](https://github.com/docker-library/haproxy/blob/7c772b810df3afe6884d0fb8b83720f992c3951b/1.7/Dockerfile)
--	[`1.7.10-alpine`, `1.7-alpine` (*1.7/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/fbf8924b471f678bbc7a4866a2beb0db37d7e9d0/1.7/alpine/Dockerfile)
--	[`1.8.4`, `1.8`, `1`, `latest` (*1.8/Dockerfile*)](https://github.com/docker-library/haproxy/blob/c0c933487b09b205ad9a2a33a70987d86fa12c23/1.8/Dockerfile)
--	[`1.8.4-alpine`, `1.8-alpine`, `1-alpine`, `alpine` (*1.8/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/c0c933487b09b205ad9a2a33a70987d86fa12c23/1.8/alpine/Dockerfile)
+-	[`1.5.19`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.5/Dockerfile)
+-	[`1.5.19-alpine`, `1.5-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.5/alpine/Dockerfile)
+-	[`1.6.14`, `1.6` (*1.6/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.6/Dockerfile)
+-	[`1.6.14-alpine`, `1.6-alpine` (*1.6/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.6/alpine/Dockerfile)
+-	[`1.7.11`, `1.7` (*1.7/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.7/Dockerfile)
+-	[`1.7.11-alpine`, `1.7-alpine` (*1.7/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.7/alpine/Dockerfile)
+-	[`1.8.14`, `1.8`, `1`, `latest` (*1.8/Dockerfile*)](https://github.com/docker-library/haproxy/blob/9da24940385e6178f987737305ff499734437c90/1.8/Dockerfile)
+-	[`1.8.14-alpine`, `1.8-alpine`, `1-alpine`, `alpine` (*1.8/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/9da24940385e6178f987737305ff499734437c90/1.8/alpine/Dockerfile)
 
 # Quick reference
 
@@ -122,7 +122,7 @@ The `haproxy` images come in many flavors, each designed for a specific use case
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `haproxy:alpine`
+## `haproxy:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

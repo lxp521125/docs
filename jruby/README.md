@@ -16,11 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `9`, `9.1`, `9.1.16`, `9.1-jre`, `9.1.16-jre`, `9.1.16.0`, `9.1.16.0-jre` (*9000/jre/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/393b43b18e2b278df1c0be91651bac4f99c4bd95/9000/jre/Dockerfile)
--	[`9-alpine`, `9.1-alpine`, `9.1.16-alpine`, `9.1-jre-alpine`, `9.1.16-jre-alpine`, `9.1.16.0-alpine`, `9.1.16.0-jre-alpine` (*9000/alpine-jre/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/393b43b18e2b278df1c0be91651bac4f99c4bd95/9000/alpine-jre/Dockerfile)
--	[`9-jdk`, `9.1-jdk`, `9.1.16-jdk`, `9.1.16.0-jdk` (*9000/jdk/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/393b43b18e2b278df1c0be91651bac4f99c4bd95/9000/jdk/Dockerfile)
--	[`9-jdk-alpine`, `9.1-jdk-alpine`, `9.1.16-jdk-alpine`, `9.1.16.0-jdk-alpine` (*9000/alpine-jdk/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/393b43b18e2b278df1c0be91651bac4f99c4bd95/9000/alpine-jdk/Dockerfile)
--	[`9-onbuild`, `9.1-onbuild`, `9.1.16-onbuild`, `9.1.16.0-onbuild` (*9000/onbuild/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/393b43b18e2b278df1c0be91651bac4f99c4bd95/9000/onbuild/Dockerfile)
+-	[`latest`, `9`, `9.2`, `9.2.0`, `9.2-jre`, `9.2.0-jre`, `9.2.0.0`, `9.2.0.0-jre` (*9000/jre/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/fadb44e816ee8d361d0ff45261efe1482a4d9441/9000/jre/Dockerfile)
+-	[`9-alpine`, `9.2-alpine`, `9.2.0-alpine`, `9.2-jre-alpine`, `9.2.0-jre-alpine`, `9.2.0.0-alpine`, `9.2.0.0-jre-alpine` (*9000/alpine-jre/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/fadb44e816ee8d361d0ff45261efe1482a4d9441/9000/alpine-jre/Dockerfile)
+-	[`9-jdk`, `9.2-jdk`, `9.2.0-jdk`, `9.2.0.0-jdk` (*9000/jdk/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/fadb44e816ee8d361d0ff45261efe1482a4d9441/9000/jdk/Dockerfile)
+-	[`9-jdk-alpine`, `9.2-jdk-alpine`, `9.2.0-jdk-alpine`, `9.2.0.0-jdk-alpine` (*9000/alpine-jdk/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/fadb44e816ee8d361d0ff45261efe1482a4d9441/9000/alpine-jdk/Dockerfile)
+-	[`9-onbuild`, `9.2-onbuild`, `9.2.0-onbuild`, `9.2.0.0-onbuild` (*9000/onbuild/Dockerfile*)](https://github.com/cpuguy83/docker-jruby/blob/fadb44e816ee8d361d0ff45261efe1482a4d9441/9000/onbuild/Dockerfile)
 
 # Quick reference
 
@@ -67,13 +67,22 @@ JRuby leverages the robustness and speed of the JVM while providing the same Rub
 ## Create a `Dockerfile` in your Ruby app project
 
 ```dockerfile
-FROM jruby:1.7-onbuild
+FROM jruby:9
+
+# throw errors if Gemfile has been modified since Gemfile.lock
+RUN bundle config --global frozen 1
+
+WORKDIR /usr/src/app
+
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+COPY . .
+
 CMD ["./your-daemon-or-script.rb"]
 ```
 
 Put this file in the root of your app, next to the `Gemfile`.
-
-This image includes multiple `ONBUILD` triggers which should be all you need to bootstrap most applications. The build will `COPY . /usr/src/app` and `RUN bundle install`.
 
 You can then build and run the Ruby image:
 
@@ -84,10 +93,10 @@ $ docker run -it --name my-running-script my-ruby-app
 
 ### Generate a `Gemfile.lock`
 
-The `onbuild` tag expects a `Gemfile.lock` in your app directory. This `docker run` will help you generate one. Run it in the root of your app, next to the `Gemfile`:
+The above example `Dockerfile` expects a `Gemfile.lock` in your app directory. This `docker run` will help you generate one. Run it in the root of your app, next to the `Gemfile`:
 
 ```console
-$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app jruby:1.7 bundle install --system
+$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app jruby:9 bundle install --system
 ```
 
 ## Run a single Ruby script
@@ -95,7 +104,7 @@ $ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app jruby:1.7 bundle instal
 For many simple, single file projects, you may find it inconvenient to write a complete `Dockerfile`. In such cases, you can run a Ruby script by using the Ruby Docker image directly:
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp jruby:1.7 jruby your-daemon-or-script.rb
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp jruby:9 jruby your-daemon-or-script.rb
 ```
 
 # Image Variants
@@ -106,7 +115,7 @@ The `jruby` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `jruby:alpine`
+## `jruby:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
@@ -114,7 +123,7 @@ This variant is highly recommended when final image size being as small as possi
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
-## `jruby:onbuild`
+## `jruby:<version>-onbuild`
 
 The `ONBUILD` image variants are deprecated, and their usage is discouraged. For more details, see [docker-library/official-images#2076](https://github.com/docker-library/official-images/issues/2076).
 

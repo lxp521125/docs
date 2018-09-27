@@ -40,7 +40,13 @@ $ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/g
 $ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost %%IMAGE%%:0.11-alpine
 ```
 
-### Breaking change
+### Breaking changes
+
+#### Ghost 1.x.x => Ghost 2.x.x
+
+When upgrading from Ghost 1.x to Ghost 2.x, you must make sure you are already running the latest version of Ghost 1.x *before* upgrading to 2.x. Otherwise, you may run into database errors.
+
+#### Ghost 0.11.x => Ghost 1.x.x
 
 If you want to run Ghost 0.11.xx, be aware of the container's path difference:
 
@@ -58,6 +64,16 @@ Alternatively you can use a [data container](http://docs.docker.com/engine/tutor
 ```console
 $ docker run -d --name some-ghost --volumes-from some-ghost-data %%IMAGE%%
 ```
+
+## Configuration
+
+All Ghost configuration parameters (such as `url`) can be specified via environment variables. See [the Ghost documentation](https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables) for details about what configuration is allowed and how to convert a nested configuration key into the appropriate environment variable name:
+
+```console
+$ docker run -d --name some-ghost -e url=http://some-ghost.example.com %%IMAGE%%
+```
+
+(There are further configuration examples in the `stack.yml` listed below.)
 
 ## What is the Node.js version?
 

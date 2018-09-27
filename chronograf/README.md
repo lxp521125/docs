@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.3`, `1.3.10`, `1.3.10.0` (*chronograf/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.3/Dockerfile)
--	[`1.3-alpine`, `1.3.10-alpine`, `1.3.10.0-alpine` (*chronograf/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.3/alpine/Dockerfile)
--	[`1.4`, `1.4.1`, `1.4.1.2`, `latest` (*chronograf/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.4/Dockerfile)
--	[`1.4-alpine`, `1.4.1-alpine`, `1.4.1.2-alpine`, `alpine` (*chronograf/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/c5587ee78b4593f44132112befea1b91426dc00f/chronograf/1.4/alpine/Dockerfile)
+-	[`1.5`, `1.5.0`, `1.5.0.1` (*chronograf/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/fe716a2310b71ab30eb9c8dc77a9f5965b1001c0/chronograf/1.5/Dockerfile)
+-	[`1.5-alpine`, `1.5.0-alpine`, `1.5.0.1-alpine` (*chronograf/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/fe716a2310b71ab30eb9c8dc77a9f5965b1001c0/chronograf/1.5/alpine/Dockerfile)
+-	[`1.6`, `1.6.2`, `latest` (*chronograf/1.6/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/fe716a2310b71ab30eb9c8dc77a9f5965b1001c0/chronograf/1.6/Dockerfile)
+-	[`1.6-alpine`, `1.6.2-alpine`, `alpine` (*chronograf/1.6/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/fe716a2310b71ab30eb9c8dc77a9f5965b1001c0/chronograf/1.6/alpine/Dockerfile)
 
 # Quick reference
 
@@ -123,7 +123,7 @@ The `chronograf` images come in many flavors, each designed for a specific use c
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `chronograf:alpine`
+## `chronograf:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

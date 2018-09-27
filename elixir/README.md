@@ -16,18 +16,19 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.6.1`, `1.6`, `latest` (*1.6/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/089cab9aeb7e5ae1fec8cdc9cd308711e1855c4d/1.6/Dockerfile)
--	[`1.6.1-slim`, `1.6-slim`, `slim` (*1.6/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/089cab9aeb7e5ae1fec8cdc9cd308711e1855c4d/1.6/slim/Dockerfile)
--	[`1.6.1-alpine`, `1.6-alpine`, `alpine` (*1.6/alpine/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/089cab9aeb7e5ae1fec8cdc9cd308711e1855c4d/1.6/alpine/Dockerfile)
+-	[`1.7.3`, `1.7`, `latest` (*1.7/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/84a28091330648bdc0e97349fd74c643eec58de9/1.7/Dockerfile)
+-	[`1.7.3-slim`, `1.7-slim`, `slim` (*1.7/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/84a28091330648bdc0e97349fd74c643eec58de9/1.7/slim/Dockerfile)
+-	[`1.7.3-alpine`, `1.7-alpine`, `alpine` (*1.7/alpine/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/84a28091330648bdc0e97349fd74c643eec58de9/1.7/alpine/Dockerfile)
+-	[`1.6.6`, `1.6` (*1.6/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/0936291249c7e11d4618a17a2b452045c9e6233a/1.6/Dockerfile)
+-	[`1.6.6-slim`, `1.6-slim` (*1.6/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/0936291249c7e11d4618a17a2b452045c9e6233a/1.6/slim/Dockerfile)
+-	[`1.6.6-alpine`, `1.6-alpine` (*1.6/alpine/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/0936291249c7e11d4618a17a2b452045c9e6233a/1.6/alpine/Dockerfile)
+-	[`1.6.6-otp-21`, `1.6-otp-21` (*1.6/otp-21/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/b57a72d04ddd1f1b4e2e3f5b70e44e37def4db31/1.6/otp-21/Dockerfile)
+-	[`1.6.6-otp-21-alpine`, `1.6-otp-21-alpine` (*1.6/otp-21-alpine/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/71f26c0a37a3d928f24021b14e23b88643c06280/1.6/otp-21-alpine/Dockerfile)
 -	[`1.5.3`, `1.5` (*1.5/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/f2528c0158d465f96f311faa19aff3cffb4e7f25/1.5/Dockerfile)
 -	[`1.5.3-slim`, `1.5-slim` (*1.5/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/f2528c0158d465f96f311faa19aff3cffb4e7f25/1.5/slim/Dockerfile)
 -	[`1.5.3-alpine`, `1.5-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/f2528c0158d465f96f311faa19aff3cffb4e7f25/1.5/alpine/Dockerfile)
 -	[`1.4.5`, `1.4` (*1.4/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/8f1888ae05506b9ad12e1b97f084a15e7588f442/1.4/Dockerfile)
 -	[`1.4.5-slim`, `1.4-slim` (*1.4/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/8f1888ae05506b9ad12e1b97f084a15e7588f442/1.4/slim/Dockerfile)
--	[`1.3.4`, `1.3` (*1.3/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/d8d656d7c0dc9dd2956a22276c93cb97568ea6d4/1.3/Dockerfile)
--	[`1.3.4-slim`, `1.3-slim` (*1.3/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/d8d656d7c0dc9dd2956a22276c93cb97568ea6d4/1.3/slim/Dockerfile)
--	[`1.2.6`, `1.2` (*1.2/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/77b9a3da43ce035327ae29083e567191d60a6ac8/1.2/Dockerfile)
--	[`1.2.6-slim`, `1.2-slim` (*1.2/slim/Dockerfile*)](https://github.com/c0b/docker-elixir/blob/77b9a3da43ce035327ae29083e567191d60a6ac8/1.2/slim/Dockerfile)
 
 # Quick reference
 
@@ -104,11 +105,11 @@ The `elixir` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `elixir:slim`
+## `elixir:<version>-slim`
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `elixir`. Unless you are working in an environment where *only* the `elixir` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `elixir:alpine`
+## `elixir:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

@@ -18,15 +18,15 @@ WARNING:
 
 ## Simple Tags
 
--	[`1.0.4-linux`, `linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/amd64/Dockerfile)
--	[`1.0.4-nanoserver`, `nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/nanoserver/Dockerfile)
--	[`1.0.4-windowsservercore`, `windowsservercore` (*windows/windowsservercore/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/windowsservercore/Dockerfile)
+-	[`1.3.0-linux`, `linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/fedce51f05d228353ca56e87062ad23a671387a0/amd64/Dockerfile)
+-	[`1.3.0-nanoserver`, `nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/fedce51f05d228353ca56e87062ad23a671387a0/windows/nanoserver/Dockerfile)
+-	[`1.3.0-windowsservercore`, `windowsservercore` (*windows/windowsservercore/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/fedce51f05d228353ca56e87062ad23a671387a0/windows/windowsservercore/Dockerfile)
 
 ## Shared Tags
 
--	`1.0.4`, `latest`:
-	-	[`1.0.4-linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/amd64/Dockerfile)
-	-	[`1.0.4-nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/4e0129ffe9d12beec981238c6cb54f5faa0fbe57/windows/nanoserver/Dockerfile)
+-	`1.3.0`, `latest`:
+	-	[`1.3.0-linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/fedce51f05d228353ca56e87062ad23a671387a0/amd64/Dockerfile)
+	-	[`1.3.0-nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/fedce51f05d228353ca56e87062ad23a671387a0/windows/nanoserver/Dockerfile)
 
 # Quick reference
 
@@ -40,7 +40,7 @@ WARNING:
 	[the NATS Project](https://github.com/nats-io/nats-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nats/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nats/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nats/), [`windows-amd64`](https://hub.docker.com/r/winamd64/nats/)
+	[`amd64`](https://hub.docker.com/r/amd64/nats/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nats/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nats/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nats/), [`windows-amd64`](https://hub.docker.com/r/winamd64/nats/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nats/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nats) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nats))  
@@ -58,7 +58,7 @@ WARNING:
 
 # [NATS](https://nats.io): A high-performance cloud native messaging system.
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/45d33e1726fed03a2a40363a9699e0587e713c55/nats/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/ad703934a62fabf54452755c8486698ff6fc5cc2/nats/logo.png)
 
 `nats` is a high performance server for the NATS Messaging System.
 
@@ -70,10 +70,26 @@ WARNING:
 # 4222 is for clients.
 # 8222 is an HTTP management port for information reporting.
 # 6222 is a routing port for clustering.
-# use -p or -P as needed.
+#
+# To actually publish the ports when running the container, use the Docker port mapping
+# flag "docker run -p <hostport>:<containerport>" to publish and map one or more ports,
+# or the -P flag to publish all exposed ports and map them to high-order ports.
+#
+# This should not be confused with the NATS Server own -p parameter.
+# For instance, to run the NATS Server and have it listen on port 4444,
+# you would have to run like this:
+#
+#   docker run -p 4444:4444 nats -p 4444
+#
+# Or, if you want to publish the port 4444 as a different port, for example 5555:
+#
+#   docker run -p 5555:4444 nats -p 4444
+#
+# Check "docker run" for more information.
 
-$ docker run -d --name nats-main nats
-[INF] Starting nats-server version 1.0.4
+$ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
+[INF] Starting nats-server version 1.3.0
+[INF] Git commit [eed4fbc]
 [INF] Starting http monitor on 0.0.0.0:8222
 [INF] Listening for client connections on 0.0.0.0:4222
 [INF] Server is ready
@@ -85,21 +101,22 @@ $ docker run -d --name nats-main nats
 # Note that since you are passing arguments, this overrides the CMD section
 # of the Dockerfile, so you need to pass all arguments, including the
 # config file.
-$ docker run -d --name=nats-2 --link nats-main nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222
+$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222
 
 # If you want to verify the routes are connected, try this instead:
-$ docker run -d --name=nats-2 --link nats-main nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222 -DV
-[INF] Starting nats-server version 1.0.4
-[DBG] Go build version go1.8.3
+$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222 -DV
+[INF] Starting nats-server version 1.3.0
+[DBG] Go build version go1.11
+[INF] Git commit [eed4fbc]
 [INF] Starting http monitor on 0.0.0.0:8222
 [INF] Listening for client connections on 0.0.0.0:4222
-[DBG] Server id is BEfslG6VOmnIbMQcXTVaVJ
+[DBG] Server id is TH1MRk9Mug4fgIDdcXIo6R
 [INF] Server is ready
 [INF] Listening for route connections on 0.0.0.0:6222
 [DBG] Trying to connect to route on nats-main:6222
 [DBG] 172.17.0.2:6222 - rid:1 - Route connection created
 [DBG] 172.17.0.2:6222 - rid:1 - Route connect msg sent
-[DBG] 172.17.0.2:6222 - rid:1 - Registering remote route "vay01L4cPxqy75GIDcqKq7"
+[DBG] 172.17.0.2:6222 - rid:1 - Registering remote route "kxi2il81mIY4TsgwdGl9Fb"
 [DBG] 172.17.0.2:6222 - rid:1 - Route sent local subscriptions
 ```
 
@@ -146,6 +163,7 @@ Server Options:
     -ms,--https_port <port>          Use port for https monitoring
     -c, --config <file>              Configuration file
     -sl,--signal <signal>[=<pid>]    Send signal to gnatsd process (stop, quit, reopen, reload)
+        --client_advertise <string>  Client URL to advertise to other servers
 
 Logging Options:
     -l, --log <file>                 File to redirect log output
@@ -172,6 +190,7 @@ Cluster Options:
         --routes <rurl-1, rurl-2>    Routes to solicit and connect
         --cluster <cluster-url>      Cluster URL for solicited routes
         --no_advertise <bool>        Advertise known cluster IPs to clients
+        --cluster_advertise <string> Cluster URL to advertise to other servers
         --connect_retries <number>   For implicit routes, number of connect retries
 
 
@@ -189,7 +208,7 @@ The `nats` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `nats:windowsservercore`
+## `nats:<version>-windowsservercore`
 
 This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
 

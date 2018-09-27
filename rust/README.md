@@ -16,8 +16,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.24.0-stretch`, `1-stretch`, `1.24-stretch`, `stretch`, `1.24.0`, `1`, `1.24`, `latest` (*1.24.0/stretch/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/c481589e552336cffcbe97b6e42a7d1d3e1e9a49/1.24.0/stretch/Dockerfile)
--	[`1.24.0-jessie`, `1-jessie`, `1.24-jessie`, `jessie` (*1.24.0/jessie/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/c481589e552336cffcbe97b6e42a7d1d3e1e9a49/1.24.0/jessie/Dockerfile)
+-	[`1.29.1-stretch`, `1-stretch`, `1.29-stretch`, `stretch`, `1.29.1`, `1`, `1.29`, `latest` (*1.29.1/stretch/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/6b67741c0493c37f6a46b5193dd82ac4b0784bdf/1.29.1/stretch/Dockerfile)
+-	[`1.29.1-slim-stretch`, `1-slim-stretch`, `1.29-slim-stretch`, `slim-stretch`, `1.29.1-slim`, `1-slim`, `1.29-slim`, `slim` (*1.29.1/stretch/slim/Dockerfile*)](https://github.com/rust-lang-nursery/docker-rust/blob/6b67741c0493c37f6a46b5193dd82ac4b0784bdf/1.29.1/stretch/slim/Dockerfile)
 
 # Quick reference
 
@@ -88,6 +88,18 @@ $ docker run --rm --user "$(id -u)":"$(id -g)" -v "$PWD":/usr/src/myapp -w /usr/
 ```
 
 This will add your current directory, as a volume, to the container, set the working directory to the volume, and run the command `cargo build --release`. This tells Cargo, Rust's build system, to compile the crate in `myapp` and output the executable to `target/release/myapp`.
+
+# Image Variants
+
+The `rust` images come in many flavors, each designed for a specific use case.
+
+## `rust:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
+
+## `rust:<version>-slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `rust`. Unless you are working in an environment where *only* the `rust` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

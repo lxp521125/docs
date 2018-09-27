@@ -17,8 +17,8 @@ WARNING:
 # Supported tags and respective `Dockerfile` links
 
 -	[`1.0.6`, `1.0` (*1.0.6/Dockerfile*)](https://github.com/31z4/storm-docker/blob/9986213e09356e2d5230e6af9338052ce858b224/1.0.6/Dockerfile)
--	[`1.1.2`, `1.1` (*1.1.2/Dockerfile*)](https://github.com/31z4/storm-docker/blob/9986213e09356e2d5230e6af9338052ce858b224/1.1.2/Dockerfile)
--	[`1.2.1`, `1.2`, `latest` (*1.2.1/Dockerfile*)](https://github.com/31z4/storm-docker/blob/9b5187aea15c0e21d082b1f041cdc2f7a892dc26/1.2.1/Dockerfile)
+-	[`1.1.3`, `1.1` (*1.1.3/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.1.3/Dockerfile)
+-	[`1.2.2`, `1.2`, `latest` (*1.2.2/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.2.2/Dockerfile)
 
 # Quick reference
 
@@ -32,7 +32,7 @@ WARNING:
 	[the Docker Community](https://github.com/31z4/storm-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/storm/)
+	[`amd64`](https://hub.docker.com/r/amd64/storm/), [`arm32v6`](https://hub.docker.com/r/arm32v6/storm/), [`arm64v8`](https://hub.docker.com/r/arm64v8/storm/), [`i386`](https://hub.docker.com/r/i386/storm/), [`ppc64le`](https://hub.docker.com/r/ppc64le/storm/), [`s390x`](https://hub.docker.com/r/s390x/storm/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/storm/` directory](https://github.com/docker-library/repo-info/blob/master/repos/storm) ([history](https://github.com/docker-library/repo-info/commits/master/repos/storm))  

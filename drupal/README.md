@@ -16,15 +16,15 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.5.0-rc1-apache`, `8.5-rc-apache`, `rc-apache`, `8.5.0-rc1`, `8.5-rc`, `rc` (*8.5-rc/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/40d45cf0a8a772eb559d749961ca33e6ad34fdba/8.5-rc/apache/Dockerfile)
--	[`8.5.0-rc1-fpm`, `8.5-rc-fpm`, `rc-fpm` (*8.5-rc/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/40d45cf0a8a772eb559d749961ca33e6ad34fdba/8.5-rc/fpm/Dockerfile)
--	[`8.5.0-rc1-fpm-alpine`, `8.5-rc-fpm-alpine`, `rc-fpm-alpine` (*8.5-rc/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/40d45cf0a8a772eb559d749961ca33e6ad34fdba/8.5-rc/fpm-alpine/Dockerfile)
--	[`8.4.5-apache`, `8.4-apache`, `8-apache`, `apache`, `8.4.5`, `8.4`, `8`, `latest` (*8.4/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/e515558bcece9bd5fe8d9b4e799185cb4c5e7d72/8.4/apache/Dockerfile)
--	[`8.4.5-fpm`, `8.4-fpm`, `8-fpm`, `fpm` (*8.4/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/e515558bcece9bd5fe8d9b4e799185cb4c5e7d72/8.4/fpm/Dockerfile)
--	[`8.4.5-fpm-alpine`, `8.4-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine` (*8.4/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/e515558bcece9bd5fe8d9b4e799185cb4c5e7d72/8.4/fpm-alpine/Dockerfile)
--	[`7.57-apache`, `7-apache`, `7.57`, `7` (*7/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/c1863d8b12623355b7ca0abdffead4618289e2ee/7/apache/Dockerfile)
--	[`7.57-fpm`, `7-fpm` (*7/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/c1863d8b12623355b7ca0abdffead4618289e2ee/7/fpm/Dockerfile)
--	[`7.57-fpm-alpine`, `7-fpm-alpine` (*7/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/c1863d8b12623355b7ca0abdffead4618289e2ee/7/fpm-alpine/Dockerfile)
+-	[`8.6.1-apache`, `8.6-apache`, `8-apache`, `apache`, `8.6.1`, `8.6`, `8`, `latest` (*8.6/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/d3c158bd114f9041ecf25a80b8b8b62deb249833/8.6/apache/Dockerfile)
+-	[`8.6.1-fpm`, `8.6-fpm`, `8-fpm`, `fpm` (*8.6/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/d3c158bd114f9041ecf25a80b8b8b62deb249833/8.6/fpm/Dockerfile)
+-	[`8.6.1-fpm-alpine`, `8.6-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine` (*8.6/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/d3c158bd114f9041ecf25a80b8b8b62deb249833/8.6/fpm-alpine/Dockerfile)
+-	[`8.5.7-apache`, `8.5-apache`, `8.5.7`, `8.5` (*8.5/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/37b255dbb119fb78221dab4ea2e9ebdb3c2cc263/8.5/apache/Dockerfile)
+-	[`8.5.7-fpm`, `8.5-fpm` (*8.5/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/37b255dbb119fb78221dab4ea2e9ebdb3c2cc263/8.5/fpm/Dockerfile)
+-	[`8.5.7-fpm-alpine`, `8.5-fpm-alpine` (*8.5/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/37b255dbb119fb78221dab4ea2e9ebdb3c2cc263/8.5/fpm-alpine/Dockerfile)
+-	[`7.59-apache`, `7-apache`, `7.59`, `7` (*7/apache/Dockerfile*)](https://github.com/docker-library/drupal/blob/ff8962fc943001457c6919fa42e3d875b9fab9f7/7/apache/Dockerfile)
+-	[`7.59-fpm`, `7-fpm` (*7/fpm/Dockerfile*)](https://github.com/docker-library/drupal/blob/ff8962fc943001457c6919fa42e3d875b9fab9f7/7/fpm/Dockerfile)
+-	[`7.59-fpm-alpine`, `7-fpm-alpine` (*7/fpm-alpine/Dockerfile*)](https://github.com/docker-library/drupal/blob/ff8962fc943001457c6919fa42e3d875b9fab9f7/7/fpm-alpine/Dockerfile)
 
 # Quick reference
 
@@ -160,7 +160,7 @@ version: '3.1'
 services:
 
   drupal:
-    image: drupal:8.2-apache
+    image: drupal:8-apache
     ports:
       - 8080:80
     volumes:
@@ -174,13 +174,13 @@ services:
     restart: always
 
   postgres:
-    image: postgres:9.6
+    image: postgres:10
     environment:
       POSTGRES_PASSWORD: example
     restart: always
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/54359bd26c41e63c6e50ccd338b5a18d8b572c60/drupal/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/f81077b92e4522999836b8c5d098a103f568a431/drupal/stack.yml)
 
 Run `docker stack deploy -c stack.yml drupal` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate). When installing select `postgres` as database with the following parameters: `dbname=postgres` `user=postgres` `pass=example` `hostname=postgres`
 
@@ -195,6 +195,10 @@ The following Docker Hub features can help with the task of keeping your depende
 -	[Automated Builds](https://docs.docker.com/docker-hub/builds/) let Docker Hub automatically build your Dockerfile each time you push changes to it.
 -	[Repository Links](https://docs.docker.com/docker-hub/builds/#repository-links) can ensure that your image is also rebuilt any time `drupal` is updated.
 
+## Running as an arbitrary user
+
+See [the "Running as an arbitrary user" section of the `php` image documentation](https://hub.docker.com/_/php/).
+
 # Image Variants
 
 The `drupal` images come in many flavors, each designed for a specific use case.
@@ -203,7 +207,7 @@ The `drupal` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `drupal:alpine`
+## `drupal:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

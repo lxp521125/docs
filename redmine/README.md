@@ -16,12 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.4.4`, `3.4`, `3`, `latest` (*3.4/Dockerfile*)](https://github.com/docker-library/redmine/blob/86a208cc744d9743a219973ba2ab675f6718bec4/3.4/Dockerfile)
--	[`3.4.4-passenger`, `3.4-passenger`, `3-passenger`, `passenger` (*3.4/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/4ebd2edbbba5bb0a9ef1ecc101d6376bba9295a1/3.4/passenger/Dockerfile)
--	[`3.3.6`, `3.3` (*3.3/Dockerfile*)](https://github.com/docker-library/redmine/blob/1a66905d6ed69f74e74e6b48fedb39f8e3bff949/3.3/Dockerfile)
--	[`3.3.6-passenger`, `3.3-passenger` (*3.3/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/4ebd2edbbba5bb0a9ef1ecc101d6376bba9295a1/3.3/passenger/Dockerfile)
--	[`3.2.9`, `3.2` (*3.2/Dockerfile*)](https://github.com/docker-library/redmine/blob/71453c2e7a7a0736a669a67c668f4abd59857605/3.2/Dockerfile)
--	[`3.2.9-passenger`, `3.2-passenger` (*3.2/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/4ebd2edbbba5bb0a9ef1ecc101d6376bba9295a1/3.2/passenger/Dockerfile)
+-	[`3.4.6`, `3.4`, `3`, `latest` (*3.4/Dockerfile*)](https://github.com/docker-library/redmine/blob/69082edc899cdbc69a00c4dd30d01f83fb59048f/3.4/Dockerfile)
+-	[`3.4.6-passenger`, `3.4-passenger`, `3-passenger`, `passenger` (*3.4/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/3620c44581073acbafa5ee848025122e350b39e0/3.4/passenger/Dockerfile)
+-	[`3.3.8`, `3.3` (*3.3/Dockerfile*)](https://github.com/docker-library/redmine/blob/69082edc899cdbc69a00c4dd30d01f83fb59048f/3.3/Dockerfile)
+-	[`3.3.8-passenger`, `3.3-passenger` (*3.3/passenger/Dockerfile*)](https://github.com/docker-library/redmine/blob/3620c44581073acbafa5ee848025122e350b39e0/3.3/passenger/Dockerfile)
 
 # Quick reference
 
@@ -150,12 +148,6 @@ The Docker documentation is a good starting point for understanding the differen
 	```
 
 The `-v /my/own/datadir:/usr/src/redmine/files` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/usr/src/redmine/files` inside the container, where Redmine will store uploaded files.
-
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to the new data directory so that the container will be allowed to access it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/own/datadir
-```
 
 ## Port Mapping
 

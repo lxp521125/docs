@@ -16,11 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`10.3.4`, `10.3` (*10.3/Dockerfile*)](https://github.com/docker-library/mariadb/blob/25d4485e6192c1cfa2f9b12882c291258b73ed64/10.3/Dockerfile)
--	[`10.2.13`, `10.2`, `10`, `latest` (*10.2/Dockerfile*)](https://github.com/docker-library/mariadb/blob/a99e44ae93547f37c653299aff36a393d14bc9eb/10.2/Dockerfile)
--	[`10.1.31`, `10.1` (*10.1/Dockerfile*)](https://github.com/docker-library/mariadb/blob/8ec32d0733772952c5bcd39691b2b830f3031fea/10.1/Dockerfile)
--	[`10.0.34`, `10.0` (*10.0/Dockerfile*)](https://github.com/docker-library/mariadb/blob/ef09e6e573d40aa512dee1309437fc6a9553b7c2/10.0/Dockerfile)
--	[`5.5.59`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-library/mariadb/blob/13319ccb3c41c7c84404e628e9b051d340e9d055/5.5/Dockerfile)
+-	[`10.3.9-bionic`, `10.3-bionic`, `10-bionic`, `bionic`, `10.3.9`, `10.3`, `10`, `latest` (*10.3/Dockerfile*)](https://github.com/docker-library/mariadb/blob/4891ee2e3bd2dc6b07db634a39433ad579764a4b/10.3/Dockerfile)
+-	[`10.2.18-bionic`, `10.2-bionic`, `10.2.18`, `10.2` (*10.2/Dockerfile*)](https://github.com/docker-library/mariadb/blob/d42959d5f5772f70f71d433f843836a7401a07fd/10.2/Dockerfile)
+-	[`10.1.36-bionic`, `10.1-bionic`, `10.1.36`, `10.1` (*10.1/Dockerfile*)](https://github.com/docker-library/mariadb/blob/b678346ca1c832c93ecf0969f2738268d065dd8f/10.1/Dockerfile)
+-	[`10.0.36-xenial`, `10.0-xenial`, `10.0.36`, `10.0` (*10.0/Dockerfile*)](https://github.com/docker-library/mariadb/blob/cf769b4ec7ce7b343bd3b04225ab2a9bdd6bdc6e/10.0/Dockerfile)
+-	[`5.5.61-trusty`, `5.5-trusty`, `5-trusty`, `5.5.61`, `5.5`, `5` (*5.5/Dockerfile*)](https://github.com/docker-library/mariadb/blob/350bb5974b3cb5ee71805d2b29812a76d7c6d393/5.5/Dockerfile)
 
 # Quick reference
 
@@ -34,7 +34,7 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/mariadb)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/mariadb/)
+	[`amd64`](https://hub.docker.com/r/amd64/mariadb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/mariadb/), [`i386`](https://hub.docker.com/r/i386/mariadb/), [`ppc64le`](https://hub.docker.com/r/ppc64le/mariadb/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/mariadb/` directory](https://github.com/docker-library/repo-info/blob/master/repos/mariadb) ([history](https://github.com/docker-library/repo-info/commits/master/repos/mariadb))  
@@ -153,12 +153,6 @@ $ docker run --name some-mariadb -v /my/custom:/etc/mysql/conf.d -e MYSQL_ROOT_P
 
 This will start a new container `some-mariadb` where the MariaDB instance uses the combined startup settings from `/etc/mysql/my.cnf` and `/etc/mysql/conf.d/config-file.cnf`, with settings from the latter taking precedence.
 
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to your new config file so that the container will be allowed to mount it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/custom
-```
-
 ### Configuration without a `cnf` file
 
 Many configuration options can be passed as flags to `mysqld`. This will give you the flexibility to customize the container without needing a `cnf` file. For example, if you want to change the default encoding and collation for all tables to use UTF-8 (`utf8mb4`) just run the following:
@@ -232,12 +226,6 @@ The Docker documentation is a good starting point for understanding the differen
 	```
 
 The `-v /my/own/datadir:/var/lib/mysql` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/var/lib/mysql` inside the container, where MySQL by default will write its data files.
-
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to the new data directory so that the container will be allowed to access it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/own/datadir
-```
 
 ## No connections until MySQL init completes
 

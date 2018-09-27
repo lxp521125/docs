@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.5.2`, `1.5.2`, `v1.5`, `1.5`, `cancoillotte`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/2629a1f4a45b2ce0eb2280cd2640a5a02c24b3c2/scratch/amd64/Dockerfile)
--	[`v1.5.2-alpine`, `1.5.2-alpine`, `v1.5-alpine`, `1.5-alpine`, `cancoillotte-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/2629a1f4a45b2ce0eb2280cd2640a5a02c24b3c2/alpine/Dockerfile)
+-	[`v1.7.0`, `1.7.0`, `v1.7`, `1.7`, `maroilles`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/cd926d586b87791aca0cebe2eb51889b678a84e0/scratch/amd64/Dockerfile)
+-	[`v1.7.0-alpine`, `1.7.0-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/cd926d586b87791aca0cebe2eb51889b678a84e0/alpine/Dockerfile)
+-	[`v1.7.0-nanoserver`, `1.7.0-nanoserver`, `v1.7-nanoserver`, `1.7-nanoserver`, `maroilles-nanoserver`, `v1.7.0-nanoserver-sac2016`, `1.7.0-nanoserver-sac2016`, `v1.7-nanoserver-sac2016`, `1.7-nanoserver-sac2016`, `maroilles-nanoserver-sac2016`, `nanoserver`, `nanoserver-sac2016` (*windows/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/cd926d586b87791aca0cebe2eb51889b678a84e0/windows/Dockerfile)
 
 # Quick reference
 
@@ -31,7 +32,7 @@ WARNING:
 	[the Træfik Project](https://github.com/containous/traefik-library-image)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/)
+	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/traefik/` directory](https://github.com/docker-library/repo-info/blob/master/repos/traefik) ([history](https://github.com/docker-library/repo-info/commits/master/repos/traefik))  
@@ -49,7 +50,11 @@ WARNING:
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/a6cc2c5f4bc6658168f2a0abbb0307acaefff80e/traefik/logo.png)
 
-[Træfɪk](https://github.com/containous/traefik) is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease. It supports several backends ([Docker :whale:](https://www.docker.com/), [Swarm :whale::whale:](https://github.com/docker/swarm), [Mesos/Marathon](https://mesosphere.github.io/marathon/), [Consul](https://www.consul.io/), [Etcd](https://coreos.com/etcd/), [Zookeeper](https://zookeeper.apache.org), [BoltDB](https://github.com/boltdb/bolt), Rest API, file...) to manage its configuration automatically and dynamically.
+[Træfɪk](https://github.com/containous/traefik) is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
+
+Træfik integrates with your existing infrastructure components ([Docker](https://www.docker.com/), [Swarm mode](https://docs.docker.com/engine/swarm/), [Kubernetes](https://kubernetes.io), [Marathon](https://mesosphere.github.io/marathon/), [Consul](https://www.consul.io/), [Etcd](https://coreos.com/etcd/), [Rancher](https://rancher.com), [Amazon ECS](https://aws.amazon.com/ecs), ...) and configures itself automatically and dynamically.
+
+Telling Træfik where your orchestrator is could be the *only* configuration step you need to do.
 
 # Example usage
 
@@ -57,10 +62,9 @@ Grab a [sample configuration file](https://raw.githubusercontent.com/containous/
 
 ```toml
 ################################################################
-# Web configuration backend
+# API and dashboard configuration
 ################################################################
-[web]
-address = ":8080"
+[api]
 ################################################################
 # Docker configuration backend
 ################################################################
@@ -107,11 +111,13 @@ X-Forwarded-Server: f2e05c433120
 
 The web UI [http://localhost:8080](http://localhost:8080) will give you an overview of the frontends/backends and also a health dashboard.
 
-![Web UI Providers](https://traefik.io/web.frontend.png)
+![Web UI Providers](https://raw.githubusercontent.com/containous/traefik/master/docs/img/web.frontend.png)
 
 # Documentation
 
-You can find the complete documentation [here](https://docs.traefik.io).
+You can find the complete documentation at [https://docs.traefik.io](https://docs.traefik.io).
+
+A collection of contributions around Træfik can be found at [https://awesome.traefik.io](https://awesome.traefik.io).
 
 # License
 

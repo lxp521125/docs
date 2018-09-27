@@ -19,8 +19,7 @@ The Nuxeo platform is accesible at http://${DOCKER_HOST}:8080/ and default User 
 ## Start a nuxeo with some additional packages
 
 ```console
-$ docker run --name mynuxeo -p 8080:8080 -e NUXEO_PACKAGES="nuxeo-web-mobile nuxeo-drive nuxeo-diff nuxeo-spreadsheet nuxeo-dam nuxeo-template-rendering nuxeo-template-rendering-samples nuxeo-showcase-content"
-nuxeo
+$ docker run --name mynuxeo --rm -ti -p 8080:8080 -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-dam nuxeo-drive nuxeo-showcase-content nuxeo-template-rendering nuxeo-template-rendering-samples nuxeo-spreadsheet" nuxeo
 ```
 
 This will install the same image as above but comes with some demo Nuxeo packages to demonstrate its various usage (DAM, DM, search etc...)
@@ -129,7 +128,7 @@ If you would like to do additional setup in an image derived from this one, you 
 
 ```dockerfile
 FROM %%IMAGE%%:7.10
-ADD nuxeo.conf /docker-entrypoint-initnuxeo.d/nuxeo.conf
+COPY nuxeo.conf /docker-entrypoint-initnuxeo.d/nuxeo.conf
 ```
 
 If you need a root account to run some installation steps in your `Dockerfile`, then you need to put those steps between two `USER` command as the image is run with the user `1000` (nuxeo). For instance:

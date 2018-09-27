@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6.7.1`, `lts` (*6.7.1/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/6.7.1/Dockerfile)
--	[`6.7.1-alpine`, `lts-alpine` (*6.7.1-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/6.7.1-alpine/Dockerfile)
--	[`7.0`, `latest` (*7.0/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/7.0/Dockerfile)
--	[`7.0-alpine`, `alpine` (*7.0-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/fc89d1c1786137cb1ab98b338a61898ac5b54ae4/7.0-alpine/Dockerfile)
+-	[`6.7.5`, `lts` (*6.7.5/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/4d76dfe9fb4c5d41ba1852cd5072dbff15ca5a20/6.7.5/Dockerfile)
+-	[`6.7.5-alpine`, `lts-alpine` (*6.7.5-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/4d76dfe9fb4c5d41ba1852cd5072dbff15ca5a20/6.7.5-alpine/Dockerfile)
+-	[`7.1`, `latest` (*7.1/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/4d76dfe9fb4c5d41ba1852cd5072dbff15ca5a20/7.1/Dockerfile)
+-	[`7.1-alpine`, `alpine` (*7.1-alpine/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/4d76dfe9fb4c5d41ba1852cd5072dbff15ca5a20/7.1-alpine/Dockerfile)
 
 # Quick reference
 
@@ -108,7 +108,7 @@ The `sonarqube` images come in many flavors, each designed for a specific use ca
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `sonarqube:alpine`
+## `sonarqube:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

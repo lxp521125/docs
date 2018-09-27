@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.7.21`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/percona/blob/34106a8d1325f2692826b98502b1c4760a716e9a/5.7/Dockerfile)
--	[`5.6.39`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/a3ba3b6a69a6c7a21e9ea2d4a5b746b9829039eb/5.6/Dockerfile)
--	[`5.5.59`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/6b511c1afee7545d8e3ebe307d3186cf7c92bb2d/5.5/Dockerfile)
+-	[`5.7.23-stretch`, `5.7-stretch`, `5-stretch`, `stretch`, `5.7.23`, `5.7`, `5`, `latest` (*5.7/Dockerfile*)](https://github.com/docker-library/percona/blob/0f9f131aaff61dd735195ca44e190d4ef4995335/5.7/Dockerfile)
+-	[`5.6.41-stretch`, `5.6-stretch`, `5.6.41`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/percona/blob/e90d7a6c4dc7aa8317ec710095dce1bc848d9f5b/5.6/Dockerfile)
+-	[`5.5.61-stretch`, `5.5-stretch`, `5.5.61`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/percona/blob/7eed6eb52668ecaca933e68898d63d6f28d51af9/5.5/Dockerfile)
 
 # Quick reference
 
@@ -151,12 +151,6 @@ $ docker run --name some-percona -v /my/custom:/etc/mysql/conf.d -e MYSQL_ROOT_P
 
 This will start a new container `some-percona` where the Percona instance uses the combined startup settings from `/etc/mysql/my.cnf` and `/etc/mysql/conf.d/config-file.cnf`, with settings from the latter taking precedence.
 
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to your new config file so that the container will be allowed to mount it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/custom
-```
-
 ### Configuration without a `cnf` file
 
 Many configuration options can be passed as flags to `mysqld`. This will give you the flexibility to customize the container without needing a `cnf` file. For example, if you want to change the default encoding and collation for all tables to use UTF-8 (`utf8mb4`) just run the following:
@@ -234,12 +228,6 @@ The Docker documentation is a good starting point for understanding the differen
 	```
 
 The `-v /my/own/datadir:/var/lib/mysql` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/var/lib/mysql` inside the container, where MySQL by default will write its data files.
-
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to the new data directory so that the container will be allowed to access it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/own/datadir
-```
 
 ## No connections until MySQL init completes
 

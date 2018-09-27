@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.5.0`, `7.5`, `latest` (*7.5/7.5.0/Dockerfile*)](https://github.com/convertigo/docker/blob/44b59de97f1bc69dd7d9ae35bc67277106825f96/7.5/7.5.0/Dockerfile)
--	[`7.5.0-alpine`, `7.5-alpine`, `alpine` (*7.5/7.5.0/alpine/Dockerfile*)](https://github.com/convertigo/docker/blob/44b59de97f1bc69dd7d9ae35bc67277106825f96/7.5/7.5.0/alpine/Dockerfile)
--	[`7.4.8`, `7.4` (*7.4/7.4.8/Dockerfile*)](https://github.com/convertigo/docker/blob/44b59de97f1bc69dd7d9ae35bc67277106825f96/7.4/7.4.8/Dockerfile)
--	[`7.4.8-alpine`, `7.4-alpine` (*7.4/7.4.8/alpine/Dockerfile*)](https://github.com/convertigo/docker/blob/44b59de97f1bc69dd7d9ae35bc67277106825f96/7.4/7.4.8/alpine/Dockerfile)
+-	[`7.5.3`, `7.5`, `latest` (*7.5/7.5.3/Dockerfile*)](https://github.com/convertigo/docker/blob/ebb9eb9b8601726ad1314c915eb4b42b033c5c98/7.5/7.5.3/Dockerfile)
+-	[`7.5.3-alpine`, `7.5-alpine`, `alpine` (*7.5/7.5.3/alpine/Dockerfile*)](https://github.com/convertigo/docker/blob/ebb9eb9b8601726ad1314c915eb4b42b033c5c98/7.5/7.5.3/alpine/Dockerfile)
+-	[`7.4.8`, `7.4` (*7.4/7.4.8/Dockerfile*)](https://github.com/convertigo/docker/blob/ebb9eb9b8601726ad1314c915eb4b42b033c5c98/7.4/7.4.8/Dockerfile)
+-	[`7.4.8-alpine`, `7.4-alpine` (*7.4/7.4.8/alpine/Dockerfile*)](https://github.com/convertigo/docker/blob/ebb9eb9b8601726ad1314c915eb4b42b033c5c98/7.4/7.4.8/alpine/Dockerfile)
 
 # Quick reference
 
@@ -78,12 +78,12 @@ You can access the Server admin console on http://[dockerhost]:28080/convertigo 
 
 ## Link Convertigo to a CouchDB database for FullSync (Convertigo EE only)
 
-Convertigo MBaaS FullSync module uses Apache CouchDB 1.6.1 as NoSQL repository. You can use the **[couchdb](https://hub.docker.com/_/couchdb/)** docker image and link to it convertigo this way
+Convertigo MBaaS FullSync module uses Apache CouchDB 1.7.1 as NoSQL repository. You can use the **[couchdb](https://hub.docker.com/_/couchdb/)** docker image and link to it convertigo this way
 
 Launch CouchDB container and name it 'fullsync'
 
 ```console
-$ docker run -d --name fullsync couchdb:1.6.1
+$ docker run -d --name fullsync couchdb:1.7.1
 ```
 
 Then launch Convertigo and link it to the running 'fullsync' container. Convertigo MBaaS sever will automatically use it as its fullsync repository.
@@ -172,7 +172,7 @@ The `convertigo` images come in many flavors, each designed for a specific use c
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `convertigo:alpine`
+## `convertigo:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`stable`, `latest`, `1.30`, `1.30.0` (*stable/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/b47e3c56ace8af1bce4d4b9670fc23b11519ccc6/stable/Dockerfile)
--	[`legacy`, `1.29`, `1.29.2` (*legacy/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/b47e3c56ace8af1bce4d4b9670fc23b11519ccc6/legacy/Dockerfile)
--	[`lts`, `1.27`, `1.27.4` (*lts/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/b47e3c56ace8af1bce4d4b9670fc23b11519ccc6/lts/Dockerfile)
+-	[`stable`, `latest`, `1.31`, `1.31.1` (*stable/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/41edcc8020aa47823d30c1b35f216b0a2834b2b6/stable/Dockerfile)
+-	[`legacy`, `1.30`, `1.30.1` (*legacy/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/41edcc8020aa47823d30c1b35f216b0a2834b2b6/legacy/Dockerfile)
+-	[`lts`, `1.27`, `1.27.5` (*lts/Dockerfile*)](https://github.com/wikimedia/mediawiki-docker/blob/41edcc8020aa47823d30c1b35f216b0a2834b2b6/lts/Dockerfile)
 
 # Quick reference
 
@@ -26,13 +26,13 @@ WARNING:
 	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
 
 -	**Where to file issues**:  
-	[https://github.com/wikimedia/mediawiki-docker/issues](https://github.com/wikimedia/mediawiki-docker/issues)
+	[https://phabricator.wikimedia.org/project/view/3094/](https://phabricator.wikimedia.org/project/view/3094/)
 
 -	**Maintained by**:  
 	[Wikimedia Foundation & Docker Community](https://github.com/wikimedia/mediawiki-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/mediawiki/)
+	[`amd64`](https://hub.docker.com/r/amd64/mediawiki/), [`arm32v5`](https://hub.docker.com/r/arm32v5/mediawiki/), [`arm32v7`](https://hub.docker.com/r/arm32v7/mediawiki/), [`arm64v8`](https://hub.docker.com/r/arm64v8/mediawiki/), [`i386`](https://hub.docker.com/r/i386/mediawiki/), [`ppc64le`](https://hub.docker.com/r/ppc64le/mediawiki/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/mediawiki/` directory](https://github.com/docker-library/repo-info/blob/master/repos/mediawiki) ([history](https://github.com/docker-library/repo-info/commits/master/repos/mediawiki))  

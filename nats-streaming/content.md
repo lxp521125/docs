@@ -9,13 +9,13 @@
 Due to restrictions on how the Windows Docker Image is built, running the image without argument will run the NATS Streaming server with memory based store on port 4222 and the monitoring port 8222. If you need to specify any additional argument, or modify these options, you need to specify the executable name as this:
 
 ```bash
-$ docker run %%IMAGE%% nats-streaming-server -p 4223 -m 8223
+$ docker run -p 4223:4223 -p 8223:8223 %%IMAGE%% nats-streaming-server -p 4223 -m 8223
 ```
 
 If you need to specify the entrypoint:
 
 ```bash
-$ docker run --entrypoint c:/nats-streaming-server/nats-streaming-server %%IMAGE%%
+$ docker run --entrypoint c:/nats-streaming-server/nats-streaming-server -p 4222:4222 -p 8222:8222 %%IMAGE%%
 ```
 
 # Non Windows Docker images
@@ -23,13 +23,13 @@ $ docker run --entrypoint c:/nats-streaming-server/nats-streaming-server %%IMAGE
 If you need to provide arguments to the NATS Streaming server, just pass them to the command line. For instance, to change the listen and monitoring port to 4223 and 8223 respectively:
 
 ```bash
-$ docker run %%IMAGE%% -p 4223 -m 8223
+$ docker run -p 4223:4223 -p 8223:8223 %%IMAGE%% -p 4223 -m 8223
 ```
 
 If you need to specify the entrypoint:
 
 ```bash
-$ docker run --entrypoint /nats-streaming-server %%IMAGE%%
+$ docker run --entrypoint /nats-streaming-server -p 4222:4222 -p 8222:8222 %%IMAGE%%
 ```
 
 # Example usage
@@ -39,62 +39,82 @@ $ docker run --entrypoint /nats-streaming-server %%IMAGE%%
 # Each server exposes multiple ports
 # 4222 is for clients.
 # 8222 is an HTTP management port for information reporting.
-# use -p or -P as needed.
+#
+# To actually publish the ports when running the container, use the Docker port mapping
+# flag "docker run -p <hostport>:<containerport>" to publish and map one or more ports,
+# or the -P flag to publish all exposed ports and map them to high-order ports.
+#
+# This should not be confused with the NATS Streaming Server own -p parameter.
+# For instance, to run the NATS Streaming Server and have it listen on port 4444,
+# you would have to run like this:
+#
+#   docker run -p 4444:4444 %%IMAGE%% -p 4444
+#
+# Or, if you want to publish the port 4444 as a different port, for example 5555:
+#
+#   docker run -p 5555:4444 %%IMAGE%% -p 4444
+#
+# Check "docker run" for more information.
 
-$ docker run -d %%IMAGE%%
+$ docker run -d -p 4222:4222 -p 8222:8222 %%IMAGE%%
 ```
 
 Output that you would get if you had started with `-ti` instead of `d` (for daemon):
 
 ```bash
-[1] 2018/01/30 00:53:35.226503 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.8.0-beta
-[1] 2018/01/30 00:53:35.226552 [INF] STREAM: ServerID: hQz6YxauPSn21PDaayqxLO
-[1] 2018/01/30 00:53:35.226582 [INF] STREAM: Go version: go1.9.3
-[1] 2018/01/30 00:53:35.226819 [INF] Starting nats-server version 1.0.4
-[1] 2018/01/30 00:53:35.227108 [INF] Starting http monitor on 0.0.0.0:8222
-[1] 2018/01/30 00:53:35.227582 [INF] Listening for client connections on 0.0.0.0:4222
-[1] 2018/01/30 00:53:35.227629 [INF] Server is ready
-[1] 2018/01/30 00:53:35.255121 [INF] STREAM: Recovering the state...
-[1] 2018/01/30 00:53:35.255157 [INF] STREAM: No recovered state
-[1] 2018/01/30 00:53:35.508148 [INF] STREAM: Message store is MEMORY
-[1] 2018/01/30 00:53:35.508208 [INF] STREAM: ---------- Store Limits ----------
-[1] 2018/01/30 00:53:35.508220 [INF] STREAM: Channels:                  100 *
-[1] 2018/01/30 00:53:35.508231 [INF] STREAM: --------- Channels Limits --------
-[1] 2018/01/30 00:53:35.508337 [INF] STREAM:   Subscriptions:          1000 *
-[1] 2018/01/30 00:53:35.508399 [INF] STREAM:   Messages     :       1000000 *
-[1] 2018/01/30 00:53:35.508419 [INF] STREAM:   Bytes        :     976.56 MB *
-[1] 2018/01/30 00:53:35.508456 [INF] STREAM:   Age          :     unlimited *
-[1] 2018/01/30 00:53:35.508467 [INF] STREAM: ----------------------------------
+[1] 2018/09/04 20:53:14.599922 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.11.0
+[1] 2018/09/04 20:53:14.599966 [INF] STREAM: ServerID: 9CkJfj17Splb7IJCQd6YHF
+[1] 2018/09/04 20:53:14.599969 [INF] STREAM: Go version: go1.11
+[1] 2018/09/04 20:53:14.600488 [INF] Starting nats-server version 1.3.0
+[1] 2018/09/04 20:53:14.600525 [INF] Git commit [not set]
+[1] 2018/09/04 20:53:14.600600 [INF] Starting http monitor on 0.0.0.0:8222
+[1] 2018/09/04 20:53:14.600658 [INF] Listening for client connections on 0.0.0.0:4222
+[1] 2018/09/04 20:53:14.600668 [INF] Server is ready
+[1] 2018/09/04 20:53:14.627318 [INF] STREAM: Recovering the state...
+[1] 2018/09/04 20:53:14.627338 [INF] STREAM: No recovered state
+[1] 2018/09/04 20:53:14.877917 [INF] STREAM: Message store is MEMORY
+[1] 2018/09/04 20:53:14.877967 [INF] STREAM: ---------- Store Limits ----------
+[1] 2018/09/04 20:53:14.877973 [INF] STREAM: Channels:                  100 *
+[1] 2018/09/04 20:53:14.877978 [INF] STREAM: --------- Channels Limits --------
+[1] 2018/09/04 20:53:14.877982 [INF] STREAM:   Subscriptions:          1000 *
+[1] 2018/09/04 20:53:14.877986 [INF] STREAM:   Messages     :       1000000 *
+[1] 2018/09/04 20:53:14.877990 [INF] STREAM:   Bytes        :     976.56 MB *
+[1] 2018/09/04 20:53:14.877993 [INF] STREAM:   Age          :     unlimited *
+[1] 2018/09/04 20:53:14.877997 [INF] STREAM:   Inactivity   :     unlimited *
+[1] 2018/09/04 20:53:14.878015 [INF] STREAM: ----------------------------------
 ```
 
 To use a file based store instead, you would run:
 
 ```bash
-$ docker run -d %%IMAGE%% -store file -dir datastore
+$ docker run -d -p 4222:4222 -p 8222:8222 %%IMAGE%% -store file -dir datastore
 
-[1] 2018/01/30 00:53:54.958785 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.8.0-beta
-[1] 2018/01/30 00:53:54.958871 [INF] STREAM: ServerID: iLmhti57q2EurDLpumt2Fm
-[1] 2018/01/30 00:53:54.958894 [INF] STREAM: Go version: go1.9.3
-[1] 2018/01/30 00:53:54.959217 [INF] Starting nats-server version 1.0.4
-[1] 2018/01/30 00:53:54.959311 [INF] Listening for client connections on 0.0.0.0:4222
-[1] 2018/01/30 00:53:54.959332 [INF] Server is ready
-[1] 2018/01/30 00:53:54.986810 [INF] STREAM: Recovering the state...
-[1] 2018/01/30 00:53:54.987103 [INF] STREAM: No recovered state
-[1] 2018/01/30 00:53:55.241549 [INF] STREAM: Message store is FILE
-[1] 2018/01/30 00:53:55.241702 [INF] STREAM: ---------- Store Limits ----------
-[1] 2018/01/30 00:53:55.241855 [INF] STREAM: Channels:                  100 *
-[1] 2018/01/30 00:53:55.241870 [INF] STREAM: --------- Channels Limits --------
-[1] 2018/01/30 00:53:55.241885 [INF] STREAM:   Subscriptions:          1000 *
-[1] 2018/01/30 00:53:55.241979 [INF] STREAM:   Messages     :       1000000 *
-[1] 2018/01/30 00:53:55.242004 [INF] STREAM:   Bytes        :     976.56 MB *
-[1] 2018/01/30 00:53:55.242152 [INF] STREAM:   Age          :     unlimited *
-[1] 2018/01/30 00:53:55.242177 [INF] STREAM: ----------------------------------
+[1] 2018/09/04 20:54:00.076196 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.11.0
+[1] 2018/09/04 20:54:00.076242 [INF] STREAM: ServerID: EHYwdUKwLyGfWOUOnUdfFm
+[1] 2018/09/04 20:54:00.076247 [INF] STREAM: Go version: go1.11
+[1] 2018/09/04 20:54:00.076804 [INF] Starting nats-server version 1.3.0
+[1] 2018/09/04 20:54:00.076824 [INF] Git commit [not set]
+[1] 2018/09/04 20:54:00.076904 [INF] Listening for client connections on 0.0.0.0:4222
+[1] 2018/09/04 20:54:00.076927 [INF] Server is ready
+[1] 2018/09/04 20:54:00.104013 [INF] STREAM: Recovering the state...
+[1] 2018/09/04 20:54:00.104173 [INF] STREAM: No recovered state
+[1] 2018/09/04 20:54:00.356446 [INF] STREAM: Message store is FILE
+[1] 2018/09/04 20:54:00.356496 [INF] STREAM: Store location: datastore
+[1] 2018/09/04 20:54:00.356559 [INF] STREAM: ---------- Store Limits ----------
+[1] 2018/09/04 20:54:00.356565 [INF] STREAM: Channels:                  100 *
+[1] 2018/09/04 20:54:00.356569 [INF] STREAM: --------- Channels Limits --------
+[1] 2018/09/04 20:54:00.356601 [INF] STREAM:   Subscriptions:          1000 *
+[1] 2018/09/04 20:54:00.356630 [INF] STREAM:   Messages     :       1000000 *
+[1] 2018/09/04 20:54:00.356634 [INF] STREAM:   Bytes        :     976.56 MB *
+[1] 2018/09/04 20:54:00.356638 [INF] STREAM:   Age          :     unlimited *
+[1] 2018/09/04 20:54:00.356641 [INF] STREAM:   Inactivity   :     unlimited *
+[1] 2018/09/04 20:54:00.356645 [INF] STREAM: ----------------------------------
 ```
 
 You can also connect to a remote NATS Server running in a docker image. First, run NATS Server:
 
 ```bash
-$ docker run -d --name=nats-main nats
+$ docker run -d --name=nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
 ```
 
 Now, start the Streaming server and link it to the above docker image:
@@ -102,20 +122,22 @@ Now, start the Streaming server and link it to the above docker image:
 ```bash
 $ docker run -d --link nats-main %%IMAGE%% -store file -dir datastore -ns nats://nats-main:4222
 
-[1] 2018/01/30 00:54:43.190686 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.8.0-beta
-[1] 2018/01/30 00:54:43.190746 [INF] STREAM: ServerID: TY45b34hYz2bucIKPcwsTA
-[1] 2018/01/30 00:54:43.190759 [INF] STREAM: Go version: go1.9.3
-[1] 2018/01/30 00:54:43.196393 [INF] STREAM: Recovering the state...
-[1] 2018/01/30 00:54:43.196544 [INF] STREAM: No recovered state
-[1] 2018/01/30 00:54:43.452232 [INF] STREAM: Message store is FILE
-[1] 2018/01/30 00:54:43.452315 [INF] STREAM: ---------- Store Limits ----------
-[1] 2018/01/30 00:54:43.452344 [INF] STREAM: Channels:                  100 *
-[1] 2018/01/30 00:54:43.452371 [INF] STREAM: --------- Channels Limits --------
-[1] 2018/01/30 00:54:43.452393 [INF] STREAM:   Subscriptions:          1000 *
-[1] 2018/01/30 00:54:43.452455 [INF] STREAM:   Messages     :       1000000 *
-[1] 2018/01/30 00:54:43.452477 [INF] STREAM:   Bytes        :     976.56 MB *
-[1] 2018/01/30 00:54:43.452526 [INF] STREAM:   Age          :     unlimited *
-[1] 2018/01/30 00:54:43.452550 [INF] STREAM: ----------------------------------
+[1] 2018/09/04 20:54:16.718725 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.11.0
+[1] 2018/09/04 20:54:16.718768 [INF] STREAM: ServerID: z9du1OH1tM7wLB69Nku3d0
+[1] 2018/09/04 20:54:16.718770 [INF] STREAM: Go version: go1.11
+[1] 2018/09/04 20:54:16.746440 [INF] STREAM: Recovering the state...
+[1] 2018/09/04 20:54:16.746566 [INF] STREAM: No recovered state
+[1] 2018/09/04 20:54:16.999988 [INF] STREAM: Message store is FILE
+[1] 2018/09/04 20:54:17.000008 [INF] STREAM: Store location: datastore
+[1] 2018/09/04 20:54:17.000039 [INF] STREAM: ---------- Store Limits ----------
+[1] 2018/09/04 20:54:17.000044 [INF] STREAM: Channels:                  100 *
+[1] 2018/09/04 20:54:17.000047 [INF] STREAM: --------- Channels Limits --------
+[1] 2018/09/04 20:54:17.000051 [INF] STREAM:   Subscriptions:          1000 *
+[1] 2018/09/04 20:54:17.000055 [INF] STREAM:   Messages     :       1000000 *
+[1] 2018/09/04 20:54:17.000058 [INF] STREAM:   Bytes        :     976.56 MB *
+[1] 2018/09/04 20:54:17.000062 [INF] STREAM:   Age          :     unlimited *
+[1] 2018/09/04 20:54:17.000066 [INF] STREAM:   Inactivity   :     unlimited *
+[1] 2018/09/04 20:54:17.000069 [INF] STREAM: ----------------------------------
 ```
 
 Notice that the output shows that the NATS Server was not started, as opposed to the first output.
@@ -124,20 +146,22 @@ Notice that the output shows that the NATS Server was not started, as opposed to
 
 ```bash
 Streaming Server Options:
-    -cid, --cluster_id  <string>     Cluster ID (default: test-cluster)
-    -st,  --store <string>           Store type: MEMORY|FILE (default: MEMORY)
-          --dir <string>             For FILE store type, this is the root directory
-    -mc,  --max_channels <int>       Max number of channels (0 for unlimited)
-    -msu, --max_subs <int>           Max number of subscriptions per channel (0 for unlimited)
-    -mm,  --max_msgs <int>           Max number of messages per channel (0 for unlimited)
-    -mb,  --max_bytes <size>         Max messages total size per channel (0 for unlimited)
-    -ma,  --max_age <duration>       Max duration a message can be stored ("0s" for unlimited)
-    -ns,  --nats_server <string>     Connect to this external NATS Server URL (embedded otherwise)
-    -sc,  --stan_config <string>     Streaming server configuration file
-    -hbi, --hb_interval <duration>   Interval at which server sends heartbeat to a client
-    -hbt, --hb_timeout <duration>    How long server waits for a heartbeat response
-    -hbf, --hb_fail_count <int>      Number of failed heartbeats before server closes the client connection
-          --ft_group <string>        Name of the FT Group. A group can be 2 or more servers with a single active server and all sharing the same datastore.
+    -cid, --cluster_id  <string>      Cluster ID (default: test-cluster)
+    -st,  --store <string>            Store type: MEMORY|FILE|SQL (default: MEMORY)
+          --dir <string>              For FILE store type, this is the root directory
+    -mc,  --max_channels <int>        Max number of channels (0 for unlimited)
+    -msu, --max_subs <int>            Max number of subscriptions per channel (0 for unlimited)
+    -mm,  --max_msgs <int>            Max number of messages per channel (0 for unlimited)
+    -mb,  --max_bytes <size>          Max messages total size per channel (0 for unlimited)
+    -ma,  --max_age <duration>        Max duration a message can be stored ("0s" for unlimited)
+    -mi,  --max_inactivity <duration> Max inactivity (no new message, no subscription) after which a channel can be garbage collected (0 for unlimited)
+    -ns,  --nats_server <string>      Connect to this external NATS Server URL (embedded otherwise)
+    -sc,  --stan_config <string>      Streaming server configuration file
+    -hbi, --hb_interval <duration>    Interval at which server sends heartbeat to a client
+    -hbt, --hb_timeout <duration>     How long server waits for a heartbeat response
+    -hbf, --hb_fail_count <int>       Number of failed heartbeats before server closes the client connection
+          --ft_group <string>         Name of the FT Group. A group can be 2 or more servers with a single active server and all sharing the same datastore.
+    -sl,  --signal <signal>[=<pid>]   Send signal to nats-streaming-server process (stop, quit, reopen)
 
 Streaming Server Clustering Options:
     --clustered <bool>                   Run the server in a clustered configuration (default: false)
@@ -166,6 +190,7 @@ Streaming Server File Store Options:
     --file_slice_archive_script <string> Path to script to use if you want to archive a file slice being removed
     --file_fds_limit <int>               Store will try to use no more file descriptors than this given limit
     --file_parallel_recovery <int>       On startup, number of channels that can be recovered in parallel
+    --file_truncate_bad_eof <bool>       Truncate files for which there is an unexpected EOF on recovery, dataloss may occur
 
 Streaming Server SQL Store Options:
     --sql_driver <string>            Name of the SQL Driver ("mysql" or "postgres")
@@ -184,6 +209,7 @@ Streaming Server Logging Options:
     -SD, --stan_debug=<bool>         Enable STAN debugging output
     -SV, --stan_trace=<bool>         Trace the raw STAN protocol
     -SDV                             Debug and trace STAN
+         --syslog_name               On Windows, when running several servers as a service, use this name for the event source
     (See additional NATS logging options below)
 
 Embedded NATS Server Options:

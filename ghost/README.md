@@ -16,10 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.21.3`, `1.21`, `1`, `latest` (*1/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/b58ead46ec55252ea9674d50bbeba693b6727e80/1/debian/Dockerfile)
--	[`1.21.3-alpine`, `1.21-alpine`, `1-alpine`, `alpine` (*1/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/b58ead46ec55252ea9674d50bbeba693b6727e80/1/alpine/Dockerfile)
--	[`0.11.12`, `0.11`, `0` (*0/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/44dc27d05debece6a738ccbddd85d2ed4adc2eac/0/debian/Dockerfile)
--	[`0.11.12-alpine`, `0.11-alpine`, `0-alpine` (*0/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/44dc27d05debece6a738ccbddd85d2ed4adc2eac/0/alpine/Dockerfile)
+-	[`2.1.4`, `2.1`, `2`, `latest` (*2/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/b55768081c3382215bc6a7c166ae217abaecd636/2/debian/Dockerfile)
+-	[`2.1.4-alpine`, `2.1-alpine`, `2-alpine`, `alpine` (*2/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/b55768081c3382215bc6a7c166ae217abaecd636/2/alpine/Dockerfile)
+-	[`1.25.5`, `1.25`, `1` (*1/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/7b323446256b8d18a09233c83001cb1c2b4046bb/1/debian/Dockerfile)
+-	[`1.25.5-alpine`, `1.25-alpine`, `1-alpine` (*1/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/7b323446256b8d18a09233c83001cb1c2b4046bb/1/alpine/Dockerfile)
+-	[`0.11.13`, `0.11`, `0` (*0/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/f4e1e58723ab0c2aac695aacf08a6fd54b4d2eee/0/debian/Dockerfile)
+-	[`0.11.13-alpine`, `0.11-alpine`, `0-alpine` (*0/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/f0cfbd2cd2bdbaea10a4f15cd05746397e84dd18/0/alpine/Dockerfile)
 
 # Quick reference
 
@@ -33,7 +35,7 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/ghost)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/ghost/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ghost/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ghost/), [`i386`](https://hub.docker.com/r/i386/ghost/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ghost/), [`s390x`](https://hub.docker.com/r/s390x/ghost/)
+	[`amd64`](https://hub.docker.com/r/amd64/ghost/), [`arm32v6`](https://hub.docker.com/r/arm32v6/ghost/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ghost/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ghost/), [`i386`](https://hub.docker.com/r/i386/ghost/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ghost/), [`s390x`](https://hub.docker.com/r/s390x/ghost/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/ghost/` directory](https://github.com/docker-library/repo-info/blob/master/repos/ghost) ([history](https://github.com/docker-library/repo-info/commits/master/repos/ghost))  
@@ -91,7 +93,13 @@ $ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/g
 $ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost ghost:0.11-alpine
 ```
 
-### Breaking change
+### Breaking changes
+
+#### Ghost 1.x.x => Ghost 2.x.x
+
+When upgrading from Ghost 1.x to Ghost 2.x, you must make sure you are already running the latest version of Ghost 1.x *before* upgrading to 2.x. Otherwise, you may run into database errors.
+
+#### Ghost 0.11.x => Ghost 1.x.x
 
 If you want to run Ghost 0.11.xx, be aware of the container's path difference:
 
@@ -109,6 +117,16 @@ Alternatively you can use a [data container](http://docs.docker.com/engine/tutor
 ```console
 $ docker run -d --name some-ghost --volumes-from some-ghost-data ghost
 ```
+
+## Configuration
+
+All Ghost configuration parameters (such as `url`) can be specified via environment variables. See [the Ghost documentation](https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables) for details about what configuration is allowed and how to convert a nested configuration key into the appropriate environment variable name:
+
+```console
+$ docker run -d --name some-ghost -e url=http://some-ghost.example.com ghost
+```
+
+(There are further configuration examples in the `stack.yml` listed below.)
 
 ## What is the Node.js version?
 
@@ -163,7 +181,7 @@ The `ghost` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `ghost:alpine`
+## `ghost:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

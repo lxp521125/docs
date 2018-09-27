@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2-5.10.0`, `2-5.10`, `2-5`, `2` (*2/Dockerfile*)](https://github.com/docker-library/pypy/blob/2b2b28c8d47683df043de22ddd11cb1bc6c5d151/2/Dockerfile)
--	[`2-5.10.0-slim`, `2-5.10-slim`, `2-5-slim`, `2-slim` (*2/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/2b2b28c8d47683df043de22ddd11cb1bc6c5d151/2/slim/Dockerfile)
--	[`3-5.10.1`, `3-5.10`, `3-5`, `3`, `latest` (*3/Dockerfile*)](https://github.com/docker-library/pypy/blob/90d6f08b46c99c7cccae534f4ba003c132cc1afe/3/Dockerfile)
--	[`3-5.10.1-slim`, `3-5.10-slim`, `3-5-slim`, `3-slim`, `slim` (*3/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/90d6f08b46c99c7cccae534f4ba003c132cc1afe/3/slim/Dockerfile)
+-	[`2-6.0.0`, `2-6.0`, `2-6`, `2`, `2-6.0.0-jessie`, `2-6.0-jessie`, `2-6-jessie`, `2-jessie` (*2/Dockerfile*)](https://github.com/docker-library/pypy/blob/cad275d97df1d056fca6731e6293d687bc7b5e80/2/Dockerfile)
+-	[`2-6.0.0-slim`, `2-6.0-slim`, `2-6-slim`, `2-slim`, `2-6.0.0-slim-jessie`, `2-6.0-slim-jessie`, `2-6-slim-jessie`, `2-slim-jessie` (*2/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/cad275d97df1d056fca6731e6293d687bc7b5e80/2/slim/Dockerfile)
+-	[`3-6.0.0`, `3-6.0`, `3-6`, `3`, `latest`, `3-6.0.0-jessie`, `3-6.0-jessie`, `3-6-jessie`, `3-jessie`, `jessie` (*3/Dockerfile*)](https://github.com/docker-library/pypy/blob/d813837c73e726c0b5568297eff2f5a4b00c123f/3/Dockerfile)
+-	[`3-6.0.0-slim`, `3-6.0-slim`, `3-6-slim`, `3-slim`, `slim`, `3-6.0.0-slim-jessie`, `3-6.0-slim-jessie`, `3-6-slim-jessie`, `3-slim-jessie`, `slim-jessie` (*3/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/d813837c73e726c0b5568297eff2f5a4b00c123f/3/slim/Dockerfile)
 
 # Quick reference
 
@@ -64,18 +64,32 @@ PyPy started out as a Python interpreter written in the Python language itself. 
 ## Create a `Dockerfile` in your Python app project
 
 ```dockerfile
-FROM pypy:3-onbuild
+FROM pypy:3
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
 CMD [ "pypy3", "./your-daemon-or-script.py" ]
 ```
 
-or (if you need to use PyPy 2):
+or (if you need to use Python 2):
 
 ```dockerfile
-FROM pypy:2-onbuild
+FROM pypy:2
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
 CMD [ "pypy", "./your-daemon-or-script.py" ]
 ```
-
-These images include multiple `ONBUILD` triggers, which should be all you need to bootstrap most applications. The build will `COPY` a `requirements.txt` file,`RUN pip install` on said file, and then copy the current directory into`/usr/src/app`.
 
 You can then build and run the Docker image:
 
@@ -106,7 +120,7 @@ The `pypy` images come in many flavors, each designed for a specific use case.
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
-## `pypy:slim`
+## `pypy:<version>-slim`
 
 This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `pypy`. Unless you are working in an environment where *only* the `pypy` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 

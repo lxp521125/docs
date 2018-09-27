@@ -16,18 +16,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.7.4-rc.1`, `3.7-rc` (*3.7-rc/debian/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/65c42bf5ceda842b857c9fc4afc88378563c6be6/3.7-rc/debian/Dockerfile)
--	[`3.7.4-rc.1-management`, `3.7-rc-management` (*3.7-rc/debian/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/da06cbdbe9e89305b2650a782af06f96004a894e/3.7-rc/debian/management/Dockerfile)
--	[`3.7.4-rc.1-alpine`, `3.7-rc-alpine` (*3.7-rc/alpine/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/65c42bf5ceda842b857c9fc4afc88378563c6be6/3.7-rc/alpine/Dockerfile)
--	[`3.7.4-rc.1-management-alpine`, `3.7-rc-management-alpine` (*3.7-rc/alpine/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/da06cbdbe9e89305b2650a782af06f96004a894e/3.7-rc/alpine/management/Dockerfile)
--	[`3.7.3`, `3.7`, `3`, `latest` (*3.7/debian/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b5543df2789c16d8ea1c2119484378d4c23baa6c/3.7/debian/Dockerfile)
--	[`3.7.3-management`, `3.7-management`, `3-management`, `management` (*3.7/debian/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/4b2b11c59ee65c2a09616b163d4572559a86bb7b/3.7/debian/management/Dockerfile)
--	[`3.7.3-alpine`, `3.7-alpine`, `3-alpine`, `alpine` (*3.7/alpine/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b5543df2789c16d8ea1c2119484378d4c23baa6c/3.7/alpine/Dockerfile)
--	[`3.7.3-management-alpine`, `3.7-management-alpine`, `3-management-alpine`, `management-alpine` (*3.7/alpine/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/4b2b11c59ee65c2a09616b163d4572559a86bb7b/3.7/alpine/management/Dockerfile)
--	[`3.6.15`, `3.6` (*3.6/debian/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/da82eb0f68ed89a876fc44e915f20fc1e6e6bd8d/3.6/debian/Dockerfile)
--	[`3.6.15-management`, `3.6-management` (*3.6/debian/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b9eda3e4665c24db70a9a290fddf33bc5c567b10/3.6/debian/management/Dockerfile)
--	[`3.6.15-alpine`, `3.6-alpine` (*3.6/alpine/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/da82eb0f68ed89a876fc44e915f20fc1e6e6bd8d/3.6/alpine/Dockerfile)
--	[`3.6.15-management-alpine`, `3.6-management-alpine` (*3.6/alpine/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b9eda3e4665c24db70a9a290fddf33bc5c567b10/3.6/alpine/management/Dockerfile)
+-	[`3.7.8`, `3.7`, `3`, `latest` (*3.7/debian/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/d566a9b72ee43d891757a8515704ff87aef22d72/3.7/debian/Dockerfile)
+-	[`3.7.8-management`, `3.7-management`, `3-management`, `management` (*3.7/debian/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/4b2b11c59ee65c2a09616b163d4572559a86bb7b/3.7/debian/management/Dockerfile)
+-	[`3.7.8-alpine`, `3.7-alpine`, `3-alpine`, `alpine` (*3.7/alpine/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/6a57996987ef2d277ffbf101eff00649990bd72b/3.7/alpine/Dockerfile)
+-	[`3.7.8-management-alpine`, `3.7-management-alpine`, `3-management-alpine`, `management-alpine` (*3.7/alpine/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/4b2b11c59ee65c2a09616b163d4572559a86bb7b/3.7/alpine/management/Dockerfile)
+-	[`3.6.16`, `3.6` (*3.6/debian/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/406d5ee14aec24f9012ce204dc6aa0e5400a649d/3.6/debian/Dockerfile)
+-	[`3.6.16-management`, `3.6-management` (*3.6/debian/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b9eda3e4665c24db70a9a290fddf33bc5c567b10/3.6/debian/management/Dockerfile)
+-	[`3.6.16-alpine`, `3.6-alpine` (*3.6/alpine/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/406d5ee14aec24f9012ce204dc6aa0e5400a649d/3.6/alpine/Dockerfile)
+-	[`3.6.16-management-alpine`, `3.6-management-alpine` (*3.6/alpine/management/Dockerfile*)](https://github.com/docker-library/rabbitmq/blob/b9eda3e4665c24db70a9a290fddf33bc5c567b10/3.6/alpine/management/Dockerfile)
 
 # Quick reference
 
@@ -131,6 +127,14 @@ Listing users ...
 guest   [administrator]
 ```
 
+If you wish to provide the cookie via a file (such as with [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/)), it needs to be mounted at `/var/lib/rabbitmq/.erlang.cookie`:
+
+```console
+docker service create ... --secret source=my-erlang-cookie,target=/var/lib/rabbitmq/.erlang.cookie ... rabbitmq
+```
+
+(Note that it will likely also be necessary to specify `uid=XXX,gid=XXX,mode=0600` in order for Erlang in the container to be able to read the cookie file properly. See [Docker's `--secret` documentation for more details](https://docs.docker.com/engine/reference/commandline/service_create/#create-a-service-with-secrets).)
+
 ### Management Plugin
 
 There is a second set of tags provided with the [management plugin](https://www.rabbitmq.com/management.html) installed and enabled by default, which is available on the standard management port of 15672, with the default username and password of `guest` / `guest`:
@@ -147,6 +151,32 @@ $ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3
 
 You can then go to `http://localhost:8080` or `http://host-ip:8080` in a browser.
 
+### Environment Variables
+
+A small selection of the possible environment variables are defined in the Dockerfile to be passed through the docker engine (listed below). For a list of environment variables supported by RabbitMQ itself, see: https://www.rabbitmq.com/configure.html
+
+For SSL configuration without the management plugin:
+
+```bash
+RABBITMQ_SSL_CACERTFILE
+RABBITMQ_SSL_CERTFILE
+RABBITMQ_SSL_DEPTH
+RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT
+RABBITMQ_SSL_KEYFILE
+RABBITMQ_SSL_VERIFY
+```
+
+For SSL configuration using the management plugin:
+
+```bash
+RABBITMQ_MANAGEMENT_SSL_CACERTFILE
+RABBITMQ_MANAGEMENT_SSL_CERTFILE
+RABBITMQ_MANAGEMENT_SSL_DEPTH
+RABBITMQ_MANAGEMENT_SSL_FAIL_IF_NO_PEER_CERT
+RABBITMQ_MANAGEMENT_SSL_KEYFILE
+RABBITMQ_MANAGEMENT_SSL_VERIFY
+```
+
 ### Setting default user and password
 
 If you wish to change the default username and password of `guest` / `guest`, you can do so with the `RABBITMQ_DEFAULT_USER` and `RABBITMQ_DEFAULT_PASS` environmental variables:
@@ -156,6 +186,8 @@ $ docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_USER
 ```
 
 You can then go to `http://localhost:8080` or `http://host-ip:8080` in a browser and use `user`/`password` to gain access to the management console
+
+To source the username and password from files instead of environment variables, add a `_FILE` suffix to the environment variable names (for example, `RABBITMQ_DEFAULT_USER_FILE=/run/secrets/xxx` to use [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/)).
 
 ### Setting default vhost
 
@@ -167,8 +199,6 @@ $ docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_VHOS
 
 ### Enabling HiPE
 
-**Warning:** if you're using the Alpine variant, there is currently [an outstanding bug (Alpine Linux bug #5700) with the `erlang-hipe` package](https://bugs.alpinelinux.org/issues/5700) which prevents HiPE from working in Alpine Linux. See [docker-library/rabbitmq#151](https://github.com/docker-library/rabbitmq/issues/151) for more discussion.
-
 See the [RabbitMQ "Configuration"](http://www.rabbitmq.com/configure.html#config-items) for more information about various configuration options.
 
 For enabling the HiPE compiler on startup use `RABBITMQ_HIPE_COMPILE` set to `1`. Accroding to the official documentation:
@@ -176,6 +206,23 @@ For enabling the HiPE compiler on startup use `RABBITMQ_HIPE_COMPILE` set to `1`
 > Set to true to precompile parts of RabbitMQ with HiPE, a just-in-time compiler for Erlang. This will increase server throughput at the cost of increased startup time. You might see 20-50% better performance at the cost of a few minutes delay at startup.
 
 It is therefore important to take that startup delay into consideration when configuring health checks, automated clustering etc.
+
+### Enabling Plugins
+
+Creating a Dockerfile will have them enabled at runtime. To see the full list of plugins present on the image `rabbitmq-plugins list`
+
+```Dockerfile
+FROM rabbitmq:3.7-management
+RUN rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_federation_management rabbitmq_stomp
+```
+
+You can also mount a file at `/etc/rabbitmq/enabled_plugins` with contents as an erlang list of atoms ending with a period.
+
+Example `enabled_plugins`
+
+```bash
+[rabbitmq_federation_management,rabbitmq_management,rabbitmq_mqtt,rabbitmq_stomp].
+```
 
 ### Additional Configuration
 
@@ -199,7 +246,7 @@ The `rabbitmq` images come in many flavors, each designed for a specific use cas
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `rabbitmq:alpine`
+## `rabbitmq:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

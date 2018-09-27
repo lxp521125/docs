@@ -16,10 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.4`, `1.4.5` (*telegraf/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.4/Dockerfile)
--	[`1.4-alpine`, `1.4.5-alpine` (*telegraf/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.4/alpine/Dockerfile)
--	[`1.5`, `1.5.2`, `latest` (*telegraf/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.5/Dockerfile)
--	[`1.5-alpine`, `1.5.2-alpine`, `alpine` (*telegraf/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/telegraf/1.5/alpine/Dockerfile)
+-	[`1.6`, `1.6.4` (*telegraf/1.6/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.6/Dockerfile)
+-	[`1.6-alpine`, `1.6.4-alpine` (*telegraf/1.6/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.6/alpine/Dockerfile)
+-	[`1.7`, `1.7.4` (*telegraf/1.7/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.7/Dockerfile)
+-	[`1.7-alpine`, `1.7.4-alpine` (*telegraf/1.7/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.7/alpine/Dockerfile)
+-	[`1.8`, `1.8.0`, `latest` (*telegraf/1.8/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.8/Dockerfile)
+-	[`1.8-alpine`, `1.8.0-alpine`, `alpine` (*telegraf/1.8/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/8c29cb559b6ad7ae91f67b64038c157303519ba8/telegraf/1.8/alpine/Dockerfile)
 
 # Quick reference
 
@@ -223,6 +225,42 @@ Check that the measurement `foo` is added in the DB.
 
 -	[Output Plugins](https://docs.influxdata.com/telegraf/latest/plugins/outputs/)
 
+### Monitoring the host filesystem
+
+One of the more common use cases for Telegraf is running it in a container to monitor the host filesystem using the inputs that take information from the `/proc` filesystem. This section only applies to monitoring a Linux host.
+
+To do this, you can mount the host's `/proc` filesystem inside of the container and set the location of `/proc` to an alternate location by using the `HOST_PROC` environment variable to change the location of where `/proc` is located. As an example:
+
+```console
+$ docker run -d --name=telegraf \
+      --net=influxdb \
+      -e HOST_PROC=/host/proc \
+      -v /proc:/host/proc:ro \
+      -v $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+      telegraf
+```
+
+### Monitoring docker containers
+
+To monitor other docker containers, you can use the docker plugin and mount the docker socket into the container. An example configuration is below:
+
+```toml
+[[inputs.docker]]
+  endpoint = "unix:///var/run/docker.sock"
+```
+
+Then you can start the telegraf container.
+
+```console
+$ docker run -d --name=telegraf \
+      --net=influxdb \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      -v $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+      telegraf
+```
+
+Refer to the docker [plugin documentation](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/docker/README.md) for more information.
+
 # Image Variants
 
 The `telegraf` images come in many flavors, each designed for a specific use case.
@@ -231,7 +269,7 @@ The `telegraf` images come in many flavors, each designed for a specific use cas
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `telegraf:alpine`
+## `telegraf:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

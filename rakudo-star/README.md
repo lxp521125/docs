@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2018.01`, `latest` (*Dockerfile*)](https://github.com/perl6/docker/blob/887c06b76fe720335ce31d4f17c8ac8f4b05d489/Dockerfile)
+-	[`latest`, `2018.06` (*Dockerfile*)](https://github.com/perl6/docker/blob/f8a418d4d8d4a75f18af5d9b86c7e0a7cfe6bfd8/Dockerfile)
 
 # Quick reference
 
@@ -30,7 +30,7 @@ WARNING:
 	[the Perl 6 Community](https://github.com/perl6/docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/rakudo-star/)
+	[`amd64`](https://hub.docker.com/r/amd64/rakudo-star/), [`arm64v8`](https://hub.docker.com/r/arm64v8/rakudo-star/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/rakudo-star/` directory](https://github.com/docker-library/repo-info/blob/master/repos/rakudo-star) ([history](https://github.com/docker-library/repo-info/commits/master/repos/rakudo-star))  

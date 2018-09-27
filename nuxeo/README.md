@@ -16,10 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.10`, `7`, `LTS-2015` (*7.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/4da3ff891d3d6911304cbbe0895333ae4c84ffa7/7.10/Dockerfile)
--	[`8.10`, `8`, `LTS-2016` (*8.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/20df98ce84f12cd3cfdcfd08ab8c9e029f7f01ab/8.10/Dockerfile)
--	[`9.3`, `FT` (*9.3/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/261cb4cb5bee049a8c756366b5257b4bc48e811d/9.3/Dockerfile)
--	[`9.10`, `9`, `LTS-2017`, `LTS`, `latest` (*9.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/261cb4cb5bee049a8c756366b5257b4bc48e811d/9.10/Dockerfile)
+-	[`7.10`, `7`, `LTS-2015` (*7.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/b5c1f07464530ef23f78671547cfbe94bc027848/7.10/Dockerfile)
+-	[`8.10`, `8`, `LTS-2016` (*8.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/410650daecfa5d8bc79dea54a875d16f47b80eda/8.10/Dockerfile)
+-	[`9.10`, `9`, `LTS-2017`, `LTS` (*9.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/5c0031a6e7ac1f52a9ce80b26fd8e764d319a8b0/9.10/Dockerfile)
+-	[`10.1` (*10.1/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/410650daecfa5d8bc79dea54a875d16f47b80eda/10.1/Dockerfile)
+-	[`10.2`, `10`, `FT`, `latest` (*10.2/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/5c0031a6e7ac1f52a9ce80b26fd8e764d319a8b0/10.2/Dockerfile)
 
 # Quick reference
 
@@ -70,8 +71,7 @@ The Nuxeo platform is accesible at http://${DOCKER_HOST}:8080/ and default User 
 ## Start a nuxeo with some additional packages
 
 ```console
-$ docker run --name mynuxeo -p 8080:8080 -e NUXEO_PACKAGES="nuxeo-web-mobile nuxeo-drive nuxeo-diff nuxeo-spreadsheet nuxeo-dam nuxeo-template-rendering nuxeo-template-rendering-samples nuxeo-showcase-content"
-nuxeo
+$ docker run --name mynuxeo --rm -ti -p 8080:8080 -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-dam nuxeo-drive nuxeo-showcase-content nuxeo-template-rendering nuxeo-template-rendering-samples nuxeo-spreadsheet" nuxeo
 ```
 
 This will install the same image as above but comes with some demo Nuxeo packages to demonstrate its various usage (DAM, DM, search etc...)
@@ -180,7 +180,7 @@ If you would like to do additional setup in an image derived from this one, you 
 
 ```dockerfile
 FROM nuxeo:7.10
-ADD nuxeo.conf /docker-entrypoint-initnuxeo.d/nuxeo.conf
+COPY nuxeo.conf /docker-entrypoint-initnuxeo.d/nuxeo.conf
 ```
 
 If you need a root account to run some installation steps in your `Dockerfile`, then you need to put those steps between two `USER` command as the image is run with the user `1000` (nuxeo). For instance:

@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.0.6`, `latest` (*0.X/Dockerfile*)](https://github.com/hashicorp/docker-consul/blob/b820cd370d68d28f91e1c8327616fb8f4c6e9126/0.X/Dockerfile)
+-	[`1.2.3`, `latest` (*0.X/Dockerfile*)](https://github.com/hashicorp/docker-consul/blob/36498f6d97bdf367a2cfa8ac94faad2d83c52f56/0.X/Dockerfile)
 
 # Quick reference
 
@@ -30,7 +30,7 @@ WARNING:
 	[HashiCorp](https://github.com/hashicorp/docker-consul)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/consul/)
+	[`amd64`](https://hub.docker.com/r/amd64/consul/), [`arm32v6`](https://hub.docker.com/r/arm32v6/consul/), [`arm64v8`](https://hub.docker.com/r/arm64v8/consul/), [`i386`](https://hub.docker.com/r/i386/consul/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/consul/` directory](https://github.com/docker-library/repo-info/blob/master/repos/consul) ([history](https://github.com/docker-library/repo-info/commits/master/repos/consul))  

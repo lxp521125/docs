@@ -16,7 +16,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.1`, `3.1.0`, `latest` (*3.1.0/Dockerfile*)](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/29dd9a63a4ade302705d3643bc507605c5e4dfe0/3.1.0/Dockerfile)
+-	[`3.4`, `3.4.0`, `latest` (*alpine/Dockerfile*)](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/ca34caf6fd01b1e476b34ed65b5cabd898ce71f7/alpine/Dockerfile)
 
 # Quick reference
 
@@ -52,7 +52,7 @@ TeamSpeak offers the ideal voice communication for online gaming, education and 
 
 > [teamspeak.com](https://teamspeak.com/)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/f23faa2ed7724a0d74fe6adc30be9054f5b552f2/teamspeak/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/618191cf82de051ff6661c3c8b82cfca1b663972/teamspeak/logo.png)
 
 # How to use this image
 
@@ -171,6 +171,18 @@ If this variable is set to 1, every query command that is sent to the server wil
 
 If this variable is set to 1, all new log entries are written into a single file per virtual server. We suggest setting this variable to 0 as it will make life easier when looking at the logs.
 
+### `TS3SERVER_QUERY_PROTOCOLS`
+
+Comma separated list of protocols that can be used to connect to the ServerQuery. Possible values are `raw` and `ssh`. If `raw` is specified a raw or "classic" ServerQuery is opened on `10011/tcp`. If `ssh` is specified an encrypted ServerQuery using SSH is opened at `10022/tcp`. Any combination of the aforementioned values can be specified in this parameter, including leaving it empty, which would disable ServerQuery altogether.
+
+### `TS3SERVER_QUERY_TIMEOUT`
+
+Number of seconds before a query connection is disconnected because of inactivity. If value is set to be zero or negative, the timeout will be disabled. The default is a timeout of 300 seconds.
+
+### `TS3SERVER_QUERY_SSH_RSA_HOST_KEY`
+
+Path to the `ssh_host_rsa_key` to be used by query. If it does not exist, it will be created when the server is starting up.
+
 # Caveats
 
 ## Inserting license file
@@ -200,12 +212,6 @@ $ docker run --name some-teamspeak -v /my/own/datadir:/var/ts3server/ -d teamspe
 ```
 
 The `-v /my/own/datadir:/var/ts3server/` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/var/ts3server` inside the container, where TeamSpeak by default will write its data files.
-
-Note that users on host systems with SELinux enabled may see issues with this. The current workaround is to assign the relevant SELinux policy type to the new data directory so that the container will be allowed to access it:
-
-```console
-$ chcon -Rt svirt_sandbox_file_t /my/own/datadir
-```
 
 # License
 

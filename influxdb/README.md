@@ -16,14 +16,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.3`, `1.3.9` (*influxdb/1.3/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/Dockerfile)
--	[`1.3-alpine`, `1.3.9-alpine` (*influxdb/1.3/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/alpine/Dockerfile)
--	[`1.3-data`, `1.3.9-data`, `data` (*influxdb/1.3/data/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/data/Dockerfile)
--	[`1.3-data-alpine`, `1.3.9-data-alpine`, `data-alpine` (*influxdb/1.3/data/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/data/alpine/Dockerfile)
--	[`1.3-meta`, `1.3.9-meta`, `meta` (*influxdb/1.3/meta/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/meta/Dockerfile)
--	[`1.3-meta-alpine`, `1.3.9-meta-alpine`, `meta-alpine` (*influxdb/1.3/meta/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.3/meta/alpine/Dockerfile)
--	[`1.4`, `1.4.3`, `latest` (*influxdb/1.4/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.4/Dockerfile)
--	[`1.4-alpine`, `1.4.3-alpine`, `alpine` (*influxdb/1.4/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/af49c68bbb555d67be4470104c35e16f42f3e0fb/influxdb/1.4/alpine/Dockerfile)
+-	[`1.5`, `1.5.4` (*influxdb/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/Dockerfile)
+-	[`1.5-alpine`, `1.5.4-alpine` (*influxdb/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/alpine/Dockerfile)
+-	[`1.5-data`, `1.5.4-data` (*influxdb/1.5/data/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/data/Dockerfile)
+-	[`1.5-data-alpine`, `1.5.4-data-alpine` (*influxdb/1.5/data/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/data/alpine/Dockerfile)
+-	[`1.5-meta`, `1.5.4-meta` (*influxdb/1.5/meta/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/meta/Dockerfile)
+-	[`1.5-meta-alpine`, `1.5.4-meta-alpine` (*influxdb/1.5/meta/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/meta/alpine/Dockerfile)
+-	[`1.6`, `1.6.3`, `latest` (*influxdb/1.6/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/Dockerfile)
+-	[`1.6-alpine`, `1.6.3-alpine`, `alpine` (*influxdb/1.6/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/alpine/Dockerfile)
+-	[`1.6-data`, `1.6.3-data`, `data` (*influxdb/1.6/data/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/data/Dockerfile)
+-	[`1.6-data-alpine`, `1.6.3-data-alpine`, `data-alpine` (*influxdb/1.6/data/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/data/alpine/Dockerfile)
+-	[`1.6-meta`, `1.6.3-meta`, `meta` (*influxdb/1.6/meta/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/meta/Dockerfile)
+-	[`1.6-meta-alpine`, `1.6.3-meta-alpine`, `meta-alpine` (*influxdb/1.6/meta/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/meta/alpine/Dockerfile)
 
 # Quick reference
 
@@ -268,7 +272,7 @@ The `influxdb` images come in many flavors, each designed for a specific use cas
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `influxdb:alpine`
+## `influxdb:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
