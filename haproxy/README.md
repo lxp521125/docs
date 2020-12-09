@@ -14,30 +14,38 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.5.19`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.5/Dockerfile)
--	[`1.5.19-alpine`, `1.5-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.5/alpine/Dockerfile)
--	[`1.6.14`, `1.6` (*1.6/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.6/Dockerfile)
--	[`1.6.14-alpine`, `1.6-alpine` (*1.6/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.6/alpine/Dockerfile)
--	[`1.7.11`, `1.7` (*1.7/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.7/Dockerfile)
--	[`1.7.11-alpine`, `1.7-alpine` (*1.7/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/5803ee6e7e1f542bb22dbf83761bbe908d8e66ab/1.7/alpine/Dockerfile)
--	[`1.8.14`, `1.8`, `1`, `latest` (*1.8/Dockerfile*)](https://github.com/docker-library/haproxy/blob/9da24940385e6178f987737305ff499734437c90/1.8/Dockerfile)
--	[`1.8.14-alpine`, `1.8-alpine`, `1-alpine`, `alpine` (*1.8/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/9da24940385e6178f987737305ff499734437c90/1.8/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/haproxy/issues](https://github.com/docker-library/haproxy/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/haproxy)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`2.4-dev2`, `2.4-dev`](https://github.com/docker-library/haproxy/blob/ad7662656f2d2dc3218d2e3616c141956cb4a8d0/2.4-rc/Dockerfile)
+-	[`2.4-dev2-alpine`, `2.4-dev-alpine`](https://github.com/docker-library/haproxy/blob/ad7662656f2d2dc3218d2e3616c141956cb4a8d0/2.4-rc/alpine/Dockerfile)
+-	[`2.3.2`, `2.3`, `latest`](https://github.com/docker-library/haproxy/blob/ced45443a115fbcc9f170c5f71c19a2b227aeb1d/2.3/Dockerfile)
+-	[`2.3.2-alpine`, `2.3-alpine`, `alpine`](https://github.com/docker-library/haproxy/blob/ced45443a115fbcc9f170c5f71c19a2b227aeb1d/2.3/alpine/Dockerfile)
+-	[`2.2.6`, `2.2`, `lts`](https://github.com/docker-library/haproxy/blob/acf4b709eac7a08c16ba7669ac76c46312033bb0/2.2/Dockerfile)
+-	[`2.2.6-alpine`, `2.2-alpine`, `lts-alpine`](https://github.com/docker-library/haproxy/blob/acf4b709eac7a08c16ba7669ac76c46312033bb0/2.2/alpine/Dockerfile)
+-	[`2.1.10`, `2.1`](https://github.com/docker-library/haproxy/blob/b808ca775382ae59e9ed3a43308fcbe62c1389c5/2.1/Dockerfile)
+-	[`2.1.10-alpine`, `2.1-alpine`](https://github.com/docker-library/haproxy/blob/45fa7611660c5017326eaa9db671c439dc12262d/2.1/alpine/Dockerfile)
+-	[`2.0.19`, `2.0`](https://github.com/docker-library/haproxy/blob/c395a5c7bcc9d7bc04aaaf028a591cbad7afd9f7/2.0/Dockerfile)
+-	[`2.0.19-alpine`, `2.0-alpine`](https://github.com/docker-library/haproxy/blob/c395a5c7bcc9d7bc04aaaf028a591cbad7afd9f7/2.0/alpine/Dockerfile)
+-	[`1.8.27`, `1.8`](https://github.com/docker-library/haproxy/blob/c3371e83f9c47c4c25cfc731f5765703b514890e/1.8/Dockerfile)
+-	[`1.8.27-alpine`, `1.8-alpine`](https://github.com/docker-library/haproxy/blob/c3371e83f9c47c4c25cfc731f5765703b514890e/1.8/alpine/Dockerfile)
+-	[`1.7.12`, `1.7`](https://github.com/docker-library/haproxy/blob/b808ca775382ae59e9ed3a43308fcbe62c1389c5/1.7/Dockerfile)
+-	[`1.7.12-alpine`, `1.7-alpine`](https://github.com/docker-library/haproxy/blob/e538b03ce98ce2c9bb9e6e0db26d87ad45a137d0/1.7/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/haproxy/issues](https://github.com/docker-library/haproxy/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/haproxy/), [`arm32v5`](https://hub.docker.com/r/arm32v5/haproxy/), [`arm32v6`](https://hub.docker.com/r/arm32v6/haproxy/), [`arm32v7`](https://hub.docker.com/r/arm32v7/haproxy/), [`arm64v8`](https://hub.docker.com/r/arm64v8/haproxy/), [`i386`](https://hub.docker.com/r/i386/haproxy/), [`ppc64le`](https://hub.docker.com/r/ppc64le/haproxy/), [`s390x`](https://hub.docker.com/r/s390x/haproxy/)
+	[`amd64`](https://hub.docker.com/r/amd64/haproxy/), [`arm32v5`](https://hub.docker.com/r/arm32v5/haproxy/), [`arm32v6`](https://hub.docker.com/r/arm32v6/haproxy/), [`arm32v7`](https://hub.docker.com/r/arm32v7/haproxy/), [`arm64v8`](https://hub.docker.com/r/arm64v8/haproxy/), [`i386`](https://hub.docker.com/r/i386/haproxy/), [`mips64le`](https://hub.docker.com/r/mips64le/haproxy/), [`ppc64le`](https://hub.docker.com/r/ppc64le/haproxy/), [`s390x`](https://hub.docker.com/r/s390x/haproxy/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/haproxy/` directory](https://github.com/docker-library/repo-info/blob/master/repos/haproxy) ([history](https://github.com/docker-library/repo-info/commits/master/repos/haproxy))  
@@ -50,16 +58,13 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `haproxy/` directory](https://github.com/docker-library/docs/tree/master/haproxy) ([history](https://github.com/docker-library/docs/commits/master/haproxy))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # What is HAProxy?
 
 HAProxy is a free, open source high availability solution, providing load balancing and proxying for TCP and HTTP-based applications by spreading requests across multiple servers. It is written in C and has a reputation for being fast and efficient (in terms of processor and memory usage).
 
 > [wikipedia.org/wiki/HAProxy](https://en.wikipedia.org/wiki/HAProxy)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/566c944ca5eb9d1947c8a2e8821f8de2b0fc144c/haproxy/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/4da3e2446a4c257c3a32faac6256bee81f770316/haproxy/logo.png)
 
 # How to use this image
 
@@ -124,9 +129,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `haproxy:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

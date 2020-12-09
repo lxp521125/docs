@@ -14,23 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7.5`, `7`, `latest` (*7.5/Dockerfile*)](https://github.com/oracle/container-images/blob/1fa3a563afcc3d3d948ea6348922bac41f7cf89c/7.5/Dockerfile)
--	[`7-slim` (*7-slim/Dockerfile*)](https://github.com/oracle/container-images/blob/1fa3a563afcc3d3d948ea6348922bac41f7cf89c/7-slim/Dockerfile)
--	[`6.10`, `6` (*6.10/Dockerfile*)](https://github.com/oracle/container-images/blob/1fa3a563afcc3d3d948ea6348922bac41f7cf89c/6.10/Dockerfile)
--	[`6-slim` (*6-slim/Dockerfile*)](https://github.com/oracle/container-images/blob/1fa3a563afcc3d3d948ea6348922bac41f7cf89c/6-slim/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[the Oracle Linux Product Team](https://github.com/oracle/container-images)
 
 -	**Where to get help**:  
 	see the "Customer Support" and "Community Support" sections below
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`8.3`, `8`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/8.3/Dockerfile)
+-	[`8-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/8-slim/Dockerfile)
+-	[`7.9`, `7`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/7.9/Dockerfile)
+-	[`7-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/7-slim/Dockerfile)
+-	[`6.10`, `6`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/6.10/Dockerfile)
+-	[`6-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/6-slim/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	[https://github.com/oracle/container-images/issues](https://github.com/oracle/container-images/issues)
-
--	**Maintained by**:  
-	[the Oracle Linux Product Team](https://github.com/oracle/container-images)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/oraclelinux/), [`arm64v8`](https://hub.docker.com/r/arm64v8/oraclelinux/)
@@ -46,18 +50,19 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `oraclelinux/` directory](https://github.com/docker-library/docs/tree/master/oraclelinux) ([history](https://github.com/docker-library/docs/commits/master/oraclelinux))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # Oracle Linux
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/ec0d698a7724e87f1e9ee0e4af266a334a574a03/oraclelinux/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/9d0bc984117a35c4236e09ba1c6f4b2b9f287773/oraclelinux/logo.png)
 
 Oracle Linux is an open-source operating system available under the GNU General Public License (GPLv2). Suitable for general purpose or Oracle workloads, it benefits from rigorous testing of more than 128,000 hours per day with real- world workloads and includes unique innovations such as Ksplice for zero- downtime kernel patching, DTrace for real-time diagnostics, the powerful Btrfs file system, and more.
 
 ## How to use these images
 
 The Oracle Linux images are intended for use in the **FROM** field of a downstream `Dockerfile`. For example, to use the latest optimized Oracle Linux 7 image, specify `FROM oraclelinux:7-slim`.
+
+## Removal of `latest` tag
+
+The `latest` tag was removed from the Oracle Linux official images in June 2020 to reduce confusion. Downstream images using `oraclelinux:latest` or no tag should be updated to `oraclelinux:7` for future builds. Note that Oracle recommends using the `-slim` variants for the smallest possible image size.
 
 ## Official Resources
 
@@ -67,7 +72,7 @@ The Oracle Linux images are intended for use in the **FROM** field of a downstre
 
 ## Social media resources
 
--	[Twitter](https://twitter.com/ORCL_Linux)
+-	[Twitter](https://twitter.com/OracleLinux)
 -	[Facebook](https://www.facebook.com/OracleLinux)
 -	[YouTube](https://www.youtube.com/user/OracleLinuxChannel)
 -	[Blog](http://blogs.oracle.com/linux)
@@ -90,12 +95,11 @@ Please review the [Oracle Container Runtime for Docker User's Guide](https://doc
 
 For Oracle Linux users without a paid support subscription, the following resources are available:
 
--	The [Oracle Linux Forum](https://community.oracle.com/community/server_%26_storage_systems/linux/oracle_linux) on the [Oracle Technology Network Community](https://community.oracle.com/welcome).
--	The `#oracle-linux` IRC channel on Freenode.
+-	The [Oracle Linux space](https://community.oracle.com/community/groundbreakers/server_&_storage_systems/linux/oracle_linux) on the [Oracle Technology Network Community](https://community.oracle.com/welcome).
 
 # License
 
-View the [Oracle Linux End-User License Agreement](https://oss.oracle.com/ol6/EULA) for the software contained in this image.
+View the [Oracle Linux End-User License Agreement](https://oss.oracle.com/ol/EULA) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

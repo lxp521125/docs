@@ -14,20 +14,22 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.4`, `3.4.0`, `latest` (*alpine/Dockerfile*)](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/ca34caf6fd01b1e476b34ed65b5cabd898ce71f7/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues)
 
 -	**Maintained by**:  
 	TeamSpeak Developers [nwerensteijn](https://github.com/nwerensteijn) and [muenchow](https://github.com/muenchow)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`3.13`, `3.13.2`, `latest`](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/f3fdade4d0a97c79d35dda2a5de9042c27d3db86/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/teamspeak/)
@@ -42,9 +44,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `teamspeak/` directory](https://github.com/docker-library/docs/tree/master/teamspeak) ([history](https://github.com/docker-library/docs/commits/master/teamspeak))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is TeamSpeak?
 

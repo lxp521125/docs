@@ -14,31 +14,33 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.5`, `1.5.4` (*influxdb/1.5/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/Dockerfile)
--	[`1.5-alpine`, `1.5.4-alpine` (*influxdb/1.5/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/alpine/Dockerfile)
--	[`1.5-data`, `1.5.4-data` (*influxdb/1.5/data/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/data/Dockerfile)
--	[`1.5-data-alpine`, `1.5.4-data-alpine` (*influxdb/1.5/data/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/data/alpine/Dockerfile)
--	[`1.5-meta`, `1.5.4-meta` (*influxdb/1.5/meta/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/meta/Dockerfile)
--	[`1.5-meta-alpine`, `1.5.4-meta-alpine` (*influxdb/1.5/meta/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.5/meta/alpine/Dockerfile)
--	[`1.6`, `1.6.3`, `latest` (*influxdb/1.6/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/Dockerfile)
--	[`1.6-alpine`, `1.6.3-alpine`, `alpine` (*influxdb/1.6/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/alpine/Dockerfile)
--	[`1.6-data`, `1.6.3-data`, `data` (*influxdb/1.6/data/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/data/Dockerfile)
--	[`1.6-data-alpine`, `1.6.3-data-alpine`, `data-alpine` (*influxdb/1.6/data/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/data/alpine/Dockerfile)
--	[`1.6-meta`, `1.6.3-meta`, `meta` (*influxdb/1.6/meta/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/meta/Dockerfile)
--	[`1.6-meta-alpine`, `1.6.3-meta-alpine`, `meta-alpine` (*influxdb/1.6/meta/alpine/Dockerfile*)](https://github.com/influxdata/influxdata-docker/blob/809f1559ddf2c20c371eff4cb253166ab707dc89/influxdb/1.6/meta/alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/influxdata/influxdata-docker/issues](https://github.com/influxdata/influxdata-docker/issues)
 
 -	**Maintained by**:  
 	[InfluxData](https://github.com/influxdata/influxdata-docker)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.7`, `1.7.10`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/Dockerfile)
+-	[`1.7-alpine`, `1.7.10-alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/alpine/Dockerfile)
+-	[`1.7-data`, `1.7.10-data`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/data/Dockerfile)
+-	[`1.7-data-alpine`, `1.7.10-data-alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/data/alpine/Dockerfile)
+-	[`1.7-meta`, `1.7.10-meta`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/meta/Dockerfile)
+-	[`1.7-meta-alpine`, `1.7.10-meta-alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.7/meta/alpine/Dockerfile)
+-	[`1.8`, `1.8.3`, `latest`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/Dockerfile)
+-	[`1.8-alpine`, `1.8.3-alpine`, `alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/alpine/Dockerfile)
+-	[`1.8-data`, `1.8.3-data`, `data`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/data/Dockerfile)
+-	[`1.8-data-alpine`, `1.8.3-data-alpine`, `data-alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/data/alpine/Dockerfile)
+-	[`1.8-meta`, `1.8.3-meta`, `meta`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/meta/Dockerfile)
+-	[`1.8-meta-alpine`, `1.8.3-meta-alpine`, `meta-alpine`](https://github.com/influxdata/influxdata-docker/blob/6ffb9c8be705a1fd1672bc9b923fb97ebe3883c3/influxdb/1.8/meta/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/influxdata/influxdata-docker/issues](https://github.com/influxdata/influxdata-docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/influxdb/), [`arm32v7`](https://hub.docker.com/r/arm32v7/influxdb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/influxdb/)
@@ -54,9 +56,6 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `influxdb/` directory](https://github.com/docker-library/docs/tree/master/influxdb) ([history](https://github.com/docker-library/docs/commits/master/influxdb))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # InfluxDB
 
 InfluxDB is a time series database built from the ground up to handle high write and query loads. InfluxDB is meant to be used as a backing store for any use case involving large amounts of timestamped data, including DevOps monitoring, application metrics, IoT sensor data, and real-time analytics.
@@ -64,6 +63,10 @@ InfluxDB is a time series database built from the ground up to handle high write
 [InfluxDB Documentation](https://docs.influxdata.com/influxdb/latest/)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/43d87118415bb75d7bb107683e79cd6d69186f67/influxdb/logo.png)
+
+## Updating latest to 2.0
+
+In the future, the latest tag for this image will point to the latest released implementation of influxdb 2.0. This will happen when the first general available release for 2.0 exists. If you are using the `latest` tag for any production or development purposes, please update your development environment to reference the `1.8` tag.
 
 ## Using this Image
 
@@ -92,14 +95,9 @@ $ docker run -p 8086:8086 \
 The following ports are important and are used by InfluxDB.
 
 -	8086 HTTP API port
--	8083 Administrator interface port, if it is enabled
 -	2003 Graphite support, if it is enabled
 
 The HTTP API port will be automatically exposed when using `docker run -P`.
-
-The administrator interface is not automatically exposed when using `docker run -P` and is disabled by default. The adminstrator interface requires that the web browser have access to InfluxDB on the same port in the container as from the web browser. Since `-P` exposes the HTTP port to the host on a random port, the administrator interface is not compatible with this setting.
-
-The administrator interface is deprecated as of 1.1.0 and will be removed in 1.3.0.
 
 Find more about API Endpoints & Ports [here](https://docs.influxdata.com/influxdb/latest/concepts/api/).
 
@@ -146,18 +144,6 @@ docker run -p 8086:8086 -p 2003:2003 \
 ```
 
 See the [README on GitHub](https://github.com/influxdata/influxdb/blob/master/services/graphite/README.md) for more detailed documentation to set up the Graphite service. In order to take advantage of graphite templates, you should use a configuration file by outputting a default configuration file using the steps above and modifying the `[[graphite]]` section.
-
-### Administrator Interface
-
-The administrator interface is deprecated as of 1.1.0 and will be removed in 1.3.0. It is disabled by default. If needed, it can still be enabled by setting an environment variable like below:
-
-```console
-docker run -p 8086:8086 -p 8083:8083 \
-    -e INFLUXDB_ADMIN_ENABLED=true \
-    influxdb
-```
-
-To use the administrator interface, both the HTTP API and the administrator interface API's must be forwarded to the same port.
 
 ### HTTP API
 
@@ -255,7 +241,7 @@ To manually initialize the database and exit, the `/init-influxdb.sh` script can
 
 ```console
 $ docker run --rm \
-      -e INFLUXDB_DB=db0 -e INFLUXDB_ADMIN_ENABLED=true \
+      -e INFLUXDB_DB=db0 \
       -e INFLUXDB_ADMIN_USER=admin -e INFLUXDB_ADMIN_PASSWORD=supersecretpassword \
       -e INFLUXDB_USER=telegraf -e INFLUXDB_USER_PASSWORD=secretpassword \
       -v $PWD:/var/lib/influxdb \
@@ -274,9 +260,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `influxdb:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

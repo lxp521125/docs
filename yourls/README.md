@@ -14,25 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.7.2-apache`, `1.7-apache`, `1-apache`, `apache`, `1.7.2`, `1.7`, `1`, `latest` (*1.7.2/apache/Dockerfile*)](https://github.com/YOURLS/docker-yourls/blob/d95df637a2b47dd34d93f0716229f86f8fc1bb09/1.7.2/apache/Dockerfile)
--	[`1.7.2-fpm`, `1.7-fpm`, `1-fpm`, `fpm` (*1.7.2/fpm/Dockerfile*)](https://github.com/YOURLS/docker-yourls/blob/d95df637a2b47dd34d93f0716229f86f8fc1bb09/1.7.2/fpm/Dockerfile)
--	[`1.7.2-fpm-alpine`, `1.7-fpm-alpine`, `1-fpm-alpine`, `fpm-alpine` (*1.7.2/fpm-alpine/Dockerfile*)](https://github.com/YOURLS/docker-yourls/blob/d95df637a2b47dd34d93f0716229f86f8fc1bb09/1.7.2/fpm-alpine/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/YOURLS/docker-yourls/issues](https://github.com/YOURLS/docker-yourls/issues)
 
 -	**Maintained by**:  
 	[YOURLS](https://github.com/YOURLS/docker-yourls)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.7.9-apache`, `1.7-apache`, `1-apache`, `apache`, `1.7.9`, `1.7`, `1`, `latest`](https://github.com/YOURLS/docker-yourls/blob/fe07662938efe12d7c8c82bea32d1d34874d0665/apache/Dockerfile)
+-	[`1.7.9-fpm`, `1.7-fpm`, `1-fpm`, `fpm`](https://github.com/YOURLS/docker-yourls/blob/fe07662938efe12d7c8c82bea32d1d34874d0665/fpm/Dockerfile)
+-	[`1.7.9-fpm-alpine`, `1.7-fpm-alpine`, `1-fpm-alpine`, `fpm-alpine`](https://github.com/YOURLS/docker-yourls/blob/fe07662938efe12d7c8c82bea32d1d34874d0665/fpm-alpine/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/YOURLS/docker-yourls/issues](https://github.com/YOURLS/docker-yourls/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/yourls/)
+	[`amd64`](https://hub.docker.com/r/amd64/yourls/), [`arm32v5`](https://hub.docker.com/r/arm32v5/yourls/), [`arm32v6`](https://hub.docker.com/r/arm32v6/yourls/), [`arm32v7`](https://hub.docker.com/r/arm32v7/yourls/), [`arm64v8`](https://hub.docker.com/r/arm64v8/yourls/), [`i386`](https://hub.docker.com/r/i386/yourls/), [`mips64le`](https://hub.docker.com/r/mips64le/yourls/), [`ppc64le`](https://hub.docker.com/r/ppc64le/yourls/), [`s390x`](https://hub.docker.com/r/s390x/yourls/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/yourls/` directory](https://github.com/docker-library/repo-info/blob/master/repos/yourls) ([history](https://github.com/docker-library/repo-info/commits/master/repos/yourls))  
@@ -44,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `yourls/` directory](https://github.com/docker-library/docs/tree/master/yourls) ([history](https://github.com/docker-library/docs/commits/master/yourls))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is YOURLS?
 
@@ -61,18 +60,23 @@ YOURLS is a set of PHP scripts that will allow you to run Your Own URL Shortener
 ```console
 $ docker run --name some-yourls --link some-mysql:mysql \
     -e YOURLS_SITE="https://example.com" \
+    -e YOURLS_USER="example_username" \
+    -e YOURLS_PASS="example_password" \
     -d yourls
 ```
 
-The following environment variables are also honored for configuring your YOURLS instance:
+The YOURLS instance accepts [a number of environment variables for configuration](https://yourls.org/#Config).  
+A few notable/important examples for using this Docker image include:
 
 -	`-e YOURLS_DB_HOST=...` (defaults to the IP and port of the linked `mysql` container)
 -	`-e YOURLS_DB_USER=...` (defaults to "root")
 -	`-e YOURLS_DB_PASS=...` (defaults to the value of the `MYSQL_ROOT_PASSWORD` environment variable from the linked `mysql` container)
 -	`-e YOURLS_DB_NAME=...` (defaults to "yourls")
--	`-e YOURLS_TABLE_PREFIX=...` (defaults to "", only set this when you need to override the default table prefix in wp-config.php)
+-	`-e YOURLS_DB_PREFIX=...` (defaults to "yourls_", only set this when you need to override the default table prefix)
 -	`-e YOURLS_COOKIEKEY=...` (default to unique random SHA1s)
 -	`-e YOURLS_SITE=...` (yourls instance url)
+-	`-e YOURLS_USER=...` (yourls instance user name)
+-	`-e YOURLS_PASS=...` (yourls instance user password)
 
 If the `YOURLS_DB_NAME` specified does not already exist on the given MySQL server, it will be created automatically upon startup of the `yourls` container, provided that the `YOURLS_DB_USER` specified has the necessary permissions to create it.
 
@@ -82,7 +86,7 @@ If you'd like to be able to access the instance from the host without the contai
 $ docker run --name some-yourls --link some-mysql:mysql -p 8080:80 -d yourls
 ```
 
-Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
+Then, access it via `http://localhost:8080/admin/` or `http://host-ip:8080/admin/` in a browser.
 
 If you'd like to use an external database instead of a linked `mysql` container, specify the hostname and port with `YOURLS_DB_HOST` along with the password in `YOURLS_DB_PASS` and the username in `YOURLS_DB_USER` (if it is something other than `root`):
 
@@ -108,6 +112,8 @@ services:
     environment:
       YOURLS_DB_PASS: example
       YOURLS_SITE: https://example.com
+      YOURLS_USER: example_username
+      YOURLS_PASS: example_password
 
   mysql:
     image: mysql:5.7
@@ -116,9 +122,9 @@ services:
       MYSQL_ROOT_PASSWORD: example
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/56798ba4051d863557e7e6256c452a9265745675/yourls/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/be1a84b44ec3c028aa0ac5a9c8e413e43dfe05e4/yourls/stack.yml)
 
-Run `docker stack deploy -c stack.yml yourls` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
+Run `docker stack deploy -c stack.yml yourls` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080/admin/`, `http://localhost:8080/admin/`, or `http://host-ip:8080/admin/` (as appropriate).
 
 ## Adding additional libraries / extensions
 
@@ -129,7 +135,6 @@ If you need additional PHP extensions, you'll need to create your own image `FRO
 The following Docker Hub features can help with the task of keeping your dependent images up-to-date:
 
 -	[Automated Builds](https://docs.docker.com/docker-hub/builds/) let Docker Hub automatically build your Dockerfile each time you push changes to it.
--	[Repository Links](https://docs.docker.com/docker-hub/builds/#repository-links) can ensure that your image is also rebuilt any time `yourls` is updated.
 
 # Image Variants
 
@@ -141,9 +146,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `yourls:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

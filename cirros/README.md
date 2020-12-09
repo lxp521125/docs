@@ -14,20 +14,22 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`0.4.0`, `0.4`, `0`, `latest` (*arches/amd64/Dockerfile*)](https://github.com/tianon/docker-brew-cirros/blob/d04ffb350eb29c24bafe12f6b109aa3990309771/arches/amd64/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/tianon/docker-brew-cirros/issues](https://github.com/tianon/docker-brew-cirros/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/tianon/docker-brew-cirros)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`0.5.1`, `0.5`, `0`, `latest`](https://github.com/tianon/docker-brew-cirros/blob/0f4ac5ae1e2b7bbff60b81b554f7578be1caec3b/arches/amd64/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/tianon/docker-brew-cirros/issues](https://github.com/tianon/docker-brew-cirros/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/cirros/), [`arm32v5`](https://hub.docker.com/r/arm32v5/cirros/), [`arm64v8`](https://hub.docker.com/r/arm64v8/cirros/), [`i386`](https://hub.docker.com/r/i386/cirros/), [`ppc64le`](https://hub.docker.com/r/ppc64le/cirros/)
@@ -43,14 +45,16 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `cirros/` directory](https://github.com/docker-library/docs/tree/master/cirros) ([history](https://github.com/docker-library/docs/commits/master/cirros))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # What is CirrOS?
 
-CirrOS is a Tiny OS that specializes in running on a cloud.
+The CirrOS project provides linux disk and kernel/initramfs images. The images are well suited for testing as they are small and boot quickly. Please note that:
 
-> [launchpad.net/cirros](https://launchpad.net/cirros)
+-	**Images are provided for test only**. They should not be used in production.
+-	**Images have well known login information**. Users can log in with 'cirros:letsgocubs' locally or remotely and have passwordless sudo access to root.
+
+CirrOS images have useful tools and function for debugging or developing cloud infrastructure.
+
+> [github.com/cirros-dev/cirros](https://github.com/cirros-dev/cirros#readme)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/b449be7df57e9ed9086bb5821bfb5d6cdc5d67a4/cirros/logo.png)
 

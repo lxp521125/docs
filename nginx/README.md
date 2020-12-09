@@ -14,30 +14,32 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.15.4`, `mainline`, `1`, `1.15`, `latest` (*mainline/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/866b071f099f96898563f9a003c2dbb03bb90339/mainline/stretch/Dockerfile)
--	[`1.15.4-perl`, `mainline-perl`, `1-perl`, `1.15-perl`, `perl` (*mainline/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/866b071f099f96898563f9a003c2dbb03bb90339/mainline/stretch-perl/Dockerfile)
--	[`1.15.4-alpine`, `mainline-alpine`, `1-alpine`, `1.15-alpine`, `alpine` (*mainline/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/3c446adddf7b04e877d5c5191b151c794c74bb58/mainline/alpine/Dockerfile)
--	[`1.15.4-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.15-alpine-perl`, `alpine-perl` (*mainline/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/3c446adddf7b04e877d5c5191b151c794c74bb58/mainline/alpine-perl/Dockerfile)
--	[`1.14.0`, `stable`, `1.14` (*stable/stretch/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/d377983a14b214fcae4b8e34357761282aca788f/stable/stretch/Dockerfile)
--	[`1.14.0-perl`, `stable-perl`, `1.14-perl` (*stable/stretch-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/d377983a14b214fcae4b8e34357761282aca788f/stable/stretch-perl/Dockerfile)
--	[`1.14.0-alpine`, `stable-alpine`, `1.14-alpine` (*stable/alpine/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/d377983a14b214fcae4b8e34357761282aca788f/stable/alpine/Dockerfile)
--	[`1.14.0-alpine-perl`, `stable-alpine-perl`, `1.14-alpine-perl` (*stable/alpine-perl/Dockerfile*)](https://github.com/nginxinc/docker-nginx/blob/d377983a14b214fcae4b8e34357761282aca788f/stable/alpine-perl/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/nginxinc/docker-nginx/issues](https://github.com/nginxinc/docker-nginx/issues)
 
 -	**Maintained by**:  
 	[the NGINX Docker Maintainers](https://github.com/nginxinc/docker-nginx)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.19.5`, `mainline`, `1`, `1.19`, `latest`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/debian/Dockerfile)
+-	[`1.19.5-perl`, `mainline-perl`, `1-perl`, `1.19-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/debian-perl/Dockerfile)
+-	[`1.19.5-alpine`, `mainline-alpine`, `1-alpine`, `1.19-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/alpine/Dockerfile)
+-	[`1.19.5-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.19-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/alpine-perl/Dockerfile)
+-	[`1.18.0`, `stable`, `1.18`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/debian/Dockerfile)
+-	[`1.18.0-perl`, `stable-perl`, `1.18-perl`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/debian-perl/Dockerfile)
+-	[`1.18.0-alpine`, `stable-alpine`, `1.18-alpine`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/alpine/Dockerfile)
+-	[`1.18.0-alpine-perl`, `stable-alpine-perl`, `1.18-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/alpine-perl/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/nginxinc/docker-nginx/issues](https://github.com/nginxinc/docker-nginx/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nginx/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nginx/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nginx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nginx/), [`i386`](https://hub.docker.com/r/i386/nginx/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nginx/), [`s390x`](https://hub.docker.com/r/s390x/nginx/)
+	[`amd64`](https://hub.docker.com/r/amd64/nginx/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nginx/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nginx/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nginx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nginx/), [`i386`](https://hub.docker.com/r/i386/nginx/), [`mips64le`](https://hub.docker.com/r/mips64le/nginx/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nginx/), [`s390x`](https://hub.docker.com/r/s390x/nginx/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nginx/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nginx) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nginx))  
@@ -49,9 +51,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `nginx/` directory](https://github.com/docker-library/docs/tree/master/nginx) ([history](https://github.com/docker-library/docs/commits/master/nginx))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is nginx?
 
@@ -121,9 +120,9 @@ Then build the image with `docker build -t custom-nginx .` and run it as follows
 $ docker run --name my-custom-nginx-container -d custom-nginx
 ```
 
-### Using environment variables in nginx configuration
+### Using environment variables in nginx configuration (new in 1.19)
 
-Out-of-the-box, nginx doesn't support environment variables inside most configuration blocks. But `envsubst` may be used as a workaround if you need to generate your nginx configuration dynamically before nginx starts.
+Out-of-the-box, nginx doesn't support environment variables inside most configuration blocks. But this image has a function, which will extract environment variables before nginx starts.
 
 Here is an example using docker-compose.yml:
 
@@ -131,19 +130,37 @@ Here is an example using docker-compose.yml:
 web:
   image: nginx
   volumes:
-   - ./mysite.template:/etc/nginx/conf.d/mysite.template
+   - ./templates:/etc/nginx/templates
   ports:
    - "8080:80"
   environment:
    - NGINX_HOST=foobar.com
    - NGINX_PORT=80
-  command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
 ```
 
-The `mysite.template` file may then contain variable references like this:
+By default, this function reads template files in `/etc/nginx/templates/*.template` and outputs the result of executing `envsubst` to `/etc/nginx/conf.d`.
 
-`listen       ${NGINX_PORT};
-`
+So if you place `templates/default.conf.template` file, which contains variable references like this:
+
+	listen       ${NGINX_PORT};
+
+outputs to `/etc/nginx/conf.d/default.conf` like this:
+
+	listen       80;
+
+This behavior can be changed via the following environment variables:
+
+-	`NGINX_ENVSUBST_TEMPLATE_DIR`
+	-	A directory which contains template files (default: `/etc/nginx/templates`)
+	-	When this directory doesn't exist, this function will do nothing about template processing.
+-	`NGINX_ENVSUBST_TEMPLATE_SUFFIX`
+	-	A suffix of template files (default: `.template`)
+	-	This function only processes the files whose name ends with this suffix.
+-	`NGINX_ENVSUBST_OUTPUT_DIR`
+	-	A directory where the result of executing envsubst is output (default: `/etc/nginx/conf.d`)
+	-	The output filename is the template filename with the suffix removed.
+		-	ex.) `/etc/nginx/templates/default.conf.template` will be output with the filename `/etc/nginx/conf.d/default.conf`.
+	-	This directory must be writable by the user running a container.
 
 ## Running nginx in read-only mode
 
@@ -173,6 +190,50 @@ web:
   command: [nginx-debug, '-g', 'daemon off;']
 ```
 
+## Entrypoint quiet logs
+
+Since version 1.19.0, a verbose entrypoint was added. It provides information on what's happening during container startup. You can silence this output by setting environment variable `NGINX_ENTRYPOINT_QUIET_LOGS`:
+
+```console
+$ docker run -d -e NGINX_ENTRYPOINT_QUIET_LOGS=1 nginx
+```
+
+## User and group id
+
+Since 1.17.0, both alpine- and debian-based images variants use the same user and group ids to drop the privileges for worker processes:
+
+```console
+$ id
+uid=101(nginx) gid=101(nginx) groups=101(nginx)
+```
+
+## Running nginx as a non-root user
+
+It is possible to run the image as a less privileged arbitrary UID/GID. This, however, requires modification of nginx configuration to use directories writeable by that specific UID/GID pair:
+
+```console
+$ docker run -d -v $PWD/nginx.conf:/etc/nginx/nginx.conf nginx
+```
+
+where nginx.conf in the current directory should have the following directives re-defined:
+
+```nginx
+pid        /tmp/nginx.pid;
+```
+
+And in the http context:
+
+```nginx
+http {
+    client_body_temp_path /tmp/client_temp;
+    proxy_temp_path       /tmp/proxy_temp_path;
+    fastcgi_temp_path     /tmp/fastcgi_temp;
+    uwsgi_temp_path       /tmp/uwsgi_temp;
+    scgi_temp_path        /tmp/scgi_temp;
+...
+}
+```
+
 ## Monitoring nginx with Amplify
 
 [Amplify](https://amplify.nginx.com/signup/) is a free monitoring tool that can be used to monitor microservice architectures based on nginx. Amplify is developed and maintained by the company behind the nginx software.
@@ -193,9 +254,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `nginx:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

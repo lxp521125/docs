@@ -14,20 +14,28 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
+# **DEPRECATION NOTICE**
 
--	[`1.2.9`, `latest` (*Dockerfile*)](https://github.com/docker/swarm-library-image/blob/a2a08d733833327354b5d3336ffbd19e4f369a2d/Dockerfile)
+> Classic Swarm has been archived and is no longer actively developed. You may want to use the Swarm mode built into the Docker Engine instead, or another orchestration system.
+
+(https://github.com/docker/classicswarm#readme)
 
 # Quick reference
 
+-	**Maintained by**:  
+	[Docker, Inc.](https://github.com/docker/swarm-library-image)
+
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.2.9`, `latest`](https://github.com/docker/swarm-library-image/blob/a2a08d733833327354b5d3336ffbd19e4f369a2d/Dockerfile)
+
+# Quick reference (cont.)
 
 -	**Where to file issues**:  
 	[https://github.com/docker/swarm-library-image/issues](https://github.com/docker/swarm-library-image/issues)
-
--	**Maintained by**:  
-	[Docker, Inc.](https://github.com/docker/swarm-library-image)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/swarm/)
@@ -42,9 +50,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `swarm/` directory](https://github.com/docker-library/docs/tree/master/swarm) ([history](https://github.com/docker-library/docs/commits/master/swarm))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Swarm: a Docker-native clustering system
 

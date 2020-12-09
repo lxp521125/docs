@@ -8,7 +8,7 @@ The Apache HTTP Server, colloquially called Apache, is a Web server application 
 
 # How to use this image.
 
-This image only contains Apache httpd with the defaults from upstream. There is no PHP installed, but it should not be hard to extend. On the other hand, if you just want PHP with Apache httpd see the [PHP image](https://registry.hub.docker.com/_/php/) and look at the `-apache` tags. If you want to run a simple HTML server, add a simple Dockerfile to your project where `public-html/` is the directory containing all your HTML.
+This image only contains Apache httpd with the defaults from upstream. There is no PHP installed, but it should not be hard to extend. On the other hand, if you just want PHP with Apache httpd see the [PHP image](https://hub.docker.com/_/php/) and look at the `-apache` tags. If you want to run a simple HTML server, add a simple Dockerfile to your project where `public-html/` is the directory containing all your HTML.
 
 ### Create a `Dockerfile` in your project
 
@@ -36,7 +36,13 @@ $ docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/h
 
 ### Configuration
 
-To customize the configuration of the httpd server, just `COPY` your custom configuration in as `/usr/local/apache2/conf/httpd.conf`.
+To customize the configuration of the httpd server, first obtain the upstream default configuration from the container:
+
+```console
+$ docker run --rm %%IMAGE%%:2.4 cat /usr/local/apache2/conf/httpd.conf > my-httpd.conf
+```
+
+You can then `COPY` your custom configuration in as `/usr/local/apache2/conf/httpd.conf`:
 
 ```dockerfile
 FROM %%IMAGE%%:2.4

@@ -14,34 +14,33 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`12.0.11-apache`, `12.0-apache`, `12-apache`, `12.0.11`, `12.0`, `12` (*12.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/apache/Dockerfile)
--	[`12.0.11-fpm-alpine`, `12.0-fpm-alpine`, `12-fpm-alpine` (*12.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/fpm-alpine/Dockerfile)
--	[`12.0.11-fpm`, `12.0-fpm`, `12-fpm` (*12.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/12.0/fpm/Dockerfile)
--	[`13.0.6-apache`, `13.0-apache`, `13-apache`, `stable-apache`, `production-apache`, `13.0.6`, `13.0`, `13`, `stable`, `production` (*13.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/apache/Dockerfile)
--	[`13.0.6-fpm-alpine`, `13.0-fpm-alpine`, `13-fpm-alpine`, `stable-fpm-alpine`, `production-fpm-alpine` (*13.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/fpm-alpine/Dockerfile)
--	[`13.0.6-fpm`, `13.0-fpm`, `13-fpm`, `stable-fpm`, `production-fpm` (*13.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/13.0/fpm/Dockerfile)
--	[`14.0.1RC1-apache`, `14.0.1-rc-apache`, `14.0-rc-apache`, `14-rc-apache`, `rc-apache`, `14.0.1RC1`, `14.0.1-rc`, `14.0-rc`, `14-rc`, `rc` (*14.0-rc/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/apache/Dockerfile)
--	[`14.0.1RC1-fpm-alpine`, `14.0.1-rc-fpm-alpine`, `14.0-rc-fpm-alpine`, `14-rc-fpm-alpine`, `rc-fpm-alpine` (*14.0-rc/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/fpm-alpine/Dockerfile)
--	[`14.0.1RC1-fpm`, `14.0.1-rc-fpm`, `14.0-rc-fpm`, `14-rc-fpm`, `rc-fpm` (*14.0-rc/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/fca3a2f12d6dadbc46b96620fcc8f1d51be7abd3/14.0-rc/fpm/Dockerfile)
--	[`14.0.0-apache`, `14.0-apache`, `14-apache`, `apache`, `14.0.0`, `14.0`, `14`, `latest` (*14.0/apache/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/apache/Dockerfile)
--	[`14.0.0-fpm-alpine`, `14.0-fpm-alpine`, `14-fpm-alpine`, `fpm-alpine` (*14.0/fpm-alpine/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/fpm-alpine/Dockerfile)
--	[`14.0.0-fpm`, `14.0-fpm`, `14-fpm`, `fpm` (*14.0/fpm/Dockerfile*)](https://github.com/nextcloud/docker/blob/f5d27c615330fc4331522405fd19234e02385770/14.0/fpm/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/nextcloud/docker/issues](https://github.com/nextcloud/docker/issues)
 
 -	**Maintained by**:  
 	[Nextcloud](https://github.com/nextcloud/docker)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`18.0.11-apache`, `18.0-apache`, `18-apache`, `18.0.11`, `18.0`, `18`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/18.0/apache/Dockerfile)
+-	[`18.0.11-fpm-alpine`, `18.0-fpm-alpine`, `18-fpm-alpine`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/18.0/fpm-alpine/Dockerfile)
+-	[`18.0.11-fpm`, `18.0-fpm`, `18-fpm`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/18.0/fpm/Dockerfile)
+-	[`19.0.5-apache`, `19.0-apache`, `19-apache`, `stable-apache`, `production-apache`, `19.0.5`, `19.0`, `19`, `stable`, `production`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/19.0/apache/Dockerfile)
+-	[`19.0.5-fpm-alpine`, `19.0-fpm-alpine`, `19-fpm-alpine`, `stable-fpm-alpine`, `production-fpm-alpine`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/19.0/fpm-alpine/Dockerfile)
+-	[`19.0.5-fpm`, `19.0-fpm`, `19-fpm`, `stable-fpm`, `production-fpm`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/19.0/fpm/Dockerfile)
+-	[`20.0.2-apache`, `20.0-apache`, `20-apache`, `apache`, `20.0.2`, `20.0`, `20`, `latest`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/20.0/apache/Dockerfile)
+-	[`20.0.2-fpm-alpine`, `20.0-fpm-alpine`, `20-fpm-alpine`, `fpm-alpine`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/20.0/fpm-alpine/Dockerfile)
+-	[`20.0.2-fpm`, `20.0-fpm`, `20-fpm`, `fpm`](https://github.com/nextcloud/docker/blob/62398b5ea03fb6dd4b89a59765ab7d285083c327/20.0/fpm/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/nextcloud/docker/issues](https://github.com/nextcloud/docker/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/nextcloud/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nextcloud/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nextcloud/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nextcloud/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nextcloud/), [`i386`](https://hub.docker.com/r/i386/nextcloud/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nextcloud/), [`s390x`](https://hub.docker.com/r/s390x/nextcloud/)
+	[`amd64`](https://hub.docker.com/r/amd64/nextcloud/), [`arm32v5`](https://hub.docker.com/r/arm32v5/nextcloud/), [`arm32v6`](https://hub.docker.com/r/arm32v6/nextcloud/), [`arm32v7`](https://hub.docker.com/r/arm32v7/nextcloud/), [`arm64v8`](https://hub.docker.com/r/arm64v8/nextcloud/), [`i386`](https://hub.docker.com/r/i386/nextcloud/), [`mips64le`](https://hub.docker.com/r/mips64le/nextcloud/), [`ppc64le`](https://hub.docker.com/r/ppc64le/nextcloud/), [`s390x`](https://hub.docker.com/r/s390x/nextcloud/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/nextcloud/` directory](https://github.com/docker-library/repo-info/blob/master/repos/nextcloud) ([history](https://github.com/docker-library/repo-info/commits/master/repos/nextcloud))  
@@ -54,16 +53,13 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `nextcloud/` directory](https://github.com/docker-library/docs/tree/master/nextcloud) ([history](https://github.com/docker-library/docs/commits/master/nextcloud))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # What is Nextcloud?
 
 A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.
 
 > [Nextcloud.com](https://nextcloud.com/)
 
-![logo](https://cdn.rawgit.com/docker-library/docs/e563b6cd3d797e2b3695576d20041227d1fb7536/nextcloud/logo.svg)
+![logo](https://raw.githubusercontent.com/docker-library/docs/eabcf59e64b4395e681a7f7a9773bd213c9f3678/nextcloud/logo.svg?sanitize=true)
 
 # How to use this image
 
@@ -101,7 +97,7 @@ By default this container uses SQLite for data storage, but the Nextcloud setup 
 
 The Nextcloud installation and all data beyond what lives in the database (file uploads, etc) is stored in the [unnamed docker volume](https://docs.docker.com/engine/tutorials/dockervolumes/#adding-a-data-volume) volume `/var/www/html`. The docker daemon will store that data within the docker directory `/var/lib/docker/volumes/...`. That means your data is saved even if the container crashes, is stopped or deleted.
 
-To make your data persistent to upgrading and get access for backups is using named docker volume or mount a host folder. To achieve this you need one volume for your database container and Nextcloud.
+A named Docker volume or a mounted host directory should be used for upgrades and backups. To achieve this you need one volume for your database container and one for Nextcloud.
 
 Nextcloud:
 
@@ -148,7 +144,7 @@ $ docker run -d \
 
 ## Using the Nextcloud command-line interface
 
-To use the [Nextcloud command-line interface](https://docs.nextcloud.com/server/12/admin_manual/configuration_server/occ_command.html) (aka. `occ` command):
+To use the [Nextcloud command-line interface](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html) (aka. `occ` command):
 
 ```console
 $ docker exec --user www-data CONTAINER_ID php occ
@@ -164,7 +160,7 @@ $ docker-compose exec --user www-data app php occ
 
 The nextcloud image supports auto configuration via environment variables. You can preconfigure everything that is asked on the install page on first run. To enable auto configuration, set your database connection via the following environment variables. ONLY use one database type!
 
-**SQLITE_DATABASE**:
+**SQLite**:
 
 -	`SQLITE_DATABASE` Name of the database using sqlite
 
@@ -187,10 +183,55 @@ If you set any values, they will not be asked in the install page on first run. 
 -	`NEXTCLOUD_ADMIN_USER` Name of the Nextcloud admin user.
 -	`NEXTCLOUD_ADMIN_PASSWORD` Password for the Nextcloud admin user.
 
-If you want you can set the data directory and table prefix, otherwise default values will be used.
+If you want, you can set the data directory, otherwise default value will be used.
 
 -	`NEXTCLOUD_DATA_DIR` (default: */var/www/html/data*) Configures the data directory where nextcloud stores all files from the users.
--	`NEXTCLOUD_TABLE_PREFIX` (default: *""*) Optional prefix for the tables. Used to be `oc_` in the past
+
+One or more trusted domains can be set by environment variable, too. They will be added to the configuration after install.
+
+-	`NEXTCLOUD_TRUSTED_DOMAINS` (not set by default) Optional space-separated list of domains
+
+The install and update script is only triggered when a default command is used (`apache-foreground` or `php-fpm`). If you use a custom command you have to enable the install / update with
+
+-	`NEXTCLOUD_UPDATE` (default: *0*)
+
+If you want to use Redis you have to create a separate [Redis](https://hub.docker.com/_/redis/) container in your setup / in your docker-compose file. To inform Nextcloud about the Redis container add:
+
+-	`REDIS_HOST` (not set by default) Name of Redis container
+-	`REDIS_HOST_PORT` (default: *6379*) Optional port for Redis, only use for external Redis servers that run on non-standard ports.
+
+The use of Redis is recommended to prevent file locking problems. See the examples for further instructions.
+
+To use a external SMTP server you have to provide the connection details. To configure Nextcloud to use SMTP add:
+
+-	`SMTP_HOST` (not set by default) hostname of the SMTP server
+-	`SMTP_SECURE` (empty by default) set to 'ssl' to use SSL on the connection.
+-	`SMTP_PORT` (default: *465* for SSL and *25* for non-secure connection) Optional port for SMTP connection.
+-	`SMTP_AUTHTYPE` (default: *LOGIN*) The method used for authentication.
+-	`SMTP_NAME` (empty by default) Username for the authentication.
+-	`SMTP_PASSWORD` (empty by default) Password for the authentication.
+-	`MAIL_FROM_ADDRESS` (not set by default) Use this address for the 'from' field in the mail envelopes sent by Nextcloud.
+-	`MAIL_DOMAIN` (not set by default) Set a different domain for the emails than the domain where Nextcloud is installed.
+
+Check the [Nextcloud documentation](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/email_configuration.html) for other values to configure SMTP.
+
+## Using the apache image behind a reverse proxy and auto configure server host and protocol
+
+The apache image will replace the remote addr (ip address visible to Nextcloud) with the ip address from `X-Real-IP` if the request is coming from a proxy in 10.0.0.0/8, 172.16.0.0/12 or 192.168.0.0/16 by default. If you want Nextcloud to pick up the server host (`HTTP_X_FORWARDED_HOST`), protocol (`HTTP_X_FORWARDED_PROTO`) and client ip (`HTTP_X_FORWARDED_FOR`) from a trusted proxy disable rewrite ip and the reverse proxies ip address to `TRUSTED_PROXIES`.
+
+-	`APACHE_DISABLE_REWRITE_IP` (not set by default): Set to 1 to disable rewrite ip.
+-	`TRUSTED_PROXIES` (empty by default): A space-separated list of trusted proxies. CIDR notation is supported for IPv4.
+
+If the `TRUSTED_PROXIES` approach does not work for you, try using fixed values for overwrite parameters.
+
+-	`OVERWRITEHOST` (empty by default): Set the hostname of the proxy. Can also specify a port.
+-	`OVERWRITEPROTOCOL` (empty by default): Set the protocol of the proxy, http or https.
+-	`OVERWRITEWEBROOT` (empty by default): Set the absolute path of the proxy.
+-	`OVERWRITECONDADDR` (empty by default): Regex to overwrite the values dependent on the remote address.
+
+Check the [Nexcloud documentation](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/reverse_proxy_configuration.html) for more details.
+
+Keep in mind that once set, removing these environment variables won't remove these values from the configuration file, due to how Nextcloud merges configuration files together.
 
 # Running this image with docker-compose
 
@@ -214,6 +255,7 @@ volumes:
 services:
   db:
     image: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
       - db:/var/lib/mysql
@@ -254,6 +296,7 @@ volumes:
 services:
   db:
     image: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
       - db:/var/lib/mysql
@@ -286,6 +329,70 @@ services:
 
 Then run `docker-compose up -d`, now you can access Nextcloud at http://localhost:8080/ from your host system.
 
+# Docker Secrets
+
+As an alternative to passing sensitive information via environment variables, _FILE may be appended to the previously listed environment variables, causing the initialization script to load the values for those variables from files present in the container. In particular, this can be used to load passwords from Docker secrets stored in /run/secrets/<secret_name> files. For example:
+
+```yaml
+version: '3.2'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB_FILE=/run/secrets/postgres_db
+      - POSTGRES_USER_FILE=/run/secrets/postgres_user
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password
+    secrets:
+      - postgres_db
+      - postgres_password
+      - postgres_user
+
+  app:
+    image: nextcloud
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - nextcloud:/var/www/html
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB_FILE=/run/secrets/postgres_db
+      - POSTGRES_USER_FILE=/run/secrets/postgres_user
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password
+      - NEXTCLOUD_ADMIN_PASSWORD_FILE=/run/secrets/nextcloud_admin_password
+      - NEXTCLOUD_ADMIN_USER_FILE=/run/secrets/nextcloud_admin_user
+    depends_on:
+      - db
+    secrets:
+      - nextcloud_admin_password
+      - nextcloud_admin_user
+      - postgres_db
+      - postgres_password
+      - postgres_user
+
+volumes:
+  db:
+  nextcloud:
+
+secrets:
+  nextcloud_admin_password:
+    file: ./nextcloud_admin_password.txt # put admin password to this file
+  nextcloud_admin_user:
+    file: ./nextcloud_admin_user.txt # put admin username to this file
+  postgres_db:
+    file: ./postgres_db.txt # put postgresql db name to this file
+  postgres_password:
+    file: ./postgres_password.txt # put postgresql password to this file
+  postgres_user:
+    file: ./postgres_user.txt # put postgresql username to this file
+```
+
+Currently, this is only supported for `NEXTCLOUD_ADMIN_PASSWORD`, `NEXTCLOUD_ADMIN_USER`, `MYSQL_DB`, `MYSQL_PASSWORD`, `MYSQL_USER`, `POSTGRES_DB`, `POSTGRES_PASSWORD`, `POSTGRES_USER`.
+
 # Make your Nextcloud available from the internet
 
 Until here your Nextcloud is just available from you docker host. If you want you Nextcloud available from the internet adding SSL encryption is mandatory.
@@ -304,7 +411,11 @@ When you first access your Nextcloud, the setup wizard will appear and ask you t
 
 # Update to a newer version
 
-Updating the Nextcloud container is done by pulling the new image, throwing away the old container and starting the new one. Since all data is stored in volumes, nothing gets lost. The startup script will check for the version in your volume and the installed docker version. If it finds a mismatch, it automatically starts the upgrade process. Don't forget to add all the volumes to your new container, so it works as expected.
+Updating the Nextcloud container is done by pulling the new image, throwing away the old container and starting the new one.
+
+**It is only possible to upgrade one major version at a time. For example, if you want to upgrade from version 14 to 16, you will have to upgrade from version 14 to 15, then from 15 to 16.**
+
+Since all data is stored in volumes, nothing gets lost. The startup script will check for the version in your volume and the installed docker version. If it finds a mismatch, it automatically starts the upgrade process. Don't forget to add all the volumes to your new container, so it works as expected.
 
 ```console
 $ docker pull nextcloud
@@ -347,6 +458,18 @@ If you use your own Dockerfile you need to configure your docker-compose file ac
       - config:/var/www/html/config
       - apps:/var/www/html/apps
     restart: always
+```
+
+If you intend to use another command to run the image. Make sure that you set `NEXTCLOUD_UPDATE=1` in your Dockerfile. Otherwise the installation and update will not work.
+
+```yaml
+FROM nextcloud:apache
+
+...
+
+ENV NEXTCLOUD_UPDATE=1
+
+CMD ["/usr/bin/supervisord"]
 ```
 
 **Updating** your own derived image is also very simple. When a new version of the Nextcloud image is available run:
@@ -436,9 +559,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `nextcloud:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

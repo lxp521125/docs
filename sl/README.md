@@ -14,21 +14,22 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7`, `latest` (*sl7/Dockerfile*)](https://github.com/scientificlinux/sl-docker/blob/b1a2cb1c4a0efc1965f3344f8bdf1c949c7b79c2/sl7/Dockerfile)
--	[`6` (*sl6/Dockerfile*)](https://github.com/scientificlinux/sl-docker/blob/020b3e367c934ee9ce9987e2875fdd5d0761e82a/sl6/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[Scientific Linux Development Team](https://github.com/scientificlinux/sl-docker)
 
 -	**Where to get help**:  
 	[SL Faq](https://www.scientificlinux.org/documentation/faq) or [Email Lists](https://www.scientificlinux.org/community)
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`7`, `latest`](https://github.com/scientificlinux/sl-docker/blob/103fb635abb0df55fb975269911f81635164b0ef/sl7/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	[https://github.com/scientificlinux/sl-docker/issues](https://github.com/scientificlinux/sl-docker/issues)
-
--	**Maintained by**:  
-	[Scientific Linux Development Team](https://github.com/scientificlinux/sl-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/sl/)
@@ -43,9 +44,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `sl/` directory](https://github.com/docker-library/docs/tree/master/sl) ([history](https://github.com/docker-library/docs/commits/master/sl))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Scientific Linux
 

@@ -14,25 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8-jre`, `jre`, `8`, `latest` (*ibmjava/8/jre/ubuntu/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/jre/ubuntu/Dockerfile)
--	[`8-jre-alpine`, `jre-alpine` (*ibmjava/8/jre/alpine/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/jre/alpine/Dockerfile)
--	[`8-sfj`, `sfj` (*ibmjava/8/sfj/ubuntu/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/sfj/ubuntu/Dockerfile)
--	[`8-sfj-alpine`, `sfj-alpine` (*ibmjava/8/sfj/alpine/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/sfj/alpine/Dockerfile)
--	[`8-sdk`, `sdk` (*ibmjava/8/sdk/ubuntu/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/sdk/ubuntu/Dockerfile)
--	[`8-sdk-alpine`, `sdk-alpine` (*ibmjava/8/sdk/alpine/Dockerfile*)](https://github.com/ibmruntimes/ci.docker/blob/32ae50c1fec2e1e556b1bebd8174c24cfd951257/ibmjava/8/sdk/alpine/Dockerfile)
-
 # Quick reference
+
+-	**Maintained by**:  
+	[IBM Runtime Technologies](https://github.com/ibmruntimes/ci.docker)
 
 -	**Where to get help**:  
 	[the developerWorks forum for IBM Java Runtimes and SDKs](https://www.ibm.com/developerworks/community/forums/html/forum?id=11111111-0000-0000-0000-000000000367)
 
+# Supported tags and respective `Dockerfile` links
+
+-	[`8-jre`, `jre`, `8`, `latest`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/jre/ubuntu/Dockerfile)
+-	[`8-jre-alpine`, `jre-alpine`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/jre/alpine/Dockerfile)
+-	[`8-sfj`, `sfj`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/sfj/ubuntu/Dockerfile)
+-	[`8-sfj-alpine`, `sfj-alpine`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/sfj/alpine/Dockerfile)
+-	[`8-sdk`, `sdk`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/sdk/ubuntu/Dockerfile)
+-	[`8-sdk-alpine`, `sdk-alpine`](https://github.com/ibmruntimes/ci.docker/blob/ad52e78bdc22fab015d80038d0166f6f62831862/ibmjava/8/sdk/alpine/Dockerfile)
+
+# Quick reference (cont.)
+
 -	**Where to file issues**:  
 	[GitHub](https://github.com/ibmruntimes/ci.docker/issues); for troubleshooting, see our [How Do I ...?](http://www.ibm.com/developerworks/java/jdk/howdoi/) page
-
--	**Maintained by**:  
-	[IBM Runtime Technologies](https://github.com/ibmruntimes/ci.docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/ibmjava/), [`i386`](https://hub.docker.com/r/i386/ibmjava/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ibmjava/), [`s390x`](https://hub.docker.com/r/s390x/ibmjava/)
@@ -48,12 +50,9 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `ibmjava/` directory](https://github.com/docker-library/docs/tree/master/ibmjava) ([history](https://github.com/docker-library/docs/commits/master/ibmjava))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 ### Overview
 
-The images in this repository contain IBM® SDK, Java™ Technology Edition, version 1.8.0\_sr5fp21 (8.0.5.21). See [what's new](https://developer.ibm.com/javasdk/blog). See the license section for restrictions that relate to the use of this image. For more information about IBM® SDK, Java™ Technology Edition and API documentation as well as tutorials, recipes, and Java usage in IBM Cloud, see [IBM developerWorks](https://developer.ibm.com/javasdk/).
+The images in this repository contain IBM® SDK, Java™ Technology Edition. For more information on the latest version and what's new, see [sdk8 on IBM developerWorks](https://developer.ibm.com/javasdk/downloads/sdk8/). See the license section for restrictions that relate to the use of this image. For more information about IBM® SDK, Java™ Technology Edition and API documentation as well as tutorials, recipes, and Java usage in IBM Cloud, see [IBM developerWorks](https://developer.ibm.com/javasdk/).
 
 Java and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle and/or its affiliates.
 
@@ -168,9 +167,9 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `ibmjava:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

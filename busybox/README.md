@@ -14,26 +14,28 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.29.2-uclibc`, `1.29-uclibc`, `1-uclibc`, `uclibc` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/a36744245bff4234c130f994eee2e7ba4d3b745a/uclibc/Dockerfile)
--	[`1.29.2-glibc`, `1.29-glibc`, `1-glibc`, `glibc` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/a36744245bff4234c130f994eee2e7ba4d3b745a/glibc/Dockerfile)
--	[`1.29.2-musl`, `1.29-musl`, `1-musl`, `musl` (*musl/Dockerfile*)](https://github.com/docker-library/busybox/blob/a36744245bff4234c130f994eee2e7ba4d3b745a/musl/Dockerfile)
--	[`1.29.2`, `1.29`, `1`, `latest` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/a36744245bff4234c130f994eee2e7ba4d3b745a/uclibc/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/busybox/issues](https://github.com/docker-library/busybox/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/busybox)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.32.0-uclibc`, `1.32-uclibc`, `1-uclibc`, `uclibc`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/uclibc/Dockerfile)
+-	[`1.32.0-glibc`, `1.32-glibc`, `1-glibc`, `glibc`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/glibc/Dockerfile)
+-	[`1.32.0-musl`, `1.32-musl`, `1-musl`, `musl`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/musl/Dockerfile)
+-	[`1.32.0`, `1.32`, `1`, `latest`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/uclibc/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/busybox/issues](https://github.com/docker-library/busybox/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/busybox/), [`arm32v5`](https://hub.docker.com/r/arm32v5/busybox/), [`arm32v6`](https://hub.docker.com/r/arm32v6/busybox/), [`arm32v7`](https://hub.docker.com/r/arm32v7/busybox/), [`arm64v8`](https://hub.docker.com/r/arm64v8/busybox/), [`i386`](https://hub.docker.com/r/i386/busybox/), [`ppc64le`](https://hub.docker.com/r/ppc64le/busybox/), [`s390x`](https://hub.docker.com/r/s390x/busybox/)
+	[`amd64`](https://hub.docker.com/r/amd64/busybox/), [`arm32v5`](https://hub.docker.com/r/arm32v5/busybox/), [`arm32v6`](https://hub.docker.com/r/arm32v6/busybox/), [`arm32v7`](https://hub.docker.com/r/arm32v7/busybox/), [`arm64v8`](https://hub.docker.com/r/arm64v8/busybox/), [`i386`](https://hub.docker.com/r/i386/busybox/), [`mips64le`](https://hub.docker.com/r/mips64le/busybox/), [`ppc64le`](https://hub.docker.com/r/ppc64le/busybox/), [`s390x`](https://hub.docker.com/r/s390x/busybox/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/busybox/` directory](https://github.com/docker-library/repo-info/blob/master/repos/busybox) ([history](https://github.com/docker-library/repo-info/commits/master/repos/busybox))  
@@ -45,9 +47,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `busybox/` directory](https://github.com/docker-library/docs/tree/master/busybox) ([history](https://github.com/docker-library/docs/commits/master/busybox))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is BusyBox? The Swiss Army Knife of Embedded Linux
 

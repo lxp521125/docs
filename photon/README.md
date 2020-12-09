@@ -14,22 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`2.0`, `2.0-20180917`, `latest` (*docker/Dockerfile*)](https://github.com/vmware/photon-docker-image/blob/c0c82ca86d96319047ef0723b31d127e6981052e/docker/Dockerfile)
--	[`1.0`, `1.0-20180917` (*docker/Dockerfile*)](https://github.com/vmware/photon-docker-image/blob/133add6add4a9a4707895c6eeaeb157b49596e0a/docker/Dockerfile)
--	[`dev`, `dev-20180904` (*docker/Dockerfile*)](https://github.com/vmware/photon-docker-image/blob/ef64980d07a68bd0cd97de9224df5c3e62e4db12/docker/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/vmware/photon-docker-image/issues](https://github.com/vmware/photon-docker-image/issues)
 
 -	**Maintained by**:  
 	[VMware](https://github.com/vmware/photon-docker-image)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`3.0`, `3.0-20201204`, `latest`](https://github.com/vmware/photon-docker-image/blob/9b8756336cdf84b336cb74b215ebb46ed55b62dd/docker/Dockerfile)
+-	[`1.0`, `1.0-20201204`](https://github.com/vmware/photon-docker-image/blob/1c71e58c4514743ba3292982626f1c658f9ce481/docker/Dockerfile)
+-	[`2.0`, `2.0-20201204`](https://github.com/vmware/photon-docker-image/blob/d7387870d451064200b4cea4bf774e73090debdb/docker/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/vmware/photon-docker-image/issues](https://github.com/vmware/photon-docker-image/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/photon/), [`arm64v8`](https://hub.docker.com/r/arm64v8/photon/)
@@ -44,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `photon/` directory](https://github.com/docker-library/docs/tree/master/photon) ([history](https://github.com/docker-library/docs/commits/master/photon))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # VMware Photon OS
 

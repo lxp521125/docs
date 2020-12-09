@@ -14,31 +14,45 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`latest`, `5`, `5.28`, `5.28.0` (*5.028.000-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.028.000-main/Dockerfile)
--	[`slim`, `5-slim`, `5.28-slim`, `5.28.0-slim` (*5.028.000-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.028.000-slim/Dockerfile)
--	[`threaded`, `5-threaded`, `5.28-threaded`, `5.28.0-threaded` (*5.028.000-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.028.000-main,threaded/Dockerfile)
--	[`slim-threaded`, `5-slim-threaded`, `5.28-slim-threaded`, `5.28.0-slim-threaded` (*5.028.000-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.028.000-slim,threaded/Dockerfile)
--	[`5.26`, `5.26.2` (*5.026.002-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.026.002-main/Dockerfile)
--	[`5.26-slim`, `5.26.2-slim` (*5.026.002-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.026.002-slim/Dockerfile)
--	[`5.26-threaded`, `5.26.2-threaded` (*5.026.002-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.026.002-main,threaded/Dockerfile)
--	[`5.26-slim-threaded`, `5.26.2-slim-threaded` (*5.026.002-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.026.002-slim,threaded/Dockerfile)
--	[`5.24`, `5.24.4` (*5.024.004-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.024.004-main/Dockerfile)
--	[`5.24-slim`, `5.24.4-slim` (*5.024.004-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.024.004-slim/Dockerfile)
--	[`5.24-threaded`, `5.24.4-threaded` (*5.024.004-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.024.004-main,threaded/Dockerfile)
--	[`5.24-slim-threaded`, `5.24.4-slim-threaded` (*5.024.004-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/892e2b4fbb58c48ee802cd13b34017300c630f18/5.024.004-slim,threaded/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/Perl/docker-perl/issues](https://github.com/Perl/docker-perl/issues)
 
 -	**Maintained by**:  
 	[the Perl Community](https://github.com/Perl/docker-perl)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`latest`, `5`, `5.32`, `5.32.0`, `5-buster`, `5.32-buster`, `5.32.0-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-main-buster/Dockerfile)
+-	[`5-stretch`, `5.32-stretch`, `5.32.0-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-main-stretch/Dockerfile)
+-	[`slim`, `5-slim`, `5.32-slim`, `5.32.0-slim`, `slim-buster`, `5-slim-buster`, `5.32-slim-buster`, `5.32.0-slim-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-slim-buster/Dockerfile)
+-	[`slim-stretch`, `5-slim-stretch`, `5.32-slim-stretch`, `5.32.0-slim-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-slim-stretch/Dockerfile)
+-	[`threaded`, `5-threaded`, `5.32-threaded`, `5.32.0-threaded`, `threaded-buster`, `5-threaded-buster`, `5.32-threaded-buster`, `5.32.0-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-main,threaded-buster/Dockerfile)
+-	[`threaded-stretch`, `5-threaded-stretch`, `5.32-threaded-stretch`, `5.32.0-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-main,threaded-stretch/Dockerfile)
+-	[`slim-threaded`, `5-slim-threaded`, `5.32-slim-threaded`, `5.32.0-slim-threaded`, `slim-threaded-buster`, `5-slim-threaded-buster`, `5.32-slim-threaded-buster`, `5.32.0-slim-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-slim,threaded-buster/Dockerfile)
+-	[`slim-threaded-stretch`, `5-slim-threaded-stretch`, `5.32-slim-threaded-stretch`, `5.32.0-slim-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.032.000-slim,threaded-stretch/Dockerfile)
+-	[`5.30`, `5.30.3`, `5.30-buster`, `5.30.3-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-main-buster/Dockerfile)
+-	[`5.30-stretch`, `5.30.3-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-main-stretch/Dockerfile)
+-	[`5.30-slim`, `5.30.3-slim`, `5.30-slim-buster`, `5.30.3-slim-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-slim-buster/Dockerfile)
+-	[`5.30-slim-stretch`, `5.30.3-slim-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-slim-stretch/Dockerfile)
+-	[`5.30-threaded`, `5.30.3-threaded`, `5.30-threaded-buster`, `5.30.3-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-main,threaded-buster/Dockerfile)
+-	[`5.30-threaded-stretch`, `5.30.3-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-main,threaded-stretch/Dockerfile)
+-	[`5.30-slim-threaded`, `5.30.3-slim-threaded`, `5.30-slim-threaded-buster`, `5.30.3-slim-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-slim,threaded-buster/Dockerfile)
+-	[`5.30-slim-threaded-stretch`, `5.30.3-slim-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.030.003-slim,threaded-stretch/Dockerfile)
+-	[`5.28`, `5.28.3`, `5.28-buster`, `5.28.3-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-main-buster/Dockerfile)
+-	[`5.28-stretch`, `5.28.3-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-main-stretch/Dockerfile)
+-	[`5.28-slim`, `5.28.3-slim`, `5.28-slim-buster`, `5.28.3-slim-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-slim-buster/Dockerfile)
+-	[`5.28-slim-stretch`, `5.28.3-slim-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-slim-stretch/Dockerfile)
+-	[`5.28-threaded`, `5.28.3-threaded`, `5.28-threaded-buster`, `5.28.3-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-main,threaded-buster/Dockerfile)
+-	[`5.28-threaded-stretch`, `5.28.3-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-main,threaded-stretch/Dockerfile)
+-	[`5.28-slim-threaded`, `5.28.3-slim-threaded`, `5.28-slim-threaded-buster`, `5.28.3-slim-threaded-buster`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-slim,threaded-buster/Dockerfile)
+-	[`5.28-slim-threaded-stretch`, `5.28.3-slim-threaded-stretch`](https://github.com/perl/docker-perl/blob/6234cfc650c3bf55001600dcc174aae5ecb4e85d/5.028.003-slim,threaded-stretch/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/Perl/docker-perl/issues](https://github.com/Perl/docker-perl/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/perl/), [`arm32v7`](https://hub.docker.com/r/arm32v7/perl/), [`arm64v8`](https://hub.docker.com/r/arm64v8/perl/), [`i386`](https://hub.docker.com/r/i386/perl/), [`ppc64le`](https://hub.docker.com/r/ppc64le/perl/), [`s390x`](https://hub.docker.com/r/s390x/perl/)
@@ -53,9 +67,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `perl/` directory](https://github.com/docker-library/docs/tree/master/perl) ([history](https://github.com/docker-library/docs/commits/master/perl))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Perl?
 
@@ -91,6 +102,40 @@ For many simple, single file projects, you may find it inconvenient to write a c
 $ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp perl:5.20 perl your-daemon-or-script.pl
 ```
 
+## Coexisting with Debian's `/usr/bin/perl`
+
+The *perl* binary built for this image is installed in `/usr/local/bin/perl`, along with other standard tools in the Perl distribution such as `prove` and `perldoc`, as well as [`cpanm`](https://metacpan.org/pod/App::cpanminus) for installing [CPAN](https://www.cpan.org) modules. Containers running this image will also have their `PATH` enviroment set like `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin` to ensure that this *perl* binary will be found *first* in normal usage.
+
+As this official image of Docker is built using the [buildpack-deps](https://hub.docker.com/_/buildpack-deps) image (or [debian:slim](https://hub.docker.com/_/debian) for `:slim` variants,) this image also contains a `/usr/bin/perl` as supplied by the [Debian](https://www.debian.org) project. This is needed for the underlying [dpkg](https://en.wikipedia.org/wiki/Dpkg)/[apt](https://en.wikipedia.org/wiki/APT_(software)) package management tools to work correctly, as docker-perl cannot be used here due to different configuration (such as `@INC` and installation paths, as well as other differences like whether `-Dusethreads` is included or not.)
+
+See also [Perl/docker-perl#26](https://github.com/Perl/docker-perl/issues/26) for an extended discussion.
+
+## Signal handling behavior notice
+
+As Perl will run as PID 1 by default in containers (unless an [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) is set,) special care needs to be considered when expecting to send signals (particularly SIGINT or SIGTERM) to it. For example, running
+
+```console
+$ docker run -it --name sleeping_beauty --rm perl:5.20 perl -E 'sleep 300'
+```
+
+and doing on another terminal,
+
+```console
+$ docker exec sleeping_beauty kill 1
+```
+
+will *not* stop the perl running on the `sleeping_beauty` container (it will keep running until the `sleep 300` finishes.) To do so, one must set a signal handler like this:
+
+```console
+$ docker run -it --name quick_nap --rm perl:5.20 perl -E '$SIG{TERM} = sub { $sig++; say "recv TERM" }; sleep 300; say "waking up" if $sig'
+```
+
+so doing `docker exec quick_nap kill 1` (or the simpler `docker stop quick_nap`) will immediately stop the container, and print `recv TERM` in the other terminal. Note that the signal handler does not stop the perl process itself unless it calls a `die` or `exit`; in this case, perl will continue and print `waking up` *after* it receives the signal.
+
+If your Perl program is expected to handle signals and fork child processes, it is encouraged to use an init-like program for ENTRYPOINT, such as [dumb-init](https://github.com/Yelp/dumb-init) or [tini](https://github.com/krallin/tini) (the latter is available since Docker 1.13 via the `docker run --init` flag.)
+
+See also [Signals in perlipc](https://perldoc.pl/perlipc#Signals) as well as [Perl/docker-perl#44](https://github.com/Perl/docker-perl/issues/44).
+
 ## Example: Creating a reusable Carton image for Perl projects
 
 Suppose you have a project that uses [Carton](https://metacpan.org/pod/Carton) to manage Perl dependencies. You can create a `perl:carton` image that makes use of the [ONBUILD](https://docs.docker.com/engine/reference/builder/#onbuild) instruction in its `Dockerfile`, like this:
@@ -121,7 +166,11 @@ The `perl` images come in many flavors, each designed for a specific use case.
 
 ## `perl:<version>`
 
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+Some of these tags may have names like buster or stretch in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
+
+This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
 ## `perl:<version>-slim`
 

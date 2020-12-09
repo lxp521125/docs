@@ -14,40 +14,36 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`webProfile8`, `webProfile8-java8-ibm` (*library/webProfile8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/webProfile8/java8/ibmjava/Dockerfile)
--	[`webProfile8-java8-ibmsfj` (*library/webProfile8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/webProfile8/java8/ibmsfj/Dockerfile)
--	[`javaee8`, `javaee8-java8-ibm`, `latest` (*library/javaee8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/javaee8/java8/ibmjava/Dockerfile)
--	[`javaee8-java8-ibmsfj` (*library/javaee8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/javaee8/java8/ibmsfj/Dockerfile)
--	[`microProfile1`, `microProfile1-java8-ibm` (*library/microProfile1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/microProfile1/java8/ibmjava/Dockerfile)
--	[`microProfile1-java8-ibmsfj` (*library/microProfile1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/microProfile1/java8/ibmsfj/Dockerfile)
--	[`microProfile2`, `microProfile2-java8-ibm` (*library/microProfile2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/microProfile2/java8/ibmjava/Dockerfile)
--	[`microProfile2-java8-ibmsfj` (*library/microProfile2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/microProfile2/java8/ibmsfj/Dockerfile)
--	[`springBoot2`, `springBoot2-java8-ibm` (*library/springBoot2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/springBoot2/java8/ibmjava/Dockerfile)
--	[`springBoot2-java8-ibmsfj` (*library/springBoot2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/springBoot2/java8/ibmsfj/Dockerfile)
--	[`kernel`, `kernel-java8-ibm` (*library/kernel/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/kernel/java8/ibmjava/Dockerfile)
--	[`kernel-java8-ibmsfj` (*library/kernel/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/kernel/java8/ibmsfj/Dockerfile)
--	[`webProfile7`, `webProfile7-java8-ibm` (*library/webProfile7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/webProfile7/java8/ibmjava/Dockerfile)
--	[`webProfile7-java8-ibmsfj` (*library/webProfile7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/webProfile7/java8/ibmsfj/Dockerfile)
--	[`javaee7`, `javaee7-java8-ibm` (*library/javaee7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/javaee7/java8/ibmjava/Dockerfile)
--	[`javaee7-java8-ibmsfj` (*library/javaee7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/javaee7/java8/ibmsfj/Dockerfile)
--	[`springBoot1`, `springBoot1-java8-ibm` (*library/springBoot1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/springBoot1/java8/ibmjava/Dockerfile)
--	[`springBoot1-java8-ibmsfj` (*library/springBoot1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/0b035649595dba866fe6bdc159f26a6ec7ae4f40/library/springBoot1/java8/ibmsfj/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Open Liberty community](https://www.openliberty.io/community/)
-
--	**Where to file issues**:  
-	[https://github.com/OpenLiberty/ci.docker/issues](https://github.com/OpenLiberty/ci.docker/issues)
 
 -	**Maintained by**:  
 	[the Open Liberty Community](https://github.com/OpenLiberty/ci.docker)
 
+-	**Where to get help**:  
+	[the Open Liberty community](https://www.openliberty.io/community/)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`beta`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/beta/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`beta-java11`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/beta/Dockerfile.ubuntu.adoptopenjdk11)
+-	[`kernel-slim`, `kernel-slim-java8-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/kernel-slim/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`kernel-slim-java11-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/kernel-slim/Dockerfile.ubuntu.adoptopenjdk11)
+-	[`full`, `full-java8-openj9`, `latest`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/full/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`full-java11-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/latest/full/Dockerfile.ubuntu.adoptopenjdk11)
+-	[`20.0.0.12-kernel-slim-java8-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.12/kernel-slim/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`20.0.0.12-kernel-slim-java11-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.12/kernel-slim/Dockerfile.ubuntu.adoptopenjdk11)
+-	[`20.0.0.12-full-java8-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.12/full/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`20.0.0.12-full-java11-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.12/full/Dockerfile.ubuntu.adoptopenjdk11)
+-	[`20.0.0.9-kernel-java8-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.9/kernel/Dockerfile.ubuntu.adoptopenjdk8)
+-	[`20.0.0.9-full-java8-openj9`](https://github.com/OpenLiberty/ci.docker/blob/51ff2606fcecbcb70c35fd69f3adcb214eb34c7b/releases/20.0.0.9/full/Dockerfile.ubuntu.adoptopenjdk8)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/OpenLiberty/ci.docker/issues](https://github.com/OpenLiberty/ci.docker/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/open-liberty/), [`i386`](https://hub.docker.com/r/i386/open-liberty/), [`ppc64le`](https://hub.docker.com/r/ppc64le/open-liberty/), [`s390x`](https://hub.docker.com/r/s390x/open-liberty/)
+	[`amd64`](https://hub.docker.com/r/amd64/open-liberty/), [`ppc64le`](https://hub.docker.com/r/ppc64le/open-liberty/), [`s390x`](https://hub.docker.com/r/s390x/open-liberty/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/open-liberty/` directory](https://github.com/docker-library/repo-info/blob/master/repos/open-liberty) ([history](https://github.com/docker-library/repo-info/commits/master/repos/open-liberty))  
@@ -60,128 +56,125 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `open-liberty/` directory](https://github.com/docker-library/docs/tree/master/open-liberty) ([history](https://github.com/docker-library/docs/commits/master/open-liberty))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # Overview
 
-The images in this repository contain Open Liberty. For more information about Open Liberty, see the [Open Liberty Website](https://openliberty.io/) site.
+All of the images in this repository use Ubuntu as the Operating System. For variants that use the Universal Base Image, please see [this repository](https://hub.docker.com/r/openliberty/open-liberty/).
 
-# Images
+For more information on these images please see our [GitHub repository](https://github.com/OpenLiberty/ci.docker#container-images).
 
-There are multiple images available in this repository.
+# Image User
 
-The `kernel` image contains the Liberty kernel and can be used as the basis for custom built images that contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application.
+This image runs by default with `USER 1001` (non-root), as part of group `0`. Please make sure you read below to set the appropriate folder and file permissions.
+
+## Updating folder permissions
+
+All of the folders accessed by Open Liberty have been given the appropriate permissions, but if your extending Dockerfile needs permission to another location you can simply temporarily switch into root and provide the needed permissions, example:
+
+```dockerfile
+USER root
+RUN mkdir -p /myFolder && chown -R 1001:0 /myFolder
+USER 1001
+```
+
+## Updating file permissions
+
+You have to make sure that **all** the artifacts you are copying into the image (via `COPY` or `ADD`) have the correct permissions to be `read` and `executed` by user `1001` or group `0`, because the ownership of the file is changed to be `root:0` when transferring into the docker image.
+
+You have a few options for doing this: before copying the file, during copy, or after copy.
+
+### Updating permissions before copying
+
+Since the ownership of the file will change to `root:0`, you can simply set the permissions for the owner's group to be able to read/execute the artifact (i.e. the middle digit of a `chmod` command). For example, you can do `chmod g+rx server.xml` to ensure your `server.xml` can be `read` and `executed` by group `0`, as well as any artifacts such as the application's `EAR` or `WAR` file, JDBC driver, or other files that are placed on the image via `COPY` or `ADD`.
+
+### Updating permissions during copy
+
+If you're using Docker v17.09.0-ce and newer you can take advantage of the flag `--chown=<user>:<group>` during either `ADD` or `COPY`. For example: `COPY --chown=1001:0 jvm.options /config/jvm.options`. This is the preferred approach as you don't need to worry about changing permissions before calling `docker build` and you also do not duplicate layers in the resulting image.
+
+### Updating permissions after copy
+
+If you need your Dockerfile to work with older versions of Docker CE and don't want to pre-process the permissions of the files you can temporarily switch into root to change the permissions of the needed files. For example:
+
+```dockerfile
+USER root
+RUN chown 1001:0 /config/jvm.options
+RUN chown 1001:0 /output/resources/security/ltpa.keys
+USER 1001
+```
+
+Please note that this pattern will duplicate the docker layers for those artifacts, which can heavily bloat your resulting docker image (depending on the size of the artifact). So it is recommended to set the permissions before or during copy.
+
+## Tags
+
+There are multiple tags available in this repository.
+
+The `kernel` image contains just the Liberty kernel and no additional runtime features. This image is the recommended basis for custom built images, so that they can contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application, and then uses the `configure.sh` script to download those features from the online repository.
 
 ```dockerfile
 FROM open-liberty:kernel
-COPY server.xml /config/
+COPY --chown=1001:0  Sample1.war /config/dropins/
+COPY --chown=1001:0  server.xml /config/
+RUN configure.sh
 ```
 
-The `microProfile1` image contains the features required to implement Eclipse MicroProfile 1.3. The `webProfile8` image contains the features required for Java EE8 Web Profile compliance. The `javaee8` image adds the features required for Java EE8 Full Platform compliance. The `javaee8` image is also tagged with `latest`. The `webProfile7` image contains the features required for Java EE7 Web Profile compliance. The `javaee7` image adds the features required for Java EE7 Full Platform compliance. The `springBoot1` and `springBoot2` images contain the features required for running Spring Boot 1.5 and 2.0 applications.
-
-There are also additional images for different JVM combinations. Currently there are tags for java8 only, but there are two variants one based on IBM Java and Ubuntu and the other based on the IBM small footprint Java which is based on alpine linux. The naming structure for the variants is tag-javaversion-vandor/variant. This leads to webProfile8-java8-ibmsfj as one. At this time the full list of images are:
-
-	kernel
-	kernel-java8-ibm
-	kernel-java8-ibmsfj
-	microProfile1
-	microProfile1-java8-ibm
-	microProfile1-java8-ibmsfj
-	springBoot1
-	springBoot1-java8-ibm
-	springBoot1-java8-ibmsfj
-	springBoot2
-	springBoot2-java8-ibm
-	springBoot2-java8-ibmsfj
-	webProfile8
-	webProfile8-java8-ibm
-	webProfile8-java8-ibmsfj
-	javaee8
-	javaee8-java8-ibm
-	javaee8-java8-ibmsfj
-	webProfile7
-	webProfile7-java8-ibm
-	webProfile7-java8-ibmsfj
-	javaee7
-	javaee7-java8-ibm
-	javaee7-java8-ibmsfj
+The full list of images are found in the `Supported tags and respective Dockerfile links` section above.
 
 # Usage
 
-The images are designed to support a number of different usage patterns. The following examples assume that [DefaultServletEngine.zip](https://github.com/WASdev/sample.servlet/releases/download/V1/DefaultServletEngine.zip) has been extracted to `/tmp`.
+The images are designed to support a number of different usage patterns. The following examples are based on the Java EE8 Liberty [application deployment sample](https://developer.ibm.com/wasdev/docs/article_appdeployment/) and assume that [DefaultServletEngine.zip](https://github.com/WASdev/sample.servlet/releases/download/V1/DefaultServletEngine.zip) has been extracted to `/tmp` and the `server.xml` updated to accept HTTP connections from outside of the container by adding the following element inside the `server` stanza (if not using one of the pre-packaged `server.xml` files with our tags):
 
-1.	Each image contains a default server configuration that specifies the corresponding features and exposes ports 9080 and 9443 for HTTP and HTTPS respectively. A .WAR file can therefore be mounted in the `dropins` directory of this server and run. The following example starts a container in the background running a .WAR file from the host file system with the HTTP and HTTPS ports mapped to 80 and 443 respectively.
+```xml
+<httpEndpoint host="*" httpPort="9080" httpsPort="-1"/>
+```
 
-	```console
-	$ docker run -d -p 80:9080 -p 443:9443 \
+## Application Image
+
+It is a very strong best practice to create an extending Docker image, we called it the `application image`, that encapsulates an application and its configuration. This creates a robust, self-contained and predictable Docker image that can span new containers upon request, without relying on volumes or other external runtime artifacts that may behave different over time.
+
+If you want to build the smallest possible Open Liberty application image you can start with our `kernel` tag, add your artifacts, and run `configure.sh` to grow the set of features to be fit-for-purpose. Please see our [GitHub page](https://github.com/OpenLiberty/ci.docker#building-an-application-image) for more details.
+
+## Enabling Enterprise functionality
+
+The Open Liberty images have a set of built-in XML snippets that enable and configure enterprise functionality such as session cache and monitoring. These are toggled by specific `ARG`s in your application image Dockerfile and configured via the `configure.sh` script. Please see the [instructions](https://github.com/openliberty/ci.docker#enterprise-functionality) on our GitHub page for more information.
+
+## Using volumes for configuration
+
+This pattern can be useful for quick experiments / early development (i.e. `I just want to run the application as I iterate over it`), but should not be used for development scenarios that involve different teams and environments - for these cases the `Application Image` pattern described above is the way to go.
+
+When using `volumes`, an application file can be mounted in the `dropins` directory of this server and run. The following example starts a container in the background running a .WAR file from the host file system with the HTTP and HTTPS ports mapped to 80 and 443 respectively.
+
+```console
+$ docker run -d -p 80:9080 -p 443:9443 \
 	    -v /tmp/DefaultServletEngine/dropins/Sample1.war:/config/dropins/Sample1.war \
-	    open-liberty:webProfile8
-	```
+	    open-liberty:full
+```
 
-	When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
+When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
 
-2.	For greater flexibility over configuration, it is possible to mount an entire server configuration directory from the host and then specify the server name as a parameter to the run command. Note: This particular example server configuration provides only HTTP access.
+Note: If you are using the boot2docker virtual machine on OS X or Windows, you need to get the IP of the virtual host by using the command `boot2docker ip` instead of by using localhost.
 
-	```console
-	$ docker run -d -p 80:9080 \
-	  -v /tmp/DefaultServletEngine:/config \
-	  open-liberty:webProfile8-sfj
-	```
+For greater flexibility over configuration, it is possible to mount an entire server configuration directory from the host and then specify the server name as a parameter to the run command. Note: This particular example server configuration provides only HTTP access.
 
-3.	You can also build an application layer on top of this image by using either the default server configuration or a new server configuration. In this example, we have copied the `Sample1.war` from `/tmp/DefaultServletEngine/dropins` to the same directory as the following Dockerfile.
+```console
+$ docker run -d -p 80:9080 \
+  -v /tmp/DefaultServletEngine:/config \
+  open-liberty:full
+```
 
-	```dockerfile
-	FROM open-liberty:webProfile8
-	COPY Sample1.war /config/dropins/
-	```
+# Using Spring Boot with Open Liberty
 
-	This can then be built and run as follows:
+The `full` images introduce capabilities specific to the support of all Liberty features, including Spring Boot applications. This image thus includes the `springBootUtility` used to separate Spring Boot applications into thin applications and dependency library caches. To get these same capabilities without including features you are not using, build instead on top of `kernel` images and run configure.sh for your server.xml, ensuring that it enables either the `springBoot-1.5` or `springBoot-2.0` feature.
 
-	```console
-	$ docker build -t app .
-	$ docker run -d -p 80:9080 -p 443:9443 app
-	```
+To elaborate these capabilities this section assumes the standalone Spring Boot 2.0.x application `hellospringboot.jar` exists in the `/tmp` directory.
 
-4.	You can mount a data volume container that contains the application and the server configuration on to the image. This has the benefit that it has no dependency on files from the host but still allows the application container to be easily re-mounted on a newer version of the application server image. This example assumes that you have copied the `/tmp/DefaultServletEngine` directory in to the same directory as the Dockerfile.
-
-	Build and run the data volume container:
+1.	A Spring Boot application JAR deploys to the `dropins/spring` directory within the default server configuration, not the `dropins` directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
 
 	```dockerfile
-	FROM open-liberty:webProfile8
-	COPY DefaultServletEngine /config
-	```
+	FROM open-liberty:kernel
 
-	```console
-	$ docker build -t app-image .
-	$ docker run -d -v /config \
-	    --name app app-image true
-	```
+	COPY --chown=1001:0 hellospringboot.jar /config/dropins/spring/
+	COPY --chown=1001:0 server.xml /config/
 
-	Run the Open Liberty image with the volumes from the data volume container mounted:
-
-	```console
-	$ docker run -d -p 80:9080 \
-	  --volumes-from app open-liberty:webProfile8
-	```
-
-# Using `springBoot` images
-
-The `springBoot` images introduce capabilities specific to the support of Spring Boot applications, including the `springBootUtility` used to separate Spring Boot applications into thin applications and dependency library caches. To elaborate these capabilities this section assumes the standalone Spring Boot 2.0.x application `hellospringboot.jar` exists in the `/tmp` directory.
-
-1.	A Spring Boot application JAR deploys to the `dropins/spring` directory within the default server configuration, not the `dropins` directory. Liberty allows one Spring Boot application per server configuration. The following example starts a container running a Spring Boot application.
-
-	```console
-	$ docker run -d -p 8080:9080 \
-	    -v /tmp/hellospringboot.jar:/config/dropins/spring/hellospringboot.jar \
-	    open-liberty:springBoot2
-	```
-
-	Similarly, you can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
-
-	```dockerfile
-	FROM open-liberty:springBoot2
-	COPY hellospringboot.jar /config/dropins/spring/
+	RUN configure.sh
 	```
 
 	The custom image can be built and run as follows.
@@ -191,38 +184,23 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	$ docker run -d -p 8080:9080 app
 	```
 
-2.	The `springBoot` images provide the library cache directory, `lib.index.cache`, which contains an indexed library cache created by the `springBootUtility` command. Use `lib.index.cache` to provide the library cache for a thin application.
+2.	The `full` images provide the library cache directory, `lib.index.cache`, which contains an indexed library cache created by the `springBootUtility` command. Use `lib.index.cache` to provide the library cache for a thin application.
 
-	For example, run the following command to thin the `hellospringboot.jar` application.
-
-	```console
-	$ <wlp>/bin/springBootUtility thin \
-	   --sourceAppPath=/tmp/hellospringboot.jar \
-	   --targetLibCachePath=/tmp/lib.index.cache \
-	   --targetThinAppPath=/tmp/thinhellospringboot.jar
-	```
-
-	You can run the thin application by mounting both the target application JAR and library cache when starting the container.
-
-	```console
-	$ docker run -d -p 8080:9080 \
-	    -v /tmp/thinhellospringboot.jar:/config/dropins/spring/thinhellospringboot.jar \
-	    -v /tmp/lib.index.cache:/lib.index.cache \
-	    open-liberty:springBoot2
-	```
-
-	Similarly, you can use the `springBootUtility` command to create thin application and library cache layers over a `springBoot` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
+	You can use the `springBootUtility` command to create thin application and library cache layers over a `full` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
 
 	```dockerfile
-	FROM open-liberty:springBoot2 as staging
-	COPY hellospringboot.jar /staging/myFatApp.jar
+	FROM open-liberty:kernel as staging
+	COPY --chown=1001:0 hellospringboot.jar /staging/myFatApp.jar
+	COPY --chown=1001:0 server.xml /config/
 	RUN springBootUtility thin \
 	   --sourceAppPath=/staging/myFatApp.jar \
 	   --targetThinAppPath=/staging/myThinApp.jar \
 	   --targetLibCachePath=/staging/lib.index.cache
-	FROM open-liberty:springBoot2
+	FROM open-liberty:kernel
+	COPY --chown=1001:0 server.xml /config
 	COPY --from=staging /staging/lib.index.cache /lib.index.cache
 	COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
+	RUN configure.sh
 	```
 
 	For Spring Boot applications packaged with library dependencies that rarely change across continuous application updates, you can use the capabilities mentioned above to to share library caches across containers and to create even more efficient docker layers that leverage the docker build cache.
@@ -281,10 +259,22 @@ docker run -d -p 80:9080 -p 443:9443 \
 
 WebSphere Liberty is a commercial distribution of Open Liberty. There is an official docker image for websphere-liberty. The websphere-liberty docker image predates the open-liberty one, so to make it simpler to move from open-liberty to websphere-liberty (or vice versa) the images are broadly compatible. It should be possible to move from one to the other with a simple FROM clause change. Some considerations for moving between them:
 
-	Open Liberty installs into `/opt/ol` rather than `/opt/ibm`.
-	Use the `/config` folder for accessing the server configuration.
-	Use the `/output` folder for accessing the server output.
-	When adding your own SSL configuration use the `/config/configDropins/defaults/keystore.xml`.
+-	Open Liberty installs into `/opt/ol` rather than `/opt/ibm`.
+-	Use the `/config` folder for accessing the server configuration.
+-	Use the `/output` folder for accessing the server output.
+-	When adding your own SSL configuration use the `/config/configDropins/defaults/keystore.xml`.
+
+# Image Variants
+
+The `open-liberty` images come in many flavors, each designed for a specific use case.
+
+## `open-liberty:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+## `open-liberty:<version>-slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `open-liberty`. Unless you are working in an environment where *only* the `open-liberty` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

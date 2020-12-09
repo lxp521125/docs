@@ -14,26 +14,30 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`2-6.0.0`, `2-6.0`, `2-6`, `2`, `2-6.0.0-jessie`, `2-6.0-jessie`, `2-6-jessie`, `2-jessie` (*2/Dockerfile*)](https://github.com/docker-library/pypy/blob/cad275d97df1d056fca6731e6293d687bc7b5e80/2/Dockerfile)
--	[`2-6.0.0-slim`, `2-6.0-slim`, `2-6-slim`, `2-slim`, `2-6.0.0-slim-jessie`, `2-6.0-slim-jessie`, `2-6-slim-jessie`, `2-slim-jessie` (*2/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/cad275d97df1d056fca6731e6293d687bc7b5e80/2/slim/Dockerfile)
--	[`3-6.0.0`, `3-6.0`, `3-6`, `3`, `latest`, `3-6.0.0-jessie`, `3-6.0-jessie`, `3-6-jessie`, `3-jessie`, `jessie` (*3/Dockerfile*)](https://github.com/docker-library/pypy/blob/d813837c73e726c0b5568297eff2f5a4b00c123f/3/Dockerfile)
--	[`3-6.0.0-slim`, `3-6.0-slim`, `3-6-slim`, `3-slim`, `slim`, `3-6.0.0-slim-jessie`, `3-6.0-slim-jessie`, `3-6-slim-jessie`, `3-slim-jessie`, `slim-jessie` (*3/slim/Dockerfile*)](https://github.com/docker-library/pypy/blob/d813837c73e726c0b5568297eff2f5a4b00c123f/3/slim/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/pypy/issues](https://github.com/docker-library/pypy/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/docker-library/pypy)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`2.7-7.3.3`, `2.7-7.3`, `2.7-7`, `2.7`, `2-7.3.3`, `2-7.3`, `2-7`, `2`, `2.7-7.3.3-buster`, `2.7-7.3-buster`, `2.7-7-buster`, `2.7-buster`, `2-7.3.3-buster`, `2-7.3-buster`, `2-7-buster`, `2-buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/2.7/Dockerfile)
+-	[`2.7-7.3.3-slim`, `2.7-7.3-slim`, `2.7-7-slim`, `2.7-slim`, `2-7.3.3-slim`, `2-7.3-slim`, `2-7-slim`, `2-slim`, `2.7-7.3.3-slim-buster`, `2.7-7.3-slim-buster`, `2.7-7-slim-buster`, `2.7-slim-buster`, `2-7.3.3-slim-buster`, `2-7.3-slim-buster`, `2-7-slim-buster`, `2-slim-buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/2.7/slim/Dockerfile)
+-	[`3.6-7.3.3`, `3.6-7.3`, `3.6-7`, `3.6`, `3-7.3.3`, `3-7.3`, `3-7`, `3`, `latest`, `3.6-7.3.3-buster`, `3.6-7.3-buster`, `3.6-7-buster`, `3.6-buster`, `3-7.3.3-buster`, `3-7.3-buster`, `3-7-buster`, `3-buster`, `buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/3.6/Dockerfile)
+-	[`3.6-7.3.3-slim`, `3.6-7.3-slim`, `3.6-7-slim`, `3.6-slim`, `3-7.3.3-slim`, `3-7.3-slim`, `3-7-slim`, `3-slim`, `slim`, `3.6-7.3.3-slim-buster`, `3.6-7.3-slim-buster`, `3.6-7-slim-buster`, `3.6-slim-buster`, `3-7.3.3-slim-buster`, `3-7.3-slim-buster`, `3-7-slim-buster`, `3-slim-buster`, `slim-buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/3.6/slim/Dockerfile)
+-	[`3.7-7.3.3`, `3.7-7.3`, `3.7-7`, `3.7`, `3.7-7.3.3-buster`, `3.7-7.3-buster`, `3.7-7-buster`, `3.7-buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/3.7/Dockerfile)
+-	[`3.7-7.3.3-slim`, `3.7-7.3-slim`, `3.7-7-slim`, `3.7-slim`, `3.7-7.3.3-slim-buster`, `3.7-7.3-slim-buster`, `3.7-7-slim-buster`, `3.7-slim-buster`](https://github.com/docker-library/pypy/blob/603de426caf27c39d9b154537a7c85143f963988/3.7/slim/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/pypy/issues](https://github.com/docker-library/pypy/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/pypy/), [`arm32v5`](https://hub.docker.com/r/arm32v5/pypy/), [`i386`](https://hub.docker.com/r/i386/pypy/)
+	[`amd64`](https://hub.docker.com/r/amd64/pypy/), [`arm64v8`](https://hub.docker.com/r/arm64v8/pypy/), [`i386`](https://hub.docker.com/r/i386/pypy/), [`s390x`](https://hub.docker.com/r/s390x/pypy/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/pypy/` directory](https://github.com/docker-library/repo-info/blob/master/repos/pypy) ([history](https://github.com/docker-library/repo-info/commits/master/repos/pypy))  
@@ -45,9 +49,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `pypy/` directory](https://github.com/docker-library/docs/tree/master/pypy) ([history](https://github.com/docker-library/docs/commits/master/pypy))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is PyPy?
 
@@ -118,7 +119,11 @@ The `pypy` images come in many flavors, each designed for a specific use case.
 
 ## `pypy:<version>`
 
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+Some of these tags may have names like buster in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
+
+This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
 ## `pypy:<version>-slim`
 

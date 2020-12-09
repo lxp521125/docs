@@ -14,23 +14,25 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.5.1`, `latest` (*r-base/Dockerfile*)](https://github.com/rocker-org/rocker/blob/b9f9289ef27f07dc2f2b64d56d12646770b9b233/r-base/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[GitHub](https://github.com/rocker-org/rocker/issues) or [Email](mailto:rocker-maintainers@eddelbuettel.com)
 
 -	**Maintained by**:  
 	[the Rocker Community](https://github.com/rocker-org/rocker)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`4.0.3`, `latest`](https://github.com/rocker-org/rocker/blob/f710db09bce5ed4670f80ff4bf5a6cc8f022b76b/r-base/4.0.3/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[GitHub](https://github.com/rocker-org/rocker/issues) or [Email](mailto:rocker-maintainers@eddelbuettel.com)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/r-base/), [`arm64v8`](https://hub.docker.com/r/arm64v8/r-base/)
+	[`amd64`](https://hub.docker.com/r/amd64/r-base/), [`arm64v8`](https://hub.docker.com/r/arm64v8/r-base/), [`ppc64le`](https://hub.docker.com/r/ppc64le/r-base/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/r-base/` directory](https://github.com/docker-library/repo-info/blob/master/repos/r-base) ([history](https://github.com/docker-library/repo-info/commits/master/repos/r-base))  
@@ -42,9 +44,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `r-base/` directory](https://github.com/docker-library/docs/tree/master/r-base) ([history](https://github.com/docker-library/docs/commits/master/r-base))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is R?
 
@@ -58,7 +57,7 @@ R is a GNU project. The source code for the R software environment is written pr
 
 > [R FAQ](http://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f), [wikipedia.org/wiki/R_(programming_language)](http://en.wikipedia.org/wiki/R_%28programming_language%29)
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/878d695448f08584e0b90a88fb60614e4c346d6e/r-base/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/18225eea5667b1bc03a19024eb09ccc482207ecf/r-base/logo.png)
 
 # How to use this image
 
@@ -81,7 +80,7 @@ $ docker run -ti --rm -v "$PWD":/home/docker -w /home/docker -u docker r-base R 
 Alternatively, just run a bash session on the container first. This allows a user to run batch commands and also edit and run scripts:
 
 ```console
-$ docker run -ti --rm r-base /usr/bin/bash
+$ docker run -ti --rm r-base bash
 $ vim.tiny myscript.R
 ```
 

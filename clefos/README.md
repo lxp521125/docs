@@ -14,20 +14,22 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7`, `7.5.1804`, `latest` (*Dockerfile*)](https://github.com/nealef/clefos/blob/a13384382290c7aef7012d1353fee4f84ce8548c/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[GitHub](https://github.com/nealef/clefos/issues)
 
 -	**Maintained by**:  
 	[The ClefOS Project](https://github.com/nealef/clefos)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`7`, `7.7.1908`, `latest`](https://github.com/nealef/clefos/blob/1aa7d3771b2ced8b8b5cdc9a1a1752d93c56a60e/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[GitHub](https://github.com/nealef/clefos/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`s390x`](https://hub.docker.com/r/s390x/clefos/)
@@ -42,9 +44,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `clefos/` directory](https://github.com/docker-library/docs/tree/master/clefos) ([history](https://github.com/docker-library/docs/commits/master/clefos))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # ClefOS
 

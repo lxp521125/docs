@@ -14,23 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`18.04`, `bionic-20180821`, `bionic`, `latest`, `rolling` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/222130dfdfa777c09a17b3f08ba68c5b9850e905/bionic/Dockerfile)
--	[`18.10`, `cosmic-20180905`, `cosmic`, `devel` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/222130dfdfa777c09a17b3f08ba68c5b9850e905/cosmic/Dockerfile)
--	[`14.04`, `trusty-20180807`, `trusty` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/222130dfdfa777c09a17b3f08ba68c5b9850e905/trusty/Dockerfile)
--	[`16.04`, `xenial-20180808`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/222130dfdfa777c09a17b3f08ba68c5b9850e905/xenial/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[the cloud-images bug tracker](https://bugs.launchpad.net/cloud-images) (include the `docker` tag)
 
 -	**Maintained by**:  
 	[Canonical](https://partner-images.canonical.com/core/) and [Tianon (Debian Developer)](https://github.com/tianon/docker-brew-ubuntu-core)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`18.04`, `bionic-20201119`, `bionic`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/bionic/Dockerfile)
+-	[`20.04`, `focal-20201106`, `focal`, `latest`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/focal/Dockerfile)
+-	[`20.10`, `groovy-20201125.2`, `groovy`, `rolling`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/groovy/Dockerfile)
+-	[`21.04`, `hirsute-20201119`, `hirsute`, `devel`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/hirsute/Dockerfile)
+-	[`14.04`, `trusty-20191217`, `trusty`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/trusty/Dockerfile)
+-	[`16.04`, `xenial-20201030`, `xenial`](https://github.com/tianon/docker-brew-ubuntu-core/blob/74249faf47098bef2cedad89696bfd1ed521e019/xenial/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[the cloud-images bug tracker](https://bugs.launchpad.net/cloud-images) (include the `docker` tag)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/ubuntu/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ubuntu/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ubuntu/), [`i386`](https://hub.docker.com/r/i386/ubuntu/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ubuntu/), [`s390x`](https://hub.docker.com/r/s390x/ubuntu/)
@@ -46,16 +50,13 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `ubuntu/` directory](https://github.com/docker-library/docs/tree/master/ubuntu) ([history](https://github.com/docker-library/docs/commits/master/ubuntu))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # What is Ubuntu?
 
-Ubuntu is a Debian-based Linux operating system, with Unity as its default desktop environment. It is based on free software and named after the Southern African philosophy of ubuntu (literally, "human-ness"), which often is translated as "humanity towards others" or "the belief in a universal bond of sharing that connects all humanity".
+Ubuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things. It is the world's most popular operating system across public clouds and OpenStack clouds. It is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale. Fast, secure and simple, Ubuntu powers millions of PCs worldwide.
 
-Development of Ubuntu is led by UK-based Canonical Ltd., a company owned by South African entrepreneur Mark Shuttleworth. Canonical generates revenue through the sale of technical support and other services related to Ubuntu. The Ubuntu project is publicly committed to the principles of open-source software development; people are encouraged to use free software, study how it works, improve upon it, and distribute it.
+Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue through the sale of technical support and other services related to Ubuntu. The Ubuntu project is publicly committed to the principles of open-source software development; people are encouraged to use free software, study how it works, improve upon it, and distribute it.
 
-> [wikipedia.org/wiki/Ubuntu_(operating_system)](https://en.wikipedia.org/wiki/Ubuntu_%28operating_system%29)
+> [wikipedia.org/wiki/Ubuntu](https://en.wikipedia.org/wiki/Ubuntu)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/ubuntu/logo.png)
 
@@ -77,80 +78,6 @@ For uses where that is not sufficient, other locales can be installed/generated 
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
 	&& localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
-```
-
-## `/etc/apt/sources.list`
-
-### `ubuntu:18.04`
-
-```console
-$ docker run ubuntu:18.04 grep -v '^#' /etc/apt/sources.list
-
-deb http://archive.ubuntu.com/ubuntu/ bionic main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ bionic-updates main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ bionic universe
-deb-src http://archive.ubuntu.com/ubuntu/ bionic universe
-deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe
-deb-src http://archive.ubuntu.com/ubuntu/ bionic-updates universe
-
-deb http://archive.ubuntu.com/ubuntu/ bionic multiverse
-deb http://archive.ubuntu.com/ubuntu/ bionic-updates multiverse
-
-deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
-
-
-deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted
-deb http://security.ubuntu.com/ubuntu/ bionic-security universe
-deb-src http://security.ubuntu.com/ubuntu/ bionic-security universe
-deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse
-```
-
-### `ubuntu:16.04`
-
-```console
-$ docker run ubuntu:16.04 grep -v '^#' /etc/apt/sources.list
-
-deb http://archive.ubuntu.com/ubuntu/ xenial main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ xenial universe
-deb-src http://archive.ubuntu.com/ubuntu/ xenial universe
-deb http://archive.ubuntu.com/ubuntu/ xenial-updates universe
-deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates universe
-
-
-deb http://archive.ubuntu.com/ubuntu/ xenial-security main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ xenial-security main restricted
-deb http://archive.ubuntu.com/ubuntu/ xenial-security universe
-deb-src http://archive.ubuntu.com/ubuntu/ xenial-security universe
-```
-
-### `ubuntu:14.04`
-
-```console
-$ docker run ubuntu:14.04 grep -v '^#' /etc/apt/sources.list
-
-deb http://archive.ubuntu.com/ubuntu/ trusty main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ trusty main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted
-
-deb http://archive.ubuntu.com/ubuntu/ trusty universe
-deb-src http://archive.ubuntu.com/ubuntu/ trusty universe
-deb http://archive.ubuntu.com/ubuntu/ trusty-updates universe
-deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates universe
-
-
-deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted
-deb-src http://archive.ubuntu.com/ubuntu/ trusty-security main restricted
-deb http://archive.ubuntu.com/ubuntu/ trusty-security universe
-deb-src http://archive.ubuntu.com/ubuntu/ trusty-security universe
 ```
 
 # License

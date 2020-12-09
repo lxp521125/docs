@@ -14,24 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`2`, `2.6`, `2.6.2`, `latest` (*Dockerfile*)](https://github.com/docker/distribution-library-image/blob/bc5d4f15a7e8d12ed6e5174ac4edab4b6032d09f/Dockerfile)
--	[`2.5`, `2.5.2` (*Dockerfile*)](https://github.com/docker/distribution-library-image/blob/a878b04f22c48dd2fd49581bc74363ab8213b15b/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker/distribution-library-image/issues](https://github.com/docker/distribution-library-image/issues)
 
 -	**Maintained by**:  
 	[Docker, Inc.](https://github.com/docker/distribution-library-image)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+-	**Need a free, secure hosted registry?** Try [Docker Hub](https://www.docker.com/pricing).
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`2.7.1`, `2.7`, `2`, `latest`](https://github.com/docker/distribution-library-image/blob/ab00e8dae12d4515ed259015eab771ec92e92dd4/amd64/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker/distribution-library-image/issues](https://github.com/docker/distribution-library-image/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/registry/)
+	[`amd64`](https://hub.docker.com/r/amd64/registry/), [`arm32v6`](https://hub.docker.com/r/arm32v6/registry/), [`arm64v8`](https://hub.docker.com/r/arm64v8/registry/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/registry/` directory](https://github.com/docker-library/repo-info/blob/master/repos/registry) ([history](https://github.com/docker-library/repo-info/commits/master/repos/registry))  
@@ -43,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `registry/` directory](https://github.com/docker-library/docs/tree/master/registry) ([history](https://github.com/docker-library/docs/commits/master/registry))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Docker Registry
 
@@ -70,10 +70,6 @@ $ docker push localhost:5000/ubuntu
 The [documentation over at docs.docker.com](https://docs.docker.com/registry/) is a good place to learn more about what the registry is, how it works, and how to use it.
 
 Specifically, [the section regarding deployment](https://docs.docker.com/registry/deploying/) has pointers for more complex use cases than simply running a registry on localhost.
-
-# Support
-
-If you are interested in commercial support, the [Docker Trusted Registry](https://www.docker.com/docker-trusted-registry) provides an image registry, LDAP/Active Directory integration, security certificates, and more in a solution that includes commercial support.
 
 # License
 

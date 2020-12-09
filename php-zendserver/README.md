@@ -14,22 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`5.6`, `8.5-php5.6`, `8.5` (*8.5/5.6/Dockerfile*)](https://github.com/zendtech/php-zendserver-docker/blob/78105bf7c9123abbb432ddba50d73ecb482062ca/8.5/5.6/Dockerfile)
--	[`9.1` (*9.1/7.1/Dockerfile*)](https://github.com/zendtech/php-zendserver-docker/blob/78105bf7c9123abbb432ddba50d73ecb482062ca/9.1/7.1/Dockerfile)
--	[`2018.0`, `latest` (*2018.0/7.2/Dockerfile*)](https://github.com/zendtech/php-zendserver-docker/blob/78105bf7c9123abbb432ddba50d73ecb482062ca/2018.0/7.2/Dockerfile)
-
 # Quick reference
 
+-	**Maintained by**:  
+	[Perforce Software, Inc.](https://github.com/zendtech/php-zendserver-docker)
+
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`8.5`, `8.5-php5.6`, `5.6`](https://github.com/zendtech/php-zendserver-docker/blob/5ed6d060d28a9484f7163b807a1a31116462715b/8.5/5.6/Dockerfile)
+-	[`9.1`](https://github.com/zendtech/php-zendserver-docker/blob/5ed6d060d28a9484f7163b807a1a31116462715b/9.1/7.1/Dockerfile)
+-	[`2019.0`, `latest`](https://github.com/zendtech/php-zendserver-docker/blob/5ed6d060d28a9484f7163b807a1a31116462715b/2019.0/Dockerfile)
+
+# Quick reference (cont.)
 
 -	**Where to file issues**:  
 	[Zend Support Center](https://www.zend.com/en/support-center)
-
--	**Maintained by**:  
-	[Zend Technologies](https://github.com/zendtech/php-zendserver-docker)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/php-zendserver/)
@@ -44,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `php-zendserver/` directory](https://github.com/docker-library/docs/tree/master/php-zendserver) ([history](https://github.com/docker-library/docs/commits/master/php-zendserver))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Zend Server?
 
@@ -94,6 +93,7 @@ To start a single Zend Server instance, execute:
 
 -	Zend Server 8
 -	Zend Server 9 (With PHP 7 GA)(Default version)
+-	Zend Server 2019 with multi PHP Version Support (7.1, 7.2 & 7.3)
 
 ##### Cluster
 
@@ -184,7 +184,7 @@ Each Zend Server Docker container requires 1GB of availible memory.
 
 # License
 
-[Zend Technologies Ltd.](https://www.zend.com/topics/License-EULA-2010-09-2.pdf)
+[Perforce Software, Inc.](https://www.zend.com/end-user-license-agreement)
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

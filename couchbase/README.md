@@ -14,24 +14,25 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`latest`, `enterprise`, `5.5.1`, `enterprise-5.5.1` (*enterprise/couchbase-server/5.5.1/Dockerfile*)](https://github.com/couchbase/docker/blob/8f038528a450a5ec540beff43388ff8fbf685b89/enterprise/couchbase-server/5.5.1/Dockerfile)
--	[`6.0.0-beta` (*enterprise/couchbase-server/6.0.0-beta/Dockerfile*)](https://github.com/couchbase/docker/blob/8f038528a450a5ec540beff43388ff8fbf685b89/enterprise/couchbase-server/6.0.0-beta/Dockerfile)
--	[`4.6.5`, `enterprise-4.6.5` (*enterprise/couchbase-server/4.6.5/Dockerfile*)](https://github.com/couchbase/docker/blob/8f038528a450a5ec540beff43388ff8fbf685b89/enterprise/couchbase-server/4.6.5/Dockerfile)
--	[`community`, `community-5.1.1` (*community/couchbase-server/5.1.1/Dockerfile*)](https://github.com/couchbase/docker/blob/8f038528a450a5ec540beff43388ff8fbf685b89/community/couchbase-server/5.1.1/Dockerfile)
--	[`community-4.5.1` (*community/couchbase-server/4.5.1/Dockerfile*)](https://github.com/couchbase/docker/blob/8f038528a450a5ec540beff43388ff8fbf685b89/community/couchbase-server/4.5.1/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/couchbase/docker/issues](https://github.com/couchbase/docker/issues)
 
 -	**Maintained by**:  
 	[the Couchbase Docker Team](https://github.com/couchbase/docker)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`7.0.0-beta`, `enterprise-7.0.0-beta`](https://github.com/couchbase/docker/blob/de4d4fe41f6ac64a8640d4b7942808d959da1484/enterprise/couchbase-server/7.0.0-beta/Dockerfile)
+-	[`community-7.0.0-beta`](https://github.com/couchbase/docker/blob/de4d4fe41f6ac64a8640d4b7942808d959da1484/community/couchbase-server/7.0.0-beta/Dockerfile)
+-	[`latest`, `enterprise`, `6.6.0`, `enterprise-6.6.0`](https://github.com/couchbase/docker/blob/f0ab8e5c7fc1091465097dc231cd5586f3eb7355/enterprise/couchbase-server/6.6.0/Dockerfile)
+-	[`community`, `community-6.6.0`](https://github.com/couchbase/docker/blob/78cbcaa2c90ce4c975299e7cbfdce146a7bab081/community/couchbase-server/6.6.0/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/couchbase/docker/issues](https://github.com/couchbase/docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/couchbase/)
@@ -46,9 +47,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `couchbase/` directory](https://github.com/docker-library/docs/tree/master/couchbase) ([history](https://github.com/docker-library/docs/commits/master/couchbase))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Couchbase Server?
 

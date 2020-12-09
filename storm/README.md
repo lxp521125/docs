@@ -14,25 +14,27 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.0.6`, `1.0` (*1.0.6/Dockerfile*)](https://github.com/31z4/storm-docker/blob/9986213e09356e2d5230e6af9338052ce858b224/1.0.6/Dockerfile)
--	[`1.1.3`, `1.1` (*1.1.3/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.1.3/Dockerfile)
--	[`1.2.2`, `1.2`, `latest` (*1.2.2/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.2.2/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/31z4/storm-docker/issues](https://github.com/31z4/storm-docker/issues)
 
 -	**Maintained by**:  
 	[the Docker Community](https://github.com/31z4/storm-docker)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.1.3`, `1.1`](https://github.com/31z4/storm-docker/blob/664a7f4730f58be00fd7fe0526d2c13180107c6f/1.1.3/Dockerfile)
+-	[`1.2.3`, `1.2`](https://github.com/31z4/storm-docker/blob/664a7f4730f58be00fd7fe0526d2c13180107c6f/1.2.3/Dockerfile)
+-	[`2.2.0`, `2.2`, `latest`](https://github.com/31z4/storm-docker/blob/4c2804fa4365f62c3b6009d3496661542e4d446a/2.2.0/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/31z4/storm-docker/issues](https://github.com/31z4/storm-docker/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/storm/), [`arm32v6`](https://hub.docker.com/r/arm32v6/storm/), [`arm64v8`](https://hub.docker.com/r/arm64v8/storm/), [`i386`](https://hub.docker.com/r/i386/storm/), [`ppc64le`](https://hub.docker.com/r/ppc64le/storm/), [`s390x`](https://hub.docker.com/r/s390x/storm/)
+	[`amd64`](https://hub.docker.com/r/amd64/storm/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/storm/` directory](https://github.com/docker-library/repo-info/blob/master/repos/storm) ([history](https://github.com/docker-library/repo-info/commits/master/repos/storm))  
@@ -44,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `storm/` directory](https://github.com/docker-library/docs/tree/master/storm) ([history](https://github.com/docker-library/docs/commits/master/storm))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Apache Storm?
 
@@ -142,7 +141,7 @@ Run `docker stack deploy -c stack.yml storm` (or `docker-compose -f stack.yml up
 
 ## Configuration
 
-This image uses [default configuration](https://github.com/apache/storm/blob/v1.1.0/conf/defaults.yaml) of the Apache Storm. There are two main ways to change it.
+This image uses [default configuration](https://github.com/apache/storm/blob/v2.0.0/conf/defaults.yaml) of the Apache Storm. There are two main ways to change it.
 
 1.	Using command line arguments.
 
@@ -158,7 +157,7 @@ This image uses [default configuration](https://github.com/apache/storm/blob/v1.
 
 ## Logging
 
-This image uses [default logging configuration](https://github.com/apache/storm/tree/v1.1.0/log4j2). All logs go to the `/logs` directory by default.
+This image uses [default logging configuration](https://github.com/apache/storm/tree/v2.0.0/log4j2). All logs go to the `/logs` directory by default.
 
 ## Data persistence
 

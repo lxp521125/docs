@@ -14,36 +14,45 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.5.4-jdk-10-slim`, `3.5-jdk-10-slim`, `3-jdk-10-slim` (*jdk-10-slim/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-10-slim/Dockerfile)
--	[`3.5.4-jdk-10`, `3.5-jdk-10`, `3-jdk-10` (*jdk-10/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-10/Dockerfile)
--	[`3.5.4-jdk-11-slim`, `3.5-jdk-11-slim`, `3-jdk-11-slim` (*jdk-11-slim/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-11-slim/Dockerfile)
--	[`3.5.4-jdk-11`, `3.5-jdk-11`, `3-jdk-11` (*jdk-11/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-11/Dockerfile)
--	[`3.5.4-jdk-7-alpine`, `3.5-jdk-7-alpine`, `3-jdk-7-alpine` (*jdk-7-alpine/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-7-alpine/Dockerfile)
--	[`3.5.4-jdk-7-slim`, `3.5-jdk-7-slim`, `3-jdk-7-slim` (*jdk-7-slim/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-7-slim/Dockerfile)
--	[`3.5.4-jdk-7`, `3.5-jdk-7`, `3-jdk-7` (*jdk-7/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-7/Dockerfile)
--	[`3.5.4-jdk-8-alpine`, `3.5.4-alpine`, `3.5-jdk-8-alpine`, `3.5-alpine`, `3-jdk-8-alpine`, `alpine` (*jdk-8-alpine/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-8-alpine/Dockerfile)
--	[`3.5.4-jdk-8-slim`, `3.5.4-slim`, `3.5-jdk-8-slim`, `3.5-slim`, `3-jdk-8-slim`, `slim` (*jdk-8-slim/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-8-slim/Dockerfile)
--	[`3.5.4-jdk-8`, `3.5.4`, `3.5-jdk-8`, `3.5`, `3-jdk-8`, `3`, `latest` (*jdk-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-8/Dockerfile)
--	[`3.5.4-jdk-9-slim`, `3.5-jdk-9-slim`, `3-jdk-9-slim` (*jdk-9-slim/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-9-slim/Dockerfile)
--	[`3.5.4-jdk-9`, `3.5-jdk-9`, `3-jdk-9` (*jdk-9/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/jdk-9/Dockerfile)
--	[`3.5.4-ibmjava-8-alpine`, `3.5.4-ibmjava-alpine`, `3.5-ibmjava-8-alpine`, `3.5-ibmjava-alpine`, `3-ibmjava-8-alpine`, `ibmjava-alpine` (*ibmjava-8-alpine/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/ibmjava-8-alpine/Dockerfile)
--	[`3.5.4-ibmjava-8`, `3.5.4-ibmjava`, `3.5-ibmjava-8`, `3.5-ibmjava`, `3-ibmjava-8`, `3-ibmjava`, `ibmjava` (*ibmjava-8/Dockerfile*)](https://github.com/carlossg/docker-maven/blob/f581ea002e5d067deb6213c00a4d217297cad469/ibmjava-8/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/carlossg/docker-maven/issues](https://github.com/carlossg/docker-maven/issues)
 
 -	**Maintained by**:  
 	[the Maven Project](https://github.com/carlossg/docker-maven)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`3.6.3-jdk-11`, `3.6-jdk-11`, `3-jdk-11`, `3.6.3-openjdk-11`, `3.6-openjdk-11`, `3-openjdk-11`](https://github.com/carlossg/docker-maven/blob/26ba49149787c85b9c51222b47c00879b2a0afde/openjdk-11/Dockerfile)
+-	[`3.6.3-jdk-11-openj9`, `3.6-jdk-11-openj9`, `3-jdk-11-openj9`, `3.6.3-adoptopenjdk-11-openj9`, `3.6-adoptopenjdk-11-openj9`, `3-adoptopenjdk-11-openj9`](https://github.com/carlossg/docker-maven/blob/b243010db790a1ab8f6a43d26ae86a76cba86b55/adoptopenjdk-11-openj9/Dockerfile)
+-	[`3.6.3-jdk-11-slim`, `3.6-jdk-11-slim`, `3-jdk-11-slim`, `3.6.3-openjdk-11-slim`, `3.6-openjdk-11-slim`, `3-openjdk-11-slim`](https://github.com/carlossg/docker-maven/blob/26ba49149787c85b9c51222b47c00879b2a0afde/openjdk-11-slim/Dockerfile)
+-	[`3.6.3-jdk-8`, `3.6-jdk-8`, `3-jdk-8`, `3.6.3-openjdk-8`, `3.6-openjdk-8`, `3-openjdk-8`](https://github.com/carlossg/docker-maven/blob/26ba49149787c85b9c51222b47c00879b2a0afde/openjdk-8/Dockerfile)
+-	[`3.6.3-jdk-8-openj9`, `3.6-jdk-8-openj9`, `3-jdk-8-openj9`, `3.6.3-adoptopenjdk-8-openj9`, `3.6-adoptopenjdk-8-openj9`, `3-adoptopenjdk-8-openj9`](https://github.com/carlossg/docker-maven/blob/b243010db790a1ab8f6a43d26ae86a76cba86b55/adoptopenjdk-8-openj9/Dockerfile)
+-	[`3.6.3-jdk-8-slim`, `3.6-jdk-8-slim`, `3-jdk-8-slim`, `3.6.3-openjdk-8-slim`, `3.6-openjdk-8-slim`, `3-openjdk-8-slim`](https://github.com/carlossg/docker-maven/blob/26ba49149787c85b9c51222b47c00879b2a0afde/openjdk-8-slim/Dockerfile)
+-	[`3.6.3-openjdk-15`, `3.6.3`, `3.6.3-openjdk`, `3.6-openjdk-15`, `3.6`, `3.6-openjdk`, `3-openjdk-15`, `3`, `latest`, `3-openjdk`, `openjdk`](https://github.com/carlossg/docker-maven/blob/a7de5419ae52d514d0fd5bcd08694fce2334aed4/openjdk-15/Dockerfile)
+-	[`3.6.3-openjdk-15-slim`, `3.6-openjdk-15-slim`, `3-openjdk-15-slim`](https://github.com/carlossg/docker-maven/blob/cc080bd044b5ae09731e5cb5f8de61fb5bdb32a5/openjdk-15-slim/Dockerfile)
+-	[`3.6.3-openjdk-16`, `3.6-openjdk-16`, `3-openjdk-16`](https://github.com/carlossg/docker-maven/blob/a7de5419ae52d514d0fd5bcd08694fce2334aed4/openjdk-16/Dockerfile)
+-	[`3.6.3-openjdk-16-slim`, `3.6-openjdk-16-slim`, `3-openjdk-16-slim`](https://github.com/carlossg/docker-maven/blob/cc080bd044b5ae09731e5cb5f8de61fb5bdb32a5/openjdk-16-slim/Dockerfile)
+-	[`3.6.3-adoptopenjdk-11`, `3.6-adoptopenjdk-11`, `3-adoptopenjdk-11`](https://github.com/carlossg/docker-maven/blob/d98fc55d68cbd5fa8df9e59c95678e1d702b0925/adoptopenjdk-11/Dockerfile)
+-	[`3.6.3-adoptopenjdk-14`, `3.6-adoptopenjdk-14`, `3-adoptopenjdk-14`](https://github.com/carlossg/docker-maven/blob/5768b638a84739d0ad85dbcbe42018075550b109/adoptopenjdk-14/Dockerfile)
+-	[`3.6.3-adoptopenjdk-14-openj9`, `3.6-adoptopenjdk-14-openj9`, `3-adoptopenjdk-14-openj9`](https://github.com/carlossg/docker-maven/blob/b243010db790a1ab8f6a43d26ae86a76cba86b55/adoptopenjdk-14-openj9/Dockerfile)
+-	[`3.6.3-adoptopenjdk-15`, `3.6.3-adoptopenjdk`, `3.6-adoptopenjdk-15`, `3.6-adoptopenjdk`, `3-adoptopenjdk-15`, `3-adoptopenjdk`, `adoptopenjdk`](https://github.com/carlossg/docker-maven/blob/ecb160edac810c845116ef70ffbda8bfeca21075/adoptopenjdk-15/Dockerfile)
+-	[`3.6.3-adoptopenjdk-15-openj9`, `3.6-adoptopenjdk-15-openj9`, `3-adoptopenjdk-15-openj9`](https://github.com/carlossg/docker-maven/blob/b243010db790a1ab8f6a43d26ae86a76cba86b55/adoptopenjdk-15-openj9/Dockerfile)
+-	[`3.6.3-adoptopenjdk-8`, `3.6-adoptopenjdk-8`, `3-adoptopenjdk-8`](https://github.com/carlossg/docker-maven/blob/d98fc55d68cbd5fa8df9e59c95678e1d702b0925/adoptopenjdk-8/Dockerfile)
+-	[`3.6.3-ibmjava-8`, `3.6.3-ibmjava`, `3.6-ibmjava-8`, `3.6-ibmjava`, `3-ibmjava-8`, `3-ibmjava`, `ibmjava`](https://github.com/carlossg/docker-maven/blob/d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4/ibmjava-8/Dockerfile)
+-	[`3.6.3-ibmjava-8-alpine`, `3.6.3-ibmjava-alpine`, `3.6-ibmjava-8-alpine`, `3.6-ibmjava-alpine`, `3-ibmjava-8-alpine`, `ibmjava-alpine`](https://github.com/carlossg/docker-maven/blob/d3dd6bc261c6173c5e52e3a7a36b6a3d8d2800b4/ibmjava-8-alpine/Dockerfile)
+-	[`3.6.3-amazoncorretto-11`, `3.6.3-amazoncorretto`, `3.6-amazoncorretto-11`, `3.6-amazoncorretto`, `3-amazoncorretto-11`, `3-amazoncorretto`, `amazoncorretto`](https://github.com/carlossg/docker-maven/blob/bd12f1eef2fc77dd6341dbe461ff78eedfbc8f2a/amazoncorretto-11/Dockerfile)
+-	[`3.6.3-amazoncorretto-15`, `3.6-amazoncorretto-15`, `3-amazoncorretto-15`](https://github.com/carlossg/docker-maven/blob/ec6fda17ef61e07cf861b9963f16bc95da438261/amazoncorretto-15/Dockerfile)
+-	[`3.6.3-amazoncorretto-8`, `3.6-amazoncorretto-8`, `3-amazoncorretto-8`](https://github.com/carlossg/docker-maven/blob/bd12f1eef2fc77dd6341dbe461ff78eedfbc8f2a/amazoncorretto-8/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/carlossg/docker-maven/issues](https://github.com/carlossg/docker-maven/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/maven/), [`arm32v5`](https://hub.docker.com/r/arm32v5/maven/), [`arm32v6`](https://hub.docker.com/r/arm32v6/maven/), [`arm32v7`](https://hub.docker.com/r/arm32v7/maven/), [`arm64v8`](https://hub.docker.com/r/arm64v8/maven/), [`i386`](https://hub.docker.com/r/i386/maven/), [`ppc64le`](https://hub.docker.com/r/ppc64le/maven/), [`s390x`](https://hub.docker.com/r/s390x/maven/)
+	[`amd64`](https://hub.docker.com/r/amd64/maven/), [`arm32v7`](https://hub.docker.com/r/arm32v7/maven/), [`arm64v8`](https://hub.docker.com/r/arm64v8/maven/), [`i386`](https://hub.docker.com/r/i386/maven/), [`ppc64le`](https://hub.docker.com/r/ppc64le/maven/), [`s390x`](https://hub.docker.com/r/s390x/maven/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/maven/` directory](https://github.com/docker-library/repo-info/blob/master/repos/maven) ([history](https://github.com/docker-library/repo-info/commits/master/repos/maven))  
@@ -55,9 +64,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `maven/` directory](https://github.com/docker-library/docs/tree/master/maven) ([history](https://github.com/docker-library/docs/commits/master/maven))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Maven?
 
@@ -85,9 +91,11 @@ $ docker build --tag my_local_maven:3.5.2-jdk-8 .
 
 The local Maven repository can be reused across containers by creating a volume and mounting it in `/root/.m2`.
 
-	docker volume create --name maven-repo
-	docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will download artifacts
-	docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will reuse downloaded artifacts
+```console
+$ docker volume create --name maven-repo
+$ docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will download artifacts
+$ docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will reuse downloaded artifacts
+```
 
 Or you can just use your home .m2 cache directory that you share e.g. with your Eclipse/IDEA:
 
@@ -138,9 +146,9 @@ This image does not contain the common packages contained in the default tag and
 
 ## `maven:<version>-alpine`
 
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
+This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

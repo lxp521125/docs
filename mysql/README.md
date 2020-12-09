@@ -14,23 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`8.0.12`, `8.0`, `8`, `latest` (*8.0/Dockerfile*)](https://github.com/docker-library/mysql/blob/b39f1e5e4ec82dc8039cecc91dbf34f6c9ae5fb0/8.0/Dockerfile)
--	[`5.7.23`, `5.7`, `5` (*5.7/Dockerfile*)](https://github.com/docker-library/mysql/blob/9d1f62552b5dcf25d3102f14eb82b579ce9f4a26/5.7/Dockerfile)
--	[`5.6.41`, `5.6` (*5.6/Dockerfile*)](https://github.com/docker-library/mysql/blob/333935aa6612376d58737a8cab0e3f5df370585a/5.6/Dockerfile)
--	[`5.5.61`, `5.5` (*5.5/Dockerfile*)](https://github.com/docker-library/mysql/blob/333935aa6612376d58737a8cab0e3f5df370585a/5.5/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/docker-library/mysql/issues](https://github.com/docker-library/mysql/issues)
 
 -	**Maintained by**:  
 	[the Docker Community and the MySQL Team](https://github.com/docker-library/mysql)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`8.0.22`, `8.0`, `8`, `latest`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/8.0/Dockerfile.debian)
+-	[`5.7.32`, `5.7`, `5`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/5.7/Dockerfile.debian)
+-	[`5.6.50`, `5.6`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/5.6/Dockerfile.debian)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/docker-library/mysql/issues](https://github.com/docker-library/mysql/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/mysql/)
@@ -45,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `mysql/` directory](https://github.com/docker-library/docs/tree/master/mysql) ([history](https://github.com/docker-library/docs/commits/master/mysql))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is MySQL?
 
@@ -69,25 +67,17 @@ $ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 
 ... where `some-mysql` is the name you want to assign to your container, `my-secret-pw` is the password to be set for the MySQL root user and `tag` is the tag specifying the MySQL version you want. See the list above for relevant tags.
 
-## Connect to MySQL from an application in another Docker container
-
-This image exposes the standard MySQL port (3306), so container linking makes the MySQL instance available to other application containers. Start your application container like this in order to link it to the MySQL container:
-
-```console
-$ docker run --name some-app --link some-mysql:mysql -d application-that-uses-mysql
-```
-
 ## Connect to MySQL from the MySQL command line client
 
 The following command starts another `mysql` container instance and runs the `mysql` command line client against your original `mysql` container, allowing you to execute SQL statements against your database instance:
 
 ```console
-$ docker run -it --link some-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+$ docker run -it --network some-network --rm mysql mysql -hsome-mysql -uexample-user -p
 ```
 
-... where `some-mysql` is the name of your original `mysql` container.
+... where `some-mysql` is the name of your original `mysql` container (connected to the `some-network` Docker network).
 
-This image can also be used as a client for non-Docker or remote MySQL instances:
+This image can also be used as a client for non-Docker or remote instances:
 
 ```console
 $ docker run -it --rm mysql mysql -hsome.mysql.host -usome-mysql-user -p
@@ -131,7 +121,7 @@ The `docker exec` command allows you to run commands inside a Docker container. 
 $ docker exec -it some-mysql bash
 ```
 
-The MySQL Server log is available through Docker's container log:
+The log is available through Docker's container log:
 
 ```console
 $ docker logs some-mysql
@@ -185,15 +175,19 @@ Do note that there is no need to use this mechanism to create the root superuser
 
 ### `MYSQL_ALLOW_EMPTY_PASSWORD`
 
-This is an optional variable. Set to `yes` to allow the container to be started with a blank password for the root user. *NOTE*: Setting this variable to `yes` is not recommended unless you really know what you are doing, since this will leave your MySQL instance completely unprotected, allowing anyone to gain complete superuser access.
+This is an optional variable. Set to a non-empty value, like `yes`, to allow the container to be started with a blank password for the root user. *NOTE*: Setting this variable to `yes` is not recommended unless you really know what you are doing, since this will leave your MySQL instance completely unprotected, allowing anyone to gain complete superuser access.
 
 ### `MYSQL_RANDOM_ROOT_PASSWORD`
 
-This is an optional variable. Set to `yes` to generate a random initial password for the root user (using `pwgen`). The generated root password will be printed to stdout (`GENERATED ROOT PASSWORD: .....`).
+This is an optional variable. Set to a non-empty value, like `yes`, to generate a random initial password for the root user (using `pwgen`). The generated root password will be printed to stdout (`GENERATED ROOT PASSWORD: .....`).
 
 ### `MYSQL_ONETIME_PASSWORD`
 
-Sets root (*not* the user specified in `MYSQL_USER`!) user as expired once init is complete, forcing a password change on first login. *NOTE*: This feature is supported on MySQL 5.6+ only. Using this option on MySQL 5.5 will throw an appropriate error during initialization.
+Sets root (*not* the user specified in `MYSQL_USER`!) user as expired once init is complete, forcing a password change on first login. Any non-empty value will activate this setting. *NOTE*: This feature is supported on MySQL 5.6+ only. Using this option on MySQL 5.5 will throw an appropriate error during initialization.
+
+### `MYSQL_INITDB_SKIP_TZINFO`
+
+By default, the entrypoint script automatically loads the timezone data needed for the `CONVERT_TZ()` function. If it is not needed, any non-empty value disables timezone loading.
 
 ## Docker Secrets
 
@@ -233,7 +227,7 @@ The `-v /my/own/datadir:/var/lib/mysql` part of the command mounts the `/my/own/
 
 If there is no database initialized when the container starts, then a default database will be created. While this is the expected behavior, this means that it will not accept incoming connections until such initialization completes. This may cause issues when using automation tools, such as `docker-compose`, which start several containers simultaneously.
 
-If the application you're trying to connect to MySQL does not handle MySQL downtime or waiting for MySQL to start gracefully, then a putting a connect-retry loop before the service starts might be necessary. For an example of such an implementation in the official images, see [WordPress](https://github.com/docker-library/wordpress/blob/1b48b4bccd7adb0f7ea1431c7b470a40e186f3da/docker-entrypoint.sh#L195-L235) or [Bonita](https://github.com/docker-library/docs/blob/9660a0cccb87d8db842f33bc0578d769caaf3ba9/bonita/stack.yml#L28-L44).
+If the application you're trying to connect to MySQL does not handle MySQL downtime or waiting for MySQL to start gracefully, then putting a connect-retry loop before the service starts might be necessary. For an example of such an implementation in the official images, see [WordPress](https://github.com/docker-library/wordpress/blob/1b48b4bccd7adb0f7ea1431c7b470a40e186f3da/docker-entrypoint.sh#L195-L235) or [Bonita](https://github.com/docker-library/docs/blob/9660a0cccb87d8db842f33bc0578d769caaf3ba9/bonita/stack.yml#L28-L44).
 
 ## Usage against an existing database
 
@@ -256,6 +250,14 @@ Most of the normal tools will work, although their usage might be a little convo
 
 ```console
 $ docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
+```
+
+## Restoring data from dump files
+
+For restoring data. You can use `docker exec` command with `-i` flag, similar to the following:
+
+```console
+$ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some/path/on/your/host/all-databases.sql
 ```
 
 # License

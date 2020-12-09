@@ -14,27 +14,35 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`gzserver7`, `gzserver7-xenial` (*gazebo/7/ubuntu/xenial/gzserver7/Dockerfile*)](https://github.com/osrf/docker_images/blob/c5ca5054c6921645802f21e888b79f464863eb1a/gazebo/7/ubuntu/xenial/gzserver7/Dockerfile)
--	[`libgazebo7`, `libgazebo7-xenial` (*gazebo/7/ubuntu/xenial/libgazebo7/Dockerfile*)](https://github.com/osrf/docker_images/blob/c5ca5054c6921645802f21e888b79f464863eb1a/gazebo/7/ubuntu/xenial/libgazebo7/Dockerfile)
--	[`gzserver8`, `gzserver8-xenial` (*gazebo/8/ubuntu/xenial/gzserver8/Dockerfile*)](https://github.com/osrf/docker_images/blob/c5ca5054c6921645802f21e888b79f464863eb1a/gazebo/8/ubuntu/xenial/gzserver8/Dockerfile)
--	[`libgazebo8`, `libgazebo8-xenial` (*gazebo/8/ubuntu/xenial/libgazebo8/Dockerfile*)](https://github.com/osrf/docker_images/blob/c5ca5054c6921645802f21e888b79f464863eb1a/gazebo/8/ubuntu/xenial/libgazebo8/Dockerfile)
--	[`gzserver9-xenial` (*gazebo/9/ubuntu/xenial/gzserver9/Dockerfile*)](https://github.com/osrf/docker_images/blob/df787a9fad9aacbea3ae2e85aa6247d8baa522fd/gazebo/9/ubuntu/xenial/gzserver9/Dockerfile)
--	[`libgazebo9-xenial` (*gazebo/9/ubuntu/xenial/libgazebo9/Dockerfile*)](https://github.com/osrf/docker_images/blob/df787a9fad9aacbea3ae2e85aa6247d8baa522fd/gazebo/9/ubuntu/xenial/libgazebo9/Dockerfile)
--	[`gzserver9`, `gzserver9-bionic` (*gazebo/9/ubuntu/bionic/gzserver9/Dockerfile*)](https://github.com/osrf/docker_images/blob/df787a9fad9aacbea3ae2e85aa6247d8baa522fd/gazebo/9/ubuntu/bionic/gzserver9/Dockerfile)
--	[`libgazebo9`, `libgazebo9-bionic`, `latest` (*gazebo/9/ubuntu/bionic/libgazebo9/Dockerfile*)](https://github.com/osrf/docker_images/blob/df787a9fad9aacbea3ae2e85aa6247d8baa522fd/gazebo/9/ubuntu/bionic/libgazebo9/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/osrf/docker_images/issues](https://github.com/osrf/docker_images/issues)
 
 -	**Maintained by**:  
 	[the Open Source Robotics Foundation](https://github.com/osrf/docker_images)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`gzserver7`, `gzserver7-xenial`](https://github.com/osrf/docker_images/blob/c2b11f03428e862ab6c8f106823fac7d9d9ac48c/gazebo/7/ubuntu/xenial/gzserver7/Dockerfile)
+-	[`libgazebo7`, `libgazebo7-xenial`](https://github.com/osrf/docker_images/blob/c2b11f03428e862ab6c8f106823fac7d9d9ac48c/gazebo/7/ubuntu/xenial/libgazebo7/Dockerfile)
+-	[`gzserver9-xenial`](https://github.com/osrf/docker_images/blob/d521594aab0f506c90998ab79bc4dbc9c20e39b8/gazebo/9/ubuntu/xenial/gzserver9/Dockerfile)
+-	[`libgazebo9-xenial`](https://github.com/osrf/docker_images/blob/d521594aab0f506c90998ab79bc4dbc9c20e39b8/gazebo/9/ubuntu/xenial/libgazebo9/Dockerfile)
+-	[`gzserver9`, `gzserver9-bionic`](https://github.com/osrf/docker_images/blob/14c917e2aba1d985be1d62672669a577c0cc2eaa/gazebo/9/ubuntu/bionic/gzserver9/Dockerfile)
+-	[`libgazebo9`, `libgazebo9-bionic`](https://github.com/osrf/docker_images/blob/14c917e2aba1d985be1d62672669a577c0cc2eaa/gazebo/9/ubuntu/bionic/libgazebo9/Dockerfile)
+-	[`gzserver9-stretch`](https://github.com/osrf/docker_images/blob/a6c5b63e1ba4291e94b91ac5ff067c0d3f7d3c37/gazebo/9/debian/stretch/gzserver9/Dockerfile)
+-	[`libgazebo9-stretch`](https://github.com/osrf/docker_images/blob/a6c5b63e1ba4291e94b91ac5ff067c0d3f7d3c37/gazebo/9/debian/stretch/libgazebo9/Dockerfile)
+-	[`gzserver10`, `gzserver10-bionic`](https://github.com/osrf/docker_images/blob/c2b11f03428e862ab6c8f106823fac7d9d9ac48c/gazebo/10/ubuntu/bionic/gzserver10/Dockerfile)
+-	[`libgazebo10`, `libgazebo10-bionic`](https://github.com/osrf/docker_images/blob/c2b11f03428e862ab6c8f106823fac7d9d9ac48c/gazebo/10/ubuntu/bionic/libgazebo10/Dockerfile)
+-	[`gzserver11-bionic`](https://github.com/osrf/docker_images/blob/e0433b341322830cd6b3057fd7f72340ab5a0b6f/gazebo/11/ubuntu/bionic/gzserver11/Dockerfile)
+-	[`libgazebo11-bionic`](https://github.com/osrf/docker_images/blob/e0433b341322830cd6b3057fd7f72340ab5a0b6f/gazebo/11/ubuntu/bionic/libgazebo11/Dockerfile)
+-	[`gzserver11`, `gzserver11-focal`](https://github.com/osrf/docker_images/blob/74aca98655d63d549a90bdea07151d4e72279d92/gazebo/11/ubuntu/focal/gzserver11/Dockerfile)
+-	[`libgazebo11`, `libgazebo11-focal`, `latest`](https://github.com/osrf/docker_images/blob/74aca98655d63d549a90bdea07151d4e72279d92/gazebo/11/ubuntu/focal/libgazebo11/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/osrf/docker_images/issues](https://github.com/osrf/docker_images/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/gazebo/)
@@ -49,9 +57,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `gazebo/` directory](https://github.com/docker-library/docs/tree/master/gazebo) ([history](https://github.com/docker-library/docs/commits/master/gazebo))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is [Gazebo](http://www.gazebosim.org/)?
 
@@ -80,7 +85,7 @@ $ docker run -it -v="/tmp/.gazebo/:/root/.gazebo/" --name my-running-app my-gaze
 
 ## Deployment use cases
 
-This dockerized image of Gazebo is intended to provide a simplified and consistent platform to build and deploy cloud based robotic simulations. Built from the [official Ubuntu image](https://registry.hub.docker.com/_/ubuntu/) and Gazebo's official Debian packages, it includes recent supported releases for quick access and download. This provides roboticists in research and industry with an easy way to develop continuous integration and testing on training for autonomous actions and task planning, control dynamics and regions of stability, kinematic modeling and prototype characterization, localization and mapping algorithms, swarm behavior and networking, as well as general system integration and validation.
+This dockerized image of Gazebo is intended to provide a simplified and consistent platform to build and deploy cloud based robotic simulations. Built from the [official Ubuntu image](https://hub.docker.com/_/ubuntu/) and Gazebo's official Debian packages, it includes recent supported releases for quick access and download. This provides roboticists in research and industry with an easy way to develop continuous integration and testing on training for autonomous actions and task planning, control dynamics and regions of stability, kinematic modeling and prototype characterization, localization and mapping algorithms, swarm behavior and networking, as well as general system integration and validation.
 
 Conducting such complex simulations with high validity remains computationally demanding, and oftentimes outside the capacity of a modest local workstation. With the added complexity of the algorithms being benchmarked, we can soon exceed the capacity of even the most formidable servers. This is why a more distributed approach remains attractive for those who begin to encounter limitations of a centralized computing host. However, the added complication of building and maintaining a distributed testbed over a set of clusters has for a while required more time and effort than many smaller labs and businesses would have deemed appropriate to implement.
 
@@ -104,7 +109,7 @@ One thing to be careful about is that gzserver logs to files named `/root/.gazeb
 
 ### Devices
 
-As of Gazebo version 5.0, physics simulation under a headless instances of gzserver works fine. However some application may require image rendering camera views and ray traces for other sensor modalities. For Gazebo, this requires a running X server for rendering and capturing scenes. In addition, graphical hardware acceleration is also needed for reasonable realtime framerates. To this extent, mounting additional graphic devices into the container and linking to a running X server is required. In the interest of maintaining a general purpose and minimalistic image which is not tightly coupled to host system software and hardware, we do not include tags here with these additional requirements and instructions. You can however use this repo to build and customize your own images to fit your software/hardware configuration. The OSRF's Docker Hub organization profile contains a Gazebo repo at [osrf/gazebo](https://registry.hub.docker.com/u/osrf/gazebo/) which is based on this repo but includes additional tags for these advanced use cases.
+As of Gazebo version 5.0, physics simulation under a headless instances of gzserver works fine. However some application may require image rendering camera views and ray traces for other sensor modalities. For Gazebo, this requires a running X server for rendering and capturing scenes. In addition, graphical hardware acceleration is also needed for reasonable realtime framerates. To this extent, mounting additional graphic devices into the container and linking to a running X server is required. In the interest of maintaining a general purpose and minimalistic image which is not tightly coupled to host system software and hardware, we do not include tags here with these additional requirements and instructions. You can however use this repo to build and customize your own images to fit your software/hardware configuration. The OSRF's Docker Hub organization profile contains a Gazebo repo at [osrf/gazebo](https://hub.docker.com/u/osrf/gazebo/) which is based on this repo but includes additional tags for these advanced use cases.
 
 ### Development
 

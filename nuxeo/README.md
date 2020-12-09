@@ -14,24 +14,25 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`7.10`, `7`, `LTS-2015` (*7.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/b5c1f07464530ef23f78671547cfbe94bc027848/7.10/Dockerfile)
--	[`8.10`, `8`, `LTS-2016` (*8.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/410650daecfa5d8bc79dea54a875d16f47b80eda/8.10/Dockerfile)
--	[`9.10`, `9`, `LTS-2017`, `LTS` (*9.10/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/5c0031a6e7ac1f52a9ce80b26fd8e764d319a8b0/9.10/Dockerfile)
--	[`10.1` (*10.1/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/410650daecfa5d8bc79dea54a875d16f47b80eda/10.1/Dockerfile)
--	[`10.2`, `10`, `FT`, `latest` (*10.2/Dockerfile*)](https://github.com/nuxeo/docker-nuxeo/blob/5c0031a6e7ac1f52a9ce80b26fd8e764d319a8b0/10.2/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/nuxeo/docker-nuxeo/issues](https://github.com/nuxeo/docker-nuxeo/issues)
 
 -	**Maintained by**:  
 	[Nuxeo](https://github.com/nuxeo/docker-nuxeo)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`7.10`, `7`, `LTS-2015`](https://github.com/nuxeo/docker-nuxeo/blob/f253a2398dbc39b42ca6ff84f2adeda8c1e8287e/7.10/Dockerfile)
+-	[`8.10`, `8`, `LTS-2016`](https://github.com/nuxeo/docker-nuxeo/blob/f253a2398dbc39b42ca6ff84f2adeda8c1e8287e/8.10/Dockerfile)
+-	[`9.10`, `9`, `LTS-2017`](https://github.com/nuxeo/docker-nuxeo/blob/f253a2398dbc39b42ca6ff84f2adeda8c1e8287e/9.10/Dockerfile)
+-	[`10.10`, `10`, `LTS-2019`, `LTS`, `FT`, `latest`](https://github.com/nuxeo/docker-nuxeo/blob/f253a2398dbc39b42ca6ff84f2adeda8c1e8287e/10.10/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/nuxeo/docker-nuxeo/issues](https://github.com/nuxeo/docker-nuxeo/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/nuxeo/)
@@ -46,9 +47,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `nuxeo/` directory](https://github.com/docker-library/docs/tree/master/nuxeo) ([history](https://github.com/docker-library/docs/commits/master/nuxeo))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Nuxeo ?
 

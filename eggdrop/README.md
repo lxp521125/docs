@@ -14,24 +14,26 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`develop` (*develop/Dockerfile*)](https://github.com/eggheads/eggdrop-docker/blob/ddce2eb37613df4388aae6356e10d471edf112f6/develop/Dockerfile)
--	[`1.8`, `1.8.3`, `stable`, `latest` (*1.8/Dockerfile*)](https://github.com/eggheads/eggdrop-docker/blob/68e421d4e8f87301d921c84548407ec340f0b8ed/1.8/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/eggheads/eggdrop-docker/issues](https://github.com/eggheads/eggdrop-docker/issues)
 
 -	**Maintained by**:  
 	[Eggheads (the Eggdrop community)](https://github.com/eggheads/eggdrop-docker)
 
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`develop`](https://github.com/eggheads/eggdrop-docker/blob/55cd1e0c2b72fe228a8ec93be968e848568c75b3/develop/Dockerfile)
+-	[`1.8`, `1.8.4`, `stable`, `latest`](https://github.com/eggheads/eggdrop-docker/blob/14411e45f599536a86d9f023c0fa09f3dd2f5454/1.8/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/eggheads/eggdrop-docker/issues](https://github.com/eggheads/eggdrop-docker/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/eggdrop/)
+	[`amd64`](https://hub.docker.com/r/amd64/eggdrop/), [`arm32v6`](https://hub.docker.com/r/arm32v6/eggdrop/), [`arm64v8`](https://hub.docker.com/r/arm64v8/eggdrop/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/eggdrop/` directory](https://github.com/docker-library/repo-info/blob/master/repos/eggdrop) ([history](https://github.com/docker-library/repo-info/commits/master/repos/eggdrop))  
@@ -44,14 +46,11 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `eggdrop/` directory](https://github.com/docker-library/docs/tree/master/eggdrop) ([history](https://github.com/docker-library/docs/commits/master/eggdrop))
 
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
-
 # What is Eggdrop?
 
 Eggdrop is the world's most popular Open Source IRC bot, designed for flexibility and ease of use, and is freely distributable under the GNU General Public License (GPL). It is designed to Linux, BSD, SunOs, Windows, and Mac OS X, among others. The core codebase is extendable via TCL scripts or C modules and bots can be linked to form botnets, enabling the sharing of userfiles and partylines across multiple bots.
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/d36235b330f3945d48c230eb58f3ea8319b6d985/eggdrop/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/c100057041a160e73a879916f2d88762cc7a01ec/eggdrop/logo.png)
 
 # How to use this image
 

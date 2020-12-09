@@ -14,21 +14,23 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`1.10.1`, `1.10`, `1`, `1.10.1-apache`, `1.10-apache`, `1-apache`, `apache`, `latest` (*1/apache/Dockerfile*)](https://github.com/backdrop-ops/backdrop-docker/blob/e087df48230ef2ad3a7c7c3b135f412b112af6a0/1/apache/Dockerfile)
--	[`1.10.1-fpm`, `1.10-fpm`, `1-fpm`, `fpm` (*1/fpm/Dockerfile*)](https://github.com/backdrop-ops/backdrop-docker/blob/e087df48230ef2ad3a7c7c3b135f412b112af6a0/1/fpm/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/backdrop-ops/backdrop-docker/issues](https://github.com/backdrop-ops/backdrop-docker/issues)
 
 -	**Maintained by**:  
 	[Backdrop Ops](https://github.com/backdrop-ops/backdrop-docker)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.17.3`, `1.17`, `1`, `1.17.3-apache`, `1.17-apache`, `1-apache`, `apache`, `latest`](https://github.com/backdrop-ops/backdrop-docker/blob/b760ba970a67f3dcdc975ed8b77f915895184577/1/apache/Dockerfile)
+-	[`1.17.3-fpm`, `1.17-fpm`, `1-fpm`, `fpm`](https://github.com/backdrop-ops/backdrop-docker/blob/b760ba970a67f3dcdc975ed8b77f915895184577/1/fpm/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/backdrop-ops/backdrop-docker/issues](https://github.com/backdrop-ops/backdrop-docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/backdrop/), [`arm64v8`](https://hub.docker.com/r/arm64v8/backdrop/)
@@ -43,9 +45,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `backdrop/` directory](https://github.com/docker-library/docs/tree/master/backdrop) ([history](https://github.com/docker-library/docs/commits/master/backdrop))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is Backdrop CMS?
 
@@ -126,7 +125,6 @@ If you need additional PHP extensions, you'll need to create your own image `FRO
 The following Docker Hub features can help with the task of keeping your dependent images up-to-date:
 
 -	[Automated Builds](https://docs.docker.com/docker-hub/builds/) let Docker Hub automatically build your Dockerfile each time you push changes to it.
--	[Repository Links](https://docs.docker.com/docker-hub/builds/#repository-links) can ensure that your image is also rebuilt any time `backdrop` is updated.
 
 # License
 

@@ -14,27 +14,29 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.0.6`, `3.0`, `latest` (*Dockerfile*)](https://github.com/crate/docker-crate/blob/336fa520f4ca97a2839ae70c5181dfb34199af83/Dockerfile)
--	[`2.3.11`, `2.3` (*Dockerfile*)](https://github.com/crate/docker-crate/blob/f15780fc923017c66040c4baf79f2efd506655ac/Dockerfile)
--	[`2.2.7`, `2.2` (*Dockerfile*)](https://github.com/crate/docker-crate/blob/771c9b60ffbb03c2692e09a2539c7411327d7e3d/Dockerfile)
--	[`2.1.10`, `2.1` (*Dockerfile*)](https://github.com/crate/docker-crate/blob/ed8cda8b567628dd733716dc5c8f507512587783/Dockerfile)
--	[`2.0.7`, `2.0` (*Dockerfile*)](https://github.com/crate/docker-crate/blob/79d51bb263104ccd2d3c57a5d74c16d6f0466d21/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[project documentation](https://crate.io/docs/), [StackOverflow](https://stackoverflow.com/tags/crate), [Slack](https://crate.io/docs/support/slackin/), or [paid support](https://crate.io/pricing/)
-
--	**Where to file issues**:  
-	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues)
 
 -	**Maintained by**:  
 	[Crate.io](https://github.com/crate/docker-crate)
 
+-	**Where to get help**:  
+	[project documentation](https://crate.io/docs/), [StackOverflow](https://stackoverflow.com/tags/crate), [Slack](https://crate.io/docs/support/slackin/), or [paid support](https://crate.io/pricing/)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`4.3.2`, `4.3`, `latest`](https://github.com/crate/docker-crate/blob/3bd1674c253ce5130adbd4808d4b21d39bac4a31/Dockerfile)
+-	[`4.2.7`, `4.2`](https://github.com/crate/docker-crate/blob/441cd8bb0115a268f30633839bc29d813dfaa0db/Dockerfile)
+-	[`4.1.8`, `4.1`](https://github.com/crate/docker-crate/blob/fbe46a3c699dfe79242e659626a39b09325d58ab/Dockerfile)
+-	[`4.0.12`, `4.0`](https://github.com/crate/docker-crate/blob/7791cda08fbf054ab2ce7a988f8811074b8c3bf4/Dockerfile)
+-	[`3.3.5`, `3.3`](https://github.com/crate/docker-crate/blob/896c3f63e8e3d4746019e379a7aefb5225b050e3/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues)
+
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/crate/)
+	[`amd64`](https://hub.docker.com/r/amd64/crate/), [`arm64v8`](https://hub.docker.com/r/arm64v8/crate/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/crate/` directory](https://github.com/docker-library/repo-info/blob/master/repos/crate) ([history](https://github.com/docker-library/repo-info/commits/master/repos/crate))  
@@ -46,9 +48,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `crate/` directory](https://github.com/docker-library/docs/tree/master/crate) ([history](https://github.com/docker-library/docs/commits/master/crate))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/0d4ccc1c0a00a99c3302ffeb17831225cbba7863/crate/logo.png)
 
@@ -71,14 +70,15 @@ The smallest CrateDB clusters can easily ingest tens of thousands of records per
 
 Spin up this Docker image like so:
 
-	$ docker run -p 4200:4200 crate
+```console
+$ docker run -p 4200:4200 crate
+```
 
-Once you're up and running, head on over to [the introductory docs](https://crate.io/docs/stable/hello.html).
+Once you're up and running, head on over to [the introductory docs](https://crate.io/docs/crate/getting-started/en/latest/first-use/index.html).
 
-Read more:
+See also:
 
--	[Getting Started With CrateDB on Docker](https://crate.io/docs/install/containers/docker/)
--	[CrateDB Docker Best Practices](https://crate.io/docs/reference/best_practice/docker.html)
+-	[Getting Started With CrateDB on Docker](https://crate.io/docs/crate/guide/en/latest/deployment/containers/docker.html)
 
 ## Issues
 
@@ -96,13 +96,13 @@ For issues with CrateDB itself, report issues via [the `crate` GitHub issue trac
 
 This image is primarily maintained by [Crate.io](http://crate.io/), but we welcome community contributions!
 
-See the [developer docs](https://github.com/crate/docker-crateblob/master/DEVELOP.rst) and the [contribution docs](https://github.com/crate/docker-crate/blob/master/CONTRIBUTING.rst) for more information.
+See the [developer docs](https://github.com/crate/docker-crate/blob/master/DEVELOP.rst) and the [contribution docs](https://github.com/crate/docker-crate/blob/master/CONTRIBUTING.rst) for more information.
 
 # License
 
-CrateDB is an open core project.
+CrateDB is licensed under the Apache License 2.0.
 
-See the CrateDB [licensing docs](https://github.com/crate/crate/blob/master/LICENSE.txt) for more information.
+See [LICENSE](https://github.com/crate/crate/blob/master/LICENSE) for more information.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

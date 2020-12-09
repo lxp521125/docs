@@ -14,22 +14,24 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`3.13.0.11` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/29be954f3d764ae15f0666c39fc14b55f13f1033/Dockerfile)
--	[`4.1.0.6` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/a81b7f4213525aae9028b6904b51cc636102290e/Dockerfile)
--	[`4.3.0.7`, `latest` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/d2fa950e7cb5c10ccc39d778b2aef233440a855a/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[the Aerospike Forums](https://discuss.aerospike.com) or [GitHub](https://github.com/aerospike/aerospike-server.docker/issues)
 
 -	**Maintained by**:  
 	[Aerospike, Inc.](https://github.com/aerospike/aerospike-server.docker)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`5.0.0.21`](https://github.com/aerospike/aerospike-server.docker/blob/0bd0c72938c85e9d7c1c0772f56b7aeb26df0a75/Dockerfile)
+-	[`5.1.0.18`](https://github.com/aerospike/aerospike-server.docker/blob/fcea10ee32ac3373dad5ecd5e3a6b768d0ab6085/Dockerfile)
+-	[`5.2.0.10`, `latest`](https://github.com/aerospike/aerospike-server.docker/blob/8cf11d9fbdf528f40a44db1b040687e785634b9b/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[the Aerospike Forums](https://discuss.aerospike.com) or [GitHub](https://github.com/aerospike/aerospike-server.docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/aerospike/)
@@ -44,9 +46,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `aerospike/` directory](https://github.com/docker-library/docs/tree/master/aerospike) ([history](https://github.com/docker-library/docs/commits/master/aerospike))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # Aerospike
 
@@ -111,6 +110,8 @@ A full example:
 ```console
 $ docker run -d -v <DIRECTORY>:/opt/aerospike/data --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 aerospike
 ```
+
+**Note:** As of version 5.1.0.10 the Dockerfile no longer has /opt/aerospike/data as a Docker Volume by default.
 
 ## Clustering
 

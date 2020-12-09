@@ -14,21 +14,23 @@ WARNING:
 
 -->
 
-# Supported tags and respective `Dockerfile` links
-
--	[`latest`, `7.7.19` (*7.7.19/stretch/Dockerfile*)](https://github.com/SWI-Prolog/docker-swipl/blob/1e124ba47bcc2ff0eaa7c357543bbdf723050025/7.7.19/stretch/Dockerfile)
--	[`stable`, `7.6.4` (*7.6.4/stretch/Dockerfile*)](https://github.com/SWI-Prolog/docker-swipl/blob/1e124ba47bcc2ff0eaa7c357543bbdf723050025/7.6.4/stretch/Dockerfile)
-
 # Quick reference
-
--	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://blog.docker.com/2016/11/introducing-docker-community-directory-docker-community-slack/), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
-
--	**Where to file issues**:  
-	[https://github.com/SWI-Prolog/docker-swipl/issues](https://github.com/SWI-Prolog/docker-swipl/issues)
 
 -	**Maintained by**:  
 	[the SWI-Prolog community](https://github.com/SWI-Prolog/docker-swipl)
+
+-	**Where to get help**:  
+	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`latest`, `8.3.13`](https://github.com/SWI-Prolog/docker-swipl/blob/09749734edb1e4c567a93e5e713b4004fd589a53/8.3.13/stretch/Dockerfile)
+-	[`stable`, `8.2.3`](https://github.com/SWI-Prolog/docker-swipl/blob/09749734edb1e4c567a93e5e713b4004fd589a53/8.2.3/stretch/Dockerfile)
+
+# Quick reference (cont.)
+
+-	**Where to file issues**:  
+	[https://github.com/SWI-Prolog/docker-swipl/issues](https://github.com/SWI-Prolog/docker-swipl/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/swipl/), [`arm32v7`](https://hub.docker.com/r/arm32v7/swipl/), [`arm64v8`](https://hub.docker.com/r/arm64v8/swipl/)
@@ -43,9 +45,6 @@ WARNING:
 
 -	**Source of this description**:  
 	[docs repo's `swipl/` directory](https://github.com/docker-library/docs/tree/master/swipl) ([history](https://github.com/docker-library/docs/commits/master/swipl))
-
--	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest) (down to 1.6 on a best-effort basis)
 
 # What is SWI-Prolog?
 
