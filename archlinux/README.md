@@ -24,8 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `base`, `base-20201206.0.10501`](https://github.com/archlinux/archlinux-docker/blob/68b39814a97dba78c3bc5b64d7b97211a13076c7/Dockerfile.base)
--	[`base-devel`, `base-devel-20201206.0.10501`](https://github.com/archlinux/archlinux-docker/blob/68b39814a97dba78c3bc5b64d7b97211a13076c7/Dockerfile.base-devel)
+-	[`latest`, `base`, `base-20210509.0.21942`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/4b7822867a5c6e2627e653881c0c330a0e69b1be/Dockerfile.base)
+-	[`base-devel`, `base-devel-20210509.0.21942`](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/blob/4b7822867a5c6e2627e653881c0c330a0e69b1be/Dockerfile.base-devel)
 
 # Quick reference (cont.)
 
@@ -40,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/archlinux`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Farchlinux)  
+	[official-images repo's `library/archlinux` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Farchlinux)  
 	[official-images repo's `library/archlinux` file](https://github.com/docker-library/official-images/blob/master/library/archlinux) ([history](https://github.com/docker-library/official-images/commits/master/library/archlinux))
 
 -	**Source of this description**:  
@@ -69,9 +69,11 @@ This image is intended to serve the following goals:
 -	`pacman` needs to work out of the box
 -	All installed packages have to be kept unmodified
 
+> ⚠️⚠️⚠️ NOTE: For Security Reasons, these images strip the pacman lsign key. This is because the same key would be spread to all containers of the same image, allowing for malicious actors to inject packages (via, for example, a man-in-the-middle). In order to create an lsign-key run `pacman-key --init` on the first execution, but be careful to not redistribute that key. ⚠️⚠️⚠️
+
 ## Availability
 
-Root filesystem tarballs are [provided by our GitLab](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/releases) for at least a year.
+Root filesystem tarballs are [provided by our GitLab](https://gitlab.archlinux.org/archlinux/archlinux-docker/-/releases) for at least two months.
 
 ## Updating
 

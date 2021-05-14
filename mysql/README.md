@@ -24,9 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.0.22`, `8.0`, `8`, `latest`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/8.0/Dockerfile.debian)
--	[`5.7.32`, `5.7`, `5`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/5.7/Dockerfile.debian)
--	[`5.6.50`, `5.6`](https://github.com/docker-library/mysql/blob/ee33a2144a0effe9459abf02f20a6202ae645e94/5.6/Dockerfile.debian)
+-	[`8.0.25`, `8.0`, `8`, `latest`](https://github.com/docker-library/mysql/blob/a09a716a88ce34a17e16df3f8b091066d90e6f34/8.0/Dockerfile.debian)
+-	[`5.7.34`, `5.7`, `5`](https://github.com/docker-library/mysql/blob/b11f06b0d202e7b0f97b000e158fc4fc869d2194/5.7/Dockerfile.debian)
+-	[`5.6.51`, `5.6`](https://github.com/docker-library/mysql/blob/43ee7daebca3af6cb13ae3032b2a4e6f642c7233/5.6/Dockerfile.debian)
 
 # Quick reference (cont.)
 
@@ -41,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/mysql`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fmysql)  
+	[official-images repo's `library/mysql` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fmysql)  
 	[official-images repo's `library/mysql` file](https://github.com/docker-library/official-images/blob/master/library/mysql) ([history](https://github.com/docker-library/official-images/commits/master/library/mysql))
 
 -	**Source of this description**:  

@@ -24,9 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.11.2`, `1.11`, `latest`](https://github.com/erlef/docker-elixir/blob/f226e68615d6955ee311b8d613c3c8ca843e9f51/1.11/Dockerfile)
--	[`1.11.2-slim`, `1.11-slim`, `slim`](https://github.com/erlef/docker-elixir/blob/f226e68615d6955ee311b8d613c3c8ca843e9f51/1.11/slim/Dockerfile)
--	[`1.11.2-alpine`, `1.11-alpine`, `alpine`](https://github.com/erlef/docker-elixir/blob/f226e68615d6955ee311b8d613c3c8ca843e9f51/1.11/alpine/Dockerfile)
+-	[`1.12.0-rc.1`, `1.12.0-rc`, `1.12`](https://github.com/erlef/docker-elixir/blob/33fd7ec657db1995822f5c36fc3a33daf4028b41/1.12/Dockerfile)
+-	[`1.12.0-rc.1-slim`, `1.12.0-rc-slim`, `1.12-slim`](https://github.com/erlef/docker-elixir/blob/33fd7ec657db1995822f5c36fc3a33daf4028b41/1.12/slim/Dockerfile)
+-	[`1.12.0-rc.1-alpine`, `1.12.0-rc-alpine`, `1.12-alpine`](https://github.com/erlef/docker-elixir/blob/33fd7ec657db1995822f5c36fc3a33daf4028b41/1.12/alpine/Dockerfile)
+-	[`1.11.4`, `1.11`, `latest`](https://github.com/erlef/docker-elixir/blob/045351a425a16578309053fa8f729f046fcd616f/1.11/Dockerfile)
+-	[`1.11.4-slim`, `1.11-slim`, `slim`](https://github.com/erlef/docker-elixir/blob/045351a425a16578309053fa8f729f046fcd616f/1.11/slim/Dockerfile)
+-	[`1.11.4-alpine`, `1.11-alpine`, `alpine`](https://github.com/erlef/docker-elixir/blob/045351a425a16578309053fa8f729f046fcd616f/1.11/alpine/Dockerfile)
 -	[`1.10.4`, `1.10`](https://github.com/erlef/docker-elixir/blob/a8d582c328db5864a4e8e5f869900e3a52265f38/1.10/Dockerfile)
 -	[`1.10.4-slim`, `1.10-slim`](https://github.com/erlef/docker-elixir/blob/a8d582c328db5864a4e8e5f869900e3a52265f38/1.10/slim/Dockerfile)
 -	[`1.10.4-alpine`, `1.10-alpine`](https://github.com/erlef/docker-elixir/blob/a8d582c328db5864a4e8e5f869900e3a52265f38/1.10/alpine/Dockerfile)
@@ -60,7 +63,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/elixir`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Felixir)  
+	[official-images repo's `library/elixir` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Felixir)  
 	[official-images repo's `library/elixir` file](https://github.com/docker-library/official-images/blob/master/library/elixir) ([history](https://github.com/docker-library/official-images/commits/master/library/elixir))
 
 -	**Source of this description**:  
@@ -121,7 +124,7 @@ This image does not contain the common packages contained in the default tag and
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

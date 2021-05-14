@@ -24,9 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`14.0`, `14`, `latest`](https://github.com/odoo/docker/blob/a825afde09db9b5c3c4a0faae782c0381b13b68c/14.0/Dockerfile)
--	[`13.0`, `13`](https://github.com/odoo/docker/blob/a825afde09db9b5c3c4a0faae782c0381b13b68c/13.0/Dockerfile)
--	[`12.0`, `12`](https://github.com/odoo/docker/blob/a825afde09db9b5c3c4a0faae782c0381b13b68c/12.0/Dockerfile)
+-	[`14.0`, `14`, `latest`](https://github.com/odoo/docker/blob/c963853d004e7cb517e8229b60fd3e29197fdac9/14.0/Dockerfile)
+-	[`13.0`, `13`](https://github.com/odoo/docker/blob/c963853d004e7cb517e8229b60fd3e29197fdac9/13.0/Dockerfile)
+-	[`12.0`, `12`](https://github.com/odoo/docker/blob/c963853d004e7cb517e8229b60fd3e29197fdac9/12.0/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/odoo`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fodoo)  
+	[official-images repo's `library/odoo` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fodoo)  
 	[official-images repo's `library/odoo` file](https://github.com/docker-library/official-images/blob/master/library/odoo) ([history](https://github.com/docker-library/official-images/commits/master/library/odoo))
 
 -	**Source of this description**:  

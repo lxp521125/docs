@@ -24,9 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.0`, `3.0-20201204`, `latest`](https://github.com/vmware/photon-docker-image/blob/9b8756336cdf84b336cb74b215ebb46ed55b62dd/docker/Dockerfile)
--	[`1.0`, `1.0-20201204`](https://github.com/vmware/photon-docker-image/blob/1c71e58c4514743ba3292982626f1c658f9ce481/docker/Dockerfile)
--	[`2.0`, `2.0-20201204`](https://github.com/vmware/photon-docker-image/blob/d7387870d451064200b4cea4bf774e73090debdb/docker/Dockerfile)
+-	[`4.0`, `4.0-20210507`, `latest`](https://github.com/vmware/photon-docker-image/blob/0946ba23a6f379b97e8c7be5493955c7961cea49/docker/Dockerfile)
+-	[`3.0`, `3.0-20210507`](https://github.com/vmware/photon-docker-image/blob/9375b515a96dc0687b6c15a93846bd4d2210dc24/docker/Dockerfile)
+-	[`1.0`, `1.0-20210507`](https://github.com/vmware/photon-docker-image/blob/8eae252d6026af1f857306d0252adaf40ce1787f/docker/Dockerfile)
+-	[`2.0`, `2.0-20210507`](https://github.com/vmware/photon-docker-image/blob/871db7b6c52fbb06e143b8992da68ee0b283ae4e/docker/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +42,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/photon`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fphoton)  
+	[official-images repo's `library/photon` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fphoton)  
 	[official-images repo's `library/photon` file](https://github.com/docker-library/official-images/blob/master/library/photon) ([history](https://github.com/docker-library/official-images/commits/master/library/photon))
 
 -	**Source of this description**:  

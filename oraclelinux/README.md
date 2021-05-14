@@ -24,12 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.3`, `8`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/8.3/Dockerfile)
--	[`8-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/8-slim/Dockerfile)
--	[`7.9`, `7`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/7.9/Dockerfile)
--	[`7-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/7-slim/Dockerfile)
--	[`6.10`, `6`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/6.10/Dockerfile)
--	[`6-slim`](https://github.com/oracle/container-images/blob/0ea52ec02766faf5863ac51e86adecb74af134e4/6-slim/Dockerfile)
+-	[`8.3`, `8`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/8/Dockerfile)
+-	[`8-slim`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/8-slim/Dockerfile)
+-	[`7.9`, `7`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/7/Dockerfile)
+-	[`7-slim`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/7-slim/Dockerfile)
+-	[`6.10`, `6`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/6/Dockerfile)
+-	[`6-slim`](https://github.com/oracle/container-images/blob/d802bc3d20be30b74c4600beef73eb8b233d9664/6-slim/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -44,7 +44,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/oraclelinux`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Foraclelinux)  
+	[official-images repo's `library/oraclelinux` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Foraclelinux)  
 	[official-images repo's `library/oraclelinux` file](https://github.com/docker-library/official-images/blob/master/library/oraclelinux) ([history](https://github.com/docker-library/official-images/commits/master/library/oraclelinux))
 
 -	**Source of this description**:  

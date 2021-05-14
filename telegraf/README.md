@@ -24,12 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.14`, `1.14.5`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.14/Dockerfile)
--	[`1.14-alpine`, `1.14.5-alpine`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.14/alpine/Dockerfile)
--	[`1.15`, `1.15.4`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.15/Dockerfile)
--	[`1.15-alpine`, `1.15.4-alpine`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.15/alpine/Dockerfile)
--	[`1.16`, `1.16.3`, `latest`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.16/Dockerfile)
--	[`1.16-alpine`, `1.16.3-alpine`, `alpine`](https://github.com/influxdata/influxdata-docker/blob/da900619b14ddbf221e639b5108a7219af8b0bbc/telegraf/1.16/alpine/Dockerfile)
+-	[`1.16`, `1.16.3`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.16/Dockerfile)
+-	[`1.16-alpine`, `1.16.3-alpine`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.16/alpine/Dockerfile)
+-	[`1.17`, `1.17.3`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.17/Dockerfile)
+-	[`1.17-alpine`, `1.17.3-alpine`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.17/alpine/Dockerfile)
+-	[`1.18`, `1.18.2`, `latest`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.18/Dockerfile)
+-	[`1.18-alpine`, `1.18.2-alpine`, `alpine`](https://github.com/influxdata/influxdata-docker/blob/c8327f7fd14da8984ad8d5ba00ea13fad496b77f/telegraf/1.18/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -44,7 +44,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/telegraf`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Ftelegraf)  
+	[official-images repo's `library/telegraf` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Ftelegraf)  
 	[official-images repo's `library/telegraf` file](https://github.com/docker-library/official-images/blob/master/library/telegraf) ([history](https://github.com/docker-library/official-images/commits/master/library/telegraf))
 
 -	**Source of this description**:  
@@ -54,7 +54,7 @@ WARNING:
 
 Telegraf is an open source agent written in Go for collecting metrics and data on the system it's running on or from other services. Telegraf writes data it collects to InfluxDB in the correct format.
 
-[Telegraf Official Docs](https://docs.influxdata.com/telegraf/latest/introduction/getting_started/)
+[Telegraf Official Docs](https://docs.influxdata.com/telegraf/latest/introduction/getting-started/)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/43d87118415bb75d7bb107683e79cd6d69186f67/telegraf/logo.png)
 
@@ -318,7 +318,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

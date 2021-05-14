@@ -24,18 +24,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.5.3-php7.2-apache`, `5.5-php7.2-apache`, `5-php7.2-apache`, `php7.2-apache`, `5.5.3-php7.2`, `5.5-php7.2`, `5-php7.2`, `php7.2`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.2/apache/Dockerfile)
--	[`5.5.3-php7.2-fpm`, `5.5-php7.2-fpm`, `5-php7.2-fpm`, `php7.2-fpm`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.2/fpm/Dockerfile)
--	[`5.5.3-php7.2-fpm-alpine`, `5.5-php7.2-fpm-alpine`, `5-php7.2-fpm-alpine`, `php7.2-fpm-alpine`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.2/fpm-alpine/Dockerfile)
--	[`5.5.3-php7.3-apache`, `5.5-php7.3-apache`, `5-php7.3-apache`, `php7.3-apache`, `5.5.3-php7.3`, `5.5-php7.3`, `5-php7.3`, `php7.3`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.3/apache/Dockerfile)
--	[`5.5.3-php7.3-fpm`, `5.5-php7.3-fpm`, `5-php7.3-fpm`, `php7.3-fpm`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.3/fpm/Dockerfile)
--	[`5.5.3-php7.3-fpm-alpine`, `5.5-php7.3-fpm-alpine`, `5-php7.3-fpm-alpine`, `php7.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.3/fpm-alpine/Dockerfile)
--	[`5.5.3-apache`, `5.5-apache`, `5-apache`, `apache`, `5.5.3`, `5.5`, `5`, `latest`, `5.5.3-php7.4-apache`, `5.5-php7.4-apache`, `5-php7.4-apache`, `php7.4-apache`, `5.5.3-php7.4`, `5.5-php7.4`, `5-php7.4`, `php7.4`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.4/apache/Dockerfile)
--	[`5.5.3-fpm`, `5.5-fpm`, `5-fpm`, `fpm`, `5.5.3-php7.4-fpm`, `5.5-php7.4-fpm`, `5-php7.4-fpm`, `php7.4-fpm`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.4/fpm/Dockerfile)
--	[`5.5.3-fpm-alpine`, `5.5-fpm-alpine`, `5-fpm-alpine`, `fpm-alpine`, `5.5.3-php7.4-fpm-alpine`, `5.5-php7.4-fpm-alpine`, `5-php7.4-fpm-alpine`, `php7.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/5125491823651bcd691faf415d836f911fea09cd/php7.4/fpm-alpine/Dockerfile)
--	[`cli-2.4.0-php7.2`, `cli-2.4-php7.2`, `cli-2-php7.2`, `cli-php7.2`](https://github.com/docker-library/wordpress/blob/c0d11ed412fef07e748a5463041b7be0b5755dd6/php7.2/cli/Dockerfile)
--	[`cli-2.4.0-php7.3`, `cli-2.4-php7.3`, `cli-2-php7.3`, `cli-php7.3`](https://github.com/docker-library/wordpress/blob/c0d11ed412fef07e748a5463041b7be0b5755dd6/php7.3/cli/Dockerfile)
--	[`cli-2.4.0`, `cli-2.4`, `cli-2`, `cli`, `cli-2.4.0-php7.4`, `cli-2.4-php7.4`, `cli-2-php7.4`, `cli-php7.4`](https://github.com/docker-library/wordpress/blob/c0d11ed412fef07e748a5463041b7be0b5755dd6/php7.4/cli/Dockerfile)
+-	[`5.7.2-apache`, `5.7-apache`, `5-apache`, `apache`, `5.7.2`, `5.7`, `5`, `latest`, `5.7.2-php7.4-apache`, `5.7-php7.4-apache`, `5-php7.4-apache`, `php7.4-apache`, `5.7.2-php7.4`, `5.7-php7.4`, `5-php7.4`, `php7.4`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.4/apache/Dockerfile)
+-	[`5.7.2-fpm`, `5.7-fpm`, `5-fpm`, `fpm`, `5.7.2-php7.4-fpm`, `5.7-php7.4-fpm`, `5-php7.4-fpm`, `php7.4-fpm`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.4/fpm/Dockerfile)
+-	[`5.7.2-fpm-alpine`, `5.7-fpm-alpine`, `5-fpm-alpine`, `fpm-alpine`, `5.7.2-php7.4-fpm-alpine`, `5.7-php7.4-fpm-alpine`, `5-php7.4-fpm-alpine`, `php7.4-fpm-alpine`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.4/fpm-alpine/Dockerfile)
+-	[`5.7.2-php7.3-apache`, `5.7-php7.3-apache`, `5-php7.3-apache`, `php7.3-apache`, `5.7.2-php7.3`, `5.7-php7.3`, `5-php7.3`, `php7.3`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.3/apache/Dockerfile)
+-	[`5.7.2-php7.3-fpm`, `5.7-php7.3-fpm`, `5-php7.3-fpm`, `php7.3-fpm`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.3/fpm/Dockerfile)
+-	[`5.7.2-php7.3-fpm-alpine`, `5.7-php7.3-fpm-alpine`, `5-php7.3-fpm-alpine`, `php7.3-fpm-alpine`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php7.3/fpm-alpine/Dockerfile)
+-	[`5.7.2-php8.0-apache`, `5.7-php8.0-apache`, `5-php8.0-apache`, `php8.0-apache`, `5.7.2-php8.0`, `5.7-php8.0`, `5-php8.0`, `php8.0`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php8.0/apache/Dockerfile)
+-	[`5.7.2-php8.0-fpm`, `5.7-php8.0-fpm`, `5-php8.0-fpm`, `php8.0-fpm`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php8.0/fpm/Dockerfile)
+-	[`5.7.2-php8.0-fpm-alpine`, `5.7-php8.0-fpm-alpine`, `5-php8.0-fpm-alpine`, `php8.0-fpm-alpine`](https://github.com/docker-library/wordpress/blob/d6cedc3a993142ed4597579ad4084b9a81cd3e59/latest/php8.0/fpm-alpine/Dockerfile)
+-	[`cli-2.4.0`, `cli-2.4`, `cli-2`, `cli`, `cli-2.4.0-php7.4`, `cli-2.4-php7.4`, `cli-2-php7.4`, `cli-php7.4`](https://github.com/docker-library/wordpress/blob/6e068a27fd0f3885c04af0f0c40347bc34bbf569/cli/php7.4/alpine/Dockerfile)
+-	[`cli-2.4.0-php7.3`, `cli-2.4-php7.3`, `cli-2-php7.3`, `cli-php7.3`](https://github.com/docker-library/wordpress/blob/6e068a27fd0f3885c04af0f0c40347bc34bbf569/cli/php7.3/alpine/Dockerfile)
+-	[`cli-2.4.0-php8.0`, `cli-2.4-php8.0`, `cli-2-php8.0`, `cli-php8.0`](https://github.com/docker-library/wordpress/blob/ee3c59f90e29e2cf0087053a1d016c8186cab6ab/cli/php8.0/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -50,7 +50,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/wordpress`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fwordpress)  
+	[official-images repo's `library/wordpress` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fwordpress)  
 	[official-images repo's `library/wordpress` file](https://github.com/docker-library/official-images/blob/master/library/wordpress) ([history](https://github.com/docker-library/official-images/commits/master/library/wordpress))
 
 -	**Source of this description**:  
@@ -81,7 +81,7 @@ The following environment variables are also honored for configuring your WordPr
 -	`-e WORDPRESS_DEBUG=1` (defaults to disabled, non-empty value will enable `WP_DEBUG` in `wp-config.php`)
 -	`-e WORDPRESS_CONFIG_EXTRA=...` (defaults to nothing, non-empty value will be embedded verbatim inside `wp-config.php` -- especially useful for applying extra configuration values this image does not provide by default such as `WP_ALLOW_MULTISITE`; see [docker-library/wordpress#142](https://github.com/docker-library/wordpress/pull/142) for more details)
 
-If the `WORDPRESS_DB_NAME` specified does not already exist on the given MySQL server, it will be created automatically upon startup of the `wordpress` container, provided that the `WORDPRESS_DB_USER` specified has the necessary permissions to create it.
+The `WORDPRESS_DB_NAME` needs to already exist on the given MySQL server; it will not be created by the `wordpress` container.
 
 If you'd like to be able to access the instance from the host without the container's IP, standard port mappings can be used:
 
@@ -215,10 +215,15 @@ The simplest way to use it with an existing WordPress container would be somethi
 $ docker run -it --rm \
 	--volumes-from some-wordpress \
 	--network container:some-wordpress \
+	-e WORDPRESS_DB_USER=... \
+	-e WORDPRESS_DB_PASSWORD=... \
+	# [and other used environment variables]
 	wordpress:cli user list
 ```
 
 Generally speaking, for WP-CLI to interact with a WordPress install, it needs access to the on-disk files of the WordPress install, and access to the database (and the easiest way to accomplish that such that `wp-config.php` does not require changes is to simply join the networking context of the existing and presumably working WordPress container, but there are many other ways to accomplish that which will be left as an exercise for the reader).
+
+**NOTE:** Since March 2021, WordPress images use a customized `wp-config.php` that pulls the values directly from the environment variables defined above (see `wp-config-docker.php` in [docker-library/wordpress#572](https://github.com/docker-library/wordpress/pull/572) and [docker-library/wordpress#577](https://github.com/docker-library/wordpress/pull/577)). As a result of reading environment variables directly, the cli container also needs the same set of environment variables to properly evaluate `wp-config.php`.
 
 # License
 

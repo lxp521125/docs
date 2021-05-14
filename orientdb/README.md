@@ -24,10 +24,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.1.5`, `3.1`, `latest`](https://github.com/orientechnologies/orientdb-docker/blob/ef0588f6e4663e8555fcf062c2e2409506685bc8/release/3.1.x/3.1.5/Dockerfile)
--	[`3.1.5-tp3`, `3.1-tp3`](https://github.com/orientechnologies/orientdb-docker/blob/ef0588f6e4663e8555fcf062c2e2409506685bc8/release/3.1.x/3.1.5-tp3/Dockerfile)
--	[`3.0.35`, `3.0`](https://github.com/orientechnologies/orientdb-docker/blob/ef0588f6e4663e8555fcf062c2e2409506685bc8/release/3.0.x/3.0.35/Dockerfile)
--	[`3.0.35-tp3`, `3.0-tp3`](https://github.com/orientechnologies/orientdb-docker/blob/ef0588f6e4663e8555fcf062c2e2409506685bc8/release/3.0.x/3.0.35-tp3/Dockerfile)
+-	[`3.2.0`, `3.2`, `latest`](https://github.com/orientechnologies/orientdb-docker/blob/870a9052b026d5789a8ade18dd0ef07416d56235/release/3.2.x/3.2.0/Dockerfile)
+-	[`3.1.11`, `3.1`](https://github.com/orientechnologies/orientdb-docker/blob/a724310f28b42828c189b42bf5c565fa8e5f7fb8/release/3.1.x/3.1.11/Dockerfile)
+-	[`3.1.11-tp3`, `3.1-tp3`](https://github.com/orientechnologies/orientdb-docker/blob/a724310f28b42828c189b42bf5c565fa8e5f7fb8/release/3.1.x/3.1.11-tp3/Dockerfile)
+-	[`3.0.37`, `3.0`](https://github.com/orientechnologies/orientdb-docker/blob/b9f85393f7c8a3c37dbde7c9015fc25fb5a9c433/release/3.0.x/3.0.37/Dockerfile)
+-	[`3.0.37-tp3`, `3.0-tp3`](https://github.com/orientechnologies/orientdb-docker/blob/b9f85393f7c8a3c37dbde7c9015fc25fb5a9c433/release/3.0.x/3.0.37-tp3/Dockerfile)
 -	[`2.2.37`, `2.2`](https://github.com/orientechnologies/orientdb-docker/blob/0562973e21d0992bc799dcb7b64b1978b7e32ac3/release/2.2.x/2.2.37/Dockerfile)
 -	[`2.2.37-spatial`](https://github.com/orientechnologies/orientdb-docker/blob/0562973e21d0992bc799dcb7b64b1978b7e32ac3/release/2.2.x/2.2.37-spatial/Dockerfile)
 -	[`2.1.25`, `2.1`](https://github.com/orientechnologies/orientdb-docker/blob/0562973e21d0992bc799dcb7b64b1978b7e32ac3/release/2.1.x/Dockerfile)
@@ -46,7 +47,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/orientdb`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Forientdb)  
+	[official-images repo's `library/orientdb` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Forientdb)  
 	[official-images repo's `library/orientdb` file](https://github.com/docker-library/official-images/blob/master/library/orientdb) ([history](https://github.com/docker-library/official-images/commits/master/library/orientdb))
 
 -	**Source of this description**:  

@@ -24,9 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.5`, `3.5.6`](https://github.com/arangodb/arangodb-docker/blob/0d0cc55233e8abb08f42e07cd82be9795b75c7c6/alpine/3.5.6/Dockerfile)
--	[`3.6`, `3.6.9`](https://github.com/arangodb/arangodb-docker/blob/dd22fb0b6c3e356edd6e722551ab79515898aa55/alpine/3.6.9/Dockerfile)
--	[`3.7`, `3.7.3`, `latest`](https://github.com/arangodb/arangodb-docker/blob/d65e5fd722b6e3263aa0379216e5871c3a3e77d3/alpine/3.7.3/Dockerfile)
+-	[`3.6`, `3.6.13`](https://github.com/arangodb/arangodb-docker/blob/293903ae4adcf22eaafcf427076a6e62010ab1ea/alpine/3.6.13/Dockerfile)
+-	[`3.7`, `3.7.11`, `latest`](https://github.com/arangodb/arangodb-docker/blob/19dbf1a2228a04765452f4160e33fa41317a7615/alpine/3.7.11/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/arangodb`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Farangodb)  
+	[official-images repo's `library/arangodb` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Farangodb)  
 	[official-images repo's `library/arangodb` file](https://github.com/docker-library/official-images/blob/master/library/arangodb) ([history](https://github.com/docker-library/official-images/commits/master/library/arangodb))
 
 -	**Source of this description**:  

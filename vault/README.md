@@ -24,9 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.6.0`, `latest`](https://github.com/hashicorp/docker-vault/blob/ba4a0bcb8341b04e565b83784a1acee9f7592f9a/0.X/Dockerfile)
--	[`1.5.5`](https://github.com/hashicorp/docker-vault/blob/a3036687e66bc4ddbdb97d43dc0cd71f0ccf3d31/0.X/Dockerfile)
--	[`1.4.7`](https://github.com/hashicorp/docker-vault/blob/e4635725bcf8ce18f9d8fd5be5a69bf882d21223/0.X/Dockerfile)
+-	[`1.7.1`, `latest`](https://github.com/hashicorp/docker-vault/blob/14d893cb83118fd3642e9e516f682c5e0e0a2c30/0.X/Dockerfile)
+-	[`1.6.4`](https://github.com/hashicorp/docker-vault/blob/88aeb655ea14e74bb9d9ae7e583f86c3e0d9a29f/0.X/Dockerfile)
+-	[`1.5.8`](https://github.com/hashicorp/docker-vault/blob/1c4258acc24265a26b0581929954ec112230fb8d/0.X/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/vault`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fvault)  
+	[official-images repo's `library/vault` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fvault)  
 	[official-images repo's `library/vault` file](https://github.com/docker-library/official-images/blob/master/library/vault) ([history](https://github.com/docker-library/official-images/commits/master/library/vault))
 
 -	**Source of this description**:  

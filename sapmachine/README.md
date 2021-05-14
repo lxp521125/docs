@@ -24,8 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`15`, `15.0.1`, `latest`](https://github.com/SAP/SapMachine-infrastructure/blob/836b0941086b06678b2323d056ac957cd8d0b10a/dockerfiles/official/stable/Dockerfile)
--	[`11`, `11.0.9.1`, `lts`](https://github.com/SAP/SapMachine-infrastructure/blob/26f260d947d20aa72799c1035f0c74285f6e0dee/dockerfiles/official/lts/Dockerfile)
+-	[`16`, `16.0.1`, `latest`](https://github.com/SAP/SapMachine-infrastructure/blob/0449b4147caed3eb6fcf46ef3301d12af13e819a/dockerfiles/official/stable/Dockerfile)
+-	[`11`, `11.0.11`, `lts`](https://github.com/SAP/SapMachine-infrastructure/blob/ee2eebb7494ba8ba3a18e43be50aac47913c310a/dockerfiles/official/lts/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/sapmachine`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fsapmachine)  
+	[official-images repo's `library/sapmachine` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fsapmachine)  
 	[official-images repo's `library/sapmachine` file](https://github.com/docker-library/official-images/blob/master/library/sapmachine) ([history](https://github.com/docker-library/official-images/commits/master/library/sapmachine))
 
 -	**Source of this description**:  

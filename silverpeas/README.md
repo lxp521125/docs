@@ -24,7 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6.1`, `latest`](https://github.com/Silverpeas/docker-silverpeas-prod/blob/7d002ee69a68f8a8f640ce7fbf7fd47b526123d0/Dockerfile)
+-	[`6.2`, `latest`](https://github.com/Silverpeas/docker-silverpeas-prod/blob/558d384db05b003735f876a2d8a96aa3d404bfb4/Dockerfile)
+-	[`6.1.3`](https://github.com/Silverpeas/docker-silverpeas-prod/blob/8577cb90ed86ef24248d1283f032c541a38d38ea/Dockerfile)
 -	[`6.0.2`](https://github.com/Silverpeas/docker-silverpeas-prod/blob/189a4f2db783d5052add54f2c07ca7a3b860c685/Dockerfile)
 
 # Quick reference (cont.)
@@ -40,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/silverpeas`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fsilverpeas)  
+	[official-images repo's `library/silverpeas` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fsilverpeas)  
 	[official-images repo's `library/silverpeas` file](https://github.com/docker-library/official-images/blob/master/library/silverpeas) ([history](https://github.com/docker-library/official-images/commits/master/library/silverpeas))
 
 -	**Source of this description**:  

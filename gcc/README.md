@@ -24,9 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`10.2.0`, `10.2`, `10`, `latest`](https://github.com/docker-library/gcc/blob/36c1ff6d7b44428b35fa8b61787c76b225d8184a/10/Dockerfile)
--	[`9.3.0`, `9.3`, `9`](https://github.com/docker-library/gcc/blob/05aef2fc627328e12bbf77aca44fd399a22c7fc4/9/Dockerfile)
--	[`8.4.0`, `8.4`, `8`](https://github.com/docker-library/gcc/blob/05aef2fc627328e12bbf77aca44fd399a22c7fc4/8/Dockerfile)
+-	[`11.1.0`, `11.1`, `11`, `latest`, `11.1.0-bullseye`, `11.1-bullseye`, `11-bullseye`, `bullseye`](https://github.com/docker-library/gcc/blob/a5937a0b39e55c174007c2b9c2f363cdd2142818/11/Dockerfile)
+-	[`10.3.0`, `10.3`, `10`, `10.3.0-buster`, `10.3-buster`, `10-buster`](https://github.com/docker-library/gcc/blob/a5937a0b39e55c174007c2b9c2f363cdd2142818/10/Dockerfile)
+-	[`9.3.0`, `9.3`, `9`, `9.3.0-buster`, `9.3-buster`, `9-buster`](https://github.com/docker-library/gcc/blob/a5937a0b39e55c174007c2b9c2f363cdd2142818/9/Dockerfile)
+-	[`8.4.0`, `8.4`, `8`, `8.4.0-buster`, `8.4-buster`, `8-buster`](https://github.com/docker-library/gcc/blob/a5937a0b39e55c174007c2b9c2f363cdd2142818/8/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +42,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/gcc`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fgcc)  
+	[official-images repo's `library/gcc` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fgcc)  
 	[official-images repo's `library/gcc` file](https://github.com/docker-library/official-images/blob/master/library/gcc) ([history](https://github.com/docker-library/official-images/commits/master/library/gcc))
 
 -	**Source of this description**:  

@@ -24,13 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8`, `8u275`, `8u275-al2`, `8-al2-full`, `8-al2-jdk`, `latest`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/8/jdk/al2/Dockerfile)
--	[`11`, `11.0.9`, `11.0.9-al2`, `11-al2-jdk`, `11-al2-full`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/11/jdk/al2/Dockerfile)
--	[`8-alpine`, `8u275-alpine`, `8-alpine-full`, `8-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/8/jdk/alpine/Dockerfile)
--	[`8-alpine-jre`, `8u275-alpine-jre`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/8/jre/alpine/Dockerfile)
--	[`11-alpine`, `11.0.9-alpine`, `11-alpine-full`, `11-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/11/jdk/alpine/Dockerfile)
--	[`15`, `15.0.1`, `15.0.1-al2`, `15-al2-jdk`, `15-al2-full`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/15/jdk/al2/Dockerfile)
--	[`15-alpine`, `15.0.1-alpine`, `15-alpine-full`, `15-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/89fdbc674c7102cec611f4de08b21c99c8a07cbd/15/jdk/alpine/Dockerfile)
+-	[`8`, `8u292`, `8u292-al2`, `8-al2-full`, `8-al2-jdk`, `latest`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/8/jdk/al2/Dockerfile)
+-	[`11`, `11.0.11`, `11.0.11-al2`, `11-al2-jdk`, `11-al2-full`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/11/jdk/al2/Dockerfile)
+-	[`8-alpine`, `8u292-alpine`, `8-alpine-full`, `8-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/8/jdk/alpine/Dockerfile)
+-	[`8-alpine-jre`, `8u282-alpine-jre`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/8/jre/alpine/Dockerfile)
+-	[`11-alpine`, `11.0.11-alpine`, `11-alpine-full`, `11-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/11/jdk/alpine/Dockerfile)
+-	[`16`, `16.0.1`, `16.0.1-al2`, `16-al2-jdk`, `16-al2-full`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/16/jdk/al2/Dockerfile)
+-	[`16-alpine`, `16.0.1-alpine`, `16-alpine-full`, `16-alpine-jdk`](https://github.com/corretto/corretto-docker/blob/4e2c302e3ba78f2d964fb82fce2e2d25a459d4ee/16/jdk/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -45,7 +45,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/amazoncorretto`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Famazoncorretto)  
+	[official-images repo's `library/amazoncorretto` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Famazoncorretto)  
 	[official-images repo's `library/amazoncorretto` file](https://github.com/docker-library/official-images/blob/master/library/amazoncorretto) ([history](https://github.com/docker-library/official-images/commits/master/library/amazoncorretto))
 
 -	**Source of this description**:  
@@ -93,7 +93,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

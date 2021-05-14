@@ -24,11 +24,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0-beta3`, `4.0`](https://github.com/docker-library/cassandra/blob/9cb81d5e734b89af2df9e5636e0c207c5f4609e5/4.0/Dockerfile)
--	[`3.11.9`, `3.11`, `3`, `latest`](https://github.com/docker-library/cassandra/blob/6fbb6ce475a028c26cd22ac91377887ce453910f/3.11/Dockerfile)
--	[`3.0.23`, `3.0`](https://github.com/docker-library/cassandra/blob/32e0b2dc80fa6d3e67da635b379cdf0620728143/3.0/Dockerfile)
--	[`2.2.19`, `2.2`, `2`](https://github.com/docker-library/cassandra/blob/cb366dd5fdac8654cd6ecab5b97419664a72cde7/2.2/Dockerfile)
--	[`2.1.22`, `2.1`](https://github.com/docker-library/cassandra/blob/ac677624ce2dd33c995a55755a2a1dc9918b9a4e/2.1/Dockerfile)
+-	[`4.0-rc1`, `4.0`](https://github.com/docker-library/cassandra/blob/f00a725cc0189ef166ac1d893227651bd81a6996/4.0/Dockerfile)
+-	[`3.11.10`, `3.11`, `3`, `latest`](https://github.com/docker-library/cassandra/blob/03bef93db2ff4b5a3cbc954618f08c44ddcb7568/3.11/Dockerfile)
+-	[`3.0.24`, `3.0`](https://github.com/docker-library/cassandra/blob/03bef93db2ff4b5a3cbc954618f08c44ddcb7568/3.0/Dockerfile)
+-	[`2.2.19`, `2.2`, `2`](https://github.com/docker-library/cassandra/blob/03bef93db2ff4b5a3cbc954618f08c44ddcb7568/2.2/Dockerfile)
+-	[`2.1.22`, `2.1`](https://github.com/docker-library/cassandra/blob/03bef93db2ff4b5a3cbc954618f08c44ddcb7568/2.1/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -43,7 +43,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/cassandra`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fcassandra)  
+	[official-images repo's `library/cassandra` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fcassandra)  
 	[official-images repo's `library/cassandra` file](https://github.com/docker-library/official-images/blob/master/library/cassandra) ([history](https://github.com/docker-library/official-images/commits/master/library/cassandra))
 
 -	**Source of this description**:  

@@ -24,18 +24,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.0.6-jdk8`, `3.0-jdk8`, `3.0.6-jdk`, `3.0-jdk`, `jdk8`, `jdk`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jdk8/Dockerfile)
--	[`3.0.6-jre8`, `3.0-jre8`, `3.0.6-jre`, `3.0-jre`, `3.0.6`, `3.0`, `jre8`, `jre`, `latest`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jre8/Dockerfile)
--	[`3.0.6-jdk11`, `3.0-jdk11`, `jdk11`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jdk11/Dockerfile)
--	[`3.0.6-jre11`, `3.0-jre11`, `jre11`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jre11/Dockerfile)
--	[`3.0.6-jdk15`, `3.0-jdk15`, `jdk15`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jdk15/Dockerfile)
--	[`3.0.6-jre15`, `3.0-jre15`, `jre15`](https://github.com/groovy/docker-groovy/blob/a48a3fed614ad8a42f555cf6a5a8299ec47b658e/jre15/Dockerfile)
--	[`4.0.0-alpha-2-jdk8`, `4.0-jdk8`, `4.0.0-alpha-2-jdk`, `4.0-jdk`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jdk8/Dockerfile)
--	[`4.0.0-alpha-2-jre8`, `4.0-jre8`, `4.0.0-alpha-2-jre`, `4.0-jre`, `4.0.0-alpha-2`, `4.0`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jre8/Dockerfile)
--	[`4.0.0-alpha-2-jdk11`, `4.0-jdk11`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jdk11/Dockerfile)
--	[`4.0.0-alpha-2-jre11`, `4.0-jre11`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jre11/Dockerfile)
--	[`4.0.0-alpha-2-jdk15`, `4.0-jdk15`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jdk15/Dockerfile)
--	[`4.0.0-alpha-2-jre15`, `4.0-jre15`](https://github.com/groovy/docker-groovy/blob/a5bc6d96b7e8a8bd82439fdaa048c222229d82ec/jre15/Dockerfile)
+-	[`3.0.8-jdk8`, `3.0-jdk8`, `3.0.8-jdk`, `3.0-jdk`, `jdk8`, `jdk`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jdk8/Dockerfile)
+-	[`3.0.8-jre8`, `3.0-jre8`, `3.0.8-jre`, `3.0-jre`, `3.0.8`, `3.0`, `jre8`, `jre`, `latest`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jre8/Dockerfile)
+-	[`3.0.8-jdk11`, `3.0-jdk11`, `jdk11`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jdk11/Dockerfile)
+-	[`3.0.8-jre11`, `3.0-jre11`, `jre11`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jre11/Dockerfile)
+-	[`3.0.8-jdk16`, `3.0-jdk16`, `jdk16`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jdk16/Dockerfile)
+-	[`3.0.8-jre16`, `3.0-jre16`, `jre16`](https://github.com/groovy/docker-groovy/blob/fc758151cb38024e32f2bf1d05d672eb589d5872/jre16/Dockerfile)
+-	[`4.0.0-alpha-3-jdk8`, `4.0-jdk8`, `4.0.0-alpha-3-jdk`, `4.0-jdk`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jdk8/Dockerfile)
+-	[`4.0.0-alpha-3-jre8`, `4.0-jre8`, `4.0.0-alpha-3-jre`, `4.0-jre`, `4.0.0-alpha-3`, `4.0`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jre8/Dockerfile)
+-	[`4.0.0-alpha-3-jdk11`, `4.0-jdk11`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jdk11/Dockerfile)
+-	[`4.0.0-alpha-3-jre11`, `4.0-jre11`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jre11/Dockerfile)
+-	[`4.0.0-alpha-3-jdk16`, `4.0-jdk16`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jdk16/Dockerfile)
+-	[`4.0.0-alpha-3-jre16`, `4.0-jre16`](https://github.com/groovy/docker-groovy/blob/ad50fefc1fc19511003471541a68eba490642bd8/jre16/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -50,7 +50,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/groovy`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fgroovy)  
+	[official-images repo's `library/groovy` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fgroovy)  
 	[official-images repo's `library/groovy` file](https://github.com/docker-library/official-images/blob/master/library/groovy) ([history](https://github.com/docker-library/official-images/commits/master/library/groovy))
 
 -	**Source of this description**:  

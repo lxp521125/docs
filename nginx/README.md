@@ -24,14 +24,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.19.5`, `mainline`, `1`, `1.19`, `latest`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/debian/Dockerfile)
--	[`1.19.5-perl`, `mainline-perl`, `1-perl`, `1.19-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/debian-perl/Dockerfile)
--	[`1.19.5-alpine`, `mainline-alpine`, `1-alpine`, `1.19-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/alpine/Dockerfile)
--	[`1.19.5-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.19-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/c411fdefd6655144f6cdab425026a8a427adc273/mainline/alpine-perl/Dockerfile)
--	[`1.18.0`, `stable`, `1.18`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/debian/Dockerfile)
--	[`1.18.0-perl`, `stable-perl`, `1.18-perl`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/debian-perl/Dockerfile)
--	[`1.18.0-alpine`, `stable-alpine`, `1.18-alpine`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/alpine/Dockerfile)
--	[`1.18.0-alpine-perl`, `stable-alpine-perl`, `1.18-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/3fb70ddd7094c1fdd50cc83d432643dc10ab6243/stable/alpine-perl/Dockerfile)
+-	[`1.19.10`, `mainline`, `1`, `1.19`, `latest`](https://github.com/nginxinc/docker-nginx/blob/464886ab21ebe4b036ceb36d7557bf491f6d9320/mainline/debian/Dockerfile)
+-	[`1.19.10-perl`, `mainline-perl`, `1-perl`, `1.19-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/464886ab21ebe4b036ceb36d7557bf491f6d9320/mainline/debian-perl/Dockerfile)
+-	[`1.19.10-alpine`, `mainline-alpine`, `1-alpine`, `1.19-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/464886ab21ebe4b036ceb36d7557bf491f6d9320/mainline/alpine/Dockerfile)
+-	[`1.19.10-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.19-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/464886ab21ebe4b036ceb36d7557bf491f6d9320/mainline/alpine-perl/Dockerfile)
+-	[`1.20.0`, `stable`, `1.20`](https://github.com/nginxinc/docker-nginx/blob/ab8516ed3a212d8a03392567c8f55c570c839e59/stable/debian/Dockerfile)
+-	[`1.20.0-perl`, `stable-perl`, `1.20-perl`](https://github.com/nginxinc/docker-nginx/blob/ab8516ed3a212d8a03392567c8f55c570c839e59/stable/debian-perl/Dockerfile)
+-	[`1.20.0-alpine`, `stable-alpine`, `1.20-alpine`](https://github.com/nginxinc/docker-nginx/blob/ab8516ed3a212d8a03392567c8f55c570c839e59/stable/alpine/Dockerfile)
+-	[`1.20.0-alpine-perl`, `stable-alpine-perl`, `1.20-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/ab8516ed3a212d8a03392567c8f55c570c839e59/stable/alpine-perl/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -46,7 +46,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/nginx`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fnginx)  
+	[official-images repo's `library/nginx` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fnginx)  
 	[official-images repo's `library/nginx` file](https://github.com/docker-library/official-images/blob/master/library/nginx) ([history](https://github.com/docker-library/official-images/commits/master/library/nginx))
 
 -	**Source of this description**:  
@@ -234,6 +234,8 @@ http {
 }
 ```
 
+Alternatively, check out the official [Docker NGINX unprivileged image](https://hub.docker.com/r/nginxinc/nginx-unprivileged).
+
 ## Monitoring nginx with Amplify
 
 [Amplify](https://amplify.nginx.com/signup/) is a free monitoring tool that can be used to monitor microservice architectures based on nginx. Amplify is developed and maintained by the company behind the nginx software.
@@ -256,7 +258,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

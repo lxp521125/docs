@@ -24,8 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.9.1`, `3.9`, `3`, `latest`](https://github.com/RocketChat/Docker.Official.Image/blob/6abd2f7d579284e227198262859ac54ea75e24ec/3/Dockerfile)
--	[`2.4.13`, `2.4`, `2`](https://github.com/RocketChat/Docker.Official.Image/blob/6abd2f7d579284e227198262859ac54ea75e24ec/2/Dockerfile)
+-	[`3.14.0`, `3.14`, `3`, `latest`](https://github.com/RocketChat/Docker.Official.Image/blob/5fab6f816282b3a25f0ac6dc24eb74956708b153/3.14/Dockerfile)
+-	[`3.13.3`, `3.13`](https://github.com/RocketChat/Docker.Official.Image/blob/5fab6f816282b3a25f0ac6dc24eb74956708b153/3.13/Dockerfile)
+-	[`3.12.5`, `3.12`](https://github.com/RocketChat/Docker.Official.Image/blob/5fab6f816282b3a25f0ac6dc24eb74956708b153/3.12/Dockerfile)
+-	[`2.4.14`, `2.4`, `2`](https://github.com/RocketChat/Docker.Official.Image/blob/8c163b1c5a8e077280d8dc2301ba75dfbfd52d32/2.4/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +42,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/rocket.chat`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Frocket.chat)  
+	[official-images repo's `library/rocket.chat` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Frocket.chat)  
 	[official-images repo's `library/rocket.chat` file](https://github.com/docker-library/official-images/blob/master/library/rocket.chat) ([history](https://github.com/docker-library/official-images/commits/master/library/rocket.chat))
 
 -	**Source of this description**:  

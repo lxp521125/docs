@@ -24,9 +24,15 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.2.1-alpine`, `2.2-alpine`, `2.2.0`, `2.2`, `2`, `alpine`, `latest`](https://github.com/Kong/docker-kong/blob/b68b1ce746f425117d73bbdde09e0fd5edb284da/alpine/Dockerfile)
--	[`2.2.1-ubuntu`, `2.2-ubuntu`, `ubuntu`](https://github.com/Kong/docker-kong/blob/b68b1ce746f425117d73bbdde09e0fd5edb284da/ubuntu/Dockerfile)
--	[`2.2.1-centos`, `2.2-centos`, `centos`](https://github.com/Kong/docker-kong/blob/b68b1ce746f425117d73bbdde09e0fd5edb284da/centos/Dockerfile)
+-	[`2.4.1-alpine`, `2.4-alpine`, `2.4.1`, `2.4`, `2`, `alpine`, `latest`](https://github.com/Kong/docker-kong/blob/e1b0a6c7eddd327926027692863a9900fd856977/alpine/Dockerfile)
+-	[`2.4.1-ubuntu`, `2.4-ubuntu`, `ubuntu`](https://github.com/Kong/docker-kong/blob/e1b0a6c7eddd327926027692863a9900fd856977/ubuntu/Dockerfile)
+-	[`2.4.1-centos`, `2.4-centos`, `centos`](https://github.com/Kong/docker-kong/blob/e1b0a6c7eddd327926027692863a9900fd856977/centos/Dockerfile)
+-	[`2.3.3-alpine`, `2.3-alpine`, `2.3.3`, `2.3`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/alpine/Dockerfile)
+-	[`2.3.3-ubuntu`, `2.3-ubuntu`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/ubuntu/Dockerfile)
+-	[`2.3.3-centos`, `2.3-centos`](https://github.com/Kong/docker-kong/blob/6a6944f5abb7bd2708a47f5571a5133ad976b343/centos/Dockerfile)
+-	[`2.2.2-alpine`, `2.2-alpine`, `2.2.2`, `2.2`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/alpine/Dockerfile)
+-	[`2.2.2-ubuntu`, `2.2-ubuntu`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/ubuntu/Dockerfile)
+-	[`2.2.2-centos`, `2.2-centos`](https://github.com/Kong/docker-kong/blob/40f9973922b56ac590053b56f159bdce802e9296/centos/Dockerfile)
 -	[`2.1.4-alpine`, `2.1-alpine`, `2.1.4`, `2.1`](https://github.com/Kong/docker-kong/blob/b4c835f84d56a2d2d69c2780a1a409177ea0844f/alpine/Dockerfile)
 -	[`2.1.4-ubuntu`, `2.1-ubuntu`](https://github.com/Kong/docker-kong/blob/397f34af7d3503cc64614ef5852d5929a84ef65b/ubuntu/Dockerfile)
 -	[`2.1.4-centos`, `2.1-centos`](https://github.com/Kong/docker-kong/blob/397f34af7d3503cc64614ef5852d5929a84ef65b/centos/Dockerfile)
@@ -47,7 +53,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/kong`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fkong)  
+	[official-images repo's `library/kong` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fkong)  
 	[official-images repo's `library/kong` file](https://github.com/docker-library/official-images/blob/master/library/kong) ([history](https://github.com/docker-library/official-images/commits/master/library/kong))
 
 -	**Source of this description**:  
@@ -122,6 +128,7 @@ $ docker run -d --name kong-database \
                 -p 5432:5432 \
                 -e "POSTGRES_USER=kong" \
                 -e "POSTGRES_DB=kong" \
+                -e "POSTGRES_PASSWORD=kong" \
                 postgres:9.6
 ```
 
@@ -134,6 +141,8 @@ $ docker run --rm \
     --link kong-database:kong-database \
     -e "KONG_DATABASE=postgres" \
     -e "KONG_PG_HOST=kong-database" \
+    -e "KONG_PG_USER=kong" \
+    -e "KONG_PG_PASSWORD=kong" \
     -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
     kong kong migrations bootstrap
 ```
@@ -151,6 +160,7 @@ $ docker run -d --name kong \
     --link kong-database:kong-database \
     -e "KONG_DATABASE=postgres" \
     -e "KONG_PG_HOST=kong-database" \
+    -e "KONG_PG_PASSWORD=kong" \
     -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
     -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" \
     -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
@@ -213,7 +223,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

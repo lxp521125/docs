@@ -28,43 +28,43 @@ WARNING:
 
 ## Simple Tags
 
--	[`2.1.1-alpine`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/alpine/Dockerfile)
--	[`2.1.1-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/builder/Dockerfile)
--	[`2.1.1-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/1809/Dockerfile)
--	[`2.1.1-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/ltsc2016/Dockerfile)
--	[`2.1.1-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/windows-builder/1809/Dockerfile)
--	[`2.1.1-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/windows-builder/ltsc2016/Dockerfile)
--	[`2.2.1-alpine`, `2-alpine`, `alpine`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/alpine/Dockerfile)
--	[`2.2.1-builder-alpine`, `2-builder-alpine`, `builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/builder/Dockerfile)
--	[`2.2.1-windowsservercore-1809`, `2-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/1809/Dockerfile)
--	[`2.2.1-windowsservercore-ltsc2016`, `2-windowsservercore-ltsc2016`, `windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/ltsc2016/Dockerfile)
--	[`2.2.1-builder-windowsservercore-1809`, `2-builder-windowsservercore-1809`, `builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows-builder/1809/Dockerfile)
--	[`2.2.1-builder-windowsservercore-ltsc2016`, `2-builder-windowsservercore-ltsc2016`, `builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows-builder/ltsc2016/Dockerfile)
+-	[`2.3.0-alpine`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/alpine/Dockerfile)
+-	[`2.3.0-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/builder/Dockerfile)
+-	[`2.3.0-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/1809/Dockerfile)
+-	[`2.3.0-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/ltsc2016/Dockerfile)
+-	[`2.3.0-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/windows-builder/1809/Dockerfile)
+-	[`2.3.0-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/windows-builder/ltsc2016/Dockerfile)
+-	[`2.4.0-alpine`, `2-alpine`, `alpine`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/alpine/Dockerfile)
+-	[`2.4.0-builder-alpine`, `2-builder-alpine`, `builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/builder/Dockerfile)
+-	[`2.4.0-windowsservercore-1809`, `2-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/1809/Dockerfile)
+-	[`2.4.0-windowsservercore-ltsc2016`, `2-windowsservercore-ltsc2016`, `windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/ltsc2016/Dockerfile)
+-	[`2.4.0-builder-windowsservercore-1809`, `2-builder-windowsservercore-1809`, `builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/windows-builder/1809/Dockerfile)
+-	[`2.4.0-builder-windowsservercore-ltsc2016`, `2-builder-windowsservercore-ltsc2016`, `builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/windows-builder/ltsc2016/Dockerfile)
 
 ## Shared Tags
 
--	`2.1.1`:
-	-	[`2.1.1-alpine`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/alpine/Dockerfile)
-	-	[`2.1.1-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/1809/Dockerfile)
-	-	[`2.1.1-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/ltsc2016/Dockerfile)
--	`2.1.1-builder`:
-	-	[`2.1.1-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/builder/Dockerfile)
-	-	[`2.1.1-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/windows-builder/1809/Dockerfile)
-	-	[`2.1.1-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/a54f7d1165d6240f53984ad42475ac833b2e6562/2.1/windows-builder/ltsc2016/Dockerfile)
--	`2.1.1-windowsservercore`:
-	-	[`2.1.1-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/1809/Dockerfile)
-	-	[`2.1.1-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/98b7497fbd428e50040ef34f7a4ba2833c22780f/2.1/windows/ltsc2016/Dockerfile)
--	`2.2.1`, `2`, `latest`:
-	-	[`2.2.1-alpine`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/alpine/Dockerfile)
-	-	[`2.2.1-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/1809/Dockerfile)
-	-	[`2.2.1-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/ltsc2016/Dockerfile)
--	`2.2.1-builder`, `2-builder`, `builder`:
-	-	[`2.2.1-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/builder/Dockerfile)
-	-	[`2.2.1-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows-builder/1809/Dockerfile)
-	-	[`2.2.1-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows-builder/ltsc2016/Dockerfile)
--	`2.2.1-windowsservercore`, `2-windowsservercore`, `windowsservercore`:
-	-	[`2.2.1-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/1809/Dockerfile)
-	-	[`2.2.1-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/66905660327fd16a9d95c95da1e59a3302493dc8/2.2/windows/ltsc2016/Dockerfile)
+-	`2.3.0`:
+	-	[`2.3.0-alpine`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/alpine/Dockerfile)
+	-	[`2.3.0-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/1809/Dockerfile)
+	-	[`2.3.0-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/ltsc2016/Dockerfile)
+-	`2.3.0-builder`:
+	-	[`2.3.0-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/builder/Dockerfile)
+	-	[`2.3.0-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/windows-builder/1809/Dockerfile)
+	-	[`2.3.0-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/d1a09c6308adb9397a855fb7a591dd8d29240c4f/2.3/windows-builder/ltsc2016/Dockerfile)
+-	`2.3.0-windowsservercore`:
+	-	[`2.3.0-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/1809/Dockerfile)
+	-	[`2.3.0-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/2093c4a571bfe356447008d229195eb7063232b2/2.3/windows/ltsc2016/Dockerfile)
+-	`2.4.0`, `2`, `latest`:
+	-	[`2.4.0-alpine`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/alpine/Dockerfile)
+	-	[`2.4.0-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/1809/Dockerfile)
+	-	[`2.4.0-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/ltsc2016/Dockerfile)
+-	`2.4.0-builder`, `2-builder`, `builder`:
+	-	[`2.4.0-builder-alpine`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/builder/Dockerfile)
+	-	[`2.4.0-builder-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/windows-builder/1809/Dockerfile)
+	-	[`2.4.0-builder-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/ace4619e925df94e76ea5c4310ae562fade64bfe/2.4/windows-builder/ltsc2016/Dockerfile)
+-	`2.4.0-windowsservercore`, `2-windowsservercore`, `windowsservercore`:
+	-	[`2.4.0-windowsservercore-1809`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/1809/Dockerfile)
+	-	[`2.4.0-windowsservercore-ltsc2016`](https://github.com/caddyserver/caddy-docker/blob/d495eaa69aabf5870942719950ff75b7424300ed/2.4/windows/ltsc2016/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -79,7 +79,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/caddy`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fcaddy)  
+	[official-images repo's `library/caddy` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fcaddy)  
 	[official-images repo's `library/caddy` file](https://github.com/docker-library/official-images/blob/master/library/caddy) ([history](https://github.com/docker-library/official-images/commits/master/library/caddy))
 
 -	**Source of this description**:  
@@ -193,7 +193,7 @@ First, you'll need to determine your container ID or name. Then, pass the contai
 
 ```console
 $ caddy_container_id=$(docker ps | grep caddy | awk '{print $1;}')
-$ docker exec $caddy_container_id -w /etc/caddy caddy reload
+$ docker exec -w /etc/caddy $caddy_container_id caddy reload
 ```
 
 ### Docker Compose example
@@ -233,7 +233,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

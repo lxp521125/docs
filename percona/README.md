@@ -24,13 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.0.21-12-centos`, `8.0-centos`, `8-centos`, `8.0.21-12`, `8.0`, `8`, `ps-8.0.21-12`, `ps-8.0`, `ps-8`](https://github.com/percona/percona-docker/blob/40df1a9f66a3a36981f29a4d992b43085adc0128/percona-server-8.0/Dockerfile)
--	[`5.7.32-centos`, `5.7-centos`, `5-centos`, `centos`, `5.7.32`, `5.7`, `5`, `ps-5.7.32`, `ps-5.7`, `ps-5`, `latest`](https://github.com/percona/percona-docker/blob/8c97acb80f565c2d0d9108b25dd0e55cd65dc14a/percona-server-5.7/Dockerfile-dockerhub)
--	[`5.6.50-centos`, `5.6-centos`, `5.6.50`, `5.6`, `ps-5.6.50`, `ps-5.6`](https://github.com/percona/percona-docker/blob/6852dbd1bf75fb51b9933c77fb1e2b764bef06f8/percona-server-5.6/Dockerfile-dockerhub)
--	[`psmdb-4.4.1`, `psmdb-4.4`](https://github.com/percona/percona-docker/blob/602119736d5c4426ab60fbd8c05cc081a73e975d/percona-server-mongodb-4.4/Dockerfile)
--	[`psmdb-4.2.10`, `psmdb-4.2`](https://github.com/percona/percona-docker/blob/6eae66a6973515bc773161571b155a84f485a3ed/percona-server-mongodb-4.2/Dockerfile)
--	[`psmdb-4.0.21`, `psmdb-4.0`](https://github.com/percona/percona-docker/blob/0085549d89744ec5200d3b173a51c7fb5faae75f/percona-server-mongodb-4.0/Dockerfile)
--	[`psmdb-3.6.21`, `psmdb-3.6`](https://github.com/percona/percona-docker/blob/545f53f247080097203909d5af04b3867c2dd774/percona-server-mongodb-3.6/Dockerfile)
+-	[`8.0.23-14-centos`, `8.0-centos`, `8-centos`, `8.0.23-14`, `8.0`, `8`, `ps-8.0.23-14`, `ps-8.0`, `ps-8`](https://github.com/percona/percona-docker/blob/93b3cf2b7693c9dda94178fb3ce1d630e7f47a72/percona-server-8.0/Dockerfile)
+-	[`5.7.33-centos`, `5.7-centos`, `5-centos`, `centos`, `5.7.33`, `5.7`, `5`, `ps-5.7.33`, `ps-5.7`, `ps-5`, `latest`](https://github.com/percona/percona-docker/blob/9551c99eb560904aa3ea8a69c1e7f7fff3554c2b/percona-server-5.7/Dockerfile-dockerhub)
+-	[`5.6.51-centos`, `5.6-centos`, `5.6.51`, `5.6`, `ps-5.6.51`, `ps-5.6`](https://github.com/percona/percona-docker/blob/f31a00a8b59ee17f9305403b109fd1eb50256493/percona-server-5.6/Dockerfile-dockerhub)
+-	[`psmdb-4.4.5`, `psmdb-4.4`](https://github.com/percona/percona-docker/blob/4bc78f495f344a3c0cef5a321d52cee5b95047b9/percona-server-mongodb-4.4/Dockerfile)
+-	[`psmdb-4.2.14`, `psmdb-4.2`](https://github.com/percona/percona-docker/blob/5a7b7589afe005db9e296ebb2970225b5d5eb926/percona-server-mongodb-4.2/Dockerfile)
+-	[`psmdb-4.0.23`, `psmdb-4.0`](https://github.com/percona/percona-docker/blob/123ac8939a7d8cbf265fb8a122ff1fe469445d93/percona-server-mongodb-4.0/Dockerfile)
+-	[`psmdb-3.6.23`, `psmdb-3.6`](https://github.com/percona/percona-docker/blob/b32c7e632fe0d8b058ce32c0430a1783cfd557a0/percona-server-mongodb-3.6/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -47,7 +47,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/percona`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fpercona)  
+	[official-images repo's `library/percona` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fpercona)  
 	[official-images repo's `library/percona` file](https://github.com/docker-library/official-images/blob/master/library/percona) ([history](https://github.com/docker-library/official-images/commits/master/library/percona))
 
 -	**Source of this description**:  
@@ -141,7 +141,7 @@ The startup configuration is specified in the file `/etc/my.cnf`, and that file 
 If `/my/custom/config-file.cnf` is the path and name of your custom configuration file, you can start your `percona` container like this (note that only the directory path of the custom config file is used in this command):
 
 ```console
-$ docker run --name some-percona -v /my/custom:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d percona:tag
+$ docker run --name some-percona -v /my/custom:/etc/my.cnf.d -e MYSQL_ROOT_PASSWORD=my-secret-pw -d percona:tag
 ```
 
 This will start a new container `some-percona` where the Percona Server for MySQL instance uses the combined startup settings from `/etc/my.cnf` and `/etc/my.cnf.d/config-file.cnf`, with settings from the latter taking precedence.

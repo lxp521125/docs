@@ -24,18 +24,18 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`13.1`, `13`, `latest`](https://github.com/docker-library/postgres/blob/25044882a65cdd16e20e317c942d4e9109708d81/13/Dockerfile)
--	[`13.1-alpine`, `13-alpine`, `alpine`](https://github.com/docker-library/postgres/blob/b9c080857b880202ebd23c59d33fe86d7a70fea3/13/alpine/Dockerfile)
--	[`12.5`, `12`](https://github.com/docker-library/postgres/blob/b17c1440572a0922ed65eb84392b33fd44171ddd/12/Dockerfile)
--	[`12.5-alpine`, `12-alpine`](https://github.com/docker-library/postgres/blob/6f58eab268f60c9dfcfe8a7e3fba7499f239236b/12/alpine/Dockerfile)
--	[`11.10`, `11`](https://github.com/docker-library/postgres/blob/38841304ddd06dd3b39cc080b2c8fce5a5be8e52/11/Dockerfile)
--	[`11.10-alpine`, `11-alpine`](https://github.com/docker-library/postgres/blob/1dcdff4b410936b5b11d1e25c6b60a002b2fc9b9/11/alpine/Dockerfile)
--	[`10.15`, `10`](https://github.com/docker-library/postgres/blob/0e903779e979b4cae597f5dfc97fb3eb9d6d77e8/10/Dockerfile)
--	[`10.15-alpine`, `10-alpine`](https://github.com/docker-library/postgres/blob/92d7a789c6c8667105894f358eaf50a4b448875a/10/alpine/Dockerfile)
--	[`9.6.20`, `9.6`, `9`](https://github.com/docker-library/postgres/blob/c438d9e7bb9f610e7e599ee328832ed98bc0595f/9.6/Dockerfile)
--	[`9.6.20-alpine`, `9.6-alpine`, `9-alpine`](https://github.com/docker-library/postgres/blob/0e4676a9bce5f67ec9c3758b2bfa2ff35aec07e6/9.6/alpine/Dockerfile)
--	[`9.5.24`, `9.5`](https://github.com/docker-library/postgres/blob/ab0af9c5d95663d33880bbb95eb9d5d188469abf/9.5/Dockerfile)
--	[`9.5.24-alpine`, `9.5-alpine`](https://github.com/docker-library/postgres/blob/6b541bc498a02875a81a6ce6e4016ea956171205/9.5/alpine/Dockerfile)
+-	[`13.2`, `13`, `latest`](https://github.com/docker-library/postgres/blob/7bd41786539082857396f4d1b4f1cb326ebee8de/13/Dockerfile)
+-	[`13.2-alpine`, `13-alpine`, `alpine`](https://github.com/docker-library/postgres/blob/a7aa19b8501df4c459dad78fd18e2b36fded9643/13/alpine/Dockerfile)
+-	[`12.6`, `12`](https://github.com/docker-library/postgres/blob/b349a7e67b5f434768f6ae685113e0accaed0842/12/Dockerfile)
+-	[`12.6-alpine`, `12-alpine`](https://github.com/docker-library/postgres/blob/4cec33a2ee0bbfbfa73d1ff7dd08e66cd2c74297/12/alpine/Dockerfile)
+-	[`11.11`, `11`](https://github.com/docker-library/postgres/blob/14f13e4b399ed1848fa24c2c1f5bd40c25732bdd/11/Dockerfile)
+-	[`11.11-alpine`, `11-alpine`](https://github.com/docker-library/postgres/blob/9693709797a818a5d56dfb81ecd34a2754eba2f7/11/alpine/Dockerfile)
+-	[`10.16`, `10`](https://github.com/docker-library/postgres/blob/cbe3131bd8e6d454d80d5c05695276b1d468b261/10/Dockerfile)
+-	[`10.16-alpine`, `10-alpine`](https://github.com/docker-library/postgres/blob/1267a1f1bb39bcf97d9ae498e1edcfd864c8db1d/10/alpine/Dockerfile)
+-	[`9.6.21`, `9.6`, `9`](https://github.com/docker-library/postgres/blob/11119157a345c282fea29b13d374bdea602a39ac/9.6/Dockerfile)
+-	[`9.6.21-alpine`, `9.6-alpine`, `9-alpine`](https://github.com/docker-library/postgres/blob/45cbba060d3674d4ff0529450267bb4656692363/9.6/alpine/Dockerfile)
+-	[`9.5.25`, `9.5`](https://github.com/docker-library/postgres/blob/b122f60426e69df9d6effbda45fe2ef659c1d4f2/9.5/Dockerfile)
+-	[`9.5.25-alpine`, `9.5-alpine`](https://github.com/docker-library/postgres/blob/6667795da15f1a2d2791021659f2f766828a4321/9.5/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -50,7 +50,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/postgres`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fpostgres)  
+	[official-images repo's `library/postgres` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fpostgres)  
 	[official-images repo's `library/postgres` file](https://github.com/docker-library/official-images/blob/master/library/postgres) ([history](https://github.com/docker-library/official-images/commits/master/library/postgres))
 
 -	**Source of this description**:  
@@ -138,7 +138,7 @@ This environment variable is required for you to use the PostgreSQL image. It mu
 
 **Note 1:** The PostgreSQL image sets up `trust` authentication locally so you may notice a password is not required when connecting from `localhost` (inside the same container). However, a password will be required if connecting from a different host/container.
 
-**Note 2:** This variable defines the superuser password in the PostgreSQL instance, as set by the `initdb` script during initial container startup. It has no effect on the `PGPASSWORD` environment variable that may be used by the `psql` client at runtime, as described at [https://www.postgresql.org/docs/10/static/libpq-envars.html](https://www.postgresql.org/docs/10/static/libpq-envars.html). `PGPASSWORD`, if used, will be specified as a separate environment variable.
+**Note 2:** This variable defines the superuser password in the PostgreSQL instance, as set by the `initdb` script during initial container startup. It has no effect on the `PGPASSWORD` environment variable that may be used by the `psql` client at runtime, as described at [https://www.postgresql.org/docs/current/libpq-envars.html](https://www.postgresql.org/docs/current/libpq-envars.html). `PGPASSWORD`, if used, will be specified as a separate environment variable.
 
 ### `POSTGRES_USER`
 
@@ -173,6 +173,8 @@ See the PostgreSQL documentation on [`pg_hba.conf`](https://www.postgresql.org/d
 **Note 1:** It is not recommended to use [`trust`](https://www.postgresql.org/docs/current/auth-trust.html) since it allows anyone to connect without a password, even if one is set (like via `POSTGRES_PASSWORD`). For more information see the PostgreSQL documentation on [*Trust Authentication*](https://www.postgresql.org/docs/current/auth-trust.html).
 
 **Note 2:** If you set `POSTGRES_HOST_AUTH_METHOD` to `trust`, then `POSTGRES_PASSWORD` is not required.
+
+**Note 3:** If you set this to an alternative value (such as `scram-sha-256`), you might need additional `POSTGRES_INITDB_ARGS` for the database to initialize correctly (such as `POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256`).
 
 ### `PGDATA`
 
@@ -349,7 +351,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

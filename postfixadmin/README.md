@@ -24,9 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.2.4-apache`, `3.2-apache`, `3-apache`, `apache`, `3.2.4`, `3.2`, `3`, `latest`](https://github.com/postfixadmin/docker/blob/55fca287e605b3868b677351eda6dfee9fb3a453/apache/Dockerfile)
--	[`3.2.4-fpm`, `3.2-fpm`, `3-fpm`, `fpm`](https://github.com/postfixadmin/docker/blob/55fca287e605b3868b677351eda6dfee9fb3a453/fpm/Dockerfile)
--	[`3.2.4-fpm-alpine`, `3.2-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine`](https://github.com/postfixadmin/docker/blob/55fca287e605b3868b677351eda6dfee9fb3a453/fpm-alpine/Dockerfile)
+-	[`3.3.7-apache`, `3.3-apache`, `3-apache`, `apache`, `3.3.7`, `3.3`, `3`, `latest`](https://github.com/postfixadmin/docker/blob/e58854f733ebb82e43bb0289278ed746753210b5/apache/Dockerfile)
+-	[`3.3.7-fpm`, `3.3-fpm`, `3-fpm`, `fpm`](https://github.com/postfixadmin/docker/blob/e58854f733ebb82e43bb0289278ed746753210b5/fpm/Dockerfile)
+-	[`3.3.7-fpm-alpine`, `3.3-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine`](https://github.com/postfixadmin/docker/blob/e58854f733ebb82e43bb0289278ed746753210b5/fpm-alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/postfixadmin`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fpostfixadmin)  
+	[official-images repo's `library/postfixadmin` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fpostfixadmin)  
 	[official-images repo's `library/postfixadmin` file](https://github.com/docker-library/official-images/blob/master/library/postfixadmin) ([history](https://github.com/docker-library/official-images/commits/master/library/postfixadmin))
 
 -	**Source of this description**:  

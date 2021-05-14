@@ -24,11 +24,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.10.5`, `3.10`, `3`, `latest`](https://github.com/geonetwork/docker-geonetwork/blob/4475831219cebead1c57d1b72feda488c26788f5/3.10.5/Dockerfile)
--	[`3.10.5-postgres`, `3.10-postgres`, `3-postgres`, `postgres`](https://github.com/geonetwork/docker-geonetwork/blob/4475831219cebead1c57d1b72feda488c26788f5/3.10.5/postgres/Dockerfile)
--	[`3.8.3`, `3.8`](https://github.com/geonetwork/docker-geonetwork/blob/af81a4ff8f592d27b4911ad20d569379864ee85f/3.8.3/Dockerfile)
--	[`3.8.3-postgres`, `3.8-postgres`](https://github.com/geonetwork/docker-geonetwork/blob/af81a4ff8f592d27b4911ad20d569379864ee85f/3.8.3/postgres/Dockerfile)
--	[`4.0.1`, `4.0`, `4`](https://github.com/geonetwork/docker-geonetwork/blob/07642897ffc5e193c4609b4b30b8769b9e73b8d0/4.0.1/Dockerfile)
+-	[`3.10.6`, `3.10`](https://github.com/geonetwork/docker-geonetwork/blob/a737bd2c96b3d960ba6c9cade863d2330386847a/3.10.6/Dockerfile)
+-	[`3.10.6-postgres`, `3.10-postgres`](https://github.com/geonetwork/docker-geonetwork/blob/a737bd2c96b3d960ba6c9cade863d2330386847a/3.10.6/postgres/Dockerfile)
+-	[`3.12.0`, `3.12`, `3`](https://github.com/geonetwork/docker-geonetwork/blob/2569285483fb984c55bb8952958ec60025d38c3b/3.12.0/Dockerfile)
+-	[`3.12.0-postgres`, `3.12-postgres`, `3-postgres`](https://github.com/geonetwork/docker-geonetwork/blob/2569285483fb984c55bb8952958ec60025d38c3b/3.12.0/postgres/Dockerfile)
+-	[`4.0.4`, `4.0`, `4`, `latest`](https://github.com/geonetwork/docker-geonetwork/blob/4c0be361accedb96a1a96b4689c7eb133ddca5b7/4.0.4/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -36,14 +36,14 @@ WARNING:
 	[https://github.com/geonetwork/docker-geonetwork/issues](https://github.com/geonetwork/docker-geonetwork/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/geonetwork/)
+	[`amd64`](https://hub.docker.com/r/amd64/geonetwork/), [`arm64v8`](https://hub.docker.com/r/arm64v8/geonetwork/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/geonetwork/` directory](https://github.com/docker-library/repo-info/blob/master/repos/geonetwork) ([history](https://github.com/docker-library/repo-info/commits/master/repos/geonetwork))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/geonetwork`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fgeonetwork)  
+	[official-images repo's `library/geonetwork` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fgeonetwork)  
 	[official-images repo's `library/geonetwork` file](https://github.com/docker-library/official-images/blob/master/library/geonetwork) ([history](https://github.com/docker-library/official-images/commits/master/library/geonetwork))
 
 -	**Source of this description**:  

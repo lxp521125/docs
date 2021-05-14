@@ -24,9 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0.4-apache`, `4.0-apache`, `4-apache`, `apache`, `4.0.4`, `4.0`, `4`, `latest`](https://github.com/matomo-org/docker/blob/bae53f23ba6261c2a28015ff18b9b446482a362c/apache/Dockerfile)
--	[`4.0.4-fpm`, `4.0-fpm`, `4-fpm`, `fpm`](https://github.com/matomo-org/docker/blob/bae53f23ba6261c2a28015ff18b9b446482a362c/fpm/Dockerfile)
--	[`4.0.4-fpm-alpine`, `4.0-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`](https://github.com/matomo-org/docker/blob/bae53f23ba6261c2a28015ff18b9b446482a362c/fpm-alpine/Dockerfile)
+-	[`4.2.1-apache`, `4.2-apache`, `4-apache`, `apache`, `4.2.1`, `4.2`, `4`, `latest`](https://github.com/matomo-org/docker/blob/56ea9f5137c2a7fc41389da3db7bae75d2f8a275/apache/Dockerfile)
+-	[`4.2.1-fpm`, `4.2-fpm`, `4-fpm`, `fpm`](https://github.com/matomo-org/docker/blob/56ea9f5137c2a7fc41389da3db7bae75d2f8a275/fpm/Dockerfile)
+-	[`4.2.1-fpm-alpine`, `4.2-fpm-alpine`, `4-fpm-alpine`, `fpm-alpine`](https://github.com/matomo-org/docker/blob/56ea9f5137c2a7fc41389da3db7bae75d2f8a275/fpm-alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -41,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/matomo`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fmatomo)  
+	[official-images repo's `library/matomo` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fmatomo)  
 	[official-images repo's `library/matomo` file](https://github.com/docker-library/official-images/blob/master/library/matomo) ([history](https://github.com/docker-library/official-images/commits/master/library/matomo))
 
 -	**Source of this description**:  
@@ -134,7 +134,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

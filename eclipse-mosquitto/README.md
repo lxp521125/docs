@@ -24,11 +24,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.0.0`, `2.0`](https://github.com/eclipse/mosquitto/blob/122e6ecfd3ec31084a4d25c1412b3d615c617148/docker/2.0/Dockerfile)
--	[`2.0.0-openssl`, `2.0-openssl`](https://github.com/eclipse/mosquitto/blob/122e6ecfd3ec31084a4d25c1412b3d615c617148/docker/2.0-openssl/Dockerfile)
--	[`1.6.12`, `1.6`, `latest`](https://github.com/eclipse/mosquitto/blob/122e6ecfd3ec31084a4d25c1412b3d615c617148/docker/1.6/Dockerfile)
--	[`1.6.12-openssl`, `1.6-openssl`, `openssl`](https://github.com/eclipse/mosquitto/blob/122e6ecfd3ec31084a4d25c1412b3d615c617148/docker/1.6-openssl/Dockerfile)
--	[`1.5.10`, `1.5`](https://github.com/eclipse/mosquitto/blob/122e6ecfd3ec31084a4d25c1412b3d615c617148/docker/1.5/Dockerfile)
+-	[`2.0.10`, `2.0`, `2`, `latest`](https://github.com/eclipse/mosquitto/blob/1c79920d78321c69add9d6d6f879dd73387bc25e/docker/2.0/Dockerfile)
+-	[`2.0.10-openssl`, `2.0-openssl`, `2-openssl`, `openssl`](https://github.com/eclipse/mosquitto/blob/1c79920d78321c69add9d6d6f879dd73387bc25e/docker/2.0-openssl/Dockerfile)
+-	[`1.6.14`, `1.6`](https://github.com/eclipse/mosquitto/blob/1c79920d78321c69add9d6d6f879dd73387bc25e/docker/1.6/Dockerfile)
+-	[`1.6.14-openssl`, `1.6-openssl`](https://github.com/eclipse/mosquitto/blob/1c79920d78321c69add9d6d6f879dd73387bc25e/docker/1.6-openssl/Dockerfile)
+-	[`1.5.11`, `1.5`](https://github.com/eclipse/mosquitto/blob/1c79920d78321c69add9d6d6f879dd73387bc25e/docker/1.5/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -43,7 +43,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/eclipse-mosquitto`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Feclipse-mosquitto)  
+	[official-images repo's `library/eclipse-mosquitto` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Feclipse-mosquitto)  
 	[official-images repo's `library/eclipse-mosquitto` file](https://github.com/docker-library/official-images/blob/master/library/eclipse-mosquitto) ([history](https://github.com/docker-library/official-images/commits/master/library/eclipse-mosquitto))
 
 -	**Source of this description**:  

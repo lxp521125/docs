@@ -24,8 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `8.3.13`](https://github.com/SWI-Prolog/docker-swipl/blob/09749734edb1e4c567a93e5e713b4004fd589a53/8.3.13/stretch/Dockerfile)
--	[`stable`, `8.2.3`](https://github.com/SWI-Prolog/docker-swipl/blob/09749734edb1e4c567a93e5e713b4004fd589a53/8.2.3/stretch/Dockerfile)
+-	[`latest`, `8.3.18`](https://github.com/SWI-Prolog/docker-swipl/blob/5310e0a5c70dd4e6121d96b1d0b50d4d1dafd04d/8.3.18/stretch/Dockerfile)
+-	[`stable`, `8.2.4`](https://github.com/SWI-Prolog/docker-swipl/blob/5310e0a5c70dd4e6121d96b1d0b50d4d1dafd04d/8.2.4/stretch/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/swipl`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fswipl)  
+	[official-images repo's `library/swipl` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fswipl)  
 	[official-images repo's `library/swipl` file](https://github.com/docker-library/official-images/blob/master/library/swipl) ([history](https://github.com/docker-library/official-images/commits/master/library/swipl))
 
 -	**Source of this description**:  

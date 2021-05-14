@@ -24,50 +24,38 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.0.0-cli-buster`, `8.0-cli-buster`, `8-cli-buster`, `cli-buster`, `8.0.0-buster`, `8.0-buster`, `8-buster`, `buster`, `8.0.0-cli`, `8.0-cli`, `8-cli`, `cli`, `8.0.0`, `8.0`, `8`, `latest`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/buster/cli/Dockerfile)
--	[`8.0.0-apache-buster`, `8.0-apache-buster`, `8-apache-buster`, `apache-buster`, `8.0.0-apache`, `8.0-apache`, `8-apache`, `apache`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/buster/apache/Dockerfile)
--	[`8.0.0-fpm-buster`, `8.0-fpm-buster`, `8-fpm-buster`, `fpm-buster`, `8.0.0-fpm`, `8.0-fpm`, `8-fpm`, `fpm`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/buster/fpm/Dockerfile)
--	[`8.0.0-zts-buster`, `8.0-zts-buster`, `8-zts-buster`, `zts-buster`, `8.0.0-zts`, `8.0-zts`, `8-zts`, `zts`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/buster/zts/Dockerfile)
--	[`8.0.0-cli-alpine3.12`, `8.0-cli-alpine3.12`, `8-cli-alpine3.12`, `cli-alpine3.12`, `8.0.0-alpine3.12`, `8.0-alpine3.12`, `8-alpine3.12`, `alpine3.12`, `8.0.0-cli-alpine`, `8.0-cli-alpine`, `8-cli-alpine`, `cli-alpine`, `8.0.0-alpine`, `8.0-alpine`, `8-alpine`, `alpine`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/alpine3.12/cli/Dockerfile)
--	[`8.0.0-fpm-alpine3.12`, `8.0-fpm-alpine3.12`, `8-fpm-alpine3.12`, `fpm-alpine3.12`, `8.0.0-fpm-alpine`, `8.0-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine`](https://github.com/docker-library/php/blob/deb4a80b409c21ecdd2b884142fab51b48a9b3cb/8.0/alpine3.12/fpm/Dockerfile)
--	[`7.4.13-cli-buster`, `7.4-cli-buster`, `7-cli-buster`, `7.4.13-buster`, `7.4-buster`, `7-buster`, `7.4.13-cli`, `7.4-cli`, `7-cli`, `7.4.13`, `7.4`, `7`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/buster/cli/Dockerfile)
--	[`7.4.13-apache-buster`, `7.4-apache-buster`, `7-apache-buster`, `7.4.13-apache`, `7.4-apache`, `7-apache`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/buster/apache/Dockerfile)
--	[`7.4.13-fpm-buster`, `7.4-fpm-buster`, `7-fpm-buster`, `7.4.13-fpm`, `7.4-fpm`, `7-fpm`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/buster/fpm/Dockerfile)
--	[`7.4.13-zts-buster`, `7.4-zts-buster`, `7-zts-buster`, `7.4.13-zts`, `7.4-zts`, `7-zts`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/buster/zts/Dockerfile)
--	[`7.4.13-cli-alpine3.12`, `7.4-cli-alpine3.12`, `7-cli-alpine3.12`, `7.4.13-alpine3.12`, `7.4-alpine3.12`, `7-alpine3.12`, `7.4.13-cli-alpine`, `7.4-cli-alpine`, `7-cli-alpine`, `7.4.13-alpine`, `7.4-alpine`, `7-alpine`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.12/cli/Dockerfile)
--	[`7.4.13-fpm-alpine3.12`, `7.4-fpm-alpine3.12`, `7-fpm-alpine3.12`, `7.4.13-fpm-alpine`, `7.4-fpm-alpine`, `7-fpm-alpine`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.12/fpm/Dockerfile)
--	[`7.4.13-zts-alpine3.12`, `7.4-zts-alpine3.12`, `7-zts-alpine3.12`, `7.4.13-zts-alpine`, `7.4-zts-alpine`, `7-zts-alpine`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.12/zts/Dockerfile)
--	[`7.4.13-cli-alpine3.11`, `7.4-cli-alpine3.11`, `7-cli-alpine3.11`, `7.4.13-alpine3.11`, `7.4-alpine3.11`, `7-alpine3.11`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.11/cli/Dockerfile)
--	[`7.4.13-fpm-alpine3.11`, `7.4-fpm-alpine3.11`, `7-fpm-alpine3.11`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.11/fpm/Dockerfile)
--	[`7.4.13-zts-alpine3.11`, `7.4-zts-alpine3.11`, `7-zts-alpine3.11`](https://github.com/docker-library/php/blob/0274f58b8dcf68a23d8fd77101d2d4c74d38fc65/7.4/alpine3.11/zts/Dockerfile)
--	[`7.3.25-cli-buster`, `7.3-cli-buster`, `7.3.25-buster`, `7.3-buster`, `7.3.25-cli`, `7.3-cli`, `7.3.25`, `7.3`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/buster/cli/Dockerfile)
--	[`7.3.25-apache-buster`, `7.3-apache-buster`, `7.3.25-apache`, `7.3-apache`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/buster/apache/Dockerfile)
--	[`7.3.25-fpm-buster`, `7.3-fpm-buster`, `7.3.25-fpm`, `7.3-fpm`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/buster/fpm/Dockerfile)
--	[`7.3.25-zts-buster`, `7.3-zts-buster`, `7.3.25-zts`, `7.3-zts`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/buster/zts/Dockerfile)
--	[`7.3.25-cli-stretch`, `7.3-cli-stretch`, `7.3.25-stretch`, `7.3-stretch`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/stretch/cli/Dockerfile)
--	[`7.3.25-apache-stretch`, `7.3-apache-stretch`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/stretch/apache/Dockerfile)
--	[`7.3.25-fpm-stretch`, `7.3-fpm-stretch`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/stretch/fpm/Dockerfile)
--	[`7.3.25-zts-stretch`, `7.3-zts-stretch`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/stretch/zts/Dockerfile)
--	[`7.3.25-cli-alpine3.12`, `7.3-cli-alpine3.12`, `7.3.25-alpine3.12`, `7.3-alpine3.12`, `7.3.25-cli-alpine`, `7.3-cli-alpine`, `7.3.25-alpine`, `7.3-alpine`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.12/cli/Dockerfile)
--	[`7.3.25-fpm-alpine3.12`, `7.3-fpm-alpine3.12`, `7.3.25-fpm-alpine`, `7.3-fpm-alpine`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.12/fpm/Dockerfile)
--	[`7.3.25-zts-alpine3.12`, `7.3-zts-alpine3.12`, `7.3.25-zts-alpine`, `7.3-zts-alpine`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.12/zts/Dockerfile)
--	[`7.3.25-cli-alpine3.11`, `7.3-cli-alpine3.11`, `7.3.25-alpine3.11`, `7.3-alpine3.11`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.11/cli/Dockerfile)
--	[`7.3.25-fpm-alpine3.11`, `7.3-fpm-alpine3.11`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.11/fpm/Dockerfile)
--	[`7.3.25-zts-alpine3.11`, `7.3-zts-alpine3.11`](https://github.com/docker-library/php/blob/26e65d3c2acc800f7b8f190540007b8bf0d66047/7.3/alpine3.11/zts/Dockerfile)
--	[`7.2.34-cli-buster`, `7.2-cli-buster`, `7.2.34-buster`, `7.2-buster`, `7.2.34-cli`, `7.2-cli`, `7.2.34`, `7.2`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/buster/cli/Dockerfile)
--	[`7.2.34-apache-buster`, `7.2-apache-buster`, `7.2.34-apache`, `7.2-apache`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/buster/apache/Dockerfile)
--	[`7.2.34-fpm-buster`, `7.2-fpm-buster`, `7.2.34-fpm`, `7.2-fpm`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/buster/fpm/Dockerfile)
--	[`7.2.34-zts-buster`, `7.2-zts-buster`, `7.2.34-zts`, `7.2-zts`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/buster/zts/Dockerfile)
--	[`7.2.34-cli-stretch`, `7.2-cli-stretch`, `7.2.34-stretch`, `7.2-stretch`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/stretch/cli/Dockerfile)
--	[`7.2.34-apache-stretch`, `7.2-apache-stretch`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/stretch/apache/Dockerfile)
--	[`7.2.34-fpm-stretch`, `7.2-fpm-stretch`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/stretch/fpm/Dockerfile)
--	[`7.2.34-zts-stretch`, `7.2-zts-stretch`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/stretch/zts/Dockerfile)
--	[`7.2.34-cli-alpine3.12`, `7.2-cli-alpine3.12`, `7.2.34-alpine3.12`, `7.2-alpine3.12`, `7.2.34-cli-alpine`, `7.2-cli-alpine`, `7.2.34-alpine`, `7.2-alpine`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.12/cli/Dockerfile)
--	[`7.2.34-fpm-alpine3.12`, `7.2-fpm-alpine3.12`, `7.2.34-fpm-alpine`, `7.2-fpm-alpine`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.12/fpm/Dockerfile)
--	[`7.2.34-zts-alpine3.12`, `7.2-zts-alpine3.12`, `7.2.34-zts-alpine`, `7.2-zts-alpine`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.12/zts/Dockerfile)
--	[`7.2.34-cli-alpine3.11`, `7.2-cli-alpine3.11`, `7.2.34-alpine3.11`, `7.2-alpine3.11`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.11/cli/Dockerfile)
--	[`7.2.34-fpm-alpine3.11`, `7.2-fpm-alpine3.11`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.11/fpm/Dockerfile)
--	[`7.2.34-zts-alpine3.11`, `7.2-zts-alpine3.11`](https://github.com/docker-library/php/blob/3dc9a6988d478fae0f0b8b871d10e611b50e3d0c/7.2/alpine3.11/zts/Dockerfile)
+-	[`8.0.6-cli-buster`, `8.0-cli-buster`, `8-cli-buster`, `cli-buster`, `8.0.6-buster`, `8.0-buster`, `8-buster`, `buster`, `8.0.6-cli`, `8.0-cli`, `8-cli`, `cli`, `8.0.6`, `8.0`, `8`, `latest`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/buster/cli/Dockerfile)
+-	[`8.0.6-apache-buster`, `8.0-apache-buster`, `8-apache-buster`, `apache-buster`, `8.0.6-apache`, `8.0-apache`, `8-apache`, `apache`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/buster/apache/Dockerfile)
+-	[`8.0.6-fpm-buster`, `8.0-fpm-buster`, `8-fpm-buster`, `fpm-buster`, `8.0.6-fpm`, `8.0-fpm`, `8-fpm`, `fpm`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/buster/fpm/Dockerfile)
+-	[`8.0.6-zts-buster`, `8.0-zts-buster`, `8-zts-buster`, `zts-buster`, `8.0.6-zts`, `8.0-zts`, `8-zts`, `zts`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/buster/zts/Dockerfile)
+-	[`8.0.6-cli-alpine3.13`, `8.0-cli-alpine3.13`, `8-cli-alpine3.13`, `cli-alpine3.13`, `8.0.6-alpine3.13`, `8.0-alpine3.13`, `8-alpine3.13`, `alpine3.13`, `8.0.6-cli-alpine`, `8.0-cli-alpine`, `8-cli-alpine`, `cli-alpine`, `8.0.6-alpine`, `8.0-alpine`, `8-alpine`, `alpine`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/alpine3.13/cli/Dockerfile)
+-	[`8.0.6-fpm-alpine3.13`, `8.0-fpm-alpine3.13`, `8-fpm-alpine3.13`, `fpm-alpine3.13`, `8.0.6-fpm-alpine`, `8.0-fpm-alpine`, `8-fpm-alpine`, `fpm-alpine`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/alpine3.13/fpm/Dockerfile)
+-	[`8.0.6-cli-alpine3.12`, `8.0-cli-alpine3.12`, `8-cli-alpine3.12`, `cli-alpine3.12`, `8.0.6-alpine3.12`, `8.0-alpine3.12`, `8-alpine3.12`, `alpine3.12`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/alpine3.12/cli/Dockerfile)
+-	[`8.0.6-fpm-alpine3.12`, `8.0-fpm-alpine3.12`, `8-fpm-alpine3.12`, `fpm-alpine3.12`](https://github.com/docker-library/php/blob/81ceb39449dc0d42fcecf455b6f372b0b5f3f426/8.0/alpine3.12/fpm/Dockerfile)
+-	[`7.4.19-cli-buster`, `7.4-cli-buster`, `7-cli-buster`, `7.4.19-buster`, `7.4-buster`, `7-buster`, `7.4.19-cli`, `7.4-cli`, `7-cli`, `7.4.19`, `7.4`, `7`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/buster/cli/Dockerfile)
+-	[`7.4.19-apache-buster`, `7.4-apache-buster`, `7-apache-buster`, `7.4.19-apache`, `7.4-apache`, `7-apache`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/buster/apache/Dockerfile)
+-	[`7.4.19-fpm-buster`, `7.4-fpm-buster`, `7-fpm-buster`, `7.4.19-fpm`, `7.4-fpm`, `7-fpm`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/buster/fpm/Dockerfile)
+-	[`7.4.19-zts-buster`, `7.4-zts-buster`, `7-zts-buster`, `7.4.19-zts`, `7.4-zts`, `7-zts`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/buster/zts/Dockerfile)
+-	[`7.4.19-cli-alpine3.13`, `7.4-cli-alpine3.13`, `7-cli-alpine3.13`, `7.4.19-alpine3.13`, `7.4-alpine3.13`, `7-alpine3.13`, `7.4.19-cli-alpine`, `7.4-cli-alpine`, `7-cli-alpine`, `7.4.19-alpine`, `7.4-alpine`, `7-alpine`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.13/cli/Dockerfile)
+-	[`7.4.19-fpm-alpine3.13`, `7.4-fpm-alpine3.13`, `7-fpm-alpine3.13`, `7.4.19-fpm-alpine`, `7.4-fpm-alpine`, `7-fpm-alpine`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.13/fpm/Dockerfile)
+-	[`7.4.19-zts-alpine3.13`, `7.4-zts-alpine3.13`, `7-zts-alpine3.13`, `7.4.19-zts-alpine`, `7.4-zts-alpine`, `7-zts-alpine`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.13/zts/Dockerfile)
+-	[`7.4.19-cli-alpine3.12`, `7.4-cli-alpine3.12`, `7-cli-alpine3.12`, `7.4.19-alpine3.12`, `7.4-alpine3.12`, `7-alpine3.12`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.12/cli/Dockerfile)
+-	[`7.4.19-fpm-alpine3.12`, `7.4-fpm-alpine3.12`, `7-fpm-alpine3.12`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.12/fpm/Dockerfile)
+-	[`7.4.19-zts-alpine3.12`, `7.4-zts-alpine3.12`, `7-zts-alpine3.12`](https://github.com/docker-library/php/blob/47e681a74116da5a99e804bef5a7808df40d831f/7.4/alpine3.12/zts/Dockerfile)
+-	[`7.3.28-cli-buster`, `7.3-cli-buster`, `7.3.28-buster`, `7.3-buster`, `7.3.28-cli`, `7.3-cli`, `7.3.28`, `7.3`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/buster/cli/Dockerfile)
+-	[`7.3.28-apache-buster`, `7.3-apache-buster`, `7.3.28-apache`, `7.3-apache`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/buster/apache/Dockerfile)
+-	[`7.3.28-fpm-buster`, `7.3-fpm-buster`, `7.3.28-fpm`, `7.3-fpm`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/buster/fpm/Dockerfile)
+-	[`7.3.28-zts-buster`, `7.3-zts-buster`, `7.3.28-zts`, `7.3-zts`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/buster/zts/Dockerfile)
+-	[`7.3.28-cli-stretch`, `7.3-cli-stretch`, `7.3.28-stretch`, `7.3-stretch`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/stretch/cli/Dockerfile)
+-	[`7.3.28-apache-stretch`, `7.3-apache-stretch`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/stretch/apache/Dockerfile)
+-	[`7.3.28-fpm-stretch`, `7.3-fpm-stretch`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/stretch/fpm/Dockerfile)
+-	[`7.3.28-zts-stretch`, `7.3-zts-stretch`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/stretch/zts/Dockerfile)
+-	[`7.3.28-cli-alpine3.13`, `7.3-cli-alpine3.13`, `7.3.28-alpine3.13`, `7.3-alpine3.13`, `7.3.28-cli-alpine`, `7.3-cli-alpine`, `7.3.28-alpine`, `7.3-alpine`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.13/cli/Dockerfile)
+-	[`7.3.28-fpm-alpine3.13`, `7.3-fpm-alpine3.13`, `7.3.28-fpm-alpine`, `7.3-fpm-alpine`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.13/fpm/Dockerfile)
+-	[`7.3.28-zts-alpine3.13`, `7.3-zts-alpine3.13`, `7.3.28-zts-alpine`, `7.3-zts-alpine`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.13/zts/Dockerfile)
+-	[`7.3.28-cli-alpine3.12`, `7.3-cli-alpine3.12`, `7.3.28-alpine3.12`, `7.3-alpine3.12`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.12/cli/Dockerfile)
+-	[`7.3.28-fpm-alpine3.12`, `7.3-fpm-alpine3.12`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.12/fpm/Dockerfile)
+-	[`7.3.28-zts-alpine3.12`, `7.3-zts-alpine3.12`](https://github.com/docker-library/php/blob/6196a28e342a7936e4a6e89e16a5ea87bf9e8cbe/7.3/alpine3.12/zts/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -82,7 +70,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/php`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fphp)  
+	[official-images repo's `library/php` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fphp)  
 	[official-images repo's `library/php` file](https://github.com/docker-library/official-images/blob/master/library/php) ([history](https://github.com/docker-library/official-images/commits/master/library/php))
 
 -	**Source of this description**:  
@@ -334,7 +322,7 @@ Some potentially helpful resources:
 
 This image is based on the popular [Alpine Linux project](https://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
+This variant is useful when final image size being as small as possible is your primary concern. The main caveat to note is that it does use [musl libc](https://musl.libc.org) instead of [glibc and friends](https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 

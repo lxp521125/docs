@@ -24,11 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.9.0`, `1.9`, `latest`](https://github.com/hashicorp/docker-consul/blob/5bcf4fea7550854a1ce934f3389ddde8c08609ca/0.X/Dockerfile)
--	[`1.8.7-beta1`](https://github.com/hashicorp/docker-consul/blob/f14cfe76aafe05a2faa9ae1c04e0bebdb9fe76b8/0.X/Dockerfile)
--	[`1.8.6`, `1.8`](https://github.com/hashicorp/docker-consul/blob/8d94b6bb71473cb68cbeba21932fa7ca7cf65eb5/0.X/Dockerfile)
--	[`1.7.10`, `1.7`](https://github.com/hashicorp/docker-consul/blob/71ac96414c6b2b4191c3e95781dd3a1967badfb7/0.X/Dockerfile)
--	[`1.6.10`, `1.6`](https://github.com/hashicorp/docker-consul/blob/3be0ffcf84724ef5bbbb364e0da0860053b99ecf/0.X/Dockerfile)
+-	[`1.10.0-beta2`, `1.10.0-beta`](https://github.com/hashicorp/docker-consul/blob/1f909f5d28ddac5be608d1281502de94a2a7132f/0.X/Dockerfile)
+-	[`1.9.5`, `1.9`, `latest`](https://github.com/hashicorp/docker-consul/blob/c77d4c566243f4c75a3efb226b074b3e2063a3f3/0.X/Dockerfile)
+-	[`1.8.10`, `1.8`](https://github.com/hashicorp/docker-consul/blob/12580e22affec44a4ce60590ccfaf0974d7d5c7b/0.X/Dockerfile)
+-	[`1.7.14`, `1.7`](https://github.com/hashicorp/docker-consul/blob/43b15caac2a3d8f61c9ef57fab8e9eee1a07ca60/0.X/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -43,7 +42,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/consul`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fconsul)  
+	[official-images repo's `library/consul` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fconsul)  
 	[official-images repo's `library/consul` file](https://github.com/docker-library/official-images/blob/master/library/consul) ([history](https://github.com/docker-library/official-images/commits/master/library/consul))
 
 -	**Source of this description**:  

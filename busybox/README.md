@@ -24,10 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.32.0-uclibc`, `1.32-uclibc`, `1-uclibc`, `uclibc`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/uclibc/Dockerfile)
--	[`1.32.0-glibc`, `1.32-glibc`, `1-glibc`, `glibc`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/glibc/Dockerfile)
--	[`1.32.0-musl`, `1.32-musl`, `1-musl`, `musl`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/musl/Dockerfile)
--	[`1.32.0`, `1.32`, `1`, `latest`](https://github.com/docker-library/busybox/blob/3a8b3f6d991fdce58339535827052b5ef2f0180e/uclibc/Dockerfile)
+-	[`1.33.1-uclibc`, `1.33-uclibc`, `1-uclibc`, `stable-uclibc`, `uclibc`](https://github.com/docker-library/busybox/blob/01c0252fd2b32f3408a302996a1b8c6a583ef444/stable/uclibc/Dockerfile)
+-	[`1.33.1-glibc`, `1.33-glibc`, `1-glibc`, `stable-glibc`, `glibc`](https://github.com/docker-library/busybox/blob/01c0252fd2b32f3408a302996a1b8c6a583ef444/stable/glibc/Dockerfile)
+-	[`1.33.1-musl`, `1.33-musl`, `1-musl`, `stable-musl`, `musl`](https://github.com/docker-library/busybox/blob/01c0252fd2b32f3408a302996a1b8c6a583ef444/stable/musl/Dockerfile)
+-	[`1.33.1`, `1.33`, `1`, `stable`, `latest`](https://github.com/docker-library/busybox/blob/01c0252fd2b32f3408a302996a1b8c6a583ef444/stable/uclibc/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -42,7 +42,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/busybox`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fbusybox)  
+	[official-images repo's `library/busybox` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fbusybox)  
 	[official-images repo's `library/busybox` file](https://github.com/docker-library/official-images/blob/master/library/busybox) ([history](https://github.com/docker-library/official-images/commits/master/library/busybox))
 
 -	**Source of this description**:  

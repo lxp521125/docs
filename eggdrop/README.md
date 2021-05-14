@@ -24,8 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`develop`](https://github.com/eggheads/eggdrop-docker/blob/55cd1e0c2b72fe228a8ec93be968e848568c75b3/develop/Dockerfile)
--	[`1.8`, `1.8.4`, `stable`, `latest`](https://github.com/eggheads/eggdrop-docker/blob/14411e45f599536a86d9f023c0fa09f3dd2f5454/1.8/Dockerfile)
+-	[`develop`](https://github.com/eggheads/eggdrop-docker/blob/f65a97bc6d85e74d1094f1d75c7979aec53cb4fa/develop/Dockerfile)
+-	[`1.8`, `1.8.4`](https://github.com/eggheads/eggdrop-docker/blob/14411e45f599536a86d9f023c0fa09f3dd2f5454/1.8/Dockerfile)
+-	[`1.9`, `1.9.0`, `stable`, `latest`](https://github.com/eggheads/eggdrop-docker/blob/f65a97bc6d85e74d1094f1d75c7979aec53cb4fa/1.9/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +41,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/eggdrop`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Feggdrop)  
+	[official-images repo's `library/eggdrop` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Feggdrop)  
 	[official-images repo's `library/eggdrop` file](https://github.com/docker-library/official-images/blob/master/library/eggdrop) ([history](https://github.com/docker-library/official-images/commits/master/library/eggdrop))
 
 -	**Source of this description**:  

@@ -24,14 +24,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`20.10.0-rc2`, `20.10-rc`, `rc`](https://github.com/docker-library/docker/blob/bf1c9f5393c9c60460567a8e8bdf1b0d0e41acbc/20.10-rc/Dockerfile)
--	[`20.10.0-rc2-dind`, `20.10-rc-dind`, `rc-dind`](https://github.com/docker-library/docker/blob/b1d2628005e12e79079c025c3653cba248d6f264/20.10-rc/dind/Dockerfile)
--	[`20.10.0-rc2-dind-rootless`, `20.10-rc-dind-rootless`, `rc-dind-rootless`](https://github.com/docker-library/docker/blob/bf1c9f5393c9c60460567a8e8bdf1b0d0e41acbc/20.10-rc/dind-rootless/Dockerfile)
--	[`20.10.0-rc2-git`, `20.10-rc-git`, `rc-git`](https://github.com/docker-library/docker/blob/b6597f7fc1294f4ee3345576f06889d2ff773a8d/20.10-rc/git/Dockerfile)
--	[`19.03.14`, `19.03`, `19`, `stable`, `latest`](https://github.com/docker-library/docker/blob/c8b077bfbab07a33ba5c80e5d4987fba8bbdd67b/19.03/Dockerfile)
--	[`19.03.14-dind`, `19.03-dind`, `19-dind`, `stable-dind`, `dind`](https://github.com/docker-library/docker/blob/b1d2628005e12e79079c025c3653cba248d6f264/19.03/dind/Dockerfile)
--	[`19.03.14-dind-rootless`, `19.03-dind-rootless`, `19-dind-rootless`, `stable-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/c8b077bfbab07a33ba5c80e5d4987fba8bbdd67b/19.03/dind-rootless/Dockerfile)
--	[`19.03.14-git`, `19.03-git`, `19-git`, `stable-git`, `git`](https://github.com/docker-library/docker/blob/12d1c2763b54d29137ec448a3e4ad1a9aefae1a0/19.03/git/Dockerfile)
+-	[`20.10.6`, `20.10`, `20`, `latest`](https://github.com/docker-library/docker/blob/f6a0c427f0354dcf5870c430c72c8f1d6b4e6d5e/20.10/Dockerfile)
+-	[`20.10.6-dind`, `20.10-dind`, `20-dind`, `dind`](https://github.com/docker-library/docker/blob/30d7b9bf7663c96fcd888bd75e9aaa547a808a23/20.10/dind/Dockerfile)
+-	[`20.10.6-dind-rootless`, `20.10-dind-rootless`, `20-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/f6a0c427f0354dcf5870c430c72c8f1d6b4e6d5e/20.10/dind-rootless/Dockerfile)
+-	[`20.10.6-git`, `20.10-git`, `20-git`, `git`](https://github.com/docker-library/docker/blob/387e351394bfad74bceebf8303c6c8e39c3d4ed4/20.10/git/Dockerfile)
+-	[`19.03.15`, `19.03`, `19`](https://github.com/docker-library/docker/blob/835c371c516ebdf67adc0c76bbfb38bf9d3e586c/19.03/Dockerfile)
+-	[`19.03.15-dind`, `19.03-dind`, `19-dind`](https://github.com/docker-library/docker/blob/f0abe5a51a683c02501fd7ff8384fb17dbbeb946/19.03/dind/Dockerfile)
+-	[`19.03.15-dind-rootless`, `19.03-dind-rootless`, `19-dind-rootless`](https://github.com/docker-library/docker/blob/835c371c516ebdf67adc0c76bbfb38bf9d3e586c/19.03/dind-rootless/Dockerfile)
+-	[`19.03.15-git`, `19.03-git`, `19-git`](https://github.com/docker-library/docker/blob/12d1c2763b54d29137ec448a3e4ad1a9aefae1a0/19.03/git/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -46,7 +46,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/docker`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fdocker)  
+	[official-images repo's `library/docker` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fdocker)  
 	[official-images repo's `library/docker` file](https://github.com/docker-library/official-images/blob/master/library/docker) ([history](https://github.com/docker-library/official-images/commits/master/library/docker))
 
 -	**Source of this description**:  
@@ -68,7 +68,7 @@ If you are still convinced that you need Docker-in-Docker and not just access to
 
 # How to use this image
 
-[![asciicast](https://asciinema.org/a/24707.png)](https://asciinema.org/a/24707)
+[![asciicast](https://asciinema.org/a/378669.svg)](https://asciinema.org/a/378669)
 
 ## TLS
 
@@ -262,6 +262,21 @@ Some of these will not be supported based on the settings on the host's `dockerd
 ## Rootless
 
 For more information about using the experimental "rootless" image variants, see [docker-library/docker#174](https://github.com/docker-library/docker/pull/174).
+
+**Note:** just like the regular `dind` images, `--privileged` is required for Docker-in-Docker to function properly ([docker-library/docker#151](https://github.com/docker-library/docker/issues/151#issuecomment-483185972) & [docker-library/docker#281](https://github.com/docker-library/docker/issues/281#issuecomment-744766015)). For `19.03.x` rootless images, an argument of `--experimental` is required for `dockerd` ([docker/docker#40759](https://github.com/docker/docker/pull/40759)).
+
+Basic example usage:
+
+```console
+$ docker run -d --name some-docker --privileged docker:dind-rootless
+$ docker logs --tail=3 some-docker # to verify the daemon has finished generating TLS certificates and is listening successfully
+time="xxx" level=info msg="Daemon has completed initialization"
+time="xxx" level=info msg="API listen on /run/user/1000/docker.sock"
+time="xxx" level=info msg="API listen on [::]:2376"
+$ docker exec -it some-docker docker-entrypoint.sh sh # using "docker-entrypoint.sh" which auto-sets "DOCKER_HOST" appropriately
+/ $ docker info --format '{{ json .SecurityOptions }}'
+["name=seccomp,profile=default","name=rootless"]
+```
 
 ## Where to Store Data
 

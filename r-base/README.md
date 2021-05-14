@@ -24,7 +24,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0.3`, `latest`](https://github.com/rocker-org/rocker/blob/f710db09bce5ed4670f80ff4bf5a6cc8f022b76b/r-base/4.0.3/Dockerfile)
+-	[`4.0.5`, `latest`](https://github.com/rocker-org/rocker/blob/dd592d5c3ab289f33bf06c6c84eda354ddc40a38/r-base/4.0.5/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -32,14 +32,14 @@ WARNING:
 	[GitHub](https://github.com/rocker-org/rocker/issues) or [Email](mailto:rocker-maintainers@eddelbuettel.com)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/r-base/), [`arm64v8`](https://hub.docker.com/r/arm64v8/r-base/), [`ppc64le`](https://hub.docker.com/r/ppc64le/r-base/)
+	[`amd64`](https://hub.docker.com/r/amd64/r-base/), [`arm64v8`](https://hub.docker.com/r/arm64v8/r-base/), [`ppc64le`](https://hub.docker.com/r/ppc64le/r-base/), [`s390x`](https://hub.docker.com/r/s390x/r-base/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/r-base/` directory](https://github.com/docker-library/repo-info/blob/master/repos/r-base) ([history](https://github.com/docker-library/repo-info/commits/master/repos/r-base))  
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/r-base`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fr-base)  
+	[official-images repo's `library/r-base` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fr-base)  
 	[official-images repo's `library/r-base` file](https://github.com/docker-library/official-images/blob/master/library/r-base) ([history](https://github.com/docker-library/official-images/commits/master/library/r-base))
 
 -	**Source of this description**:  

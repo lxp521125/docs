@@ -24,8 +24,8 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.7.8-standalone`, `4.7-standalone`, `4-standalone`, `standalone`, `4.7.8`, `4.7`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/5a55c1bb1bba06de4e7f806397ade6175d222ff5/4/Dockerfile)
--	[`4.7.8-fastcgi`, `4.7-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/5a55c1bb1bba06de4e7f806397ade6175d222ff5/4/fastcgi/Dockerfile)
+-	[`4.8.0-standalone`, `4-standalone`, `standalone`, `4.8.0`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/40a2516bf4f95dc76a839b8b76e4a5eae2378e67/4/Dockerfile)
+-	[`4.8.0-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/40a2516bf4f95dc76a839b8b76e4a5eae2378e67/4/fastcgi/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +40,7 @@ WARNING:
 	(image metadata, transfer size, etc)
 
 -	**Image updates**:  
-	[official-images PRs with label `library/adminer`](https://github.com/docker-library/official-images/pulls?q=label%3Alibrary%2Fadminer)  
+	[official-images repo's `library/adminer` label](https://github.com/docker-library/official-images/issues?q=label%3Alibrary%2Fadminer)  
 	[official-images repo's `library/adminer` file](https://github.com/docker-library/official-images/blob/master/library/adminer) ([history](https://github.com/docker-library/official-images/commits/master/library/adminer))
 
 -	**Source of this description**:  
@@ -116,7 +116,7 @@ To load plugins you can pass a list of filenames in `ADMINER_PLUGINS`:
 $ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='tables-filter tinymce' adminer
 ```
 
-If a plugin *requires* parameters to work correctly you will need to add a custom file to the container:
+If a plugin *requires* parameters to work correctly instead of adding the plugin to `ADMINER_PLUGINS`, you need to add a custom file to the container:
 
 ```console
 $ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='login-servers' adminer
